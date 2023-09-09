@@ -7,11 +7,11 @@
 
 \setcounter{MaxMatrixCols}{10}
 %TCIDATA{OutputFilter=LATEX.DLL}
-%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{Version=5.50.0.2960}
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=Manual}
 %TCIDATA{Created=Thursday, June 02, 2011 09:40:55}
-%TCIDATA{LastRevised=Tuesday, November 22, 2016 14:14:50}
+%TCIDATA{LastRevised=Friday, September 08, 2023 18:52:20}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 %TCIDATA{<META NAME="DocumentShell" CONTENT="Style Editor\TLLectureNotes">}
 %TCIDATA{Language=American English}
@@ -42,11 +42,9 @@
 %EndExpansion
 \vspace{1in}\vspace{0.5in}
 
-{\Huge PH223 Lectures on Physics }
+{\Huge PH223: Physics for Chemists and Mechanical Engineers }
 
 {\Huge \vspace{0.1in}}
-
-{\Large For Mechanical Engineers}
 
 {\Huge \vspace{0.1in}}
 
@@ -151,11 +149,14 @@ Contents
 \section{What is this class?}
 
 This class is designed to teach the physics of wave motion, electricity and
-magnetism, and optics. We have two major goals. One is to teach the physics
-that is not covered by Statics, Dynamics, and the Engineering Electronics
-Course. This physics can affect the mechanical systems you will design,
-build, or test, so knowing this physics is a very good thing. The second
-objective is to teach a different method of thinking about how things work.
+magnetism, and optics. We have three major goals. One is to teach the
+physics that is not covered by Statics, Dynamics, and the Engineering
+Electronics Course. This physics can affect the mechanical systems you will
+design, build, or test, so knowing this physics is a very good thing. The
+second objective is to teach a different method of thinking about how things
+work. The third goal is to describe electrical and wave motion enought that
+the quantum nature of atoms and moledules make sense as our chemists take
+physical chemistry.
 
 In engineering, the design parameters are often the goal. In physics, the
 physical relationship is the goal. For design engineers, both views are
@@ -170,7 +171,7 @@ by only a few nanometers. The chief engineer knew how to build all the
 systems, but did not understand the physics that required the close
 wavelength spacing. He judged that the difficulty in building the device at
 that wavelength spacing outweighed any benefit, and he changed the specs to
-give two wavelength that were fifty nanometers apart. Fifty nanometers is a
+give two wavelengths that were fifty nanometers apart. Fifty nanometers is a
 pretty small tolerance. Surely it would be good enough! The resulting
 product did not work. For two years he tried to fine tune the scanners, and
 servos to make it work. After ten million dollars and two years, he finally
@@ -204,8 +205,7 @@ very like it based on the original design) and is a major part of the
 predictive models that tell us what the weather will be in a few days.
 
 Because this type of reasoning is our goal, we will not only do typical
-homework problems, but we will also work on our conceptual understanding
-with the Knight Workbook.
+homework problems, but we will also work on our conceptual understanding.
 
 I will also emphasize a problem solving method that I used with my
 engineering team in industry. It is a structured approach to finding a
@@ -223,6 +223,9 @@ structured method, with an eye toward symbolic answers or relationships
 rather than end numbers, you will learn to be a more valuable engineer. The
 process we will use is the same approach I\ used to teach my new engineers
 in the defense industry. It has been proven useful over and over for decades.
+
+This same problem solving process is useful in chemistry, particularly as
+you study physical chemistry.
 
 So let's get started. To understand waves, we need to get the waves moving.
 You studied Oscillation in Dynamics or PH121. Oscillating systems are often
@@ -491,8 +494,8 @@ This is a good definition of \emph{simple harmonic motion.}
 
 \section{Mathematical Representation of Simple Harmonic Motion}
 
-Recall from your Dynamics classes that acceleration is the second derivative
-of position 
+Recall from your Dynamics or PH121 classes that acceleration is the second
+derivative of position 
 \begin{equation*}
 a=\frac{dv}{dt}=\frac{d^{2}x}{dt^{2}}
 \end{equation*}
@@ -654,12 +657,13 @@ v_{\max }=\omega x_{\max }=x_{\max }\sqrt{\frac{k}{m}}
 
 Likewise for the acceleration%
 \begin{eqnarray}
-a\left( t\right) &=&\frac{dx\left( t\right) }{dt}=-\omega ^{2}A\cos \left(
-\omega t+\phi _{o}\right) \\
-&=&-\omega ^{2}x_{\max }\cos \left( \omega t+\phi _{o}\right)  \notag
+a\left( t\right)  &=&\frac{dv\left( t\right) }{dt} \\
+&=&\frac{d}{dt}\left( -\omega x_{\max }\sin \left( \omega t+\phi _{o}\right)
+\right)  \\
+&=&-\omega ^{2}x_{\max }\cos \left( \omega t+\phi _{o}\right)   \notag
 \end{eqnarray}
 
-where we identify%
+where we can identify%
 \begin{equation}
 a_{\max }=\omega ^{2}x_{\max }=\frac{k}{m}x_{\max }
 \end{equation}
@@ -742,10 +746,9 @@ TRUE;display "USEDEF";valid_file "T";width 2.1906in;height 1.2358in;depth
 
 \subsubsection{Initial Conditions}
 
-Now let's return to the idea that we need to find $A$ and $\phi _{o}.$ To do
-this we need to know how we started the mass-spring motion. We call the
-information on how the system starts it's motion the \emph{initial
-conditions.}
+Now let's find $A$ and $\phi _{o}.$ To do this we need to know how we
+started the mass-spring motion. We call the information on how the system
+starts it's motion the \emph{initial conditions.}
 
 Suppose we start the motion by pulling the mass to $x=x_{\max }$ and
 releasing it at $t=0.$ These our our initial conditions. Let's see if we can
@@ -796,7 +799,7 @@ v\left( 0\right) &=&v_{i}=-v_{\max }\sin \left( 0+\phi _{o}\right)  \notag
 
 from 
 \begin{equation*}
-0=x_{\max }\cos \left( \phi _{o}\right)
+0=x_{\max }\cos \left( \phi _{o}\right) 
 \end{equation*}%
 (first equation above) we see that\footnote{%
 Really there are more possibilities, but we are taking the smallest value
@@ -806,8 +809,8 @@ for $\phi _{o}$ as we discussed above.}
 \end{equation*}%
 but we don't know the sign. Using our initial velocity condition 
 \begin{eqnarray*}
-v_{i} &=&-v_{\max }\sin \left( \pm \frac{\pi }{2}\right) \\
-v_{i} &=&-\omega x_{\max }\sin \left( \pm \frac{\pi }{2}\right)
+v_{i} &=&-v_{\max }\sin \left( \pm \frac{\pi }{2}\right)  \\
+v_{i} &=&-\omega x_{\max }\sin \left( \pm \frac{\pi }{2}\right) 
 \end{eqnarray*}
 
 We defined the initial velocity as positive, and we insist on having
@@ -828,12 +831,13 @@ v\left( t\right) &=&v_{i}\sin \left( \omega t-\frac{\pi }{2}\right)
 
 \begin{remark}
 Generally to have a complete solution to a differential equation, you must
-find all the constants based on the initial conditions.
+find all the constants (like $A$ and $\phi _{o}$) based on the initial
+conditions.
 \end{remark}
 
 \subsection{A third example}
 
-So far we have concentrated on finding $\phi _{o}.$ Let's do a complete
+So far we have concentrated on finding $\phi _{o}.$ Let's do a more complete
 example where we find $\phi _{o,}$ $A,$ and $\omega .$
 
 A particle moving along the $x$ axis in simple harmonic motion starts from
@@ -918,13 +922,13 @@ symbols first
 \textbf{Part (a)}
 
 We can start by recognizing that we can find $\omega $ because we know the
-frequency. 
+frequency. We just use the basic equation. 
 \begin{equation*}
 \omega =2\pi f
 \end{equation*}%
 We also know the amplitude $A=x_{\max }$ which is given. Knowing that%
 \begin{equation*}
-x\left( 0\right) =0=A\cos \left( 0+\phi _{o}\right)
+x\left( 0\right) =0=A\cos \left( 0+\phi _{o}\right) 
 \end{equation*}%
 we can guess that 
 \begin{equation*}
@@ -958,7 +962,7 @@ x\left( t\right) &=&x_{\max }\cos \left( 2\pi ft-\frac{\pi }{2}\right) \\
 
 \textbf{Part (b)}
 
-We have a formula for $v_{\max }$ 
+We have a basic equation for $v_{\max }$ 
 \begin{eqnarray*}
 v_{m} &=&\omega x_{\max } \\
 &=&2\pi fx_{\max }
@@ -966,13 +970,13 @@ v_{m} &=&\omega x_{\max } \\
 to find when this happens, take%
 \begin{equation*}
 v\left( t\right) =v_{\max }=-\omega x_{\max }\sin \left( 2\pi ft-\frac{\pi }{%
-2}\right)
+2}\right) 
 \end{equation*}%
 and recognize that $\sin \left( \theta \right) =1$ is at a maximum when $%
 \theta =\pi /2$ so the entire argument of the sine function must be $\pi /2$
 when we are at the maximum displacement, so 
 \begin{equation*}
-\frac{\pi }{2}=\left( 2\pi ft-\frac{\pi }{2}\right)
+\frac{\pi }{2}=\left( 2\pi ft-\frac{\pi }{2}\right) 
 \end{equation*}%
 or%
 \begin{equation*}
@@ -1268,26 +1272,28 @@ on the string. The tangential component of $F_{g}$ is always directed toward
 $\theta =0.$ This is a restoring force!
 
 Let's call the path the bob takes $s.$ The path, $s$, is along an arc, then
-from Jr. High geometry, we can use the arc-length formula to describe $s$%
+from Jr. High geometry\footnote{%
+From Jr. High, but if you are like me you have forgotten it until now.}, we
+can use the arc-length formula to describe $s$%
 \begin{equation}
-s=L\theta  \tag{10.01a}
+s=L\theta   \tag{10.01a}
 \end{equation}%
 and we can write an equation for the restoring force that brings the bob
 back to its equilibrium position as%
 \begin{eqnarray}
-F_{t} &=&-mg\sin \theta \\
+F_{t} &=&-mg\sin \theta  \\
 &=&m\frac{d^{2}s}{dt^{2}}  \notag \\
 &=&mL\frac{d^{2}\theta }{dt^{2}}  \notag
 \end{eqnarray}%
 or%
 \begin{equation*}
-\frac{d^{2}\theta }{dt^{2}}=-\frac{g}{L}\sin \theta
+\frac{d^{2}\theta }{dt^{2}}=-\frac{g}{L}\sin \theta 
 \end{equation*}%
 This is a harder differential equation to solve. But suppose we are building
 a grandfather clock with our pendulum, and we won't let the pendulum swing
 very far. Then we can take $\theta $ as a very small angle, then 
 \begin{equation}
-\sin \left( \theta \right) \approx \theta
+\sin \left( \theta \right) \approx \theta 
 \end{equation}
 
 In this approximation%
@@ -1507,8 +1513,8 @@ b_{c}=2m\omega _{o}
 
 \begin{remark}
 When $\frac{b}{2\pi }\geq \omega _{o}$ the solution in equation (\ref%
-{dampped solution}) is not valid! You will find out more about this
-situation in your advanced mechanics classes.
+{dampped solution}) is not valid! If you are a mechanical engineer you will
+find out more about this situation in your advanced mechanics classes.
 \end{remark}
 
 \section{Driven Oscillations and Resonance}
@@ -5853,12 +5859,12 @@ interference.\FRAME{dtbpF}{4.1919in}{1.5815in}{0pt}{}{}{Figure}{\special%
 TRUE;display "USEDEF";valid_file "T";width 4.1919in;height 1.5815in;depth
 0pt;original-width 4.2424in;original-height 1.5833in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
-'C:/Users/rtlines/OneDrive - BYU-Idaho/BYUI-Synced/Course Materials/PH123/Lecture_Notes_PH123_V2.2/MJIKJQ0B.wmf';tempfile-properties
-"PR";}} We have such a wavelength shift in the coating. But we don't know
-the wavelength inside the coating. All we know is the radar wavelength, $%
-\lambda _{out}$. We can fix it by writing the wavelength inside in terms of
-the wavelength outside. Earlier in our studies we found that the new
-wavelength will be given by equation (\ref{WavelengthChange})%
+'../../../../PH123/Lecture_Notes_PH123_V2.2/MJIKJQ0B.wmf';tempfile-properties "PR";}%
+} We have such a wavelength shift in the coating. But we don't know the
+wavelength inside the coating. All we know is the radar wavelength, $\lambda
+_{out}$. We can fix it by writing the wavelength inside in terms of the
+wavelength outside. Earlier in our studies we found that the new wavelength
+will be given by equation (\ref{WavelengthChange})%
 \begin{equation*}
 \lambda _{f}=\frac{v_{f}}{v_{i}}\lambda _{i}
 \end{equation*}%
@@ -14525,8 +14531,8 @@ F_{net_{y}} &=&ma_{y}=F_{L_{y}}+F_{2y}
 but we don't know $F_{L_{x}},F_{2x},F_{L_{y}},$ and $F_{2y}.$ But our basic
 equations should include how to make vector components%
 \begin{eqnarray*}
-v_{x} &=&v\cos \theta  \\
-v_{y} &=&v\sin \theta 
+v_{x} &=&v\cos \theta \\
+v_{y} &=&v\sin \theta
 \end{eqnarray*}%
 where $\theta $ is measured from the positive $x$-axis. So%
 \begin{eqnarray*}
@@ -14539,8 +14545,8 @@ and we realize that
 \end{equation*}%
 and that 
 \begin{eqnarray*}
-\cos \left( 0\right)  &=&1 \\
-\sin \left( 0\right)  &=&0
+\cos \left( 0\right) &=&1 \\
+\sin \left( 0\right) &=&0
 \end{eqnarray*}%
 so 
 \begin{eqnarray*}
@@ -14563,8 +14569,8 @@ I will tell you $\theta =\frac{\pi }{4}\unit{rad}$ (or $45\unit{%
 \begin{eqnarray*}
 F_{net_{x}} &=&k_{e}\frac{q_{e}^{2}}{r^{2}}+k_{e}\frac{q_{e}^{2}}{r^{2}}%
 \left( \frac{\sqrt{2}}{2}\right) =k_{e}\frac{q_{e}^{2}}{r^{2}}\left( 1+\frac{%
-\sqrt{2}}{2}\right)  \\
-F_{net_{y}} &=&k_{e}\frac{q_{e}^{2}}{r^{2}}\left( \frac{\sqrt{2}}{2}\right) 
+\sqrt{2}}{2}\right) \\
+F_{net_{y}} &=&k_{e}\frac{q_{e}^{2}}{r^{2}}\left( \frac{\sqrt{2}}{2}\right)
 \end{eqnarray*}%
 and%
 \begin{eqnarray*}
@@ -14643,12 +14649,11 @@ as follows:
 "USEDEF";valid_file "T";width 3.869in;height 2.2449in;depth
 0pt;original-width 3.9142in;original-height 2.26in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
-'NBC7SJ00.wmf';tempfile-properties "XPR";}}%
-where the environment for constant acceleration is drawn as a series of
-arrows in the acceleration direction (downward toward the center of the
-Earth). Anywhere the ball goes the environment is the same. So we draw
-arrows all around the ball to show that the whole environment around the
-ball is the same.
+'NBC7SJ00.wmf';tempfile-properties "XPR";}}where the environment for
+constant acceleration is drawn as a series of arrows in the acceleration
+direction (downward toward the center of the Earth). Anywhere the ball goes
+the environment is the same. So we draw arrows all around the ball to show
+that the whole environment around the ball is the same.
 
 Notice that the environment is described by an acceleration, $g$ given by 
 \begin{equation*}
@@ -29705,7 +29710,8 @@ Harmonic Oscillator\FRAME{dtbpF}{1.8775in}{0.8484in}{0pt}{}{}{Figure}{%
 TRUE;display "USEDEF";valid_file "T";width 1.8775in;height 0.8484in;depth
 0pt;original-width 1.8403in;original-height 0.8164in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
-'C:/Users/rtlines/OneDrive - BYU-Idaho/BYUI-Synced/Course Materials/PH123/Lecture_Notes_Book_V2/LVK7E003.wmf';tempfile-properties "PR";}}
+'../../../../PH123/Lecture_Notes_Book_V2/LVK7E003.wmf';tempfile-properties
+"PR";}}
 
 Remember from Dynamics or PH121 that a mass-spring system will oscillate.
 The mass has kinetic energy because the mass is moving 
@@ -29755,7 +29761,8 @@ Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
 "T";width 3.2659in;height 2.2361in;depth 0pt;original-width
 3.2206in;original-height 2.1958in;cropleft "0";croptop "1";cropright
 "1";cropbottom "0";tempfilename
-'C:/Users/rtlines/OneDrive - BYU-Idaho/BYUI-Synced/Course Materials/PH123/Lecture_Notes_Book_V2/LVK7E004.wmf';tempfile-properties "PR";}}
+'../../../../PH123/Lecture_Notes_Book_V2/LVK7E004.wmf';tempfile-properties
+"PR";}}
 
 We can see that the total energy won't change, and the energy switches back
 and forth from kinetic to potential as the mass moves back and forth. If we
@@ -29767,7 +29774,7 @@ something like this.
 "USEDEF";valid_file "T";width 4.7539in;height 3.5699in;depth
 0pt;original-width 10.0258in;original-height 7.5247in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
-'C:/Users/rtlines/OneDrive - BYU-Idaho/BYUI-Synced/Course Materials/PH123/Lecture_Notes_Book/LVK7E002.wmf';tempfile-properties "PR";}}
+'LVK7E002.wmf';tempfile-properties "XPR";}}
 
 %TCIMACRO{%
 %\TeXButton{Question 223.46.6}{\marginpar {
@@ -30835,8 +30842,7 @@ person in frame $S^{\prime }$. This will be our mover charge.
 "USEDEF";valid_file "T";width 4.8544in;height 2.7665in;depth
 0pt;original-width 4.9201in;original-height 2.7905in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
-'NBD0L901.wmf';tempfile-properties "XPR";}}%
-Is there a force on the charge?
+'NBD0L901.wmf';tempfile-properties "XPR";}}Is there a force on the charge?
 
 If we are with the person in reference frame $S,$ then we must say yes. The
 charge is moving along with frame $S^{\prime }$ with a velocity $%
@@ -30878,12 +30884,12 @@ correct. Both are equally valid.
 "USEDEF";valid_file "T";width 3.48in;height 1.7677in;depth
 0in;original-width 3.4333in;original-height 1.7296in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
-'NBD0L902.wmf';tempfile-properties "XPR";}}%
-In our case, we are considering that person $S$ sees a moving charge. We
-have learned that moving charge will make \emph{both} an electric field 
-\emph{and} a magnetic field. This is the situation from frame $S.$ But
-person $S^{\prime }$ sees a static charge. This charge will \emph{only} make
-an electric field. We need a way to resolve this apparent contradiction.
+'NBD0L902.wmf';tempfile-properties "XPR";}}In our case, we are considering
+that person $S$ sees a moving charge. We have learned that moving charge
+will make \emph{both} an electric field \emph{and} a magnetic field. This is
+the situation from frame $S.$ But person $S^{\prime }$ sees a static charge.
+This charge will \emph{only} make an electric field. We need a way to
+resolve this apparent contradiction.
 
 \subsection{Galilean transformation}
 
@@ -30894,9 +30900,8 @@ frame $S^{\prime }$ again. \FRAME{dhF}{4.8544in}{2.7665in}{0pt}{}{}{Figure}{%
 TRUE;display "USEDEF";valid_file "T";width 4.8544in;height 2.7665in;depth
 0pt;original-width 4.9201in;original-height 2.7905in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
-'NBD0L903.wmf';tempfile-properties "XPR";}}%
-We can't see fields, but we can see acceleration of a particle. Since by
-Newton's second law 
+'NBD0L903.wmf';tempfile-properties "XPR";}}We can't see fields, but we can
+see acceleration of a particle. Since by Newton's second law 
 \begin{equation*}
 F=ma
 \end{equation*}%
@@ -30938,11 +30943,11 @@ of the room as moving the opposite direction. \FRAME{dtbpF}{2.5244in}{%
 "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
 2.5244in;height 2.0254in;depth 0pt;original-width 2.4837in;original-height
 1.9873in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
-'NBD0L905.wmf';tempfile-properties "XPR";}}%
-The notation $V_{S^{\prime }S}$ means the speed of the reference frame $%
-S^{\prime }$ with respect to frame $S $ or in our case the speed of the
-treadmill with respect to the room $\overrightarrow{\mathbf{V}}_{S^{\prime
-}S}=-2\frac{\unit{m}}{\unit{s}}\hat{\imath}.$
+'NBD0L905.wmf';tempfile-properties "XPR";}}The notation $V_{S^{\prime }S}$
+means the speed of the reference frame $S^{\prime }$ with respect to frame $%
+S $ or in our case the speed of the treadmill with respect to the room $%
+\overrightarrow{\mathbf{V}}_{S^{\prime }S}=-2\frac{\unit{m}}{\unit{s}}\hat{%
+\imath}.$
 
 Now suppose the person is running at speed $\overrightarrow{\mathbf{v}}%
 ^{\prime }=1.9\frac{\unit{m}}{\unit{s}}\hat{\imath}^{\prime }$ on the tread
@@ -30951,9 +30956,9 @@ mill in the tread mill frame $S^{\prime }$. \FRAME{dtbpF}{2.6403in}{1.9614in%
 "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
 2.6403in;height 1.9614in;depth 0in;original-width 2.5979in;original-height
 1.9233in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
-'NBD0L906.wmf';tempfile-properties "XPR";}}%
-What is his/her speed with respect to the room? It seems obvious that we
-take the two speeds and add them. 
+'NBD0L906.wmf';tempfile-properties "XPR";}}What is his/her speed with
+respect to the room? It seems obvious that we take the two speeds and add
+them. 
 \begin{equation*}
 \overrightarrow{\mathbf{v}}=1.9\frac{\unit{m}}{\unit{s}}\hat{\imath}^{\prime
 }-2\frac{\unit{m}}{\unit{s}}\hat{\imath}=-0.1\frac{\unit{m}}{\unit{s}}\hat{%
@@ -31337,8 +31342,7 @@ dtbpF}{2.9297in}{1.664in}{0pt}{}{}{Figure}{\special{language "Scientific
 Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
 "T";width 2.9297in;height 1.664in;depth 0pt;original-width
 2.9572in;original-height 1.6666in;cropleft "0";croptop "1";cropright
-"1";cropbottom "0";tempfilename
-'NBD0L908.wmf';tempfile-properties "XPR";}}%
+"1";cropbottom "0";tempfilename 'NBD0L908.wmf';tempfile-properties "XPR";}}%
 There should be an upward force on the positive charge because the charge is
 moving in a magnetic field. Let's say that \textquotedblleft
 up\textquotedblright\ is the $\hat{\jmath}$ direction and that
@@ -31370,9 +31374,8 @@ force if we change frames to ride along with the loop. \FRAME{dtbpF}{3.9763in%
 "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
 3.9763in;height 1.6436in;depth 0pt;original-width 4.0242in;original-height
 1.6462in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
-'NBD0L909.wmf';tempfile-properties "XPR";}}
-Let's use our transformations to find the $E$ and $B$-fields in the new
-reference frame. Then 
+'NBD0L909.wmf';tempfile-properties "XPR";}} Let's use our transformations to
+find the $E$ and $B$-fields in the new reference frame. Then 
 \begin{eqnarray*}
 \overrightarrow{\mathbf{E}}^{\prime } &=&\overrightarrow{\mathbf{E}}_{\text{%
 self-charge}}+\overrightarrow{\mathbf{V}}_{S^{\prime }S}\times 
@@ -31493,9 +31496,8 @@ charges\textquotedblright\ inclosed in the surface.\ \FRAME{dhF}{3.3501in}{%
 "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
 3.3501in;height 2.4632in;depth 0pt;original-width 9.6397in;original-height
 7.0746in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
-'NBD0L90B.wmf';tempfile-properties "XPR";}}%
-We can see that every field line that leaves comes back in. That is how we
-defined zero net flux, so 
+'NBD0L90B.wmf';tempfile-properties "XPR";}}We can see that every field line
+that leaves comes back in. That is how we defined zero net flux, so 
 \begin{equation*}
 \Phi _{B}=\oint \mathbf{B}\times d\mathbf{A}=0
 \end{equation*}%
@@ -32534,8 +32536,8 @@ Particle Reactivity, ACERC Conference Presentation, February 17, 2005)}}{%
 "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
 3.1695in;height 2.4025in;depth 0pt;original-width 6.5328in;original-height
 4.9459in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
-'C:/Users/rtlines/OneDrive - BYU-Idaho/BYUI-Synced/Course Materials/PH220/Lecture_Notes_116/Laser_Levitation.wmf';tempfile-properties
-"XNPR";}}
+'../../../../PH220/Lecture_Notes_116/Laser_Levitation.wmf';tempfile-properties "NPR";}%
+}
 
 In the picture you are seeing a single small particle that is floating on a
 laser beam. the laser beam is directed upward. The force due to gravity
@@ -32589,10 +32591,9 @@ TRUE;num-x-gridlines 25;num-y-gridlines 25;plotstyle "patch";axesstyle
 "[linear:XYZ:RGB:0x00ff0000:0x000000ff]";surfaceStyle "Color
 Patch";num-x-gridlines 25;num-y-gridlines 25;surfaceMesh "Mesh";VCamFile
 'LVRN4L0T.xvz';valid_file "T";tempfilename
-'LVRNRC0A.wmf';tempfile-properties "XPR";}}From
-this you can see why we usually stand antennas straight up and down. Then
-the transmission travels parallel to the Earth's surface, where receivers
-are more likely to be.
+'LVRNRC0A.wmf';tempfile-properties "XPR";}}From this you can see why we
+usually stand antennas straight up and down. Then the transmission travels
+parallel to the Earth's surface, where receivers are more likely to be.
 
 Speaking of receivers, of course the receiver works like a transmitter, only
 backwards. The EM waves that hit the receiving antenna accelerate the
