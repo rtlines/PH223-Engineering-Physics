@@ -11,7 +11,7 @@
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=Manual}
 %TCIDATA{Created=Thursday, June 02, 2011 09:40:55}
-%TCIDATA{LastRevised=Thursday, October 19, 2023 12:26:12}
+%TCIDATA{LastRevised=Tuesday, November 07, 2023 16:56:21}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 %TCIDATA{<META NAME="DocumentShell" CONTENT="Style Editor\TLLectureNotes">}
 %TCIDATA{Language=American English}
@@ -16946,7 +16946,7 @@ data, so he could compare charges on different droplets. He found that no
 matter what the value for $q_{m},$ it was a multiple of a value, $%
 q_{e}=1.602\times 10^{-19}\unit{C}.$ So%
 \begin{equation*}
-q_{m}=nq_{e}\qquad n=0,\pm 1,\pm 2,\ldots 
+q_{m}=nq_{e}\qquad n=0,\pm 1,\pm 2,\ldots
 \end{equation*}%
 to within about $1\%.$\footnote{%
 There is actually some controversy about this. Apparently Millikan and his
@@ -17270,7 +17270,7 @@ Figure}{\special{language "Scientific Word";type
 "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
 1.6976in;height 1.1796in;depth 0pt;original-width 3.7256in;original-height
 2.5815in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
-'NBC9FB0D.wmf';tempfile-properties "XPR";}}Notice that as usually, just the
+'NBC9FB0D.wmf';tempfile-properties "XPR";}}Notice that as usual, just the
 environmental field is drawn. There is a field from the dipole, too, \FRAME{%
 dhF}{1.2548in}{0.806in}{0pt}{}{}{Figure}{\special{language "Scientific
 Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
@@ -17296,8 +17296,8 @@ the motion of the mover object we are studying. \FRAME{dhF}{1.6976in}{%
 2.5815in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
 'NBC9FB0H.wmf';tempfile-properties "XPR";}}To understand these figures,we
 have to remember that the red field arrows are an \emph{external field} that
-is, the dipole is not making this field. something else must be. We did not
-draw that something else. Since it is a uniform field, it is probably a
+is, the dipole is not making this field, so something else must be. We did
+not draw that something else. Since it is a uniform field, it is probably a
 capacitor. Here is what it might look like\FRAME{dhF}{1.753in}{1.9588in}{0pt%
 }{}{}{Figure}{\special{language "Scientific Word";type
 "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
@@ -17557,8 +17557,9 @@ Let's go back to our charged balloon from many lectures ago. We found that
 the charge \textquotedblleft leaked off\textquotedblright\ our balloon. We
 can see why now. The water molecules in the air are attracted to the
 charges, and stick to them. When the water molecules float off, they will
-take our charge with them. We can calculate the net force easily with our
-field from a dipole that we found earlier, 
+take our charge with them. For this problem, the dipole is the environment
+and our balloon electron is the moving charge. We can calculate the net
+force easily with our field from a dipole that we found earlier, 
 \begin{equation*}
 \overrightarrow{\mathbf{E}}_{y}=\frac{2}{4\pi \epsilon _{o}}\frac{%
 \overrightarrow{\mathbf{p}}}{L^{3}}
@@ -17582,11 +17583,13 @@ the same magnitude and opposite direction so%
 \begin{equation*}
 F_{dipole}=-1.\,\allowbreak 786\,2\times 10^{-26}\unit{N}
 \end{equation*}%
-We could also use Coulomb's law for a point charge, since we know the field
-equation. Taking the point charge as the environmental charge and the dipole
-charges as the movers,%
+We could do this problem the other way, thinking of the point charge as the
+environment and the dipole as the moving object. We know Coulomb's law for a
+point charge. So we use it to find the force on the individual parts of the
+dipole. We have to be careful because the minus charge is at a different $r$
+value than the positive charge. 
 \begin{eqnarray*}
--qE_{\text{large}}+qE_{\text{small}} &=&ma_{x} \\
+-qE_{-}+qE_{+} &=&ma_{x} \\
 -q\left( \frac{1}{4\pi \epsilon _{o}}\frac{Q}{r_{-}^{2}}\right) +q\left( 
 \frac{1}{4\pi \epsilon _{o}}\frac{Q}{r_{+}^{2}}\right) &=&ma_{x}
 \end{eqnarray*}%
@@ -17597,8 +17600,7 @@ or
 \end{equation*}%
 this is the net force on a dipole due to the point charge.
 
-From our estimations, the effective charge on one side of the water molecule
-is 
+The effective charge on one side of the water molecule is 
 \begin{eqnarray*}
 q &=&\frac{p}{a}=\frac{6.2\times 10^{-30}\unit{C}\unit{m}}{3.9\times 10^{-12}%
 \unit{m}} \\
@@ -17760,7 +17762,8 @@ If the interior cylinder is positively charged and the exterior cylinder is
 negatively charged, we have a situation much like the capacitor. Each
 cylinder has a field outside the system, but those fields cancel out if
 there are equal charges on each cylinder. This situation is similar to a
-coaxial cable, and we will revisit it later in the course.
+coaxial cable, and we will revisit it later in the course.\footnote{%
+Indeed, this coaxial cables have a capacitance!}
 
 For the charge configurations we have drawn so far, we must keep in mind
 that they are infinite in at least one dimension. Finite configurations of
@@ -17925,9 +17928,8 @@ lines.
 "USEDEF";valid_file "T";width 2.1084in;height 2.4362in;depth
 0pt;original-width 4.3768in;original-height 5.0609in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
-'Electric_Flux/flux_definition_3.wmf';tempfile-properties "XNPR";}}
-
-Of course either way gives the same $\theta .$
+'Electric_Flux/flux_definition_3.wmf';tempfile-properties "XNPR";}}Of course
+either way gives the same $\theta .$
 
 Now our definition of $\Phi $ can be made to work. We want the number of
 field lines passing through $A,$ but of course, now there are fewer lines
@@ -18231,9 +18233,13 @@ Now let's look at $\phi $
 "1";cropright "1";cropbottom "0";tempfilename
 'LTUWDI9Q.wmf';tempfile-properties "XPR";}}$\phi $ also forms a circle on
 the sphere, but it's size depends on $\theta .$ Near the north pole, the
-radius of the $\phi $-circle is very small. At $\theta =0$, the $\phi $%
--circle is in the $xy$ plane and has radius $r.$ We can write the radius of
-the $\phi $-circle as a projection over $90\unit{%
+radius of the $\phi $-circle is very small. At $\theta =90\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}$, the $\phi $-circle is in the $xy$ plane and has radius $r.$ We can write
+the radius of the $\phi $-circle as a projection over $90\unit{%
 %TCIMACRO{\U{b0}}%
 %BeginExpansion
 {{}^\circ}%
@@ -18546,18 +18552,22 @@ surface so $\overrightarrow{\mathbf{E}}\cdot d\overrightarrow{\mathbf{A}}%
 
 Using geometry we can arrange to make nearly all of our flux problems like
 this. To demonstrate, let's take the case of a point charge that is off
-center.\FRAME{dhF}{2.7121in}{1.6743in}{0pt}{}{}{Figure}{\special{language
-"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
-"USEDEF";valid_file "T";width 2.7121in;height 1.6743in;depth
+center in a spherical surface.\FRAME{dhF}{2.7121in}{1.6743in}{0pt}{}{}{Figure%
+}{\special{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
+TRUE;display "USEDEF";valid_file "T";width 2.7121in;height 1.6743in;depth
 0pt;original-width 2.6697in;original-height 1.638in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
-'LTUWDI9Y.wmf';tempfile-properties "XPR";}}This would make for a difficult
-integration because $\overrightarrow{\mathbf{E}}$ and $d\overrightarrow{%
-\mathbf{A}}$ have different directions as we go around the sphere. But let's
-consider, would there be less flux through the surface than there was when
-the charge was centered in the sphere? Every field line that is generated
-will still leave the surface. Flux gives us the amount of field that
-penetrates the surface.\footnote{%
+'LTUWDI9Y.wmf';tempfile-properties "XPR";}}Remember, we made up this
+surface. So we can place the surface anywhere we like. And this time we
+would like the charge to be off center. We will call these made up surfaces 
+\emph{Gaussian surfaces} after the matematicialn that thought up this method
+of avoiding integrals. Having the charge off center would make for a
+difficult integration because $\overrightarrow{\mathbf{E}}$ and $d%
+\overrightarrow{\mathbf{A}}$ have different directions as we go around the
+sphere. But let's consider, would there be less flux through the surface
+than there was when the charge was centered in the sphere? Every field line
+that is generated will still leave the surface. Flux gives us the amount of
+field that penetrates the surface.\footnote{%
 Think of water flow rate again. We could place the end of a garden hose in a
 wire mesh container. The water would flow out the hose end and through the
 wire mesh sides of the container. The flow rate tells us how much water
@@ -18626,14 +18636,23 @@ of charge that are positive.
 
 This leaves us with a fantastic time savings law
 
+%TCIMACRO{%
+%\TeXButton{Note}{\begin{Note}
+%The electric flux $\Phi $ through any closed surface is equal to the net
+%charge inside the surface multiplied by $4\pi k_{e}.$ The closed surface is
+%often called a \emph{Gaussian Surface.}\begin{equation}
+%\Phi _{E}=\doint \vec{E}\cdot d\vec{A}=\frac{Q_{inside}}{\varepsilon _{o}}
+%\end{equation}
+%\end{Note}}}%
+%BeginExpansion
 \begin{Note}
 The electric flux $\Phi $ through any closed surface is equal to the net
 charge inside the surface multiplied by $4\pi k_{e}.$ The closed surface is
-often called a \emph{Gaussian Surface.}%
-\begin{equation}
+often called a \emph{Gaussian Surface.}\begin{equation}
 \Phi _{E}=\doint \vec{E}\cdot d\vec{A}=\frac{Q_{inside}}{\varepsilon _{o}}
 \end{equation}
-\end{Note}
+\end{Note}%
+%EndExpansion
 
 This was first expressed by Gauss, and therefore this expression is called
 Gauss' law.
@@ -19169,14 +19188,15 @@ extra charge will all be on the surface if there is no electric current.
 0pt;original-width 3.3927in;original-height 4.5939in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
 'LZUSY705.wmf';tempfile-properties "XPR";}}We can then draw a Gaussian
-surface, to match the symmetry of the conductor. What is the charge inside?
-It is zero, since the reaming charge is all bound up in atoms and balances
-out. Since there is no net charge, there is no net flux. If there is no
-flux, there is no net field inside a conductor that is in static equilibrium.
+surface, to match the symmetry of the conductor. What is the charge inside
+the Gaussian surface? It is net zero, since the reaming charge is all bound
+up in atoms and balances out. Since there is no net charge, there is no net
+flux. If there is no flux, there is no net field inside a conductor that is
+in static equilibrium.
 
 Note that if we connected this conductor to both ends of a battery, we would
-have a field in the conductor, so we must remember that static equilibrium
-is a special case.
+have a field in the conductor generated by the battery and the charge flow
+it creates, so we must remember that static equilibrium is a special case.
 
 If we don't connect the conductor to the ground or a battery, we can say: 
 \emph{The net electric field is zero everywhere inside the conducting
@@ -19224,25 +19244,27 @@ or is it all right at the edge of the metal?
 Let's look at this again now that we know Gauss' law. Let's envision a
 conducting object with a matching Gaussian surface.
 
-\FRAME{dhF}{1.9424in}{2.2329in}{0in}{}{}{Figure}{\special{language
+\FRAME{dtbpF}{1.6944in}{1.9491in}{0in}{}{}{Figure}{\special{language
 "Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
-"USEDEF";valid_file "T";width 1.9424in;height 2.2329in;depth
-0in;original-width 1.9043in;original-height 2.1923in;cropleft "0";croptop
+"USEDEF";valid_file "T";width 1.6944in;height 1.9491in;depth
+0in;original-width 1.6718in;original-height 1.9273in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
-'LZURZF00.wmf';tempfile-properties "XPR";}}We know the field inside the
+'S35K4C00.wmf';tempfile-properties "XPR";}}We know the field inside the
 conductor is zero. So no field lines can leave or enter the Gaussian
 surface. So no charge can be inside or we would have a net flux, and,
 therefor, a field. We can move the Gaussian surface from the center of the
 conductor and grow it until it is just barely smaller than the surface of
 the conductor, and there still must be no field, so no charge inside. \FRAME{%
-dhF}{2.0271in}{2.4561in}{0in}{}{}{Figure}{\special{language "Scientific
+dtbpF}{1.7921in}{2.1654in}{0in}{}{}{Figure}{\special{language "Scientific
 Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
-"T";width 2.0271in;height 2.4561in;depth 0in;original-width
-1.9882in;original-height 2.4146in;cropleft "0";croptop "1";cropright
-"1";cropbottom "0";tempfilename 'LZUS0401.wmf';tempfile-properties "XPR";}}%
+"T";width 1.7921in;height 2.1654in;depth 0in;original-width
+1.7703in;original-height 2.1444in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'S35K4V01.wmf';tempfile-properties "XPR";}}%
 We can make this Gaussian surface as close to the actual surface as we like,
 and still there must be no field inside. Thus all the excess charge must be
-on the surface. It is not distributed at any depth in the material.
+on the surface. It is not distributed at any depth in the material.\footnote{%
+For our chemists, our quantum picture will modify this reasoning a little,
+since we will view electrons as waves that extend out into space a bit.}
 
 \subsection{Field lines leave normal to the surface}
 
@@ -19272,19 +19294,20 @@ we call this \emph{normal} to the surface). \FRAME{dhF}{1.9268in}{1.6924in}{%
 surface, and neighboring charges cancel all but the normal components of the
 field, so the field lines go straight out. Notice that farther from the
 conductor the field lines may bend, but they start out leaving the surface
-perpendicular to the surface. Let's draw a conducting object. \FRAME{dhF}{%
-2.041in}{3.0831in}{0pt}{}{}{Figure}{\special{language "Scientific Word";type
-"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-2.041in;height 3.0831in;depth 0pt;original-width 2.002in;original-height
-3.039in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
-'LTUWDJAB.wmf';tempfile-properties "XPR";}}Consider what would happen if it
-were not true that the field lines left perpendicular to a conductor surface
-when the conductor was in equilibrium. \FRAME{dhF}{1.7616in}{1.6328in}{0pt}{%
-}{}{Figure}{\special{language "Scientific Word";type
-"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-1.7616in;height 1.6328in;depth 0pt;original-width 1.7236in;original-height
-1.5965in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
-'LZUSY703.wmf';tempfile-properties "XPR";}}There would be a horizontal
+perpendicular to the surface. Let's draw a conducting object. \FRAME{dtbpF}{%
+1.4224in}{2.1645in}{0pt}{}{}{Figure}{\special{language "Scientific
+Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
+"T";width 1.4224in;height 2.1645in;depth 0pt;original-width
+1.7616in;original-height 2.6965in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'S35K8T02.wmf';tempfile-properties "XPR";}}%
+Consider what would happen if it were not true that the field lines left
+perpendicular to a conductor surface when the conductor was in equilibrium. 
+\FRAME{dtbpF}{2.0721in}{1.916in}{0in}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+"USEDEF";valid_file "T";width 2.0721in;height 1.916in;depth
+0in;original-width 2.0511in;original-height 1.8941in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
+'S35K9Q03.wmf';tempfile-properties "XPR";}}There would be a horizontal
 component of the field in such a case. The component of the field along the
 surface would cause the charge to move. In the figure there would be a net
 force to the left. This force would rearrange the charge until there was no
@@ -19309,7 +19332,8 @@ in strong electric fields. To complete the effect, we will also need to show
 that magnetic fields are canceled by such a conducting box.
 
 We should also consider what happens when we place a charge in a conductive
-container. Does this charge get screened off?
+container. Does this charge get screened off? That is, would the conductive
+container prevent us from telling if there was a charge inside?
 
 \FRAME{dhF}{2.4569in}{1.7322in}{0pt}{}{}{Figure}{\special{language
 "Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
@@ -19318,14 +19342,14 @@ container. Does this charge get screened off?
 "1";cropright "1";cropbottom "0";tempfilename
 'LZUSY704.wmf';tempfile-properties "XPR";}}In this case, the answer is no.
 The charges in the conductor will move because of the charge contained
-inside the conducting container. The negative charge will move in the case
-shown, and it will move to the outside of the container surface. This leaves
-positive charges behind on the inner surface. We know that there will be no
-field inside the conductor, but think of placing a Gaussian surface around
-all of the container and charge. There will be a net charge inside the
-Gaussian surface, so there will be a field. The inner surface charge does
-cancel the charge from the charged sphere. But the negative charge on the
-conductor surface creates a new field.
+inside the conducting container. The negative charge will move as shown, and
+it will move to the outside of the container surface. This leaves positive
+charges behind on the inner surface. We know that there will be no field
+inside the conductor material, itself. But think of placing a Gaussian
+surface around all of the container and charge. There will be a net charge
+inside the Gaussian surface, so there will be a field. The inner surface
+charge does cancel the charge from the charged sphere. But the negative
+charge on the conductor surface creates a new field.
 
 \subsection{Charge tends to accumulate at sharp points}
 
@@ -19349,18 +19373,15 @@ We remember studying energy back in PH121 or Statics and Dynamics.%
 %\begin{minipage}[t]{1in}
 %\small{Question 223.28.5}
 %\end{minipage}
-%}}}%
+%}} }%
 %BeginExpansion
 \marginpar {
 \hspace{-0.5in}
 \begin{minipage}[t]{1in}
 \small{Question 223.28.5}
 \end{minipage}
-}%
+}
 %EndExpansion
-
-\subsection{Review of Work and Energy}
-
 Remember the Work-Energy theorem?%
 %TCIMACRO{%
 %\TeXButton{Far Board}{\marginpar {
@@ -19396,13 +19417,12 @@ W_{C}\right) $ is the negative of the electrical potential energy change%
 \begin{equation}
 W_{C}=-\Delta U_{C}
 \end{equation}%
-and we are saying that the Coulomb force is conservative.
+and we are saying that the Coulomb force is conservative. But is the Coulomb
+force conservative? Remember that the equation for the force due to gravity
+and the equation for the Coulomb force are very alike. So we might guess
+that the Coulomb force is conservative like gravity--and we would be right!
 
-Remember that the equation for the force due to gravity and the equation for
-the Coulomb force are very alike. So we might guess that the Coulomb force
-is conservative like gravity--and we would be right!
-
-\subsection{Charge in a uniform field}
+\subsection{Energy of a Charge in a uniform field}
 
 %TCIMACRO{%
 %\TeXButton{Question 223.28.6}{\marginpar {
@@ -19651,9 +19671,11 @@ much larger Earth. But hopefully you also considered objects farther away
 from the Earth's surface, or larger objects like the moon. For these
 objects, $mgy$ is not enough to describe the potential energy. The reason is
 that if we are far away from the center of the Earth we will notice that the
-Earth's gravitational field is not uniform. It curves and diminishes with
-distance. So, if an object is large, it will feel the change in the
-gravitational field over its (the object's) large volume.
+Earth's gravitational field\footnote{%
+Of course, the gravitational field is really the warping of space-time. But
+that is a subject for another physics class.} is not uniform. It curves and
+diminishes with distance. So, if an object is large, it will feel the change
+in the gravitational field over its (the object's) large volume.
 
 We have the tools to find the potential energy of this situation. We know
 that a change in potential energy is just an amount of work%
@@ -20002,7 +20024,7 @@ Suppose we have three like charges. What will the potential energy of the
 three-charge system be?
 
 Let's consider the charges one at a time. If I move one charge, $q_{1},$
-from infinitely far away. there is no environemntal field electric, so there
+from infinitely far away. there is no environemntal electric field, so there
 is no force, since we need two charges for there to be a force. Then there
 is no potential energy. This is like a rock floating in deep space far away
 from anything else in the universe. It just sits there, there is no
@@ -20330,14 +20352,15 @@ must be
 which has been named the \emph{Volt} and is given the symbol, $\unit{V}.$
 
 Now this may seem familiar. Can you think of anything that carries units of
-volts? Let's consider a battery. In our clickers we have $1.5$ volt
-batteries. Inside the battery we would expect that a charge would experience
-a potential energy difference. We buy the battery so we can convert that
-potential energy into some other form of energy (radio wave energy for our
-clickers). The potential energy achieved depends on the charge carrier. We
-would have electrons in metals but we would have ions in a solution. This is
-so convenient to express the potential energy per unit charge, that it is
-the common form or expressing the energy given by most electrical sources.%
+volts? Let's consider a battery. In our cell phones we have something like a 
+$3.8\unit{V}$ lithium-ion battery. Inside the battery we would expect that a
+charge would experience a potential energy difference. We use the battery so
+we can convert that potential energy into some other form of energy (e.g.
+radio wave energy for our phone's wifi). The potential energy achieved
+depends on the charge carrier. We would have electrons in metals but we
+would have ions in a solution. This is so convenient to express the
+potential energy per unit charge, that it is the common form or expressing
+the energy given by most electrical sources.%
 %TCIMACRO{%
 %\TeXButton{Question 223.30.2}{\marginpar {
 %\hspace{-0.5in}
@@ -20388,11 +20411,12 @@ the problem, we have to stick with our choice.
 
 One logical choice for many electrical appliances is to set the Earth's
 potential equal to zero. Note! this is not true for point mass problems
-where we have already set the potential energy $U=0$ at $r=\infty .$ In our
-gravitational analogy, this is a little bit like mean sea level. Think of
-river flow. The lowest point on the planet is not mean sea level. But any
-water above mean sea level will tend to flow downward to this point. Of
-course, if we have land below mean sea level, the water would tend to
+where we have already set the potential energy $U=0$ at $r=\infty .$
+
+In our gravitational analogy, this is a little bit like mean sea level.
+Think of river flow. The lowest point on the planet is not mean sea level.
+But any water above mean sea level will tend to flow downward to this point.
+Of course, if we have land below mean sea level, the water would tend to
 continue downward (like water flows to the Dead Sea). The direction of water
 flow is given by the potential energy difference, not that actual value of
 the potential energy. It is the same way with electric potential. If we have
@@ -20419,12 +20443,14 @@ grounding rod or metal water pipe, it will be at the electric potential of
 the Earth while it's positive terminal will be at $\Delta V=9\unit{V}$ above
 the Earth's potential. Likewise, in your home, you probably have a $110\unit{%
 V}$ outlet. One wire is likely set to the potential of the Earth by
-connecting it to a ground rod. The other is at $\Delta V=110\unit{V}$ above
-it.
+connecting it to a ground rod. The others are at $\Delta V=110\unit{V}$
+above it\footnote{%
+House voltages are alternating voltages. We will deal with them later in
+this course.}.
 
-In our clickers, we don't have a ground wire, so we cannot guarantee that
-the negative terminal of the battery is at the same potential as the Earth.
-If our appliances in our house are not all grounded to the same potential,
+In our phones, we don't have a ground wire, so we cannot guarantee that the
+negative terminal of the battery is at the same potential as the Earth. If
+our appliances in our house are not all grounded to the same potential,
 there is a danger that there will be a large enough difference in their
 potentials (think potential energy per unit charge) to cause the charges to
 accelerate from one appliance to another. It is the difference in potential
@@ -20519,7 +20545,7 @@ We need a way to envision this new environmental quantity that, like a
 field, has a value throughout all space. Our analogy with gravity gives us
 an idea. Suppose we envision the height potential energy as the top of a
 hill. Then the low potential energy would be the bottom of the hill. We know
-from our Boy Scout and Girl's Camp experiences how to show a change in
+from our Young Men and Youn Women's Camp experiences how to show a change in
 gravitational potential energy. We plot on a map lines of constant potential
 energy. We call it constant elevation, but since near the Earth's surface $%
 U_{g}=mgh$ the potential energy is proportional to the height, so we can say
@@ -20621,7 +20647,8 @@ K_{f}=-q\Delta V
 \end{equation*}%
 We can find the amount of energy in Jules%
 \begin{eqnarray*}
-K_{f} &=&\left( 1.6\times 10^{-19}\unit{C}\right) \left( 1\unit{V}\right) \\
+K_{f} &=&-\left( 1.6\times 10^{-19}\unit{C}\right) \left( -1\unit{V}\right)
+\\
 &=&\allowbreak 1.\,\allowbreak 6\times 10^{-19}\unit{J}
 \end{eqnarray*}%
 since we defined a volt as $\unit{V}=\frac{\unit{J}}{\unit{C}}$ .
@@ -20885,7 +20912,7 @@ we get only a radial contribution since $\mathbf{\hat{r}}\cdot \mathbf{\hat{%
 \begin{eqnarray*}
 \overrightarrow{\mathbf{E}}\cdot d\overrightarrow{\mathbf{s}} &=&\frac{1}{%
 4\pi \epsilon _{o}}\frac{q}{r^{2}}\mathbf{\hat{r}}\cdot ds\cos \phi \mathbf{%
-\hat{r}+0} \\
+\hat{r}}+0 \\
 &=&\frac{1}{4\pi \epsilon _{o}}\frac{q}{r^{2}}ds\cos \phi
 \end{eqnarray*}%
 where $\phi $ is the angle between $d\overrightarrow{\mathbf{s}}$ and $%
@@ -20907,10 +20934,13 @@ dr \\
 &=&\left. \frac{q}{4\pi \epsilon _{o}}\frac{1}{r}\right\vert _{r_{A}}^{r_{B}}
 \end{eqnarray*}%
 so%
-\begin{equation*}
-\Delta V=\frac{q}{4\pi \epsilon _{o}}\left( \frac{1}{r_{B}}-\frac{1}{r_{A}}%
-\right)
-\end{equation*}
+\begin{eqnarray*}
+\Delta V &=&\frac{q}{4\pi \epsilon _{o}}\left( \frac{1}{r_{B}}-\frac{1}{r_{A}%
+}\right) \\
+&=&\frac{1}{4\pi \epsilon _{o}}\frac{q}{r_{B}}-\frac{1}{4\pi \epsilon _{o}}%
+\frac{q}{r_{A}} \\
+&=&V_{B}-V_{A}
+\end{eqnarray*}
 
 %TCIMACRO{%
 %\TeXButton{Question 223.31.1}{\marginpar {
@@ -20928,13 +20958,14 @@ so%
 }%
 %EndExpansion
 Note that the potential depends only on the radial distances from the point
-charge--not the path. We would expect this for conservative fields.
+charge--not the path. We would expect this for conservative fields (where
+energy is conserved).
 
 We know that, like potential energy, we may choose our zero point for the
-electric potential. For a point charge, we often take the $r_{A}=\infty $
-point as $V=0$. This is probably not a surprise, since $U\rightarrow 0$ when 
-$r\rightarrow \infty .$ So you will often see the potential for the point
-charge written as just%
+electric potential. For a point charge, we said we would take the $%
+r_{A}=\infty $ point as $V=0$.\footnote{%
+Remember this is because $U\rightarrow 0$ when $r\rightarrow \infty .$} So
+you will often see the potential for the point charge written as just%
 \begin{equation*}
 \Delta V=\frac{1}{4\pi \epsilon _{o}}\frac{q}{r_{B}}
 \end{equation*}%
@@ -20948,10 +20979,10 @@ Plot}{\special{language "Scientific Word";type "MAPLEPLOT";width
 4.1597in;height 2.8573in;depth 0pt;display "USEDEF";plot_snapshots
 TRUE;mustRecompute FALSE;lastEngine "MuPAD";xmin "-50";xmax "50";ymin
 "-50";ymax "50";xviewmin "-50";xviewmax "50";yviewmin "-50";yviewmax
-"50";zviewmin "2.55817686073E-9";zviewmax
-"3.69629993162E-7";rangeset"XYZ";phi 65;theta 113;cameraDistance
-"1.21794";cameraOrientation "[0,0,386729]";cameraOrientationFixed
-TRUE;plottype 5;labeloverrides 4;z-label "V";axesFont "Times New
+"50";zviewmin "2.55818E-9";zviewmax "3.6963E-7";rangeset"XYZ";phi 65;theta
+113;cameraDistance "1.21794";cameraOrientation
+"[0,0,386729]";cameraOrientationFixed TRUE;plottype 5;labeloverrides
+4;z-label "V";axesFont "Times New
 Roman,12,0000000000,useDefault,normal";num-x-gridlines 25;num-y-gridlines
 25;plotstyle "patch";axesstyle "normal";axestips FALSE;plotshading
 "NONE";lighting 0;xis \TEXUX{x};yis \TEXUX{y};var1name \TEXUX{$x$};var2name
@@ -20975,8 +21006,8 @@ kind of do all this backwards. We usually say we will charge up something
 until it has a particular voltage. This is because we have batteries or
 power supplies that are charge delivery services. They can provide enough
 charge to make some object have the desired voltage. By \textquotedblleft
-desired voltage\textquotedblright\ we always mean the voltage at the
-conductor surface.
+desired voltage\textquotedblright\ we always mean the voltage at a conductor
+surface in our apparatus.
 
 Early \emph{electrodes} were spherical, so let's consider making a spherical
 conductor have a particular potential at it's surface. A sphere of charge
@@ -21085,11 +21116,11 @@ potential
 V=\frac{1}{4\pi \epsilon _{o}}\left( \frac{q_{1}}{r_{1}}+\frac{q_{2}}{r_{2}}%
 \right)
 \end{equation*}%
-becomes large near $r_{1}=R$ or $r_{2}=R$ where $R$ is the charge radius
-(which is very small, since these are point charges). Plotting the potential
-in two dimensions is also interesting. We see that near the positive charge
-we have a tall mountain-like potential and near the negative charge we have
-a deep well-like potential.
+becomes large near $r_{1}=R_{o}$ or $r_{2}=R_{o}$ where $R_{o}$ is the
+charge radius (which is very small, since these are point charges). Plotting
+the potential in two dimensions is also interesting. We see that near the
+positive charge we have a tall mountain-like potential and near the negative
+charge we have a deep well-like potential.
 
 \FRAME{dtbpFX}{3.7222in}{2.5573in}{0pt}{}{}{Plot}{\special{language
 "Scientific Word";type "MAPLEPLOT";width 3.7222in;height 2.5573in;depth
@@ -21592,11 +21623,10 @@ wire. But for $r_{A,}r_{B}\ll L$ this works.
 
 We should also pause to think of the implications of this result for
 electronic equipment design. Our result means that adjacent wires in a cable
-or on a circuit board will feel a potential (in ME210 you called this a
-voltage) due to their neighbors--something we have to take into
-consideration in the design to ensure your equipment will work! This is one
-reason why we use shielded cables for delicate instruments, and for data
-lines, etc.
+or on a circuit board will feel a potential due to their
+neighbors--something we have to take into consideration in the design to
+ensure your equipment will work! This is one reason why we use shielded
+cables for delicate instruments, and for data lines, etc.
 
 As a second example, let's tackle our friendly capacitor problem again. What
 is the potential difference as we cross the capacitor from point $A$ to
@@ -21733,17 +21763,18 @@ When you eat table salt, the NaCl ionic bond splits when exposed to polar
 water molecules, leaving a positively charged Na ion and a negatively
 charged Cl ion. This is very like the \textquotedblleft
 bleeding\textquotedblright\ of charge from our charged balloons that we
-talked about earlier. The water molecules are polar, and the mostly positive
-hydrogens are attracted to the negatively charged Cl ions. This causes a
-sort of tug-o-war for the Cl ions. The positively charged Na ions pull with
-their coulomb force, and so do the positively charged hydrogens of the water
-molecules. If we have lots of water molecules, they win and the NaCl is
-broken apart. Water molecules are polar, but overall neutral. But now, with
-the Na and Cl ions, we have separated charge. We can make this charge flow,
-so we can get electric currents in our bodies. Our nervous system uses the
-positively charged Na ions to form tiny currents into and out of neurons as
-part of how nerve signaling works. Of course, NaCl is a pretty simple
-molecule. We could use more complex chemical reactions to separate charge.
+talked about earlier. We already know that the water molecules are polar,
+and the mostly positive hydrogens are attracted to the negatively charged Cl
+ions. This causes a sort of tug-o-war for the Cl ions. The positively
+charged Na ions pull with their coulomb force, and so do the positively
+charged hydrogens of the water molecules. If we have lots of water
+molecules, they win and the NaCl is broken apart. Water molecules are polar,
+but overall neutral. But now, with the Na and Cl ions, we have separated
+charge. We can make this charge flow, so we can get electric currents in our
+bodies. Our nervous system uses the positively charged Na ions to form tiny
+currents into and out of neurons as part of how nerve signaling works. Of
+course, NaCl is a pretty simple molecule. We could use more complex chemical
+reactions to separate charge.
 
 \section{batteries and emf}
 
@@ -21881,11 +21912,11 @@ Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
 If we had more batteries, we would have more potential difference. Each
 battery \textquotedblleft pumping\textquotedblright\ the charge up to a
 higher potential. Our analogy is not perfect, but it gives some insight into
-why stringing batteries together increases the voltage. Our clickers use
-three $1.5\unit{V}$ batteries for a total potential difference from the
-bottom of the first to the top of the last of 
+why stringing batteries together increases the voltage. A television remote
+likely uses two $1.5\unit{V}$ batteries for a total potential difference
+from the bottom of the first to the top of the last of 
 \begin{equation*}
-\Delta V=3\times 1.5\unit{V}=4.\,\allowbreak 5\unit{V}
+\Delta V=2\times 1.5\unit{V}=3\unit{V}
 \end{equation*}
 
 If you have been introduced to Kirchhoff's loop law, you may see this as
@@ -22007,7 +22038,8 @@ Let's try another. Let's find the electric field due to a disk of charge
 along the axis. We have done this problem before. We know the field should
 be 
 \begin{equation}
-E_{z}=2\pi k_{e}\eta \left( 1-\allowbreak \frac{z}{\sqrt{a^{2}+z^{2}}}\right)
+E_{z}=\frac{2\pi \eta }{4\pi \epsilon _{o}}\left( 1-\allowbreak \frac{z}{%
+\sqrt{a^{2}+z^{2}}}\right)
 \end{equation}%
 and in the previous lectures we found the potential to be%
 \begin{equation}
@@ -22021,18 +22053,19 @@ the $z-$component of the field, $E_{z}$%
 E_{z} &=&-\frac{dV}{dz} \\
 &=&-\frac{d}{dz}\left( \frac{\eta }{2\epsilon _{o}}\left( \allowbreak \sqrt{%
 a^{2}+z^{2}}-\allowbreak z\right) \right) \\
-&=&-\frac{d}{dz}\frac{\eta }{2\epsilon _{o}}\allowbreak \sqrt{a^{2}+z^{2}}-%
-\frac{d}{dz}k_{e}\sigma 2\pi z \\
-&=&-\frac{\eta }{2\epsilon _{o}}\allowbreak \frac{d}{dz}\sqrt{a^{2}+z^{2}}%
-+k_{e}\sigma 2\pi \\
-&=&-\frac{\eta }{2\epsilon _{o}}\allowbreak \frac{z}{\sqrt{a^{2}+z^{2}}}%
-+2\pi k_{e}\sigma \\
+&=&-\frac{d}{dz}\frac{\eta }{2\epsilon _{o}}\allowbreak \sqrt{a^{2}+z^{2}}+%
+\frac{d}{dz}\frac{\eta }{2\epsilon _{o}}z \\
+&=&-\frac{\eta }{2\epsilon _{o}}\allowbreak \frac{d}{dz}\sqrt{a^{2}+z^{2}}+%
+\frac{\eta }{2\epsilon _{o}} \\
+&=&-\frac{\eta }{2\epsilon _{o}}\allowbreak \frac{z}{\sqrt{a^{2}+z^{2}}}+%
+\frac{\eta }{2\epsilon _{o}} \\
 E_{z} &=&\frac{\eta }{2\epsilon _{o}}\left( 1-\allowbreak \frac{z}{\sqrt{%
 a^{2}+z^{2}}}\right)
 \end{eqnarray}%
 or%
 \begin{equation}
-E_{z}=2\pi k_{e}\eta \left( 1-\allowbreak \frac{z}{\sqrt{a^{2}+z^{2}}}\right)
+E_{z}=\frac{2\pi \eta }{4\pi \epsilon _{o}}\left( 1-\allowbreak \frac{z}{%
+\sqrt{a^{2}+z^{2}}}\right)
 \end{equation}%
 But remember that this situation is highly symmetric. We can see by
 inspection that all the $x$ and $y$ components will all cancel out. So this
@@ -22043,47 +22076,48 @@ this we really need values, but instead, let's play a clever trick that some
 of you will see in advanced or older books. I am going to substitute in
 place of $z$ the variable $u=\frac{z}{a}.$ Then%
 \begin{eqnarray*}
-V &=&2\pi \eta k_{e}\left( \allowbreak \sqrt{a^{2}+z^{2}}-\allowbreak
-z\right) \\
-&=&2\pi a\eta k_{e}\left( \allowbreak \sqrt{1+\frac{z^{2}}{a^{2}}}%
--\allowbreak \frac{z}{a}\right) \\
-&=&2\pi a\eta k_{e}\left( \allowbreak \sqrt{1+u^{2}}-\allowbreak u\right)
+V &=&\frac{\eta }{2\epsilon _{o}}_{e}\left( \allowbreak \sqrt{a^{2}+z^{2}}%
+-\allowbreak z\right) \\
+&=&\frac{\eta a}{2\epsilon _{o}}\left( \allowbreak \sqrt{1+\frac{z^{2}}{a^{2}%
+}}-\allowbreak \frac{z}{a}\right) \\
+&=&\frac{\eta a}{2\epsilon _{o}}\left( \allowbreak \sqrt{1+u^{2}}%
+-\allowbreak u\right)
 \end{eqnarray*}%
 and 
 \begin{eqnarray}
-E_{z} &=&2\pi k_{e}\eta \left( 1-\allowbreak \frac{z}{\sqrt{a^{2}+z^{2}}}%
-\right) \\
-&=&2\pi k_{e}\eta \left( 1-\allowbreak \frac{z}{a\sqrt{1+\frac{z^{2}}{a^{2}}}%
-}\right)  \notag \\
-&=&2\pi k_{e}\eta \left( 1-\allowbreak \frac{z}{a\sqrt{1+\frac{z^{2}}{a^{2}}}%
-}\right)  \notag \\
-&=&2\pi k_{e}\eta \left( 1-\allowbreak \frac{\frac{z}{a}}{\sqrt{1+\frac{z^{2}%
-}{a^{2}}}}\right)  \notag \\
-&=&2\pi k_{e}\eta \left( 1-\allowbreak \frac{u}{\sqrt{1+u^{2}}}\right) 
-\notag
+E_{z} &=&\frac{2\pi \eta }{4\pi \epsilon _{o}}\left( 1-\allowbreak \frac{z}{%
+\sqrt{a^{2}+z^{2}}}\right) \\
+&=&\frac{2\pi \eta }{4\pi \epsilon _{o}}\left( 1-\allowbreak \frac{z}{a\sqrt{%
+1+\frac{z^{2}}{a^{2}}}}\right)  \notag \\
+&=&\frac{2\pi \eta }{4\pi \epsilon _{o}}\left( 1-\allowbreak \frac{z}{a\sqrt{%
+1+\frac{z^{2}}{a^{2}}}}\right)  \notag \\
+&=&\frac{2\pi \eta }{4\pi \epsilon _{o}}\left( 1-\allowbreak \frac{\frac{z}{a%
+}}{\sqrt{1+\frac{z^{2}}{a^{2}}}}\right)  \notag \\
+&=&\frac{2\pi \eta }{4\pi \epsilon _{o}}\left( 1-\allowbreak \frac{u}{\sqrt{%
+1+u^{2}}}\right)  \notag
 \end{eqnarray}%
 Both my equation for $V$ and for $E_{z}$ now are in the form of a set of
 constants times a function of $u.$ 
 \begin{eqnarray*}
-V &=&2\pi a\eta k_{e}\left( \allowbreak \sqrt{1+u^{2}}-\allowbreak u\right)
-\\
-&=&2\pi a\eta k_{e}f\left( u\right)
+V &=&\frac{\eta a}{2\epsilon _{o}}\left( \allowbreak \sqrt{1+u^{2}}%
+-\allowbreak u\right) \\
+&=&\frac{\eta a}{2\epsilon _{o}}f\left( u\right)
 \end{eqnarray*}%
 \begin{eqnarray}
-E_{z} &=&2\pi k_{e}\eta \left( 1-\allowbreak \frac{u}{\sqrt{1+u^{2}}}\right)
-\notag \\
-&=&2\pi k_{e}\eta g\left( u\right)
+E_{z} &=&\frac{2\pi \eta }{4\pi \epsilon _{o}}\left( 1-\allowbreak \frac{u}{%
+\sqrt{1+u^{2}}}\right)  \notag \\
+&=&\frac{2\pi \eta }{4\pi \epsilon _{o}}g\left( u\right)
 \end{eqnarray}%
-If I plot $V$ in units of $2\pi a\sigma k_{e}$ (the constants out in front)
-I can see the shape of the curve. It is the function of $f(u).$ I can
-compare this to $E_{z}$ in units of $2\pi k_{e}\sigma .$ The shape of $E_{z}$
-will be $g\left( u\right) .$ Of course we are plotting terms of $u.$ \FRAME{%
-dtbpFX}{2.5288in}{1.6862in}{0pt}{}{}{Plot}{\special{language "Scientific
-Word";type "MAPLEPLOT";width 2.5288in;height 1.6862in;depth 0pt;display
-"USEDEF";plot_snapshots TRUE;mustRecompute FALSE;lastEngine "MuPAD";xmin
-"0";xmax "6";xviewmin "0";xviewmax "6";yviewmin "0";yviewmax
-"1.2";viewset"XY";rangeset"X";plottype 4;labeloverrides 3;x-label
-"u";y-label "Strange Units";axesFont "Times New
+If I plot $V$ in units of $\frac{\eta a}{2\epsilon _{o}}$ (the constants out
+in front) I can see the shape of the curve. It is the function of $f(u).$ I
+can compare this to $E_{z}$ in units of $\frac{2\pi \eta }{4\pi \epsilon _{o}%
+}.$ The shape of $E_{z}$ will be $g\left( u\right) .$ Of course we are
+plotting terms of $u.$ \FRAME{dtbpFX}{2.5288in}{1.6862in}{0pt}{}{}{Plot}{%
+\special{language "Scientific Word";type "MAPLEPLOT";width 2.5288in;height
+1.6862in;depth 0pt;display "USEDEF";plot_snapshots TRUE;mustRecompute
+FALSE;lastEngine "MuPAD";xmin "0";xmax "6";xviewmin "0";xviewmax
+"6";yviewmin "0";yviewmax "1.2";viewset"XY";rangeset"X";plottype
+4;labeloverrides 3;x-label "u";y-label "Strange Units";axesFont "Times New
 Roman,12,0000000000,useDefault,normal";numpoints 100;plotstyle
 "patch";axesstyle "normal";axestips FALSE;xis \TEXUX{u};var1name
 \TEXUX{$u$};function \TEXUX{$\left( \allowbreak \sqrt{1+u^{2}}-\allowbreak
@@ -22094,7 +22128,7 @@ u\right) $};linecolor "green";linestyle 1;pointstyle "point";linethickness
 2;pointstyle "point";linethickness 1;lineAttributes "Dash";var1range
 "0,6";num-x-gridlines 100;curveColor "[flat::RGB:0x000000ff]";curveStyle
 "Line";VCamFile 'LU0NUK0V.xvz';valid_file "T";tempfilename
-'MJ8W4T00.wmf';tempfile-properties "XPR";}}Now we can ask, is this
+'S3MHHQ01.wmf';tempfile-properties "XPR";}}Now we can ask, is this
 reasonable? Does it look like the $E-$field (red dashed line) is the right
 shape for the derivative of the potential (solid green line)? It is also
 comforting to see that as $u$ (a function of $z$) gets larger the field
@@ -22552,14 +22586,13 @@ Something analogous happens when a capacitor is connected to a battery.
 "USEDEF";valid_file "T";width 4.7711in;height 1.8857in;depth
 0pt;original-width 4.8332in;original-height 1.8928in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
-'LUB0P600.wmf';tempfile-properties "XPR";}}
-
-At first the charge is free to flow to the plates, but as the charge builds,
-it takes more work to bring on successive charges.\FRAME{dhF}{4.9112in}{%
-2.3611in}{0pt}{}{}{Figure}{\special{language "Scientific Word";type
-"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-4.9112in;height 2.3611in;depth 0pt;original-width 4.976in;original-height
-2.3771in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'LUB0P600.wmf';tempfile-properties "XPR";}}At first the charge is free to
+flow to the plates, but as the charge builds, it takes more work to bring on
+successive charges.\FRAME{dhF}{4.9112in}{2.3611in}{0pt}{}{}{Figure}{\special%
+{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
+TRUE;display "USEDEF";valid_file "T";width 4.9112in;height 2.3611in;depth
+0pt;original-width 4.976in;original-height 2.3771in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
 'LUB15702.wmf';tempfile-properties "XPR";}}The charges repel each other, so
 the charge already on a capacitor plate repels the new charge arriving from
 the battery. The repelling force gets larger until finally the force
@@ -22577,7 +22610,7 @@ E=\frac{\eta }{2\epsilon _{o}}
 and that for two sheets, one with $+\eta $ and one with $-\eta $ the field
 in between will be 
 \begin{equation*}
-E=\frac{\eta }{2\epsilon _{o}}
+E=\frac{\eta }{\epsilon _{o}}
 \end{equation*}%
 We also know the potential difference between the two plates is just%
 \begin{equation*}
@@ -22712,10 +22745,7 @@ terminal and the plate connected to it.
 
 We can even use our capacitor as a source of electrical power. A camera
 flash uses capacitors to make the burst of light that illuminates the
-subject of your photo. In ME210 you should have studied RC circuits, so you
-will understand that the battery is used to charge the capacitor and then a
-switch is thrown to allow the charge to quickly leave through a different
-circuit, making the flash. \FRAME{dhFU}{1.3941in}{1.7132in}{0pt}{\Qcb{Camera
+subject of your photo. \FRAME{dhFU}{1.3941in}{1.7132in}{0pt}{\Qcb{Camera
 flash unit (Public Domain image by Julo)}}{}{Figure}{\special{language
 "Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
 "USEDEF";valid_file "T";width 1.3941in;height 1.7132in;depth
@@ -22753,16 +22783,16 @@ C=\frac{Q}{\Delta V}=\frac{Q}{k_{e}\frac{Q}{R}}=\frac{R}{k_{e}}=4\pi
 This is the capacitance of a single sphere. Note that $C$ only depends on
 geometry! not on $Q,$ just as we would expect.
 
-But why would we care? If you have taken ME210 you know about RC circuits.
-This says that even if we just connect a ball to, say, the positive terminal
-of a batter, that there will be some capacitance. This capacitance will
-limit the flow of charge to the ball. So it will take time to charge even a
-single conductor. This is always true when a device is initially connected
-to a power source. Often we can ignore such \textquotedblleft
-transient\textquotedblright\ effects because the charging times are still
-small. But in special cases, this may not be possible because the changing
-voltage or charge could damage sensitive equipment. So although this is
-rarely a problem, it is good to keep in the back of our minds.
+But why would we care? This says that even if we just connect a ball to,
+say, the positive terminal of a battery, that there will be some
+capacitance. This capacitance will limit the flow of charge to the ball. So
+it will take time to charge even a single conductor. This is always true
+when a device is initially connected to a power source. Often we can ignore
+such \textquotedblleft transient\textquotedblright\ effects because the
+charging times are still small. But in special cases, this may not be
+possible because the changing voltage or charge could damage sensitive
+equipment. So although this is rarely a problem, it is good to keep in the
+back of our minds.
 
 \subsection{Capacitance of two parallel plates}
 
@@ -22869,7 +22899,7 @@ capacitance using
 \begin{equation*}
 Q=C\Delta V
 \end{equation*}%
-we want just the value of $\Delta V$ so we will plug in the absolute value
+We want just the value of $\Delta V$ so we will plug in the absolute value
 of our result.%
 \begin{equation*}
 \left\vert \Delta V\right\vert =\frac{\lambda }{2\pi \varepsilon _{o}}\ln
@@ -22887,18 +22917,19 @@ C &=&\frac{Q}{\Delta V} \\
 Wow! That was fun! But more importantly, this is a coaxial cable geometry,
 and we can see that coaxial cable will have some capacitance and that that
 capacitance will depend on the geometry of the cable including its length
-and width. This capacitance can affect signals sent through the cable. If
-you have taken ME210 and have considered RC circuits, you can see why. 
-\FRAME{dhFU}{1.5238in}{1.5212in}{0pt}{\Qcb{Increasing amounts of distortion
-in a signal due to increasing cable capacitance.}}{}{Figure}{\special%
-{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
-TRUE;display "USEDEF";valid_file "T";width 1.5238in;height 1.5212in;depth
-0pt;original-width 1.4866in;original-height 1.4849in;cropleft "0";croptop
-"1";cropright "1";cropbottom "0";tempfilename
-'M0FDL201.wmf';tempfile-properties "XPR";}}The nice square pulses that
-represent digital data will be distorted, and in extreme cases,
-undetectable. When designing data lines, this capacitance of the cable must
-be taken into account.
+and width. This capacitance can affect signals sent through the cable. Later
+in our course we will see why. But for now just know that if I combine a
+resistor and a capacitor together it takes more time for the charge to move.
+So in our signal cable the signal will get distorted.\FRAME{dhFU}{1.5238in}{%
+1.5212in}{0pt}{\Qcb{Increasing amounts of distortion in a signal due to
+increasing cable capacitance.}}{}{Figure}{\special{language "Scientific
+Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
+"T";width 1.5238in;height 1.5212in;depth 0pt;original-width
+1.4866in;original-height 1.4849in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'M0FDL201.wmf';tempfile-properties "XPR";}}%
+The nice square pulses that represent digital data will be distorted, and in
+extreme cases, undetectable. When designing data lines, this capacitance of
+the cable must be taken into account.
 
 \section{Combinations of Capacitors}
 
@@ -22973,7 +23004,7 @@ difference%
 \end{equation*}%
 and%
 \begin{equation*}
-\Delta Vj_{2}=\frac{Q}{C_{1}}
+\Delta V_{2}=\frac{Q}{C_{1}}
 \end{equation*}
 
 But the total potential difference is $\Delta V$ of the battery, then 
@@ -22994,7 +23025,8 @@ The $Q$s are all the same. So%
 \frac{1}{C_{tot}}=\frac{1}{C_{1}}+\frac{1}{C_{2}}
 \end{equation}
 
-We call this type of set up a \emph{series circuit}.
+We call this type of set up a \emph{series circuit} because the capacitors
+came one after the other as you go from one side of the battery to the other.
 
 Now after all this you might ask yourself how to know the capacitance of the
 parts you buy to build things. They are designed by engineers and tested at
@@ -23044,15 +23076,15 @@ hill, the water will rush through the pipe to the lower tank.
 
 BE CAREFUL, you are enough of a conductor that by touching different ends of
 a capacitor you could create a serious current through your body. The
-capacitors in computer monitors or TV sets can store enough charge to kill
-you!
+capacitors in old computer monitors or old TV sets can store enough charge
+to kill you!
 
-But how much energy is there? Clearly it must be related to the amount of
-energy it takes to move the charge onto the plates. By analogy, the energy
-stored in the water was the minimum amount of energy it took to pump the
-water to the upper tank $(mgh).$ It is the minimum, because our pipes might
-have some resistance, and then we would have to include more work to
-overcome the resistance.
+But how much energy would there be stored in the capacitor? Clearly it must
+be related to the amount of energy it takes to move the charge onto the
+plates. By analogy, the energy stored in the water was the minimum amount of
+energy it took to pump the water to the upper tank $(mgh).$ It is the
+minimum, because our pipes might have some resistance, and then we would
+have to include more work to overcome the resistance.
 
 But for a capacitor it is a little bit more tricky. When the capacitor is
 not charged, it takes no work (or very little) to move charge from one plate
@@ -23065,7 +23097,7 @@ the hill gets, and the more work it takes to bring up more rocks.
 
 From our formula%
 \begin{equation*}
-W=q\left( V_{B}-V_{A}\right)
+W=q\left( V_{B}-V_{A}\right) 
 \end{equation*}%
 we can see that if we have just a small amount of charge, $\Delta Q,$ we
 will have a small amount of work 
@@ -23099,7 +23131,7 @@ As $\Delta Q$ gets small we can go to a continuous charge model
 We can replaced the small unit of charge $\Delta Q$ with a continuous
 variable $q.$to obtain%
 \begin{equation*}
-dW=dq\left( \Delta V\right)
+dW=dq\left( \Delta V\right) 
 \end{equation*}%
 Recall that%
 \begin{equation*}
@@ -23107,7 +23139,7 @@ Recall that%
 \end{equation*}%
 so we can write $dW$ as 
 \begin{eqnarray*}
-dW &=&dq\left( \frac{q}{C}\right) \\
+dW &=&dq\left( \frac{q}{C}\right)  \\
 dW &=&\frac{1}{C}qdq
 \end{eqnarray*}
 
@@ -23191,9 +23223,9 @@ Ed\right) ^{2} \\
 \end{eqnarray*}%
 We often define and energy density%
 \begin{equation*}
-u=\frac{U_{stored}}{V}
+u=\frac{U_{stored}}{\mathbb{V}}
 \end{equation*}%
-In this case the volume $V$ is just $Ad$ so 
+In this case the volume $\mathbb{V}$ is just $Ad$ so 
 \begin{equation}
 u=\frac{1}{2}\epsilon _{o}E^{2}
 \end{equation}%
@@ -23243,17 +23275,17 @@ way. We can write this as
 where $\kappa $ is a constant that depends on what material we choose as our
 dielectric\footnote{%
 This symbol $\kappa ,$ is the greek letter \textquotedblleft
-kappa.\textquotedblright}. But what is happening?
+kappa.\textquotedblright }. But what is happening?
 
 The plates of the capacitor are becoming charged. These charges will
 polarize the material in the middle.
 
-\FRAME{dhF}{3.103in}{2.8669in}{0pt}{}{}{Figure}{\special{language
+\FRAME{dtbpF}{2.6403in}{2.4465in}{0in}{}{}{Figure}{\special{language
 "Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
-"USEDEF";valid_file "T";width 3.103in;height 2.8669in;depth
-0pt;original-width 3.6074in;original-height 3.3306in;cropleft "0";croptop
+"USEDEF";valid_file "T";width 2.6403in;height 2.4465in;depth
+0in;original-width 2.5979in;original-height 2.405in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
-'LUD77P02.wmf';tempfile-properties "XPR";}}%
+'S3S21900.wmf';tempfile-properties "XPR";}}%
 %TCIMACRO{%
 %\TeXButton{Question 223.35.2}{\marginpar {
 %\hspace{-0.5in}
@@ -23312,8 +23344,7 @@ have changed, so if $\Delta V$ changed, but $Q$ did not , then since
 \begin{equation*}
 Q=C\Delta V
 \end{equation*}%
-we suspect the material properties part, or the capacitance must have
-changed.%
+we suspect the material properties part--the capacitance--must have changed.%
 \begin{equation*}
 C=\frac{Q_{o}}{\Delta V}=\frac{Q_{o}}{\frac{\Delta V_{o}}{\kappa }}=\frac{%
 \kappa Q_{o}}{\Delta V_{o}}
@@ -23329,7 +23360,8 @@ C=\kappa \varepsilon _{o}\frac{A}{d}
 \end{equation}
 
 So where do you find values for $\kappa ?$ For this class, we will look them
-up in the tables in books. Here are a few values for our use.%
+up in the tables in books or on the internet. Here are a few values for our
+use.%
 \begin{equation*}
 \begin{tabular}{|c|c|c|c|c|}
 \hline
@@ -23361,12 +23393,12 @@ plate we will call the \emph{induced charge}.
 
 Since we have an induced positive charge on one side and an induced negative
 charge on the other side, we expect there will be an electric field directed
-from the positive to negative charge inside the dielectric.\FRAME{dhF}{%
-1.7054in}{2.4699in}{0pt}{}{}{Figure}{\special{language "Scientific
+from the positive to negative charge inside the dielectric.\FRAME{dtbpF}{%
+1.5843in}{2.3168in}{0in}{}{}{Figure}{\special{language "Scientific
 Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
-"T";width 1.7054in;height 2.4699in;depth 0pt;original-width
-1.6682in;original-height 2.4284in;cropleft "0";croptop "1";cropright
-"1";cropbottom "0";tempfilename 'M0IWQD01.wmf';tempfile-properties "XPR";}}
+"T";width 1.5843in;height 2.3168in;depth 0in;original-width
+1.5489in;original-height 2.2771in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'S3S28N01.wmf';tempfile-properties "XPR";}}
 
 The total field inside the dielectric is 
 \begin{equation}
@@ -23413,12 +23445,12 @@ plates, so a force is required (and work is required) to remove the
 dielectric once it is in place. If we draw out the dielectric, we can see
 that the weaker field outside the capacitor causes little induced charge,
 but the stronger field inside the capacitor causes a large induced charge. A
-net inward force will result.\FRAME{dhF}{0.9919in}{1.5212in}{0pt}{}{}{Figure%
-}{\special{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
-TRUE;display "USEDEF";valid_file "T";width 0.9919in;height 1.5212in;depth
-0pt;original-width 0.9591in;original-height 1.4849in;cropleft "0";croptop
-"1";cropright "1";cropbottom "0";tempfilename
-'M0IWV702.wmf';tempfile-properties "XPR";}}
+net inward force will result.\FRAME{dtbpF}{1.4356in}{2.2416in}{0in}{}{}{%
+Figure}{\special{language "Scientific Word";type
+"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
+1.4356in;height 2.2416in;depth 0in;original-width 1.4001in;original-height
+2.2027in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'S3S29A02.wmf';tempfile-properties "XPR";}}
 
 \section{Electric current}
 
@@ -23479,12 +23511,12 @@ random directions with slightly different speeds, so the $x$-component of
 the velocity will be different for each charge carrier, but on average they
 will move at a speed $v_{d}.$
 
-\FRAME{dhF}{5.2416in}{1.9527in}{0pt}{}{}{Figure}{\special{language
+\FRAME{dtbpF}{3.1142in}{1.222in}{0in}{}{}{Figure}{\special{language
 "Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
-"USEDEF";valid_file "T";width 5.2416in;height 1.9527in;depth
-0pt;original-width 5.1854in;original-height 1.9147in;cropleft "0";croptop
+"USEDEF";valid_file "T";width 3.1142in;height 1.222in;depth
+0in;original-width 3.0701in;original-height 1.1882in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
-'M0IX6K04.wmf';tempfile-properties "XPR";}}So we will suppose that there are
+'S3S2B503.wmf';tempfile-properties "XPR";}}So we will suppose that there are
 charge carriers of charge $q_{c}$ that are moving through the wire with
 velocity $v_{d}.$ Then we can write some length of wire, $\Delta x,$ as 
 \begin{equation*}
@@ -23522,20 +23554,20 @@ If we have electrons as our charge carrier, then $q_{c}$ is just $q_{e}.$
 
 We can substitute for $\Delta x$%
 \begin{equation*}
-\Delta Q=nAv_{d}\Delta tq_{c}
+\Delta Q=nAv_{d}\Delta tq_{e}
 \end{equation*}%
 This gives the charge within our small volume. But it would be nice to know
 how much charge is going by, because we want moving charge. We can divide by 
 $\Delta t$
 
 \begin{equation}
-\frac{\Delta Q}{\Delta t}=nAv_{d}q_{c}  \label{CurrentDefenition}
+\frac{\Delta Q}{\Delta t}=nAv_{d}q_{e}  \label{CurrentDefenition}
 \end{equation}%
 to get a charge flow rate. This is very like our volume or mass flow rate in
 fluid flow. We have an amount of charge going by in a time $\Delta t.$
 
 I gave the flow velocity a special name, $v_{d}.$ But I did not give all the
-reasons for using an average $x$-component of the velocity. But if we think
+reasons for using an average $x$-component of the velocity. If we think
 about it, we will realize that the electrons don't really flow in a straight
 line. They continually bump into atoms\footnote{%
 We will refine this picture in the next lecture.}. So the actual path the
