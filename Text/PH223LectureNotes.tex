@@ -11,7 +11,7 @@
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=Manual}
 %TCIDATA{Created=Thursday, June 02, 2011 09:40:55}
-%TCIDATA{LastRevised=Tuesday, November 07, 2023 16:56:21}
+%TCIDATA{LastRevised=Monday, November 20, 2023 15:08:39}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 %TCIDATA{<META NAME="DocumentShell" CONTENT="Style Editor\TLLectureNotes">}
 %TCIDATA{Language=American English}
@@ -23097,7 +23097,7 @@ the hill gets, and the more work it takes to bring up more rocks.
 
 From our formula%
 \begin{equation*}
-W=q\left( V_{B}-V_{A}\right) 
+W=q\left( V_{B}-V_{A}\right)
 \end{equation*}%
 we can see that if we have just a small amount of charge, $\Delta Q,$ we
 will have a small amount of work 
@@ -23131,7 +23131,7 @@ As $\Delta Q$ gets small we can go to a continuous charge model
 We can replaced the small unit of charge $\Delta Q$ with a continuous
 variable $q.$to obtain%
 \begin{equation*}
-dW=dq\left( \Delta V\right) 
+dW=dq\left( \Delta V\right)
 \end{equation*}%
 Recall that%
 \begin{equation*}
@@ -23139,7 +23139,7 @@ Recall that%
 \end{equation*}%
 so we can write $dW$ as 
 \begin{eqnarray*}
-dW &=&dq\left( \frac{q}{C}\right)  \\
+dW &=&dq\left( \frac{q}{C}\right) \\
 dW &=&\frac{1}{C}qdq
 \end{eqnarray*}
 
@@ -23269,13 +23269,14 @@ Figure}{\special{language "Scientific Word";type
 experimentation we have found that it seems to decrease in a nice, linear
 way. We can write this as 
 \begin{equation}
-\Delta V=\frac{\Delta V_{o}}{\kappa }  \label{DielectricVoltageChange}
-\end{equation}
-
+\Delta V=\frac{\Delta V_{wo}}{\kappa }  \label{DielectricVoltageChange}
+\end{equation}%
 where $\kappa $ is a constant that depends on what material we choose as our
 dielectric\footnote{%
 This symbol $\kappa ,$ is the greek letter \textquotedblleft
-kappa.\textquotedblright }. But what is happening?
+kappa.\textquotedblright} and $\Delta V_{wo}$ is the potential difference
+witout the dielectric (the subscripts $wo$ will stand for \textquotedblleft
+without the dielectric.\textquotedblright\ But what is happening?
 
 The plates of the capacitor are becoming charged. These charges will
 polarize the material in the middle.
@@ -23346,12 +23347,12 @@ Q=C\Delta V
 \end{equation*}%
 we suspect the material properties part--the capacitance--must have changed.%
 \begin{equation*}
-C=\frac{Q_{o}}{\Delta V}=\frac{Q_{o}}{\frac{\Delta V_{o}}{\kappa }}=\frac{%
-\kappa Q_{o}}{\Delta V_{o}}
+C=\frac{Q_{wo}}{\Delta V}=\frac{Q_{wo}}{\frac{\Delta V_{wo}}{\kappa }}=\frac{%
+\kappa Q_{wo}}{\Delta V_{o}}
 \end{equation*}%
 but this is just%
 \begin{equation}
-C=\kappa C_{o}  \label{DielectricCapacitanceChange}
+C=\kappa C_{wo}  \label{DielectricCapacitanceChange}
 \end{equation}%
 For a parallel plate capacitor, we have 
 \begin{equation}
@@ -23402,12 +23403,12 @@ Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
 
 The total field inside the dielectric is 
 \begin{equation}
-E=E_{o}-E_{ind}  \label{DielectricInducedField}
+E=E_{wo}-E_{ind}  \label{DielectricInducedField}
 \end{equation}%
-where $E_{o}$ is the field due to the capacitor plates. From our previous
-discussion, we recall that 
+where $E_{wo}$ is the field due to the capacitor plates without the
+dielectric. From our previous discussion, we recall that 
 \begin{equation*}
-\Delta V=\frac{\Delta V_{o}}{\kappa }
+\Delta V=\frac{\Delta V_{wo}}{\kappa }
 \end{equation*}%
 and we recall that the magnitude of the potential difference is given by 
 \begin{equation*}
@@ -23415,11 +23416,11 @@ and we recall that the magnitude of the potential difference is given by
 \end{equation*}%
 Then our new net field can be found%
 \begin{equation*}
-Ed=\frac{E_{o}d}{\kappa }
+Ed=\frac{E_{wo}d}{\kappa }
 \end{equation*}%
 or 
 \begin{equation*}
-E=\frac{E_{o}}{\kappa }
+E=\frac{E_{wo}}{\kappa }
 \end{equation*}%
 and, recalling for a parallel plate capacitor (near the center) the field is
 approximately 
@@ -23432,8 +23433,8 @@ E=E_{o}-E_{ind}
 \end{equation*}%
 gives%
 \begin{equation*}
-\frac{\eta }{\kappa \varepsilon _{o}}=\frac{\eta }{\varepsilon _{o}}-\frac{%
-\eta _{ind}}{\varepsilon _{o}}
+\frac{\eta }{\kappa \epsilon _{o}}=\frac{\eta }{\epsilon _{o}}-\frac{\eta
+_{ind}}{\epsilon _{o}}
 \end{equation*}%
 and we can find the induced surface charge density as 
 \begin{equation*}
@@ -23914,13 +23915,12 @@ positively charged, and the end connected to the negative side of the
 capacitor will become negatively charged. But if we look at the wire an
 infinitesimal time after the connection has happened, the wire will not be
 uniformly charged. It will take some time for the charges to reach
-equilibrium (if you have taken ME210, think of RC circuits). In the mean
-time, the charge is stronger near the plates, and diminishes toward the
-middle.
+equilibrium. In the mean time, the charge is stronger near the plates, and
+diminishes toward the middle.
 
 We can't find the exact field in the conductor without resorting to a
 computational solution, but we can mentally model the situation by viewing
-the wire as consisting of rings of charge that vary in surface charge
+the wire as consisting of rings of charge that vary in linear charge
 density. We know the field along the axis due to a ring of charge because we
 have done this problem in the past. \FRAME{dhF}{3.6487in}{1.9112in}{0pt}{}{}{%
 Figure}{\special{language "Scientific Word";type
@@ -24361,11 +24361,11 @@ quantity in parentheses is
 $\allowbreak $
 
 The field is due to something outside of the conducting material (e.g. the
-battery). Again it we have grouped all the properties of the material
-together. Lets give a name to the quantity in parentheses that contains all
-the material properties. Since this quantity tells us how easily the charges
-will go through the conductive material, we can call this the \emph{%
-conductivity} of the material.%
+battery). Notice that again we have grouped all the properties of the
+material together. Lets give a name to the quantity in parentheses that
+contains all the material properties. Since this quantity tells us how
+easily the charges will go through the conductive material, we can call this
+the \emph{conductivity} of the material.%
 \begin{equation*}
 \sigma =\frac{nq_{e}^{2}\tau }{m_{e}}
 \end{equation*}%
@@ -24375,7 +24375,7 @@ J=\sigma E
 \end{equation*}%
 The current density depends on two things, how well the material can allow
 the current to flow (bulk material properties related to conduction), $%
-\sigma ,$ and and the field that makes the current flow, $E.$
+\sigma ,$ and and the field that motivates the current to flow, $E.$
 
 The current, then, depends on these two items, as well as the cross
 sectional area of the wire%
@@ -24417,17 +24417,18 @@ It is common to speak of the opposite of the concept of conductance. In
 other words, how hard it is to get the electrons to travel through the
 conductive material. For example, we might want to build a heating device,
 like a toaster or space heater. In this case, we want friction in the wires,
-because that friction will produce heat. So specifying a conductive material
-by how much friction it has is useful. How much the material impedes the
-flow of current is the opposite of how much the material allows the current
-flow, so we expect this new quantity to be the inverse of our conductivity%
+because that friction will produce thermal energy. So specifying a
+conductive material by how much friction it has is useful. How much the
+material impedes the flow of current is the opposite of how much the
+material allows the current flow, so we expect this new quantity to be the
+inverse of our conductivity%
 \begin{equation*}
 \rho =\frac{1}{\sigma }=\frac{m_{e}}{nq_{e}^{2}\tau }
 \end{equation*}%
 Special conductors are often made that use \textquotedblleft
 impurities,\textquotedblright\ that is, trace amounts of other atoms, to
-increase or decrease the resistivity of conducive materials. The thermal
-dependence can be modeled using the equation
+increase or decrease the resistivity of those conducive materials. The
+thermal dependence can be modeled using the equation
 
 \begin{equation*}
 \rho =\rho _{o}\left( 1+\alpha \left( T-T_{o}\right) \right)
@@ -24534,38 +24535,41 @@ still very cold ($-150\unit{%
 }$), but these temperatures are achievable, so some superconducting products
 are possible. As you can guess, there is very active research in making
 superconductors that operate at even higher temperatures.\FRAME{dtbpFU}{%
-3.0743in}{2.2485in}{0pt}{\Qcb{Superconducting fiber material and
-superconducting magnet at CERN.}}{\Qlb{CERNSuperconductingMagnets}}{Figure}{%
-\special{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
-TRUE;display "USEDEF";valid_file "T";width 3.0743in;height 2.2485in;depth
-0pt;original-width 3.1035in;original-height 2.2636in;cropleft "0";croptop
-"1";cropright "1";cropbottom "0";tempfilename
-'N2CCNO00.wmf';tempfile-properties "XPR";}}
+3.0743in}{2.2485in}{0pt}{\Qcb{{\protect\small Superconducting fiber material
+and superconducting magnet at CERN. These superconductors operate at 1.9K.}}%
+}{\Qlb{CERNSuperconductingMagnets}}{Figure}{\special{language "Scientific
+Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
+"T";width 3.0743in;height 2.2485in;depth 0pt;original-width
+3.1035in;original-height 2.2636in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'N2CCNO00.wmf';tempfile-properties "XPR";}}
 
 \subsection{Ohm's law}
 
-Let's pause to review%
-\begin{eqnarray*}
-J &=&\sigma E \\
-&=&\frac{1}{\rho }E
-\end{eqnarray*}
+Let's pause to review, Curent density id given by%
+\begin{equation*}
+J=\sigma E
+\end{equation*}%
+or now by 
+\begin{equation*}
+J=\frac{1}{\rho }E
+\end{equation*}
 
 Then the current is given by%
 \begin{eqnarray*}
 I &=&JA \\
 &=&\frac{A}{\rho }E
 \end{eqnarray*}%
-The field is similar to our capacitor field, nearly uniform in our
-conducting wire%
+If the field is similar to our capacitor field, nearly uniform in our
+conducting wire, then the potential would be just%
 \begin{eqnarray*}
 \Delta V &=&Ed \\
 &=&E\Delta s
 \end{eqnarray*}%
-so the electric field is approximately given by 
+and then the electric field is approximately given by 
 \begin{equation*}
 E=\frac{\Delta V}{\Delta s}
 \end{equation*}%
-for our wire of length $L$ this is 
+For our wire of length $L$ this is 
 \begin{equation*}
 E=\frac{\Delta V}{L}
 \end{equation*}%
@@ -24573,11 +24577,12 @@ Then we can use this field to write our current%
 \begin{equation*}
 I=\frac{A}{\rho }\frac{\Delta V}{L}
 \end{equation*}%
-or rewriting, we have 
+Once again, let's group together all the structural and material properties
+of the wire. We have 
 \begin{equation*}
 I=\left( \frac{A}{L\rho }\right) \Delta V
 \end{equation*}%
-and rewriting again we have 
+or with a little albegra, 
 \begin{equation*}
 \Delta V=I\left( \rho \frac{L}{A}\right)
 \end{equation*}%
@@ -24676,7 +24681,7 @@ must lose all of the potential energy it gained. So it will loose
 \left\vert \Delta U_{wire}\right\vert =\left\vert \Delta
 U_{battery}\right\vert
 \end{equation*}%
-but if the battery potential energy change is positive, the wire change must
+But if the battery potential energy change is positive, the wire change must
 be negative. We can see that 
 \begin{equation*}
 \Delta V_{wire}=-\Delta V_{battery}
@@ -24689,10 +24694,10 @@ gravitational field forces rocks to fall. The positive charge ends up at the
 negative end of the battery again, ready to be pumped up to make another
 round.
 
-of course, really this process goes backwards, since our charge carriers are
-negative, but we recall that mathematically negative charges going the
-opposite way is the same.\ So we will make this picture our mental model of
-a current.
+Of course, really this process goes backwards in electrical circuits, since
+our charge carriers are negative, but we recall that mathematically negative
+charges going the opposite way is the same.\ So we will make this picture
+our mental model of a current.
 
 \subsection{Emf}
 
@@ -24701,31 +24706,33 @@ flow, there would be resistance to the flow even inside the pump. This
 resistance would be small, but not zero. So the actual potential energy gain
 would be 
 \begin{equation*}
-\Delta U=\Delta U_{\text{ideal}}-U_{\text{loss due to friction}}
+\Delta U=\Delta U_{\text{ideal}}-U_{\text{loss due to friction in the pump}}
 \end{equation*}%
-The same is true for an actual batter. There is some resistance in the
+The same is true for an actual battery. There is some resistance in the
 battery, itself.%
 \begin{equation*}
-\Delta V=\Delta V_{\text{ideal}}-\Delta V_{\text{loss due to resistance}}
+\Delta V=\Delta V_{\text{ideal}}-\Delta V_{\text{loss due to resistance in
+the battery}}
 \end{equation*}%
-Now that we have Ohm's law, we can saw what $\Delta V_{\text{loss due to
-resistance}}$ would be in terms of the internal resistance of the battery
-and the current that flows. Referring to the last figure, there is only one
-way for the current to go. So for this circuit, the current must be the same
-throughout the entire circuit., even in the battery! If we call the small
-resistance in the battery $r,$ then 
+Now that we have Ohm's law, we can see what $\Delta V_{\text{loss due to
+resistance in the battery}}$ would be in terms of the internal resistance of
+the battery and the current that flows. Referring to the last figure, there
+is only one way for the current to go. So for this circuit, the current must
+be the same throughout the entire circuit, even in the battery! If we call
+the small resistance in the battery $r,$ then 
 \begin{equation*}
-\Delta V_{\text{loss due to resistance}}=Ir
+\Delta V_{\text{loss due to resistance in the battery}}=Ir
 \end{equation*}%
-and 
+then the actual potential energy provided by the battery is 
 \begin{equation*}
 \Delta V=\Delta V_{\text{ideal}}-Ir
 \end{equation*}%
 It is traditional to give the ideal voltage a name and a symbol. The name is
-a silly one. It is emf. At one time, the letters `e', `m', and `f' stood for
-something. But not any more. It is just a name. It is pronounced
-\textquotedblleft \={e}-em-ef,\textquotedblright\ and the symbol is a script
-capital $\mathcal{E}$. So we can write 
+a silly one. It is \textquotedblleft emf.\textquotedblright\ At one time,
+the letters `e', `m', and `f' stood for something. But not any more. It is
+just a name. It is pronounced \textquotedblleft \={e}-em-ef,%
+\textquotedblright\ and the symbol is a script capital $\mathcal{E}$. So we
+can write 
 \begin{equation*}
 \Delta V=\mathcal{E}-Ir
 \end{equation*}%
@@ -25203,11 +25210,11 @@ see what it means. Let's redraw the figure. \FRAME{dhF}{1.9986in}{2.4561in}{%
 1.9986in;height 2.4561in;depth 0pt;original-width 1.9597in;original-height
 2.4146in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
 'M0KRTJ02.wmf';tempfile-properties "XPR";}}Now that we have a new figure,
-let's reconsider what our right hand rule. What we mean is that the magnetic
-field is constant in magnitude around a circle, and that the direction of
-the field is tangent to the circle, with the arrow pointing in the direction
-your fingers go with the right-hand-rule. \FRAME{dhF}{2.5019in}{2.4699in}{0pt%
-}{}{}{Figure}{\special{language "Scientific Word";type
+let's reconsider what our right hand rule means. What we mean is that the
+magnetic field is constant in magnitude around a circle, and that the
+direction of the field is tangent to the circle, with the arrow pointing in
+the direction your fingers go with the right-hand-rule. \FRAME{dhF}{2.5019in%
+}{2.4699in}{0pt}{}{}{Figure}{\special{language "Scientific Word";type
 "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
 2.5019in;height 2.4699in;depth 0pt;original-width 2.4613in;original-height
 2.4284in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
@@ -25312,10 +25319,8 @@ field direction as we have described above. In a sense, this is a very small
 current (one moving charge!). So the field should look very similar.
 
 This relationship was found by two scientists, Biot and Savart, and it
-carries their name, the \emph{Biot-Savart law.}
-
-The factor $\mu _{o}$ is a constant very like $\epsilon _{o}.$ It has a
-value 
+carries their name, the \emph{Biot-Savart law. }The factor $\mu _{o}$ is a
+constant very like $\epsilon _{o}.$ It has a value 
 \begin{equation*}
 \mu _{o}=4\pi \times 10^{-7}\frac{\unit{T}\unit{m}}{\unit{A}}
 \end{equation*}%
@@ -25326,9 +25331,8 @@ called a \emph{tesla} and is
 \end{equation*}
 
 The charges already had an electric field before they were accelerated, but
-now they have two fields, an electric and a magnetic field.
-
-We used unit vectors to write our $E$-field.%
+now they have two fields, an electric and a magnetic field. We used unit
+vectors to write our $E$-field.%
 \begin{equation*}
 \overrightarrow{\mathbf{E}}=\frac{1}{4\pi \epsilon _{o}}\frac{q}{r^{2}}%
 \mathbf{\hat{r}}
@@ -25599,28 +25603,30 @@ we had to find $dq,$ $\mathbf{\hat{r}},$ and $r$ and we integrated using
 Now we need $d\overrightarrow{\mathbf{s}}\times \mathbf{\hat{r}}$ and $r.$
 For electric fields, we needed to deal with the vector $\mathbf{\hat{r}.}$
 Now we need to deal with a cross product, $d\overrightarrow{\mathbf{s}}%
-\times \mathbf{\hat{r}}$, involving $\mathbf{\hat{r}.}$
-
-For the bottom part of our loop $d\overrightarrow{\mathbf{s}}\times \mathbf{%
-\hat{r}}$ is just%
+\times \mathbf{\hat{r}}$, involving $\mathbf{\hat{r}.}$ For the bottom part
+of our loop $d\overrightarrow{\mathbf{s}}\times \mathbf{\hat{r}}$ is just%
 \begin{eqnarray*}
 d\overrightarrow{\mathbf{s}}\times \mathbf{\hat{r}} &=&-ds\sin \theta 
 \mathbf{\hat{k}} \\
 &=&-dx\sin \theta \mathbf{\hat{k}}
 \end{eqnarray*}%
-We can see this in the figure\FRAME{dtbpF}{1.3716in}{1.6466in}{0pt}{}{}{%
-Figure}{\special{language "Scientific Word";type
-"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-1.3716in;height 1.6466in;depth 0pt;original-width 1.337in;original-height
-1.6103in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
-'M68NTL0G.wmf';tempfile-properties "XPR";}}so our field from the bottom wire
+where $+\mathbf{\hat{k}}$ in out of the page. We can see this in the figure%
+\FRAME{dtbpF}{1.3716in}{1.6466in}{0pt}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+"USEDEF";valid_file "T";width 1.3716in;height 1.6466in;depth
+0pt;original-width 1.337in;original-height 1.6103in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
+'M68NTL0G.wmf';tempfile-properties "XPR";}}So our field from the bottom wire
 is 
 \begin{eqnarray*}
 \overrightarrow{\mathbf{B}}_{b} &=&\frac{\mu _{o}I}{4\pi }\int \frac{d%
 \overrightarrow{\mathbf{s}}\times \mathbf{\hat{r}}}{r^{2}} \\
 &=&\frac{\mu _{o}I}{4\pi }\int \frac{-dx\sin \theta \mathbf{\hat{k}}}{r^{2}}
 \end{eqnarray*}%
-But we need to find $r.$ From trigonometry we realize 
+Next we need to find $r.$ We would like to not have more than one variable.
+So it would be good to try to pick $x$ or $\theta $ and to put everything in
+terms of that one variable. Let's try $\theta .$ From trigonometry we
+realize 
 \begin{equation*}
 \sin \theta =\frac{a}{r}
 \end{equation*}%
@@ -25628,11 +25634,11 @@ on the right side of the wire, and
 \begin{equation*}
 \sin \left( \pi -\theta \right) =\sin \theta =\frac{a}{r}
 \end{equation*}%
-on the left, thus 
+on the left side, So all along the bottom wire $r$ is given by 
 \begin{equation*}
 r=\frac{a}{\sin \theta }
 \end{equation*}%
-then our field equation for the bottom wire becomes%
+Then our field equation for the bottom wire becomes%
 \begin{equation*}
 \overrightarrow{\mathbf{B}}_{b}=\frac{\mu _{o}I}{4\pi }\int \frac{-\left(
 dx\right) \sin \theta \mathbf{\hat{k}}}{\left( \frac{a}{\sin \theta }\right)
@@ -25675,7 +25681,7 @@ derivative and then take the magnitude (absolute value).%
 \theta \cos \theta }{\sin ^{2}\theta }=\frac{-a}{\sin ^{2}\theta }
 \end{equation*}%
 This derivative was not obvious! We had to use the quotient rule. But once
-we have found it we can rewrite this as 
+we have found it we can rewrite $dx$ as 
 \begin{equation*}
 dx=\left\vert \frac{-a}{\sin ^{2}\theta }d\theta \right\vert
 \end{equation*}%
@@ -25684,7 +25690,7 @@ dx=\left\vert \frac{-a}{\sin ^{2}\theta }d\theta \right\vert
 \begin{equation*}
 dx=\frac{a}{\sin ^{2}\theta }d\theta
 \end{equation*}%
-Then our field for the bottom wire is 
+When we put this in our integral equation for the bottom wire we have 
 \begin{equation*}
 \overrightarrow{\mathbf{B}}_{b}=\frac{\mu _{o}I}{4\pi }\int \frac{-\left( 
 \frac{a}{\sin ^{2}\theta }\right) d\theta \sin \theta \mathbf{\hat{k}}}{%
@@ -25855,16 +25861,22 @@ so%
 B=\frac{\mu _{o}I}{2R}\mathbf{\hat{k}}\text{ \qquad loop}
 \end{equation*}%
 The field is perpendicular to the plane of the loop, which agrees with our
-square loop problem.\FRAME{dtbpF}{4.2903in}{2.7071in}{0in}{}{}{Figure}{%
-\special{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
-TRUE;display "USEDEF";valid_file "T";width 4.2903in;height 2.7071in;depth
-0in;original-width 4.3436in;original-height 2.7292in;cropleft "0";croptop
-"1";cropright "1";cropbottom "0";tempfilename
-'MP9ON603.wmf';tempfile-properties "XPR";}}
+square loop problem.
 
 Let's extend this problem to a point along the axis a distance $z$ away from
-the loop. Starting with step $1,$ we realize that, in general, our value of $%
-d\overrightarrow{\mathbf{s}}\times \mathbf{\hat{r}}$ is 
+the loop. \FRAME{dtbpF}{4.2903in}{2.7071in}{0pt}{}{}{Figure}{\special%
+{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
+TRUE;display "USEDEF";valid_file "T";width 4.2903in;height 2.7071in;depth
+0pt;original-width 4.3436in;original-height 2.7292in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
+'S44L9301.wmf';tempfile-properties "XPR";}}We need to go back to our basic
+equation again. 
+\begin{equation*}
+\overrightarrow{\mathbf{B}}=\frac{\mu _{o}I}{4\pi }\int \frac{d%
+\overrightarrow{\mathbf{s}}\times \mathbf{\hat{r}}}{r^{2}}
+\end{equation*}%
+Starting with step $1,$ we realize that, in general, our value of $d%
+\overrightarrow{\mathbf{s}}\times \mathbf{\hat{r}}$ is 
 \begin{equation*}
 d\overrightarrow{\mathbf{s}}\times \mathbf{\hat{r}}=ds\sin \phi
 \end{equation*}%
@@ -25875,12 +25887,12 @@ where $\phi $ is the angle between $d\overrightarrow{\mathbf{s}}$ and $%
 %BeginExpansion
 {{}^\circ}%
 %EndExpansion
-}.$ \FRAME{dtbpFU}{4.0801in}{3.1692in}{0pt}{\Qcb{Side View}}{}{Figure}{%
-\special{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
-TRUE;display "USEDEF";valid_file "T";width 4.0801in;height 3.1692in;depth
-0pt;original-width 4.1289in;original-height 3.2011in;cropleft "0";croptop
+}.$ \FRAME{dtbpF}{4.2052in}{3.2676in}{0in}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+"USEDEF";valid_file "T";width 4.2052in;height 3.2676in;depth
+0in;original-width 4.2566in;original-height 3.3013in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
-'MP9OO304.wmf';tempfile-properties "XPR";}}We have tipped $\mathbf{\hat{r}}$
+'S44KMF00.wmf';tempfile-properties "XPR";}}We have tipped $\mathbf{\hat{r}}$
 toward our point $P,$ but tipping $\mathbf{\hat{r}}$ from pointing to the
 center of the hoop to pointing to a point on the axis just rotated $\mathbf{%
 \hat{r}}$ about part of the hoop. We still have $\phi =90\unit{%
@@ -25892,14 +25904,9 @@ center of the hoop to pointing to a point on the axis just rotated $\mathbf{%
 \begin{equation*}
 \left\vert d\overrightarrow{\mathbf{s}}\times \mathbf{\hat{r}}\right\vert =ds
 \end{equation*}%
-with a direction shown in the figure. But our value of $r$ is now more
-complicated%
-\begin{equation*}
-r=\sqrt{R^{2}+z^{2}}
-\end{equation*}%
-We have used symmetry to argue that we can take just $x$ or $y$-components
-in the past because all the others clearly canceled out. We can also do that
-again here. 
+with a direction shown in the figure. We have used symmetry to argue that we
+can take just $x$ or $y$-components in the past because all the others
+clearly canceled out. We can also do that again here. 
 %TCIMACRO{%
 %\TeXButton{MIT Visualization}{\marginpar {
 %\hspace{-0.5in}
@@ -25925,6 +25932,10 @@ We know how to deal with such a situation, since we have done this before.
 From the diagram we can see that 
 \begin{equation*}
 \cos \theta =\frac{R}{\sqrt{R^{2}+z^{2}}}
+\end{equation*}%
+And our value of $r$ is now more complicated, but in a way we recognize%
+\begin{equation*}
+r=\sqrt{R^{2}+z^{2}}
 \end{equation*}%
 so our field becomes%
 \begin{equation*}
@@ -26143,10 +26154,9 @@ Figure}{\special{language "Scientific Word";type
 "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
 3.5362in;height 2.1767in;depth 0pt;original-width 3.4895in;original-height
 2.1369in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
-'LUQ89609.wmf';tempfile-properties "XPR";}}
-
-We wish to do a similar thing for our magnetic field. We wish to integrate
-the magnetic field along a path. The integral would look like this%
+'LUQ89609.wmf';tempfile-properties "XPR";}}We wish to do a similar thing for
+our magnetic field. We wish to integrate the magnetic field along a path.
+The integral would look like this%
 \begin{equation*}
 \int_{a}^{b}\overrightarrow{B}\cdot d\overrightarrow{s}
 \end{equation*}%
@@ -26200,7 +26210,8 @@ direction for each part of the path. \FRAME{dhF}{2.7259in}{2.5953in}{0pt}{}{%
 \begin{equation*}
 \sum_{i}B_{\Vert }\Delta s
 \end{equation*}%
-or in integral form 
+where $B_{\Vert }$ is the component of $B$ that is parallel to the $\Delta s$
+direction. In integral form this is%
 \begin{equation*}
 \int B_{\Vert }ds
 \end{equation*}%
@@ -26211,12 +26222,13 @@ moment, I\ do know a shape where $\overrightarrow{B}\cdot d\overrightarrow{%
 s_{i}}=Bds.$ If we choose a circle, then from symmetry $B$ will be constant,
 and it will be in the same direction as $ds$ so$\overrightarrow{B}\cdot d%
 \overrightarrow{s_{i}}=Bds$. From our last lecture we even know what the
-field should be. 
+field should be for a long straight wire. 
 \begin{equation*}
 B=\frac{\mu _{o}I}{2\pi r}
 \end{equation*}%
 Let's see if we can use this to form a new general approach. Since $B$ is
-constant around the loop, we can write our line integral as%
+constant around the loop (because $r$ is constant around the loop), we can
+write our line integral as%
 \begin{eqnarray*}
 \int \overrightarrow{B}\cdot d\overrightarrow{s} &=&B2\pi r \\
 &=&\frac{\mu _{o}I}{2\pi r}2\pi r \\
@@ -26384,16 +26396,16 @@ or%
 B=\mu _{o}nI
 \end{equation*}
 
-This device is so useful it has a name. It is a solenoid. You may have made
-a coil as a kid and turned it into an electromagnet by hooking it to a
-battery (a source of potential difference) so that a current ran through it.
-In engineering solenoids are used as current controlled magnetic switches.%
-\FRAME{dtbpFU}{2.1181in}{2.4011in}{0pt}{\Qcb{Solenoid operated valve system.}%
-}{}{Figure}{\special{language "Scientific Word";type
-"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-2.1181in;height 2.4011in;depth 0pt;original-width 2.7088in;original-height
-3.0752in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
-'MP9VNU08.wmf';tempfile-properties "XPR";}}
+This device is so useful it has a name. It is calle a \emph{solenoid}. You
+may have made a coil as a kid and turned it into an electromagnet by hooking
+it to a battery (a source of potential difference) so that a current ran
+through it. In engineering solenoids are used as current controlled magnetic
+switches.\FRAME{dtbpFU}{2.1181in}{2.4011in}{0pt}{\Qcb{{\protect\small %
+Solenoid operated valve system.}}}{}{Figure}{\special{language "Scientific
+Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
+"T";width 2.1181in;height 2.4011in;depth 0pt;original-width
+2.7088in;original-height 3.0752in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'MP9VNU08.wmf';tempfile-properties "XPR";}}
 
 There is another great thing about a solenoid. In the middle of the
 solenoid, the field is really nearly constant. Near the ends, there are edge
@@ -26403,13 +26415,13 @@ see how to generate uniform magnetic fields and consider uniform $B$-fields
 in problems. Such a large nearly uniform magnetic field is part of the
 Compact Muon Solenoid (CMS) experiment at CERN.
 
-\FRAME{dtbpFU}{4.2495in}{2.833in}{0pt}{\Qcb{CMS Detector at CERN. The
-detector is constructed of a very large solenoid to bend the path of the
-charge particles.}}{}{Figure}{\special{language "Scientific Word";type
-"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-4.2495in;height 2.833in;depth 0pt;original-width 4.3027in;original-height
-2.8578in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
-'MP9OFV02.wmf';tempfile-properties "XPR";}}
+\FRAME{dtbpFU}{4.2495in}{2.833in}{0pt}{\Qcb{{\protect\small CMS Detector at
+CERN. The detector is constructed of a very large solenoid to bend the path
+of the charge particles.}}}{}{Figure}{\special{language "Scientific
+Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
+"T";width 4.2495in;height 2.833in;depth 0pt;original-width
+4.3027in;original-height 2.8578in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'MP9OFV02.wmf';tempfile-properties "XPR";}}
 
 \section{Magnetic Force on a moving charge}
 
@@ -26586,12 +26598,12 @@ We refer to the magnetic field as a $B$-field for short.
 
 Let's set up a constant $B$-field as shown in the figure. We draw a $B$%
 -field as a set of vectors just like we did for electric fields. In the
-figure, the vectors are all pointing "into the paper" so all we can see is
-their tails. \FRAME{dtbpF}{2.514in}{1.9995in}{0pt}{}{}{Figure}{\special%
-{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
-TRUE;display "USEDEF";valid_file "T";width 2.514in;height 1.9995in;depth
-0pt;original-width 5.1249in;original-height 4.0698in;cropleft "0";croptop
-"1";cropright "1";cropbottom "0";tempfilename
+figure, the vectors are all pointing \textquotedblleft into the
+paper\textquotedblright\ so all we can see is their tails. \FRAME{dtbpF}{%
+2.514in}{1.9995in}{0pt}{}{}{Figure}{\special{language "Scientific Word";type
+"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
+2.514in;height 1.9995in;depth 0pt;original-width 5.1249in;original-height
+4.0698in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
 'LUQPAU0I.wmf';tempfile-properties "XPR";}}%
 %TCIMACRO{%
 %\TeXButton{Question 223.40.6}{\marginpar {
@@ -26619,9 +26631,9 @@ TRUE;display "USEDEF";valid_file "T";width 2.4829in;height 1.9752in;depth
 "1";cropright "1";cropbottom "0";tempfilename
 'LUQPAU0J.wmf';tempfile-properties "XPR";}}Remember that $F=ma,$ so the
 charge will accelerate in the $-x$ direction.\FRAME{dhF}{2.0686in}{1.6881in}{%
-0in}{}{}{Figure}{\special{language "Scientific Word";type
+0pt}{}{}{Figure}{\special{language "Scientific Word";type
 "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-2.0686in;height 1.6881in;depth 0in;original-width 2.0297in;original-height
+2.0686in;height 1.6881in;depth 0pt;original-width 2.0297in;original-height
 1.6518in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
 'M0XU7601.wmf';tempfile-properties "XPR";}}Now, if we allow the charged
 particle to move, we see that the $v$ direction changes. This makes the
@@ -26648,40 +26660,40 @@ because $\theta $ is always $90\unit{%
 \begin{equation*}
 F=ma=qvB
 \end{equation*}%
-and noting that the acceleration is center-seeking, we can write it as a
-centripetal acceleration%
+and noting that the acceleration is center-seeking, and our velocity is
+always tangential, we can write it as a centripetal acceleration%
 \begin{equation*}
-a=\frac{v^{2}}{r}
+a_{C}=\frac{v_{t}^{2}}{r}
 \end{equation*}
 
 Then 
 \begin{equation*}
-m\frac{v^{2}}{r}=qvB
+m\frac{v_{t}^{2}}{r}=qv_{t}B
 \end{equation*}%
 \begin{equation*}
-m\frac{v}{r}=qB
+m\frac{v_{t}}{r}=qB
 \end{equation*}%
 We can find the radius of the circle%
 \begin{equation*}
-\frac{mv}{qB}=r
+\frac{mv_{t}}{qB}=r
 \end{equation*}%
 Could we find the angular speed?%
 \begin{equation*}
-\omega =\frac{v}{r}=\frac{qB}{m}
+\omega =\frac{v_{t}}{r}=\frac{qB}{m}
 \end{equation*}
 
 How about the period? We can take the total distance divided by the total
 time for a revolution%
 \begin{equation*}
-v=\frac{2\pi r}{T}
+v_{t}=\frac{2\pi r}{T}
 \end{equation*}%
 to find%
 \begin{equation*}
-T=\frac{2\pi r}{v}
+T=\frac{2\pi r}{v_{t}}
 \end{equation*}%
 and we recognize 
 \begin{equation*}
-\frac{1}{\omega }=\frac{r}{v}
+\frac{1}{\omega }=\frac{r}{v_{t}}
 \end{equation*}%
 so%
 \begin{equation*}
@@ -26697,15 +26709,16 @@ particle accelerator called a cyclotron. This type of accelerator is used by
 places like CERN to start the acceleration of charged particles. The same
 concept is used to make the charged particles go in a circular path in the
 large accelerators like the LHC at CERN.\FRAME{dtbpFU}{3.0237in}{1.7979in}{%
-0pt}{\Qcb{Turning magnets at CERN. This is an actual magnet, but this magnet
-is at ground level in the testing facility. The tunnel is a mock-up of what
-the actual beam tunnel looks like.}}{}{Figure}{\special{language "Scientific
-Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
-"T";width 3.0237in;height 1.7979in;depth 0pt;original-width
-3.053in;original-height 1.8041in;cropleft "0";croptop "1";cropright
-"1";cropbottom "0";tempfilename 'MP9O7H01.wmf';tempfile-properties "XPR";}}%
-Within the detector systems, like the CMS, charged product particles can be
-tracked along curved paths for identification.
+0pt}{\Qcb{{\protect\small Turning magnets at CERN. This is an actual magnet,
+but this magnet is at ground level in the testing facility. The tunnel is a
+mock-up of what the actual beam tunnel looks like.}}}{}{Figure}{\special%
+{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
+TRUE;display "USEDEF";valid_file "T";width 3.0237in;height 1.7979in;depth
+0pt;original-width 3.053in;original-height 1.8041in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
+'MP9O7H01.wmf';tempfile-properties "XPR";}}Within the detector systems, like
+the CMS, charged product particles can be tracked along curved paths for
+identification.
 
 %TCIMACRO{%
 %\TeXButton{Question 223.40.7}{\marginpar {
@@ -26913,10 +26926,11 @@ difference across the gap%
 \begin{equation*}
 \Delta K=q\Delta V
 \end{equation*}%
-As the particle travels around the D to the other side of the, the cyclotron
-switches the polarity of the potential difference. So as it passes the gap
-on the other side of the cyclotron, it is again accelerated with an
-additional $\Delta K=q\Delta V.$ Since $r$ does depend on the speed,%
+As the particle travels around the D to the other side of the, the
+cyclotron, the cyclotron switches the polarity of the potential difference.
+So as the particle passes the gap on the other side of the cyclotron, it is
+again accelerated with an additional $\Delta K=q\Delta V.$ Since $r$ does
+depend on the speed,%
 \begin{equation*}
 r=\frac{mv}{qB}
 \end{equation*}%
@@ -26951,8 +26965,9 @@ K &=&\frac{1}{2}mv^{2} \\
 }%
 %EndExpansion
 The Hall probe is a cool little device that measures the magnitude of the
-magnetic field. We should find out how it works.\FRAME{dtbpF}{2.0721in}{%
-1.9847in}{0pt}{}{}{Figure}{\special{language "Scientific Word";type
+magnetic field. It is used in rotation and angle detection in engineering.
+We should find out how it works.\FRAME{dtbpF}{2.0721in}{1.9847in}{0pt}{}{}{%
+Figure}{\special{language "Scientific Word";type
 "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
 2.0721in;height 1.9847in;depth 0pt;original-width 2.034in;original-height
 1.9458in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
@@ -27129,12 +27144,12 @@ so our force on the current carrying wire is%
 \begin{eqnarray*}
 F_{I} &=&\left( nq_{i}v_{d}A\right) LB\sin \theta \\
 &=&ILB\sin \theta
-\end{eqnarray*}
+\end{eqnarray*}%
 Remember that $\theta $ is the angle between the field direction and the
 velocity. In this case $I$ is in the direction of the velocity (we still
-assume positive charge carriers, even though we know they are electrons). So 
-$\theta $ is the angle between the field direction and the direction of the
-current. We can write this as a cross product%
+assume positive charge carriers, even though we know they are electrons
+going the other way). So $\theta $ is the angle between the field direction
+and the direction of the current. We can write this as a cross product%
 \begin{equation}
 \overrightarrow{\mathbf{F}}_{I}=I\overrightarrow{\mathbf{L}}\mathbf{\times }%
 \overrightarrow{\mathbf{B}}
@@ -27160,26 +27175,11 @@ where $\overrightarrow{\mathbf{L}}$ is in the current direction.
 %EndExpansion
 We can use what we have learned to find the force between two wires.
 
-%TCIMACRO{%
-%\TeXButton{MIT movies}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{MIT movies}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{MIT movies}
-\end{minipage}
-}%
-%EndExpansion
 If I\ have two wires with current, I will have a field created by each wire.
 Let's suppose that $I_{1}$ and $I_{2}$ are in the same direction\FRAME{dhF}{%
-2.194in}{2.2883in}{0in}{}{}{Figure}{\special{language "Scientific Word";type
+2.194in}{2.2883in}{0pt}{}{}{Figure}{\special{language "Scientific Word";type
 "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-2.194in;height 2.2883in;depth 0in;original-width 2.1543in;original-height
+2.194in;height 2.2883in;depth 0pt;original-width 2.1543in;original-height
 2.2485in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
 'M0ZI3O02.wmf';tempfile-properties "XPR";}}and let's calculate the force on
 wire $1$ due to the field of wire $2.$ The field due to wire $2$ at the
@@ -27524,38 +27524,54 @@ spinning electrons.
 
 \section{Finally, why magnets work}
 
+We started our study of magnitism by looking at bar magnets and considering
+that if we break one, we end up with two magnets. We don't end up with a
+north end and a south end as separate pieces. This is different than charge
+and electric fields. Then we studied how moving charge makes a magnetic
+field. But we didn't say how bar magnets work yet.%
 %TCIMACRO{%
 %\TeXButton{Question 223.42.1}{\marginpar {
 %\hspace{-0.5in}
 %\begin{minipage}[t]{1in}
 %\small{Question 223.42.1}
 %\end{minipage}
-%}}}%
+%}} }%
 %BeginExpansion
 \marginpar {
 \hspace{-0.5in}
 \begin{minipage}[t]{1in}
 \small{Question 223.42.1}
 \end{minipage}
-}%
+}
 %EndExpansion
-We all would like to know how magnets work. Can a permanent magnet have
-something to do with current loops?\FRAME{dhF}{3.4696in}{1.6224in}{0pt}{}{}{%
-Figure}{\special{language "Scientific Word";type
-"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-3.4696in;height 1.6224in;depth 0pt;original-width 5.0194in;original-height
-2.3315in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
-'LV2M2102.wmf';tempfile-properties "XPR";}}Well, lets look at the field due
-to a current loop. It looks a lot like the field due to a magnet. Could
-there be current loops inside a bar magnet? The answer is well, sort of...
-We have electrons that sort of travel around the atom. Suppose the electrons
-orbit like planets. Then there would be a current as they travel. For one
-electron the current would be%
+Can a permanent magnet have something to do with current loops?\FRAME{dhF}{%
+3.4696in}{1.6224in}{0pt}{}{}{Figure}{\special{language "Scientific
+Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
+"T";width 3.4696in;height 1.6224in;depth 0pt;original-width
+5.0194in;original-height 2.3315in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'LV2M2102.wmf';tempfile-properties "XPR";}}%
+Well, lets look at the field due to a current loop. It looks a lot like the
+field due to a magnet. Could there be current loops inside a bar magnet? The
+answer is well, sort of... We have electrons that sort of travel around the
+atom. Suppose the electrons orbit like planets. Then there would be a
+current as they travel. For one electron the current would be%
 \begin{equation*}
 I=\frac{q_{e}}{T}
 \end{equation*}%
-where $T$ is the period of rotation. It is an amount of charge per unit
-time. We can write this as 
+where $T$ is the period of rotation. And we recall from PH121 or Statics and
+Dynamics that the period of rotation can be found from  
+\begin{equation*}
+\omega =\frac{2\pi }{T}
+\end{equation*}%
+so that 
+\begin{equation*}
+T=\frac{2\pi }{\omega }
+\end{equation*}%
+Then the current is 
+\begin{equation*}
+I=\frac{q_{e}\omega }{2\pi }
+\end{equation*}%
+It is an amount of charge per unit time. We can write this as 
 \begin{equation*}
 I=q_{e}\frac{\omega }{2\pi }
 \end{equation*}%
@@ -27569,19 +27585,19 @@ I=q_{e}\frac{v_{t}}{2\pi r}
 \end{equation*}%
 We can find a magnetic moment (a good review of what we have learned!) 
 \begin{eqnarray*}
-\mu &=&NIA=\left( 1\right) IA \\
-&=&q_{e}\frac{v_{t}}{2\pi r}\left( \pi r^{2}\right) \\
+\mu  &=&NIA=\left( 1\right) IA \\
+&=&q_{e}\frac{v_{t}}{2\pi r}\left( \pi r^{2}\right)  \\
 &=&\frac{q_{e}v_{t}r}{2}
 \end{eqnarray*}%
 Physicists often write this in terms of angular momentum. Just to review,
 angular momentum is given by%
 \begin{equation*}
-L=I_{m}\omega
+L=\mathbb{I}_{m}\omega 
 \end{equation*}%
-where $I_{m}$ is the moment of inertia. Then 
+where $\mathbb{I}_{m}$ is the moment of inertia. Then 
 \begin{eqnarray*}
-L &=&I_{m}\omega \\
-&=&\left( mr^{2}\right) \left( \frac{v_{t}}{r}\right) \\
+L &=&\mathbb{I}_{m}\omega  \\
+&=&\left( mr^{2}\right) \left( \frac{v_{t}}{r}\right)  \\
 &=&mrv_{t}
 \end{eqnarray*}%
 so the magnetic moment of the orbiting electron would be%
@@ -27589,7 +27605,9 @@ so the magnetic moment of the orbiting electron would be%
 \mu =\frac{q_{e}L}{2m}
 \end{equation}%
 which gives us a magnetic moment related to the angular momentum of the
-electron.
+electron. And if we have a magnetic moment this not only means the atoms
+would orient in an external field but it also means that the atoms work as
+little magnets. We will have a magnetic field
 
 \subsection{Quantum effects}
 
@@ -27615,20 +27633,27 @@ complicated because we then have many electrons and they are
 even true that most atoms have many electrons, and within the atom these
 electrons fly around in all different directions. The magnetic field due to
 one electron in the atom cancels out the magnetic field due to another, so
-there is no net magnetic field. So in general there is no net magnetic
-field. Even for Hydrogen in a compound the overall magnetic moment of the
-compound tends to cancel out.
+there is no net magnetic field do to the \textquotedblleft
+motion\textquotedblright\ of the electrons in their orbitals. So in general
+there is no net magnetic field from orbital motion. Even for Hydrogen in a
+compound the overall magnetic moment of the compound tends to cancel out.
 
 Further, we know that electrons do not travel like planets in circular
-orbits. So our model for magnetism is not really correct yet. To understand
-the current model of electron orbitals takes some quantum mechanics (and a
-few more years of physics). But we can understand a little, because quantum
-mechanics does tell us that the electrons have angular momentum. The big
-difference is that the angular momentum is \emph{quantized} meaning it can
-have only certain values (think of the quantized modes of an oscillating
-string). The smallest magnetic moment for an electron turns out to be 
+orbits. So our model for magnetism is not really correct yet.\footnote{%
+Strictly speaking, the electrons don't move like little planets around the
+nucleus. So it is not clear that orbital \textquotedblleft
+motion\textquotedblright\ makes much sense. The electrons form standing
+waves around the nucleus that oscillate in time. But they do have angular
+momentum, and that orbital angular momentum cancels out for most atoms. For
+more on this, take PH279, Modern Physics.} To understand the current model
+of electron orbitals takes some quantum mechanics (and a few more years of
+physics). But we can understand a little, because quantum mechanics does
+tell us that the electrons have angular momentum. The big difference is that
+the angular momentum is \emph{quantized} meaning it can have only certain
+values (think of the quantized modes of an oscillating string). The smallest
+magnetic moment for an electron turns out to be 
 \begin{equation}
-\mu =\sqrt{2}\frac{q_{e}}{2m_{e}}\hslash
+\mu =\sqrt{2}\frac{q_{e}}{2m_{e}}\hslash 
 \end{equation}%
 where 
 \begin{equation*}
@@ -27648,10 +27673,13 @@ electron, itself. The electron has an amount of angular momentum. It is as
 though it spins on an axis. This spin angular momentum is also quantized. It
 can take values of%
 \begin{equation}
-S=\pm \frac{\sqrt{3}}{2}\hslash
+S=\pm \frac{\sqrt{3}}{2}\hslash 
 \end{equation}%
-My mental picture of this is a charged ball spinning on an axis. \FRAME{dhF}{%
-1.0343in}{0.921in}{0pt}{}{}{Figure}{\special{language "Scientific Word";type
+My mental picture of this is a charged ball spinning on an axis.\footnote{%
+But this is just a mental model. Electrons don't spin. They do have angular
+momentum. But how electrons generate their angular momentum is still hard to
+tell. Physicists are working on this.} \FRAME{dhF}{1.0343in}{0.921in}{0pt}{}{%
+}{Figure}{\special{language "Scientific Word";type
 "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
 1.0343in;height 0.921in;depth 0pt;original-width 1.0006in;original-height
 0.8882in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
@@ -27672,14 +27700,14 @@ itself is a source of the magnetic field for permanent magnets.
 The spin magnetic moment was given the strange name \emph{Bohr magneton} in
 honor of Niels Bohr. If there are many electrons in the atom, there will be
 many contributions to the total atomic magnetic moment. The nucleus also has
-a magnetic moment (a detail we will not discuss) and there are other details
-like electron spin states pairing up. But those are topics for PH279 and our
-senior quantum mechanics class. But it turns out that this spin magnetic
-moment is the major cause that produces permanent magnetism. We don't want
-to wade though a senior level physics class now (well, you probably don't
-anyway) so we need a more macroscopic description of magnetism. But
-fundamentally, if we can get the electrons spins in a material to line up,
-we will have a magnet.
+a magnetic moment (a detail we will not discuss at any length in our class)
+and there are other details like electron spin states pairing up. But those
+are topics for PH279 and our senior quantum mechanics class. It turns out
+that this spin magnetic moment is the major cause that produces permanent
+magnetism in some metals. We don't want to wade though a senior level
+physics class now (well, you probably don't anyway) so we need a more
+macroscopic description of magnetism. But fundamentally, if we can get the
+electrons spins in a material to line up, we will have a magnet.
 
 \subsection{Ferromagnetism}
 
@@ -27798,7 +27826,7 @@ so
 \begin{equation*}
 B_{m}=\mu _{o}\frac{\mu }{\ell A}
 \end{equation*}%
-but note that $\ell A$ is just the volume of the piece of magnetic material,
+But note that $\ell A$ is just the volume of the piece of magnetic material,
 so 
 \begin{equation*}
 B_{m}=\mu _{o}\frac{\mu }{V}
@@ -27807,7 +27835,7 @@ which is gives us our new quantity, the magnetization vector%
 \begin{equation}
 M=\frac{\mu }{V}
 \end{equation}%
-well, this is the magnitude, anyway, so 
+Well, this is the magnitude, anyway, so 
 \begin{equation}
 B_{m}=\mu _{o}M
 \end{equation}%
@@ -27920,10 +27948,8 @@ Free Space & $\mu _{m}=\mu _{o}$%
 
 For paramagnetic and diamagnetic materials, $\mu _{m}$ is usually not too
 different from $\mu _{o}$ but for ferromagnetic materials $\mu _{m}$ is much
-larger than $\mu _{o}.$
-
-Note that we have not included ferromagnetic substances in this discussion.
-That is because 
+larger than $\mu _{o}.$ Note that we have not included ferromagnetic
+substances in this discussion. That is because 
 \begin{equation*}
 \mathbf{M}=\chi \mathbf{H}
 \end{equation*}%
@@ -27947,29 +27973,29 @@ is not true for ferromagnetic materials.
 }%
 %EndExpansion
 But why is ferromagnetism different? To try to understand, let's take a iron
-toroid and wrap it with a coil as shown. \FRAME{dtbpF}{2.2978in}{2.4647in}{%
-0pt}{}{}{Figure}{\special{language "Scientific Word";type
+toroid (doughnut shape) and wrap it with a coil as shown. \FRAME{dtbpF}{%
+2.2978in}{2.4647in}{0pt}{}{}{Figure}{\special{language "Scientific
+Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
+"T";width 2.2978in;height 2.4647in;depth 0pt;original-width
+4.2359in;original-height 4.5455in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'LUQPN21B.wmf';tempfile-properties "XPR";}}%
+We have a magnetic field meter that measures the field inside the windings
+of the coil. When we throw the switch, the coil produces a magnetic field.
+The field will produce a magnetization vector in the iron toroid and,
+therefore, a field strength. We can plot the applied magnetic field vs. the
+field strength to see how much effect the applied field has on the magnetic
+properties of the iron toroid. We won't do this mathematically, but the
+result is shown in the figure.\FRAME{dtbpF}{2.8228in}{2.5875in}{0pt}{}{}{%
+Figure}{\special{language "Scientific Word";type
 "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-2.2978in;height 2.4647in;depth 0pt;original-width 4.2359in;original-height
-4.5455in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
-'LUQPN21B.wmf';tempfile-properties "XPR";}}We have a magnetic field meter
-that measures the field inside the windings of the coil. When we throw the
-switch, the coil produces a magnetic field. The field will produce a
-magnetization vector in the iron toroid and, therefore, a field strength. We
-can plot the applied magnetic field vs. the field strength to see how much
-effect the applied field has on the magnetic properties of the iron toroid.
-We won't do this mathematically, but the result is shown in the figure.%
-\FRAME{dtbpF}{2.8228in}{2.5875in}{0pt}{}{}{Figure}{\special{language
-"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
-"USEDEF";valid_file "T";width 2.8228in;height 2.5875in;depth
-0pt;original-width 2.7795in;original-height 2.5469in;cropleft "0";croptop
-"1";cropright "1";cropbottom "0";tempfilename
+2.8228in;height 2.5875in;depth 0pt;original-width 2.7795in;original-height
+2.5469in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
 'M6DYEK00.wmf';tempfile-properties "XPR";}}As we throw the switch, we go
 from no alignment of the domains so zero $M$ and therefore zero induced
 field in the iron toroid to a value that represents the almost complete
-alignment of the magnetic moments of each atom of the iron. This is point $%
-a. $ It may take a bit of current, but in theory we can always do this. All
-the domains are aligned and $M$ is maximum.
+alignment of the magnetic moments of each atom of the iron. This is point $a.
+$ It may take a bit of current, but in theory we can always do this. All the
+domains are aligned and $M$ is maximum.
 
 Now we reduce the current from our battery, and we find that the field due
 to the aligned domains drops as expected, but not along the same path that
@@ -28019,12 +28045,13 @@ magnetic field switches polarity. We can see which way the magnetization
 vector points in the cooled lava deposits from places like the Mid-Atlantic
 Trench.
 
-This is also how magnetic tapes and disks work.
+This is also how old fashioned magnetic tapes and disks work.
 
 \subsection{Paramagnetism}
 
-So what is paramagnetism? It comes from the material having a small natural
-magnetic susceptibility.%
+We said that if $\mu _{m}>\mu _{o}$ we get paramagnetism. But what is
+paramagnetism? It comes from the material having a small natural magnetic
+susceptibility.%
 \begin{equation}
 0<\chi \ll 1
 \end{equation}%
@@ -28036,9 +28063,9 @@ paramagnetism is that
 M=C\frac{B_{o}}{T}
 \end{equation}%
 where $C$ contains the particular material properties of the substance you
-are investigating (another thing to look up in tables in books), $B_{o}$ the
-applied field, and $T$ is the temperature. In other words, if it is cool
-enough, a paramagnetic material becomes a magnet in the presence of an
+are investigating (another thing to look up in tables in datasets), $B_{o}$
+is the applied field, and $T$ is the temperature. In other words, if it is
+cool enough, a paramagnetic material becomes a magnet in the presence of an
 external magnetic field. This is a little like polarization of neutral
 insulators in the presence of an electric field. For paramagnetic materials,
 the induced magnetic field is in the same direction as the external field.
@@ -28056,15 +28083,16 @@ Sodium & $0.72\times 10^{-5}$%
 
 \subsection{Diamagnetism.}
 
-This is fundamentally quite different from paramagnetism. It comes from the
-material having paired electrons that orbit the atom (classical model). The
-magnetic moments of the electrons will have equal magnitudes, but opposite
-directions (a little bit of quantum mechanics to go with our classical
-model). When the external field is applied, one electron's orbit is enhanced
-by the field, and the other is diminished (think $q\mathbf{v}\times B$). So
-there will be a net magnetic moment. If you think about this for a while,
-you will realize that the new net magnetic moment is in the opposite
-direction of the applied external field! So diamagnetism will always repel.
+If $\mu _{m}<\mu _{o}$ we said we would have diamagnetism. This is
+fundamentally quite different from paramagnetism. It comes from the material
+having paired electrons that orbit the atom (classical model). The magnetic
+moments of the electrons will have equal magnitudes, but opposite directions
+(a little bit of quantum mechanics to go with our classical model). When the
+external field is applied, one electron's orbit is enhanced by the field,
+and the other is diminished (think $q\mathbf{v}\times B$). So there will be
+a net magnetic moment. If you think about this for a while, you will realize
+that the new net magnetic moment is in the opposite direction of the applied
+external field! So diamagnetism will always repel.
 
 There is always some diamagnetism in all mater. We can enhance the effect
 using a superconductor. The diamagnetism of the superconductor repeals the
@@ -28137,28 +28165,6 @@ If we think of relative motion, it seems like it should. After all, how do
 we know that it is the charge that is moving and not a moving $B$-field. In
 fact, moving $B$-fields \emph{do} cause a current. We say that a moving or
 changing magnetic field \emph{induces} a current.
-
-%TCIMACRO{%
-%\TeXButton{MIT 1_edit.wmv}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{MIT 1edit.wmv}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{MIT 1edit.wmv}
-\end{minipage}
-}%
-%EndExpansion
-Notice that in our movie, the current does not stay constant. As the magnet
-moves, we get a spike in current. But it drops back down to zero. When the
-magnet is taken away, again we get a spike in current (now the other
-direction). But again it dies back down. The current seems to exist only as
-the field changes, and there is more current where the field is changing
-fastest
 
 Faraday discovered this effect. He described it as an \emph{induced emf}. An
 emf is something that \textquotedblleft pumps\textquotedblright\ the charges
