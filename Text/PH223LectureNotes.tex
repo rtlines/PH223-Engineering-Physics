@@ -11,7 +11,7 @@
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=Manual}
 %TCIDATA{Created=Thursday, June 02, 2011 09:40:55}
-%TCIDATA{LastRevised=Friday, December 01, 2023 18:37:48}
+%TCIDATA{LastRevised=Tuesday, December 05, 2023 14:11:29}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 %TCIDATA{<META NAME="DocumentShell" CONTENT="Style Editor\TLLectureNotes">}
 %TCIDATA{Language=American English}
@@ -30709,22 +30709,26 @@ Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
 2.2087in;original-height 1.1831in;cropleft "0";croptop "1";cropright
 "1";cropbottom "0";tempfilename 'MEGNB701.wmf';tempfile-properties "XPR";}}%
 notice that there is no battery. If the field flux changes, will there be a
-potential difference measured by the voltmeters? Let's use Kirchhoff's rules
-to analyze the circuit. I\ can draw in guesses for the currents.\FRAME{dtbpF%
-}{2.4379in}{1.3197in}{0pt}{}{}{Figure}{\special{language "Scientific
-Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
-"T";width 2.4379in;height 1.3197in;depth 0pt;original-width
-2.3964in;original-height 1.2851in;cropleft "0";croptop "1";cropright
-"1";cropbottom "0";tempfilename 'MEGND802.wmf';tempfile-properties "XPR";}}%
-and now we use the junction and loop rules to find the voltages.
+potential difference measured by the voltmeters? Let's use conservation of
+energy to analyze the circuit. I\ can draw in guesses for the currents.%
+\FRAME{dtbpF}{2.4379in}{1.3197in}{0pt}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+"USEDEF";valid_file "T";width 2.4379in;height 1.3197in;depth
+0pt;original-width 2.3964in;original-height 1.2851in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
+'MEGND802.wmf';tempfile-properties "XPR";}}At the junction, we can use
+conservation of charge to see how the currents combine or divide. This will
+allow us to find the voltages.
 
 But recall that 
 \begin{equation*}
 \doint \mathbf{E}\cdot ds=0
 \end{equation*}%
-was the basis for Kirchhoff's loop rule. And we learned that this is not
-true for induced emfs. So in the middle loop Kirchhoff's loop rule is not
-true! We now know that because of the changing magnetic field, 
+is a statement of conservation of energy. In electronics, we call this
+Kirchhoff's loop rule. And we learned that this is not true for induced
+emfs. So in the middle loop Kirchhoff's loop rule--conservation of
+energy--is not true! Some energy is transfered into or out of the circuit.
+We now know that is because of the changing magnetic field, 
 \begin{equation*}
 \doint \mathbf{E}\cdot ds=\mathcal{E}=-\frac{d\Phi _{B}}{dt}
 \end{equation*}%
@@ -30738,8 +30742,8 @@ I_{1}R_{i}-IR_{1} &=&0 \\
 I_{2}R_{i}-IR_{2} &=&0
 \end{eqnarray*}%
 where $R_{i}$ is the internal resistance of the voltmeters. If there were no 
-$\mathcal{E}$, then the volt meters would certainly not read anything, but
-now we see that 
+$\mathcal{E}$, then the volt meters would not read anything, but now we see
+that 
 \begin{eqnarray*}
 \left\vert V_{1}\right\vert &=&I_{1}R_{i}\approx IR_{1} \\
 \left\vert V_{2}\right\vert &=&I_{2}R_{i}\approx IR_{2}
@@ -30791,14 +30795,14 @@ the $ds$ direction is down, we have
 \end{equation*}%
 for this section of the circuit. Suppose we have ideal wires. If the wire
 has no resistance, then it takes no work to move the charges through the
-wire. In this case, an electron launched by the electric in the battery just
-coasts from the battery to the resister. There is no need to have an
-acceleration in the ideal wire. The electric potential won't change from the
-battery to the resister. So there won't be a field in this ideal wire part.
-But let's next we consider the resister. There is a potential change as we
-go across it. And if there is a change in potential, there must be an
-electric field. So the resister also has an electric field inside of it. We
-have a component of $\doint_{R}\mathbf{E}\cdot ds$ that is equal to $%
+wire. In this case, an electron launched by the electric field in the
+battery just coasts from the battery to the resister. There is no need to
+have an acceleration in the ideal wire. The electric potential won't change
+from the battery to the resister. So there won't be a field in this ideal
+wire part. But let's next we consider the resister. There is a potential
+change as we go across it. And if there is a change in potential, there must
+be an electric field. So the resister also has an electric field inside of
+it. We have a component of $\doint_{R}\mathbf{E}\cdot ds$ that is equal to $%
 \mathcal{E}_{R}=IR$ from this field. 
 \begin{equation*}
 \doint_{R}\mathbf{E}\cdot ds=IR
@@ -31257,7 +31261,7 @@ M_{12}=\frac{N_{2}\Phi _{12}}{I_{1}}
 \doint \mathbf{B\cdot }d\mathbf{s}=\mu _{o}I
 \end{equation*}%
 \begin{equation*}
-\doint \mathbf{B\cdot }d\mathbf{A=\Phi }_{B}
+\doint \mathbf{B\cdot }d\mathbf{A}=\Phi _{B}
 \end{equation*}
 
 The field from the wire 
@@ -31453,7 +31457,7 @@ charge is moving along with frame $S^{\prime }$ with a velocity $%
 \begin{eqnarray*}
 \overrightarrow{\mathbf{F}} &=&q\overrightarrow{\mathbf{v}}\times 
 \overrightarrow{\mathbf{B}} \\
-&=&qv\hat{\imath}\times B\left( -\hat{k}\right)  \\
+&=&qv\hat{\imath}\times B\left( -\hat{k}\right) \\
 &=&qVB\hat{\jmath}
 \end{eqnarray*}%
 in the $\widehat{j}$ direction.
@@ -31614,12 +31618,14 @@ then both equations tell us
 \begin{equation*}
 \overrightarrow{\mathbf{a}}^{\prime }=\overrightarrow{\mathbf{a}}
 \end{equation*}%
-so there \emph{must be a force }%
+This was a lot of work, but the end of all this talk about reference frames
+shows us that there \emph{must be a force }%
 \begin{equation*}
 \overrightarrow{\mathbf{F}}=m\overrightarrow{\mathbf{a}}=m\overrightarrow{%
 \mathbf{a}}^{\prime }
 \end{equation*}%
-in both frame $S$ and $S^{\prime }.$
+in both frame $S$ and $S^{\prime }.$ The mass is the same in both frames,
+and so is the acceleration.
 
 We can gain some insight into finding the mysterious missing force in frame $%
 S^{\prime }$ by considering the net force in the case of both an electric
@@ -31640,7 +31646,7 @@ Going back to our two guys on different frames, In frame $S,$ the person
 sees 
 \begin{eqnarray*}
 \overrightarrow{\mathbf{F}} &=&q\left( 0+\overrightarrow{\mathbf{V}}%
-_{S^{\prime }S}\times \overrightarrow{\mathbf{B}}\right) =qV\hat{\imath}%
+_{S^{\prime }S}\times \overrightarrow{\mathbf{B}}\right) =qV_{x}\hat{\imath}%
 \times B\left( -\hat{k}\right) \\
 &=&qVB\hat{\jmath}
 \end{eqnarray*}%
@@ -31651,12 +31657,12 @@ and in frame $S^{\prime }$ the person sees
 \overrightarrow{\mathbf{E}}^{\prime }
 \end{equation*}%
 It seems that the only way that $\overrightarrow{\mathbf{F}}=\overrightarrow{%
-\mathbf{F}}^{\prime }$ is that $\overrightarrow{\mathbf{E}}^{\prime }\neq 0.$
-So in frame $S^{\prime }$ our person must conclude that there is an external
-electric field that produces the force $\overrightarrow{\mathbf{F}}^{\prime
-}.$ In frame $S$ the person is convinced that the magnetic field, $%
-\overrightarrow{\mathbf{B}}\mathbf{,}$ is making the force. In frame $%
-S^{\prime }$ the person is convinced that the electric field $%
+\mathbf{F}}^{\prime }$ is that $\overrightarrow{\mathbf{E}}^{\prime }\neq 0$
+in the primed frame! So in frame $S^{\prime }$ our person must conclude that
+there is an external electric field that produces the force $\overrightarrow{%
+\mathbf{F}}^{\prime }.$ In frame $S$ the person is convinced that the
+magnetic field, $\overrightarrow{\mathbf{B}}\mathbf{,}$ is making the force.
+In frame $S^{\prime }$ the person is convinced that the electric field $%
 \overrightarrow{\mathbf{E}}^{\prime }$ is making the force.
 
 %TCIMACRO{%
@@ -31721,9 +31727,13 @@ and the direction must be
 }%
 %EndExpansion
 Our interpretation of this result is mind-blowing. It seems that whether we
-see a magnetic field or an electric field depends on our reference frame!
-The implication is that the electric and magnetic fields are not really two
-different things. They are one field viewed from different reference frames!
+see a magnetic field or an electric field causing the force depends on our
+reference frame! The implication is that the electric and magnetic fields
+are not really two different things. They are one field viewed from
+different reference frames!
+
+Anther way to say what we have found might be that moving magnetic fields
+show up as electric fields.
 
 So far we have been talking about external fields only. The field $%
 \overrightarrow{\mathbf{B}}$ in our case study is created by some outside
@@ -31755,9 +31765,9 @@ _{\text{environment}}^{\prime }
 Of course, $\overrightarrow{\mathbf{E}}_{\text{self}}$ can't create a force
 on the charge, because it is a self-field. So we only need to be concerned
 with $\overrightarrow{\mathbf{E}}_{\text{self}}$ if we have other charges
-that could move. We could actually have other charges riding along with
+that could move. We could actually have a group of charges riding along with
 frame $S^{\prime }.$ In that case we would have an additional field $E_{%
-\text{charge }}^{\prime }.$ We could write this as 
+\text{charges }}^{\prime }.$ We could write this as 
 \begin{equation*}
 \overrightarrow{\mathbf{E}}=\mathbf{E}_{\text{charges in }S\prime }^{\prime
 }-\overrightarrow{\mathbf{V}}_{S^{\prime }S}\times \overrightarrow{\mathbf{B}%
@@ -31865,10 +31875,10 @@ additional magnet riding along with frame $S^{\prime }.$ To allow for that
 case, let's include a term $\overrightarrow{\mathbf{B}}_{\text{magnet}%
 }^{\prime }$. 
 \begin{equation*}
-\overrightarrow{\mathbf{B}}=\overrightarrow{\mathbf{B}}_{\text{magnets in }%
-S^{\prime }}^{\prime }+\mu _{o}\epsilon _{o}\left( \overrightarrow{\mathbf{V}%
-}_{S^{\prime }S}\times \overrightarrow{\mathbf{E}}_{\text{environment }%
-}^{\prime }\right)
+\overrightarrow{\mathbf{B}}_{total}=\overrightarrow{\mathbf{B}}_{\text{%
+magnets in }S^{\prime }}^{\prime }+\mu _{o}\epsilon _{o}\left( 
+\overrightarrow{\mathbf{V}}_{S^{\prime }S}\times \overrightarrow{\mathbf{E}}%
+_{\text{environment }}^{\prime }\right)
 \end{equation*}%
 or just 
 \begin{equation*}
@@ -31886,9 +31896,9 @@ magnet}}-\mu _{o}\epsilon _{o}\left( \overrightarrow{\mathbf{V}}_{S^{\prime
 \end{equation*}%
 where the minus sign comes from the relative velocity being in the other
 direction. Again $\overrightarrow{\mathbf{B}}_{\text{magnet}}$ is a
-self-field. It won't move itself, but might be important if we have a second
-magnet in our experiment. Then $\overrightarrow{\mathbf{B}}_{\text{magnet}}$
-would cause a force on this second magnet.
+self-field. It won't move the magnet creating it, but it might be important
+if we have a second magnet in our experiment. Then $\overrightarrow{\mathbf{B%
+}}_{\text{magnet}}$ would cause a force on this second magnet.
 
 Once again we have found a way to find a field, the magnetic field this
 time, in one frame if we know the fields on another frame! We call this sort
@@ -31918,8 +31928,8 @@ moving charge is negligible. But let's calculate%
 This is the speed of light! It even has units of $\unit{m}/\unit{s}.$ This
 seems an amazing coincidence--too amazing. And this was one of the clues
 that Maxwell used to discover that light is a wave in what we will now call
-(because they are different aspects of one thing) the \emph{electromagnetic
-field}.
+the \emph{electromagnetic field} (because they are different aspects of one
+thing).
 
 We can write the transformation equations for the fields as 
 \begin{eqnarray*}
@@ -32016,13 +32026,13 @@ The magnetic field in the primed frame is given by
 \begin{equation*}
 \overrightarrow{\mathbf{B}}^{\prime }=\overrightarrow{\mathbf{B}}_{\text{%
 magnet}}-\frac{1}{c^{2}}\left( \overrightarrow{\mathbf{V}}_{S^{\prime
-}S}\times \overrightarrow{\mathbf{E}}_{\text{environment}}\right) 
+}S}\times \overrightarrow{\mathbf{E}}_{\text{environment}}\right)
 \end{equation*}%
 but there is no external electric field in the unprimed frame, so 
 \begin{eqnarray*}
 \overrightarrow{\mathbf{B}}^{\prime } &=&\overrightarrow{\mathbf{B}}_{\text{%
 magnet}}-\frac{1}{c^{2}}\left( \overrightarrow{\mathbf{V}}_{S^{\prime
-}S}\times 0\right)  \\
+}S}\times 0\right) \\
 &=&\overrightarrow{\mathbf{B}}_{\text{magnet}}
 \end{eqnarray*}%
 where here \textquotedblleft magnet\textquotedblright\ means what ever is
@@ -32040,9 +32050,9 @@ force is
 \begin{eqnarray*}
 \overrightarrow{\mathbf{F}}^{\prime } &=&q\left( \overrightarrow{\mathbf{E}}%
 ^{\prime }+\overrightarrow{\mathbf{v}}\times \overrightarrow{\mathbf{B}}%
-^{\prime }\right)  \\
-&=&q\left( VB\hat{\jmath}+\mathbf{0}\times \overrightarrow{\mathbf{B}}%
-\right)  \\
+^{\prime }\right) \\
+&=&q\left( VB\hat{\jmath}+\mathbf{0}\times \overrightarrow{\mathbf{B}}\right)
+\\
 &=&qVB\hat{\jmath}
 \end{eqnarray*}%
 Which is exactly the same force (magnitude and direction) as we got in the
@@ -32392,8 +32402,8 @@ I_{d}=\varepsilon _{o}\frac{d\Phi _{E}}{dt}
 Maxwell decided that, since this looked like equivalent to a current, he
 would call it a current and include it in Ampere's law.%
 \begin{eqnarray*}
-\doint \mathbf{B}\cdot d\ell  &=&\mu _{o}\left( I+I_{d}\right)  \\
-&=&\mu _{o}\left( I+\varepsilon _{o}\frac{d\Phi _{E}}{dt}\right) 
+\doint \mathbf{B}\cdot d\ell &=&\mu _{o}\left( I+I_{d}\right) \\
+&=&\mu _{o}\left( I+\varepsilon _{o}\frac{d\Phi _{E}}{dt}\right)
 \end{eqnarray*}%
 but remember it is not really a current. What we have is a changing electric
 field that is making a magnetic field \emph{as though there were a current }$%
@@ -32423,22 +32433,22 @@ but now we know that if we use $S_{2}$ we have $\frac{d\Phi _{E}}{dt}\neq 0$%
 , and we realize that at $P_{2}$ the current $I=0$ so 
 \begin{equation*}
 \doint \mathbf{B}\cdot d\ell =\mu _{o}\left( 0+\varepsilon _{o}\frac{d\Phi
-_{E}}{dt}\right) 
+_{E}}{dt}\right)
 \end{equation*}%
 and for our geometry we found$\frac{d\Phi _{E}}{dt}$ 
 \begin{equation*}
 \doint \mathbf{B}\cdot d\ell =\mu _{o}\left( 0+\pi R^{2}\varepsilon _{o}%
-\frac{dE}{dt}\right) 
+\frac{dE}{dt}\right)
 \end{equation*}%
 and we calculated $\frac{dE}{dt}$ so we can substitute it in%
 \begin{equation*}
 \doint \mathbf{B}\cdot d\ell =\mu _{o}\left( 0+\pi R^{2}\varepsilon _{o}%
-\frac{I}{\pi R^{2}\varepsilon _{o}}\right) 
+\frac{I}{\pi R^{2}\varepsilon _{o}}\right)
 \end{equation*}%
 where we remember that the current $I$ is the current making the electric
 field--the current in the wire. Then we have 
 \begin{equation*}
-B2\pi r=\mu _{o}\left( 0+I\right) 
+B2\pi r=\mu _{o}\left( 0+I\right)
 \end{equation*}%
 and our field is%
 \begin{equation*}
@@ -32563,7 +32573,7 @@ or worse wave shapes. Unfortunately, many antennas send out complicated wave
 patterns that take spherical harmonics to describe well. That is beyond the
 math we want to do in this course.We will stick to simple shapes. But we
 will see how waves in the electromagnetic field describe light in our next
-lecture. 
+lecture.
 
 \chapter{Waves in the Field}
 
@@ -32594,11 +32604,11 @@ TRUE;display "USEDEF";valid_file "T";width 4.1572in;height 2.0851in;depth
 'Lecture_Notes/planewave3D0.bmp';tempfile-properties "XNPR";}}
 \end{itemize}
 
-Instead, let's picture our wave front far from the source. No matter what
-the total shape, if we look at a small patch of the fields far away, they
-will look like the plane wave in the last figure. Since this is a useful and
-common situation (except if you use lasers), we will perform some
-calculations assuming plane wave geometry.
+Let's picture our wave front far from the source. No matter what the total
+shape, if we look at a small patch of the fields far away, they will look
+like the plane wave in the last figure. Since this is a useful and common
+situation (except if you use lasers), we will perform some calculations
+assuming plane wave geometry.
 
 We will assume we are in empty space, so the charge $q$ and current $I$ will
 both be zero. Then our Maxwell Equations become%
@@ -32672,7 +32682,7 @@ From our discussion of displacement currents we have a strong hint that the $%
 \overrightarrow{\mathbf{E}}$ and $\overrightarrow{\mathbf{B}}$ fields will
 be perpendicular. So let's take the magnetic field as positive in the $z$
 direction. So as the light wave moves from the source along a line we could
-draw the  $\overrightarrow{\mathbf{E}}$ and $\overrightarrow{\mathbf{B}}$
+draw the $\overrightarrow{\mathbf{E}}$ and $\overrightarrow{\mathbf{B}}$
 fields something like this. \FRAME{dtbpF}{3.2301in}{2.5365in}{0in}{}{}{Figure%
 }{\special{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
 TRUE;display "USEDEF";valid_file "T";width 3.2301in;height 2.5365in;depth
@@ -33074,14 +33084,19 @@ S_{ave} &=&\frac{1}{\epsilon _{o}\mu _{o}c}\frac{1}{2}\epsilon _{o}E^{2} \\
 &=&cu_{ave}  \notag
 \end{eqnarray}
 
-Remember when you studied thermodynamics you, learned that we could transfer
-energy by radiation. This is our radiation! And we see that it does indeed
-transfer energy. We learned about this by discussing solar heating and by
-talking about Army weapons that apply energy to crowds.\FRAME{dhF}{2.2813in}{%
-2.5004in}{0pt}{}{}{Figure}{\special{language "Scientific Word";type
-"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-2.2813in;height 2.5004in;depth 0pt;original-width 2.2955in;original-height
-2.5199in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+If you have aready taken your course on thermodynamics you, learned that we
+could transfer energy by radiation. This is our radiation! And we see that
+it does indeed transfer energy. We learned about this by discussing solar
+heating and by talking about Army weapons that apply energy to crowds.\FRAME{%
+dhFU}{2.2814in}{2.5002in}{0pt}{\Qcb{{\protect\small US Army Active Denial
+System (ADS).
+https://jnlwp.defense.gov/Portals/50/Documents/Resources/Presentations/Joint%
+\_Integration\_Program\_Advanced\_Planning\_Briefs\_to\_Industry/2017\%20DoD%
+\_OGA\%20NLW\%20APBI\%20Army.pdf?ver=2020-08-25-125259-783}}}{}{Figure}{%
+\special{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
+TRUE;display "USEDEF";valid_file "T";width 2.2814in;height 2.5002in;depth
+0pt;original-width 2.2955in;original-height 2.5199in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
 'LVRLHK06.wmf';tempfile-properties "XPR";}}but we really use this every day
 when we microwave something. Microwaves are electromagnetic waves!
 
@@ -33096,7 +33111,8 @@ or if the waves are reflected it is
 \begin{equation}
 p=\frac{2U}{c}
 \end{equation}%
-(think of balls bouncing off a wall, the change in momentum is always $2mv).$
+(think of balls bouncing off a wall, the change in momentum is always $2mv$
+for a bounce)$.$
 
 We can think of the light exerting a pressure on the surface. Force is given
 by 
@@ -33231,10 +33247,10 @@ speed of light was strong evidence leading us to conclude that light was
 really a type of these waves. There are a few more types of electromagnetic
 waves. In the following chart you can see that visible light is just a small
 part of what we call the \emph{electromagnetic spectrum.}\FRAME{dtbpFU}{%
-3.8795in}{0.3035in}{0pt}{\Qcb{Electromagnetic Spectrum (Public Domain image
+4.5109in}{0.3537in}{0pt}{\Qcb{Electromagnetic Spectrum (Public Domain image
 courtesy NASA)}}{}{Figure}{\special{language "Scientific Word";type
 "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-3.8795in;height 0.3035in;depth 0pt;original-width 4.0309in;original-height
+4.5109in;height 0.3537in;depth 0pt;original-width 4.0309in;original-height
 0.2897in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
 'MFFY4Z01.wmf';tempfile-properties "XPR";}}
 
@@ -33266,12 +33282,12 @@ f^{\prime }=f\frac{\sqrt{1+\frac{v}{c}}}{\sqrt{1-\frac{v}{c}}}
 or, if we let $u$ be the relative velocity between the source and the
 detector, and insist that $u\ll c$%
 \begin{equation}
-f^{\prime }=f\left( \frac{c+u}{c}\right)
+f^{\prime }=f\left( \frac{c+u}{c}\right) 
 \end{equation}%
 Where of course $f^{\prime }$ is the observed frequency and $f$ is the
 frequency emitted by the source. This is usually written as%
 \begin{equation}
-f^{\prime }=f\left( 1\pm \frac{u}{c}\right)
+f^{\prime }=f\left( 1\pm \frac{u}{c}\right) 
 \end{equation}%
 but it is really the same equation\footnote{%
 This equation is only really true for relative speeds $u$ that are much less
