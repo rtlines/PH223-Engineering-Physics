@@ -11,7 +11,7 @@
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=Manual}
 %TCIDATA{Created=Thursday, June 02, 2011 09:40:55}
-%TCIDATA{LastRevised=Tuesday, December 05, 2023 14:11:29}
+%TCIDATA{LastRevised=Thursday, December 21, 2023 12:13:06}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 %TCIDATA{<META NAME="DocumentShell" CONTENT="Style Editor\TLLectureNotes">}
 %TCIDATA{Language=American English}
@@ -24868,6 +24868,75 @@ taken, are taking, or will take ME210 so you will know how to build simple
 circuits with resistances and capacitances. But for this class, we will now
 investigate a new force, the magnetic force.
 
+\section{Power in resisters}
+
+We learned that the resistance in a resister depends on the temperature of
+the resister, and even have an approximate relationship that shows how this
+works%
+\begin{equation*}
+R=R_{o}(1+\alpha \left( T-T_{o})\right)
+\end{equation*}%
+so we know that temperature and resistance are related. But most of us have
+used a toaster, or an electric stove, or an electric space heater, etc. How
+does an electric circuit produce heat? or even light from a light bulb?
+
+To answer this let's think of the energy expended as an electron travels a
+circuit. The potential energy expended is 
+\begin{equation*}
+\Delta U=q\Delta V
+\end{equation*}%
+where the $\Delta V$ comes from the battery, so we could write this as 
+\begin{equation*}
+\Delta U=q\mathcal{E}
+\end{equation*}%
+This is the energy lost as the electron travels from one side of the battery
+to the other. We could describe how fast the energy is lost by dividing by
+the time it takes the electron to make the trip%
+\begin{equation*}
+\frac{\Delta U}{\Delta T}=\frac{q}{\Delta t}\mathcal{E}
+\end{equation*}%
+but of course we want to do this for more than one electron. Let's take a
+small amount of charge, $\Delta Q,$ then 
+\begin{equation*}
+\frac{\Delta U}{\Delta T}=\frac{\Delta Q}{\Delta t}\mathcal{E}
+\end{equation*}%
+\begin{equation*}
+\frac{\Delta U}{\Delta T}=\frac{\Delta Q}{\Delta t}\mathcal{E}
+\end{equation*}%
+and if we make the small group of charge very small we have 
+\begin{equation*}
+\frac{dU}{dT}=\frac{dQ}{dt}\mathcal{E}
+\end{equation*}%
+and we recognize $dU/dt$ as the power and $dQ/dt$ as current, then 
+\begin{equation*}
+\mathcal{P}=I\mathcal{E}
+\end{equation*}
+
+This is the power supplied by the battery in moving the group of electrons
+through the circuit. But from conservation of energy, the charge packet must
+lose all the energy that the battery provides, so 
+\begin{equation*}
+\mathcal{P}_{battery}=\mathcal{P}_{R}=I\Delta V_{R}
+\end{equation*}%
+is the energy that leaves the circuit as the packet of charge moves.
+
+This works for any resistance 
+\begin{equation*}
+\mathcal{P}_{R}=I\Delta V_{R}
+\end{equation*}%
+Then we can use Ohm's law%
+\begin{equation*}
+\Delta V_{R}=IR
+\end{equation*}%
+to find 
+\begin{eqnarray*}
+\mathcal{P}_{R} &=&I\left( IR\right)  \\
+&=&I^{2}R
+\end{eqnarray*}
+
+But where does this energy go? This is the energy that makes the heat in the
+space heater, or the light in the light bulb.
+
 \section{Magnetism}
 
 Most people have used a magnet. at some time. They come as ads that stick to
@@ -32729,11 +32798,11 @@ we can write approximately
 \begin{eqnarray}
 \doint \overrightarrow{\mathbf{E}}\cdot d\overrightarrow{\mathbf{s}}
 &=&\int_{right}Eds-\int_{left}Eds \\
-&\approx &E\left( x+\Delta x,t\right) \ell -E\left( x,t\right) \ell  \\
+&\approx &E\left( x+\Delta x,t\right) \ell -E\left( x,t\right) \ell \\
 &=&\left( E\left( x,t\right) +\frac{\partial E}{\partial x}\Delta x\right)
-\ell -E\left( x,t\right) \ell   \notag \\
+\ell -E\left( x,t\right) \ell  \notag \\
 &=&\left( E\left( x,t\right) +\frac{\partial E}{\partial x}\Delta x\right)
-\ell -E\left( x,t\right) \ell   \notag \\
+\ell -E\left( x,t\right) \ell  \notag \\
 &=&\ell \frac{\partial E}{\partial x}\Delta x
 \end{eqnarray}%
 So far then, Faraday's law \footnote{%
@@ -32751,14 +32820,14 @@ _{B}$ so that we can find the time rate of change of the flux. We can say
 that $B$ is nearly constant over such a small area, so 
 \begin{eqnarray*}
 \Phi _{B} &=&\mathbf{B}\cdot \mathbf{A} \\
-&=&BA\cos \theta  \\
+&=&BA\cos \theta \\
 &=&BA \\
 &=&B\ell \Delta x
 \end{eqnarray*}%
 where here $\Delta x$ means \textquotedblleft a small
 distance\textquotedblright\ as it did above. Then 
 \begin{eqnarray*}
-\frac{d\Phi _{B}}{dt} &=&\frac{d}{dt}\left( B\ell \Delta x\right)  \\
+\frac{d\Phi _{B}}{dt} &=&\frac{d}{dt}\left( B\ell \Delta x\right) \\
 &=&\ell \Delta x\left. \frac{dB}{dt}\right\vert _{x\text{ constant}} \\
 &=&\ell \Delta x\frac{\partial B}{\partial t}
 \end{eqnarray*}%
@@ -33282,12 +33351,12 @@ f^{\prime }=f\frac{\sqrt{1+\frac{v}{c}}}{\sqrt{1-\frac{v}{c}}}
 or, if we let $u$ be the relative velocity between the source and the
 detector, and insist that $u\ll c$%
 \begin{equation}
-f^{\prime }=f\left( \frac{c+u}{c}\right) 
+f^{\prime }=f\left( \frac{c+u}{c}\right)
 \end{equation}%
 Where of course $f^{\prime }$ is the observed frequency and $f$ is the
 frequency emitted by the source. This is usually written as%
 \begin{equation}
-f^{\prime }=f\left( 1\pm \frac{u}{c}\right) 
+f^{\prime }=f\left( 1\pm \frac{u}{c}\right)
 \end{equation}%
 but it is really the same equation\footnote{%
 This equation is only really true for relative speeds $u$ that are much less
