@@ -11,7 +11,7 @@
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=Manual}
 %TCIDATA{Created=Thursday, March 21, 2024 14:45:27}
-%TCIDATA{LastRevised=Thursday, May 16, 2024 11:14:29}
+%TCIDATA{LastRevised=Friday, May 17, 2024 14:38:11}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 %TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Standard LaTeX Book">}
 %TCIDATA{Language=American English}
@@ -8930,21 +8930,6 @@ thin lens formula are determined by a sign convention.
 
 \section{Thin lenses and image equation}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.16.1}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.165.1}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.165.1}
-\end{minipage}
-}%
-%EndExpansion
 In this lecture, we will work toward understanding the equations that allow
 us to solve for the image location given the object location for a thin
 lens. Let's start by thinking of a special case for refraction. A circular
@@ -8982,10 +8967,10 @@ n_{1}\theta _{1}=n_{2}\theta _{2}
 \end{equation*}%
 Let's try to see where the image will be using Snell's law.
 
-\FRAME{dtbpF}{4.2687in}{1.6466in}{0in}{}{}{Figure}{\special{language
+\FRAME{dtbpF}{4.2687in}{1.6466in}{0pt}{}{}{Figure}{\special{language
 "Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
 "USEDEF";valid_file "T";width 4.2687in;height 1.6466in;depth
-0in;original-width 4.2186in;original-height 1.6103in;cropleft "0";croptop
+0pt;original-width 4.2186in;original-height 1.6103in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
 'SAPYR96K.wmf';tempfile-properties "XPR";}} Using the more detailed figure
 above, we observe triangles $SAC$ and $PAC.$ We recall that for triangle $%
@@ -9017,18 +9002,19 @@ triangle $SAC$ we know
 %EndExpansion
 }=\eta +\alpha +\beta
 \end{equation*}%
+Let's substitute in for $\eta $%
 \begin{equation*}
 180\unit{%
 %TCIMACRO{\U{b0}}%
 %BeginExpansion
 {{}^\circ}%
 %EndExpansion
-}=180\unit{%
+}=\left( 180\unit{%
 %TCIMACRO{\U{b0}}%
 %BeginExpansion
 {{}^\circ}%
 %EndExpansion
-}-\theta _{1}+\alpha +\beta
+}-\theta _{1}\right) +\alpha +\beta
 \end{equation*}%
 then 
 \begin{equation*}
@@ -9278,21 +9264,6 @@ means the image is virtual.
 
 \section{Thin Lenses}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.16.5}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.165.5}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.165.5}
-\end{minipage}
-}%
-%EndExpansion
 Lets' find an equation for a lens made from sections of spherical surfaces
 once more. But this time, let's let it be more practical and not make the
 \textquotedblleft lens\textquotedblright\ semi-infinite. We will need to
@@ -9528,22 +9499,7 @@ imaged in a corresponding point on the image\FRAME{dhF}{2.3255in}{1.8792in}{%
 3.4558in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
 'SAPYR96S.wmf';tempfile-properties "XPR";}}so, as we claimed earlier, our
 simple analysis explains the formation of actual images and not just point
-images.%
-%TCIMACRO{%
-%\TeXButton{Question 123.16.7}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 123.16.7}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 123.16.7}
-\end{minipage}
-}%
-%EndExpansion
+images.
 
 \subsection{Sign Convention}
 
@@ -9712,21 +9668,6 @@ in our brain interprets the rays as traveling in straight lines.
 
 \section{Mirror reversal}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.16.10}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.16.10}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.16.10}
-\end{minipage}
-}%
-%EndExpansion
 Look into a mirror. Raise your left hand. Your image raises what appears to
 be a right hand. It looks like a mirror switches the left and right sides of
 the image. But lie sideways on the ground in front of the mirror and raise a
@@ -9735,30 +9676,15 @@ What is happening? A flat mirror performs a front-back reversal. What this
 means is that, following the light direction, the object is positioned so
 that the back is encountered first, then the front, but in the image the
 front of the image is encountered first, then the back.\FRAME{dhF}{3.9695in}{%
-2.2191in}{0in}{}{}{Figure}{\special{language "Scientific Word";type
+2.2191in}{0pt}{}{}{Figure}{\special{language "Scientific Word";type
 "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-3.9695in;height 2.2191in;depth 0in;original-width 3.9202in;original-height
+3.9695in;height 2.2191in;depth 0pt;original-width 3.9202in;original-height
 2.1785in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
 'SAPYR96X.wmf';tempfile-properties "XPR";}}this has the effect of making it
 look like the left hand is raised when the object's right hand is raised.
 
 \subsection{Concave Mirrors}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.16.11}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.16.11}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.16.11}
-\end{minipage}
-}%
-%EndExpansion
 Concave mirrors can form images. I'm sure you know that many telescopes are
 made with mirrors. We should see how this works. Let's proceed like we did
 for lenses, but looking at what happens when light strikes the surface of
@@ -10022,21 +9948,6 @@ surface at a right angle and will be reflected back on itself.
 
 \subsection{Spherical Aberration}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.16.12}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.16.12}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.16.12}
-\end{minipage}
-}%
-%EndExpansion
 Spherical shapes are easier to make than parabolas or hyperbole, or other
 shapes. So optics manufacturers have been using spherical optics for
 centuries.\FRAME{dhF}{3.55in}{2.1767in}{0pt}{}{}{Figure}{\special{language
@@ -10052,22 +9963,7 @@ converge on a volume near where the image should be. Rays from larger angles
 converge at different distances than rays from small angles. This problem is
 known as \emph{spherical aberration}. Most of the time, we will point our
 optics so the object is near the principal axis, so we can make the paraxial
-approximation that fixes this problem.%
-%TCIMACRO{%
-%\TeXButton{Question 223.16.5}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.16.5}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.16.5}
-\end{minipage}
-}%
-%EndExpansion
+approximation that fixes this problem.
 
 The same problem happens with lenses\FRAME{dhF}{2.348in}{1.7867in}{0in}{}{}{%
 Figure}{\special{language "Scientific Word";type
@@ -10156,8 +10052,7 @@ s_{1}^{\prime }=\frac{s_{1}f_{1}}{s_{1}-f_{1}}  \label{q}
 We then take as the second object distance 
 \begin{equation*}
 s_{2}=d-s_{1}^{\prime }
-\end{equation*}
-
+\end{equation*}%
 we use the lens formula again.%
 \begin{equation*}
 \frac{1}{s_{2}}+\frac{1}{s_{2}^{\prime }}=\frac{1}{f_{2}}
@@ -10329,21 +10224,6 @@ you buy a quality manual lens, it will be marked in $f\#s$. The
 specification of an automatic lens will be given in terms of $f/\#s$. To
 help us buy such lenses, we should understand what the terminology means.
 
-%TCIMACRO{%
-%\TeXButton{Question 223.17.4}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.17.4}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.17.4}
-\end{minipage}
-}%
-%EndExpansion
 Most things we want to take a snapshot of are much farther than $58\unit{mm}$
 from the camera. For such objects we can revisit the magnification.%
 \begin{equation*}
@@ -10354,23 +10234,7 @@ but from the thin lens formula%
 \frac{1}{s}+\frac{1}{s^{\prime }}=\frac{1}{f}
 \end{equation*}%
 If $s\gg f$ then we can say that $1/s\approx 0$ and so $s^{\prime }\approx
-f. $ 
-%TCIMACRO{%
-%\TeXButton{Question 223.17.5}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.17.5}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.17.5}
-\end{minipage}
-}%
-%EndExpansion
-Then%
+f. $ Then%
 \begin{equation*}
 m=-\frac{f}{s}
 \end{equation*}%
@@ -10395,21 +10259,6 @@ Then
 \begin{equation*}
 I\propto \frac{P}{f^{2}}
 \end{equation*}%
-%TCIMACRO{%
-%\TeXButton{Question 223.17.6}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.17.6}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.17.6}
-\end{minipage}
-}%
-%EndExpansion
 The power entering the camera is proportional to the size of the aperture
 (hole the light goes through). A bigger aperture lets in more light. A
 smaller aperture lets in less light. If the camera has a circular opening,
@@ -10418,11 +10267,11 @@ D^{2}$ so%
 \begin{equation*}
 I\propto \frac{D^{2}}{f^{2}}
 \end{equation*}%
-This ratio is useful because it tells us how much intensity we get in terms
-of things we can easily know. Good cameras have changeable aperture sizes,
-and good lenses have changeable focal lengths. By using the combination of
-these two terms, we can ensure we will get enough light (but not too much)
-when we take the picture.
+This ratio is useful because it gives us a relative measure of how much
+intensity we get in terms of things we can easily know. Good cameras have
+changeable aperture sizes, and good lenses have changeable focal lengths. By
+using the combination of these two terms, we can ensure we will get enough
+light (but not too much) when we take the picture.
 
 It would be good to give this ratio a special name. But instead, we named
 the ratio 
@@ -10435,6 +10284,18 @@ I\propto \frac{1}{\left( f/\#\right) ^{2}}
 \end{equation}%
 So good cameras have adjustable lens systems marked in $f/\#^{\prime }s$.
 Typical values are $f/2.8,$ $f/4,$ $f/5.6,$ $f/8,$ $f/11,$ and $f/16.$
+Notice that since $I$ is proportional to $\left( 1/f/\#\right) ^{2}$ these
+common $f/\#$ values give an increase of intensity of a factor of 2 each
+time you change the $f/\#$ by one marked stop.%
+\begin{equation*}
+\begin{tabular}{cc}
+$f/\#$ change & Intensity change factor \\ 
+$f/11$ to $f/8$ & $2$ \\ 
+$f/8$ to $f/5.6$ & $2$ \\ 
+$f/5.6$ to $f/4$ & $2$ \\ 
+$f/4$ to $4f/2.8$ & $2$%
+\end{tabular}%
+\end{equation*}
 
 This terminology is used for telescope design as well. The Hubble telescope
 is an $f/24$ Ritchey-Chretien Cassegrainian system with a $2.4\unit{m}$
@@ -10490,21 +10351,6 @@ eyepiece to magnify the image.
 
 \section{The Eye}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.18.1}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.18.1}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.18.1}
-\end{minipage}
-}%
-%EndExpansion
 \FRAME{dhF}{3.48in}{1.3673in}{0pt}{}{}{Figure}{\special{language "Scientific
 Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
 "T";width 3.48in;height 1.3673in;depth 0pt;original-width
@@ -10519,36 +10365,21 @@ retina. \FRAME{dhF}{2.5754in}{1.8585in}{0pt}{}{}{Figure}{\special{language
 "USEDEF";valid_file "T";width 2.5754in;height 1.8585in;depth
 0pt;original-width 4.2402in;original-height 3.0528in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
-'SAPYR97D.wmf';tempfile-properties "XPR";}}%
-%TCIMACRO{%
-%\TeXButton{Question 223.18.2}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.18.2}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.18.2}
-\end{minipage}
-}%
-%EndExpansion
-The Cornea-lens system refracts the light onto the retina, which detects the
-light. The lens is focused by a set of mussels that flatten the lens to
-change it's focal length. The focusing process is different from a standard
-camera. The camera moves the lens to achieve a different image distance. Our
-eye can't change the distance between the lens system and the retina. So our
-eye changes the shape of the lens, changing it's focal length. \FRAME{dhFU}{%
-3.2387in}{1.446in}{0pt}{\Qcb{The crystaline lens becomes thicker, and
-therefore more curved when the cilliary musscle flexes. Austin Flint,
-\textquotedblleft The Eye as an Optical Instrument,\textquotedblright\ \emph{%
-Popular Science Monthly,} Vol. 45, p203, 1894 (Image in the public domain)}}{%
-}{Figure}{\special{language "Scientific Word";type
-"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-3.2387in;height 1.446in;depth 0pt;original-width 4.1987in;original-height
-1.8602in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'SAPYR97D.wmf';tempfile-properties "XPR";}}The Cornea-lens system refracts
+the light onto the retina, which detects the light. The lens is focused by a
+set of mussels that flatten the lens to change it's focal length. The
+focusing process is different from a standard camera. The camera moves the
+lens to achieve a different image distance. Our eye can't change the
+distance between the lens system and the retina. So our eye changes the
+shape of the lens, changing it's focal length. \FRAME{dhFU}{3.2387in}{1.446in%
+}{0pt}{\Qcb{The crystaline lens becomes thicker, and therefore more curved
+when the cilliary musscle flexes. Austin Flint, \textquotedblleft The Eye as
+an Optical Instrument,\textquotedblright\ \emph{Popular Science Monthly,}
+Vol. 45, p203, 1894 (Image in the public domain)}}{}{Figure}{\special%
+{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
+TRUE;display "USEDEF";valid_file "T";width 3.2387in;height 1.446in;depth
+0pt;original-width 4.1987in;original-height 1.8602in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
 'SAPYR97E.wmf';tempfile-properties "XPR";}}
 
 The focusing system is called accommodation. This system becomes less
@@ -10568,21 +10399,6 @@ is, on average, about $7\unit{mm}$ in diameter.
 
 \subsection{Nearsightedness}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.18.3}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.18.3}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.18.3}
-\end{minipage}
-}%
-%EndExpansion
 In some people the cornea-lens system focuses in front of the retina. This
 is called nearsightedness or myopia.
 
@@ -10607,21 +10423,6 @@ called farsightedness or hyperopia. It is corrected with a converging lens
 
 \subsection{Diopters}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.18.4}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.18.4}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.18.4}
-\end{minipage}
-}%
-%EndExpansion
 Eye glasses use a different unit of measure to describe how they bend light.
 The unit is the \emph{diopter} and it is equal one over the focal length%
 \begin{equation}
@@ -10940,28 +10741,13 @@ positive\textquotedblright\ and \textquotedblleft negative.\textquotedblright
 
 We have emphasized that an extended object can be viewed as a collection of
 point objects. Then the image is formed from the collection if images of
-those point objects. 
-%TCIMACRO{%
-%\TeXButton{Question 223.19.1}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.19.1}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.19.1}
-\end{minipage}
-}%
-%EndExpansion
-It would be great if optical systems could form images with infinite
-precision--that is, the image of a point object would be a point image. The
-fact that light acts as a wave prevents this from being true. The quality of
-our image depends on how poorly a point object is imaged. If each point
-object makes a large circle of light on the screen or detector array, we get
-a very confusing image (it will look blurry to us).\footnote{%
+those point objects. It would be great if optical systems could form images
+with infinite precision--that is, the image of a point object would be a
+point image. The fact that light acts as a wave prevents this from being
+true. The quality of our image depends on how poorly a point object is
+imaged. If each point object makes a large circle of light on the screen or
+detector array, we get a very confusing image (it will look blurry to us).%
+\footnote{%
 In Fourier Optics, the intensity pattern that comes from imaging a single
 point is called a \emph{point spread function} because it shows how spread
 out the light from a single point will be. In mechanical engineering, we
