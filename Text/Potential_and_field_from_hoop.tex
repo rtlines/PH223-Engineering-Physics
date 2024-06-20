@@ -1,0 +1,166 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{Created=Monday, June 17, 2024 10:41:09}
+%TCIDATA{LastRevised=Monday, June 17, 2024 11:11:39}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Scientific Notebook\Blank Document">}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+\subsection{Ring of charge}
+
+\FRAME{dtbpF}{5.1084in}{2.8089in}{0in}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+"USEDEF";valid_file "T";width 5.1084in;height 2.8089in;depth
+0in;original-width 5.0531in;original-height 2.7665in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
+'SF8IFF00.wmf';tempfile-properties "XPR";}}
+
+We found the field from a uniformly charged hoop
+
+\[
+\overrightarrow{\mathbf{E}}=\frac{1}{4\pi \epsilon _{o}}\frac{zQ}{\left(
+R^{2}+z^{2}\right) ^{\frac{3}{2}}}\mathbf{\hat{k}}
+\]
+
+\subsection{Potential}
+
+Let's find the potential from the hoop%
+\[
+v=\frac{1}{4\pi \epsilon _{o}}\int \frac{dq}{r}
+\]%
+Find $dq$%
+\[
+dq=\lambda dy
+\]%
+but now we know that for the hoop 
+\[
+dq=\lambda ds
+\]%
+where $s$ is the arc length. Recall that 
+\begin{eqnarray*}
+s &=&R\phi  \\
+ds &=&Rd\phi 
+\end{eqnarray*}%
+where $R$ is the radius of the ring and $\phi $ is an angle measured from
+the $x$-axis. So our $dq$ expression becomes 
+\[
+dq=\lambda Rd\phi 
+\]%
+For the whole ring 
+\begin{eqnarray*}
+Q &=&\lambda R2\pi  \\
+&=&2\pi R\lambda 
+\end{eqnarray*}%
+We also need to use geometry to find $r,$ the distance from our $dq$
+segments to our point were we want to know the field.%
+\[
+r=\sqrt{y_{i}^{2}+z^{2}}
+\]%
+but since this is a ring, our $y_{i}=R$ for all $i.$ So%
+\[
+r=\sqrt{R^{2}+z^{2}}
+\]%
+Then we can set up our integral.%
+\[
+V=\frac{1}{4\pi \epsilon _{o}}\int \frac{dq}{r}
+\]%
+Putting in all the parts we have found yields%
+\begin{eqnarray*}
+V &=&\frac{1}{4\pi \epsilon _{o}}\int \frac{dq}{\sqrt{R^{2}+z^{2}}} \\
+&&\frac{1}{4\pi \epsilon _{o}}\int \frac{\lambda Rd\phi }{\sqrt{R^{2}+z^{2}}}
+\\
+V &=&\frac{\lambda R}{4\pi \epsilon _{o}\sqrt{R^{2}+z^{2}}}\int_{0}^{2\pi
+}d\phi 
+\end{eqnarray*}%
+\[
+V=\frac{2\pi \lambda R}{4\pi \epsilon _{o}\sqrt{R^{2}+z^{2}}}
+\]%
+\[
+V=\frac{2\pi \frac{Q}{2\pi R}R}{4\pi \epsilon _{o}\sqrt{R^{2}+z^{2}}}
+\]%
+\[
+V=\frac{Q}{4\pi \epsilon _{o}\sqrt{R^{2}+z^{2}}}
+\]
+
+Now find the field by going backwards%
+\begin{eqnarray*}
+E_{z} &=&-\frac{dV}{dz}=-\frac{d}{dz}\left( \frac{Q}{4\pi \epsilon _{o}\sqrt{%
+R^{2}+z^{2}}}\right)  \\
+&=&-\frac{d}{dz}\frac{Q}{4\pi \epsilon _{o}}\left( \frac{1}{\sqrt{R^{2}+z^{2}%
+}}\right)  \\
+&=&-\frac{d}{dz}\frac{Q}{4\pi \epsilon _{o}}\left( \frac{1}{\left(
+R^{2}+z^{2}\right) ^{\frac{1}{2}}}\right) 
+\end{eqnarray*}
+
+\[
+E_{z}=-\frac{d}{dz}\frac{Q}{4\pi \epsilon _{o}}\left( \left(
+R^{2}+z^{2}\right) ^{-\frac{1}{2}}\right) 
+\]%
+\[
+E_{z}=-\frac{Q}{4\pi \epsilon _{o}}\left( -\frac{1}{2}\left(
+R^{2}+z^{2}\right) ^{-\frac{3}{2}}2z\right) 
+\]%
+\[
+E_{z}=\frac{Q}{4\pi \epsilon _{o}}\left( \left( R^{2}+z^{2}\right) ^{-\frac{3%
+}{2}}z\right) 
+\]%
+\[
+E_{z}=\frac{1}{4\pi \epsilon _{o}}\left( \frac{zQ}{\left( R^{2}+z^{2}\right)
+^{\frac{3}{2}}}\right) 
+\]%
+which we can copare to our previous answer%
+\[
+\overrightarrow{\mathbf{E}}=\frac{1}{4\pi \epsilon _{o}}\frac{zQ}{\left(
+R^{2}+z^{2}\right) ^{\frac{3}{2}}}\mathbf{\hat{k}}
+\]
+
+\bigskip 
+
+But not done, have to show $E_{x.}$ $E_{y}=0$%
+\[
+E_{x}=-\frac{dV}{dx}=-\frac{d}{dx}\left( \frac{Q}{4\pi \epsilon _{o}\sqrt{%
+R^{2}+z^{2}}}\right) =0
+\]%
+\[
+E_{y}=-\frac{dV}{dy}=-\frac{d}{dy}\left( \frac{Q}{4\pi \epsilon _{o}\sqrt{%
+R^{2}+z^{2}}}\right) =0
+\]
+
+\end{document}

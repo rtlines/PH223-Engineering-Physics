@@ -11,7 +11,7 @@
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=Manual}
 %TCIDATA{Created=Thursday, March 21, 2024 14:45:27}
-%TCIDATA{LastRevised=Thursday, June 13, 2024 10:47:27}
+%TCIDATA{LastRevised=Tuesday, June 18, 2024 11:05:03}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 %TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Standard LaTeX Book">}
 %TCIDATA{Language=American English}
@@ -17935,7 +17935,7 @@ more general. We should really write this as
 because we really want the component of $E$ in the $\Delta s$ direction. In
 the capacitor $\overrightarrow{\mathbf{E}}$ and $\overrightarrow{\Delta s}$
 were in the same direction so we just had $\cos \left( 0\right) =1.$ But now
-we need to allow for  $\overrightarrow{\mathbf{E}}$ and $\overrightarrow{%
+we need to allow for $\overrightarrow{\mathbf{E}}$ and $\overrightarrow{%
 \Delta s}$ not being entirely in the same direction. So far our $E$ field is
 still constant, but now it doesn't have to be in exactly the same direction
 as the displacement.
@@ -17955,8 +17955,8 @@ TRUE;display "USEDEF";valid_file "T";width 2.1664in;height 2.3186in;depth
 "1";cropright "1";cropbottom "0";tempfilename
 'SAPYRACQ.wmf';tempfile-properties "XPR";}}That is, we take a small amount
 of path difference $\Delta \overrightarrow{\mathbf{s}}_{i}$ and add up the
-contribution, $\overrightarrow{\mathbf{E}}\cdot \overrightarrow{\Delta s}_{i}
-$ from this small path. Then we can repeat this for the next $\Delta 
+contribution, $\overrightarrow{\mathbf{E}}\cdot \overrightarrow{\Delta s}%
+_{i} $ from this small path. Then we can repeat this for the next $\Delta 
 \overrightarrow{\mathbf{s}}_{i+1}$ and the next, until we have the
 contribution of each pice of the path. We can call the contribution from one
 piece. 
@@ -18026,7 +18026,7 @@ if we take
 4\pi \epsilon _{o}}\frac{Q}{r^{2}}\mathbf{\hat{r}}\cdot d\overrightarrow{%
 \mathbf{s}} \\
 &=&\frac{1}{4\pi \epsilon _{o}}\frac{Q}{r^{2}}\mathbf{\hat{r}}\cdot \left(
-ds\cos \phi \mathbf{\hat{r}}+ds\sin \phi \mathbf{\hat{\theta}}\right) 
+ds\cos \phi \mathbf{\hat{r}}+ds\sin \phi \mathbf{\hat{\theta}}\right)
 \end{eqnarray*}%
 we get only a radial contribution since $\mathbf{\hat{r}}\cdot \mathbf{\hat{%
 \theta}=0}$. Then 
@@ -18034,13 +18034,13 @@ we get only a radial contribution since $\mathbf{\hat{r}}\cdot \mathbf{\hat{%
 \overrightarrow{\mathbf{E}}\cdot d\overrightarrow{\mathbf{s}} &=&\frac{1}{%
 4\pi \epsilon _{o}}\frac{Q}{r^{2}}\mathbf{\hat{r}}\cdot ds\cos \phi \mathbf{%
 \hat{r}}+0 \\
-&=&\frac{1}{4\pi \epsilon _{o}}\frac{Q}{r^{2}}ds\cos \phi 
+&=&\frac{1}{4\pi \epsilon _{o}}\frac{Q}{r^{2}}ds\cos \phi
 \end{eqnarray*}%
 where $\phi $ is the angle between $d\overrightarrow{\mathbf{s}}$ and $%
 \mathbf{\hat{r}}$ and where we recall that $\mathbf{\hat{r}}\cdot \mathbf{%
 \hat{r}}=1\mathbf{.}$ Recalling that 
 \begin{equation*}
-dr=ds\cos \phi 
+dr=ds\cos \phi
 \end{equation*}%
 we can eliminate $\phi $ from our equation%
 \begin{equation*}
@@ -18057,7 +18057,7 @@ dr \\
 so%
 \begin{eqnarray*}
 \Delta V &=&\frac{Q}{4\pi \epsilon _{o}}\left( \frac{1}{r_{B}}-\frac{1}{r_{A}%
-}\right)  \\
+}\right) \\
 &=&\frac{1}{4\pi \epsilon _{o}}\frac{q}{r_{B}}-\frac{1}{4\pi \epsilon _{o}}%
 \frac{q}{r_{A}} \\
 &=&V_{B}-V_{A}
@@ -18382,7 +18382,7 @@ R^{2}+z^{2}}\right\vert _{0}^{a} \\
 so%
 \begin{equation}
 V=\frac{\eta }{2\epsilon _{o}}\left( \allowbreak \sqrt{a^{2}+z^{2}}%
--\allowbreak z\right) 
+-\allowbreak z\right)
 \end{equation}%
 This is the potential at point $P.$
 
@@ -18502,86 +18502,40 @@ thing
 It is time to pause and think about the meaning of this electric potential.
 Let's trace our steps backwards. We defined the electric potential as the
 potential energy per unit charge:%
-%TCIMACRO{%
-%\TeXButton{Question 223.32.1}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.32.1}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.32.1}
-\end{minipage}
-}%
-%EndExpansion
 \begin{equation*}
-\Delta V=\frac{\Delta U}{q}
+\Delta V=\frac{\Delta U}{q_{m}}
 \end{equation*}%
-\smallskip where $q$ is our mover and $\Delta V$ is a measure of the change
-in the environment between two points $r_{1}$ and $r_{2}$ measured from the
-environmental charge. $\Delta U$ is the change in potential energy as $q$
-moves. 
-%TCIMACRO{%
-%\TeXButton{Question 223.32.2}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.32.2}
-%\end{minipage}
-%}} }%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.32.2}
-\end{minipage}
-}
-%EndExpansion
-But the potential energy change is equal to the negative of the amount of
-work we have done in moving $q$%
+\smallskip where $q_{m}$ is our mover and $\Delta V$ is a measure of the
+change in the environment between two points $r_{1}$ and $r_{2}$ measured
+from the environmental charge. $\Delta U$ is the change in potential energy
+as $q_{m}$ moves. But the potential energy change is equal to the negative
+of the amount of work we have done in moving $q_{m}$%
 \begin{equation*}
-\Delta V=\frac{-W}{q}
+\Delta V=\frac{-W}{q_{m}}
 \end{equation*}%
 which is equal to 
 \begin{equation*}
-\Delta V=\frac{-1}{q}\int \overrightarrow{\mathbf{F}}\cdot d\overrightarrow{%
-\mathbf{s}}
+\Delta V=\frac{-1}{q_{m}}\int \overrightarrow{\mathbf{F}}\cdot d%
+\overrightarrow{\mathbf{s}}
 \end{equation*}%
 where again $d\overrightarrow{\mathbf{s}}$ is a general path length. But
 this force was a Coulomb force. which we know is related to the electric
 field%
 \begin{equation*}
-\overrightarrow{\mathbf{E}}=\frac{\overrightarrow{\mathbf{F}}}{q}
+\overrightarrow{\mathbf{E}}=\frac{\overrightarrow{\mathbf{F}}}{q_{m}}
 \end{equation*}%
 so we may rewrite the potential as 
 \begin{eqnarray*}
-\Delta V &=&-\int \frac{\overrightarrow{\mathbf{F}}}{q}\cdot d%
+\Delta V &=&-\int \frac{\overrightarrow{\mathbf{F}}}{q_{m}}\cdot d%
 \overrightarrow{\mathbf{s}} \\
 &=&-\int \overrightarrow{\mathbf{E}}\cdot d\overrightarrow{\mathbf{s}}
 \end{eqnarray*}%
 which we found last lecture by analogy with our capacitor potential. Our
 line of reasoning in this lecture has been more formal, but we arrive at the
-same conclusion--\textbf{and it is an important one!}%
-%TCIMACRO{%
-%\TeXButton{Question 223.32.3}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.32.3}
-%\end{minipage}
-%}} }%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.32.3}
-\end{minipage}
-}
-%EndExpansion
-If we add up the component of field magnitude times the displacement along
-the path take from $r_{1}$ to $r_{2}$ we get the electric potential (well,
-minus the electric potential).
+same conclusion--\textbf{and it is an important one!} If we add up the
+component of field magnitude times the displacement along the path take from 
+$r_{1}$ to $r_{2}$ we get the electric potential (well, minus the electric
+potential).
 
 The electric field and the electric potential are not two distinct things.
 They are really different ways to look at the same thing--and that thing is
@@ -18704,10 +18658,10 @@ As a second example, let's tackle our friendly capacitor problem again. What
 is the potential difference as we cross the capacitor from point $A$ to
 point $B$? We already know the answer 
 \begin{equation*}
-\Delta V=Ed
+\Delta V=E\Delta s=Ed
 \end{equation*}%
-But when we found this before, we assumed we knew the potential energy. This
-time let's practice using 
+where $d$ is the distance between the plates. But when we found this before,
+we assumed we knew the potential energy. This time let's practice using 
 \begin{equation*}
 \Delta V=-\int_{A}^{B}\overrightarrow{\mathbf{E}}\cdot d\overrightarrow{%
 \mathbf{s}}
@@ -18725,12 +18679,12 @@ so
 \begin{eqnarray*}
 \Delta V &=&-\int_{A}^{B}\overrightarrow{\mathbf{E}}\cdot d\overrightarrow{%
 \mathbf{s}} \\
-&=&-\int_{A}^{B}\frac{\eta }{\epsilon _{o}}ds\cos \theta
+&=&-\int_{A}^{B}\frac{\eta }{\epsilon _{o}}ds\cos \theta _{Es}
 \end{eqnarray*}%
-where $\theta $ is the angle between the field direction and our $d%
+where $\theta _{Es}$ is the angle between the field direction and our $d%
 \overrightarrow{\mathbf{s}}$ direction. We could write 
 \begin{equation*}
-dx=ds\cos \theta
+dx=ds\cos \theta _{Es}
 \end{equation*}%
 Then 
 \begin{eqnarray*}
@@ -18754,21 +18708,6 @@ our choice of the zero voltage point.
 
 \section{Sources of electric potential}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.32.4}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.32.4}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.32.4}
-\end{minipage}
-}%
-%EndExpansion
 We know that the electric potential comes from the electric field. And if we
 think about it, we know where the electric field comes from, charge. But we
 have found that equal amounts of positive and negative charge produce no net
@@ -18816,21 +18755,6 @@ particles to very high speeds.
 
 \section{Electrochemical separation of charge}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.32.5}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.32.5}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.32.5}
-\end{minipage}
-}%
-%EndExpansion
 When you eat table salt, the NaCl ionic bond splits when exposed to polar
 water molecules, leaving a positively charged Na ion and a negatively
 charged Cl ion. This is very like the \textquotedblleft
@@ -18858,18 +18782,21 @@ Somehow the battery supples positive charge on one side and negative charge
 on the other side. This is accomplished by doing work on the charges. A lead
 acid battery is often used in automobiles. The battery is made by suspending
 two lead plates in a solution of sulfuric acid and water. \FRAME{dtbpF}{%
-3.0415in}{1.8092in}{0in}{}{}{Figure}{\special{language "Scientific
+3.0415in}{1.8092in}{0pt}{}{}{Figure}{\special{language "Scientific
 Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
-"T";width 3.0415in;height 1.8092in;depth 0in;original-width
+"T";width 3.0415in;height 1.8092in;depth 0pt;original-width
 2.9983in;original-height 1.772in;cropleft "0";croptop "1";cropright
 "1";cropbottom "0";tempfilename 'SAPYRBD5.wmf';tempfile-properties "XPR";}}%
 One plate is coated with lead dioxide. There is a chemical reaction at each
-plate. The sulfuric acid (H$_{2}$SO$_{4})$ splits into two H$^{+}$ ions and
-an SO$_{4}^{-2}$ ion. \FRAME{dtbpF}{3.141in}{1.9095in}{0pt}{}{}{Figure}{%
-\special{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
-TRUE;display "USEDEF";valid_file "T";width 3.141in;height 1.9095in;depth
-0pt;original-width 3.8285in;original-height 2.3168in;cropleft "0";croptop
-"1";cropright "1";cropbottom "0";tempfilename
+plate. This ends up separating charge. Let's see the details of how this
+works.
+
+The sulfuric acid (H$_{2}$SO$_{4})$ in our battery solution splits into two H%
+$^{+}$ ions and an SO$_{4}^{-2}$ ion. \FRAME{dtbpF}{3.141in}{1.9095in}{0pt}{%
+}{}{Figure}{\special{language "Scientific Word";type
+"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
+3.141in;height 1.9095in;depth 0pt;original-width 3.8285in;original-height
+2.3168in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
 'SAPYRBD6.wmf';tempfile-properties "XPR";}}The plain lead plate reacts with
 the SO$_{4}^{-2}$ ions. \FRAME{dtbpF}{2.1698in}{2.2105in}{0pt}{}{}{Figure}{%
 \special{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
@@ -18883,21 +18810,24 @@ Pb\left( \text{solid}\right) +H_{2}SO_{4}^{-}\left( \text{aqueous}\right)
 \right) +2e^{-}\left( \text{in conductor}\right)
 \end{equation*}%
 producing lead sulfate on the electrode, some hydrogen ions in solution and
-some extra electrons that are left in the metal plate.\FRAME{dtbpF}{2.5157in%
-}{2.5296in}{0in}{}{}{Figure}{\special{language "Scientific Word";type
-"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-2.5157in;height 2.5296in;depth 0in;original-width 2.4751in;original-height
-2.4881in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+some extra electrons that are left in the metal plate. This is the begining
+of our separated charge!\FRAME{dtbpF}{2.5157in}{2.5296in}{0pt}{}{}{Figure}{%
+\special{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
+TRUE;display "USEDEF";valid_file "T";width 2.5157in;height 2.5296in;depth
+0pt;original-width 2.4751in;original-height 2.4881in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
 'SAPYRBD8.wmf';tempfile-properties "XPR";}}
 
 The coated plate's lead dioxide also reacts with the SO$_{4}^{-2}$ ions and
 uses the hydrogen ions and the oxygen from the PbO$_{2}$ coating. \FRAME{%
-dtbpF}{3.0173in}{2.7328in}{0in}{}{}{Figure}{\special{language "Scientific
+dtbpF}{3.0173in}{2.7328in}{0pt}{}{}{Figure}{\special{language "Scientific
 Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
-"T";width 3.0173in;height 2.7328in;depth 0in;original-width
+"T";width 3.0173in;height 2.7328in;depth 0pt;original-width
 2.9741in;original-height 2.6904in;cropleft "0";croptop "1";cropright
 "1";cropbottom "0";tempfilename 'SAPYRBD9.wmf';tempfile-properties "XPR";}}%
-It also uses some some electrons from the lead plate. The PbO$_{2}$ splits
+But importantly, It also uses some some electrons from the lead plate. The
+coated lead plate is neutral, so this reaction is using some of the free
+electrons from the lead. The reacion goes like this, the PbO$_{2}$ splits
 apart and the Pb$^{+4}$ combines with the SO$_{4}^{-2}$ and the two
 electrons. The left over O$_{2}$ combines with the hydrogens to form water.
 The reaction equation is 
@@ -18907,16 +18837,16 @@ PbO\left( \text{solid}\right) +H_{2}SO_{4}^{-}\left( \text{aqueous}\right)
 \rightarrow PbSO_{4}\left( \text{solid}\right) +2H_{2}O\left( \text{liquid}%
 \right)
 \end{equation*}%
-\FRAME{dtbpF}{3.0303in}{2.7328in}{0in}{}{}{Figure}{\special{language
+\FRAME{dtbpF}{3.0303in}{2.7328in}{0pt}{}{}{Figure}{\special{language
 "Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
 "USEDEF";valid_file "T";width 3.0303in;height 2.7328in;depth
-0in;original-width 2.9871in;original-height 2.6904in;cropleft "0";croptop
+0pt;original-width 2.9871in;original-height 2.6904in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
 'SAPYRBDA.wmf';tempfile-properties "XPR";}}So one lead plate has two extra
-electrons, and one lacks two electrons. We have separated charge! \FRAME{%
-dtbpF}{5.1197in}{3.3434in}{0in}{}{}{Figure}{\special{language "Scientific
+electrons, and one now lacks two electrons. We have separated charge! \FRAME{%
+dtbpF}{5.1197in}{3.3434in}{0pt}{}{}{Figure}{\special{language "Scientific
 Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
-"T";width 5.1197in;height 3.3434in;depth 0in;original-width
+"T";width 5.1197in;height 3.3434in;depth 0pt;original-width
 5.0652in;original-height 3.2984in;cropleft "0";croptop "1";cropright
 "1";cropbottom "0";tempfilename 'SAPYRBDB.wmf';tempfile-properties "XPR";}}%
 If we connect a wire between the plates, the extra electrons from one plate
@@ -18928,12 +18858,12 @@ and this drives the two chemical reactions backwards.
 Now that we see that we can use chemistry to separate charge, let's think
 about what this means for an electric circuit. 
 \begin{equation*}
-W_{chem}=\Delta U
+w_{chem}=\Delta U
 \end{equation*}%
 That work is equivalent to an amount of potential energy, so we have a
 voltage. That voltage due to the separated charge is 
 \begin{equation*}
-\Delta V=\frac{W_{chem}}{q}
+\Delta V=\frac{W_{chem}}{q_{e}}
 \end{equation*}%
 This is not a chemistry class, so we won't memorize the chemical process
 that does this. Instead, I would like to give a mechanical analogy. \FRAME{%
@@ -18991,20 +18921,27 @@ from the bottom of the first to the top of the last of
 \Delta V=2\times 1.5\unit{V}=3\unit{V}
 \end{equation*}
 
-If you have been introduced to Kirchhoff's loop law, you may see this as
-familiar. Kirchhoff said that 
+Think for a moment what the potential energy would be if we followed our
+charge around the circuit. The battery \textquotedblleft
+pumps\textquotedblright\ us up an amount $\Delta V_{battery}.$ Then we lose
+voltage (think energy) as the charge does work (lights the lightbulb). When
+we get back to the battery again we need to have a netl $\Delta V$ of zero.
+For our circuit we can write this as 
 \begin{equation*}
 \Delta V_{loop}=\sum_{i}\Delta V_{i}=0
 \end{equation*}%
 That is, if we go around a loop, we should end up at the same potential
-where we started. This would be true for our plumbing example. If we start
-at the lower tank, then travel through the pump to the upper tank, then
-through the turbine to the lower tank we have 
+where we started.It helps to think of our water analogy. If we start at the
+lower tank, then travel through the pump to the upper tank, then through the
+turbine to the lower tank we have 
 \begin{equation*}
 \Delta U_{total}=\Delta U_{pump}+\Delta U_{turbine}=0
 \end{equation*}%
-we are at the same elevation, we lost all the potential energy we gained by
-being pumped up when we fell back down through the turbine.
+The water gains potential energy by beign pumped up higher, then loses that
+potential energy by falling back down. The water ends up losing all the
+potential energy the pump gave it. The water is back at the same elevation,
+it lost all the potential energy it gained by being pumped up when it fell
+back down through the turbine.
 
 Similarly, the battery pumps the charge up an amount $\Delta V_{bat}$ and it
 \textquotedblleft falls\textquotedblright\ down an amount $\Delta V_{light}$
@@ -19019,16 +18956,17 @@ and even useful work by letting the charge or water \textquotedblleft
 fall\textquotedblright\ back down to the initial state. The change in energy
 must be zero if there is no loss mechanism. Eventually we must allow some
 loss to occur, but for now we have ideal batteries and wires and lights, so
-energy is conserved.
+energy is conserved. This rule for circuits is called \emph{Kirchhoff's loop
+rule.}
 
 We have a historic name for a charge pump like a battery. We call it an 
-\emph{emf}. This is pronounced \textquotedblleft ee em
-eff,\textquotedblright\ that is, we say the letters. Emf used to stand for
-something, but that something has turned out to be a poor model for electric
-current, but the letters describing a charge pump persist. This is a little
-like Kentucky Fried Chicken changing it's name to KFC because now they bake
-chicken (and no one wants to think about eating fried foods now days). The
-letters are the name.
+\emph{emf} and give it a new symbol $\mathcal{E}$. This is pronounced
+\textquotedblleft ee em eff,\textquotedblright\ that is, we say the letters.
+Emf used to stand for something, but that something has turned out to be a
+poor model for electric current. But the letters describing a charge pump
+persist. This is a little like Kentucky Fried Chicken changing it's name to
+KFC because now they bake chicken (and no one wants to think about eating
+fried foods now days). The letters are the name.
 
 Next lecture we will complete our task. In this lecture we discussed finding
 the potential if we know the field. Next lecture we will find out how to
@@ -19045,7 +18983,10 @@ calculate the field if we know the potential.
 \mathbf{s}}
 \end{equation*}%
 \begin{equation*}
-\Delta V=\frac{\Delta U}{q}
+\Delta V=\frac{\Delta U}{q_{m}}
+\end{equation*}%
+\begin{equation*}
+\Delta V_{loop}=\sum_{i}\Delta V_{i}=0
 \end{equation*}
 
 \chapter{Calculating fields from potentials}
@@ -19625,7 +19566,26 @@ find the field rather than integral equations to find the field directly.
 \hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}%
 %EndExpansion
 
+\begin{equation*}
+\overrightarrow{\mathbf{E}}=-\overrightarrow{\mathbf{\nabla }}V
+\end{equation*}%
+\begin{equation*}
+\overrightarrow{\mathbf{E}}=-\left( \frac{d}{dx}\mathbf{\hat{\imath}}+\frac{d%
+}{dy}\mathbf{\hat{\jmath}+}\frac{d}{dz}\mathbf{\hat{k}}\right) V
+\end{equation*}
+
 \chapter{Capacitance}
+
+So far we have concentrated on electric field theory. We have mentioned
+practical things from time to time. But it is time to take a break from
+field theory and look at a few practical devices that use charge and field.
+You will use some of these devices in your PH250 class to build instruments
+or in your mechatronics class to design controllers. And of course you have
+every day devices like computers and cell phones that use practical
+applications of electric fields and charge. We have studied the capacitor,
+and it turns out that capacitors are one of these practical devices that are
+used to build controllers or instruments. Let's start by looking at
+practical uses of capacitors.
 
 %TCIMACRO{%
 %\TeXButton{Fundamental Concepts}{{\vspace{0.25in}\LARGE Fundamental Concepts\vspace{0.25in}}}}%
@@ -19648,10 +19608,10 @@ parallel plate capacitor, it is given by $C=\frac{A}{d}\epsilon _{o}$
 
 \section{Capacitance and capacitors}
 
-Consider the following design for a pump-tank system.\FRAME{dhF}{2.7851in}{%
-3.3244in}{0pt}{}{}{Figure}{\special{language "Scientific Word";type
+Consider the following design for a pump-tank system.\FRAME{dhF}{1.6873in}{%
+2.015in}{0pt}{}{}{Figure}{\special{language "Scientific Word";type
 "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-2.7851in;height 3.3244in;depth 0pt;original-width 2.8091in;original-height
+1.6873in;height 2.015in;depth 0pt;original-width 2.8091in;original-height
 3.359in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
 'SAPYRBDT.wmf';tempfile-properties "XPR";}}This is may not be an optimal
 design. At first there is no problem, water flows into the upper tank just
@@ -19661,16 +19621,16 @@ pressure at the bottom increases, and it takes more work for the pump to
 overcome the increasing pressure.
 
 Something analogous happens when a capacitor is connected to a battery. 
-\FRAME{dhF}{4.7711in}{1.8857in}{0pt}{}{}{Figure}{\special{language
+\FRAME{dhF}{3.0969in}{1.2237in}{0pt}{}{}{Figure}{\special{language
 "Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
-"USEDEF";valid_file "T";width 4.7711in;height 1.8857in;depth
+"USEDEF";valid_file "T";width 3.0969in;height 1.2237in;depth
 0pt;original-width 4.8332in;original-height 1.8928in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
 'SAPYRBDU.wmf';tempfile-properties "XPR";}}At first the charge is free to
 flow to the plates, but as the charge builds, it takes more work to bring on
-successive charges.\FRAME{dhF}{4.9112in}{2.3611in}{0pt}{}{}{Figure}{\special%
+successive charges.\FRAME{dhF}{3.0779in}{1.4797in}{0pt}{}{}{Figure}{\special%
 {language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
-TRUE;display "USEDEF";valid_file "T";width 4.9112in;height 2.3611in;depth
+TRUE;display "USEDEF";valid_file "T";width 3.0779in;height 1.4797in;depth
 0pt;original-width 4.976in;original-height 2.3771in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
 'SAPYRBDV.wmf';tempfile-properties "XPR";}}The charges repel each other, so
@@ -19694,7 +19654,7 @@ E=\frac{\eta }{\epsilon _{o}}
 \end{equation*}%
 We also know the potential difference between the two plates is just%
 \begin{equation*}
-\Delta V=Ed
+\Delta V=E\Delta s=Ed
 \end{equation*}%
 where $E$ is our electric field and $d$ is the capacitor spacing.
 
@@ -19712,7 +19672,7 @@ E=\frac{\eta }{\epsilon _{o}}=\frac{Q}{A\epsilon _{o}}
 \end{equation*}%
 so 
 \begin{equation*}
-\Delta V=\frac{d}{A\epsilon _{o}}Q
+\Delta V=\frac{Q}{A\epsilon _{o}}d
 \end{equation*}%
 Then the potential difference is directly proportional to the charge. I\
 want to switch this around, and solve for the amount of charge. 
@@ -19741,21 +19701,6 @@ constructed differently (different $A$ or $d$ values) but so long as the
 construction constant, $C,$ is the same, the charge amount for a given
 voltage will be the same.
 
-%TCIMACRO{%
-%\TeXButton{Question 223.34.1}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.34.1}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.34.1}
-\end{minipage}
-}%
-%EndExpansion
 The electronics field gives this construction constant a name, \emph{%
 capacitance.}%
 \begin{equation}
@@ -19765,51 +19710,6 @@ The capacitance will have units of $\unit{C}/\unit{V}$ but we give this a
 name all it's own, the \emph{Farad} $\left( \unit{F}\right) .$ A Farad is a
 very large capacitance. Many capacitors in electronic devices are measured
 in microfarads. 
-%TCIMACRO{%
-%\TeXButton{Question 223.34.2}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.34.2}
-%\end{minipage}
-%}} }%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.34.2}
-\end{minipage}
-}
-%EndExpansion
-%TCIMACRO{%
-%\TeXButton{Question 223.34.3}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.34.3}
-%\end{minipage}
-%}} }%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.34.3}
-\end{minipage}
-}
-%EndExpansion
-%TCIMACRO{%
-%\TeXButton{Question 223.34.4}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.34.4}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.34.4}
-\end{minipage}
-}%
-%EndExpansion
 
 \subsection{Capacitors and sources of potential}
 
@@ -19908,7 +19808,7 @@ to start with
 "1";cropright "1";cropbottom "0";tempfilename
 'SAPYRBDX.wmf';tempfile-properties "XPR";}}
 
-(you will do a sphere in the homework problems). We want to find the
+(you will likely do a sphere in the homework problems). We want to find the
 capacitance of the cylindrical capacitor. Our strategy will be to find the
 voltage difference for the capacitor and the amount of charge on the
 capacitor, and then divide to find $C.$%
@@ -19916,7 +19816,8 @@ capacitor, and then divide to find $C.$%
 C=\frac{Q}{\Delta V}
 \end{equation*}
 
-Let's begin with our equation relating potential change to field.%
+We need $\Delta V$ to find $C,$ but we need the field to find $\Delta V.$
+Let's begin with our equation relating potential change to field.  
 \begin{equation}
 V_{b}-V_{a}=-\int_{a}^{b}\mathbf{\vec{E}}\cdot d\mathbf{\vec{s}}
 \end{equation}%
@@ -19965,7 +19866,7 @@ V_{b}-V_{a} &=&-\int_{r_{a}}^{r_{b}}\frac{\lambda }{2\pi r\varepsilon _{o}}d%
 &=&-\frac{\lambda }{2\pi \varepsilon _{o}}\int_{r_{a}}^{r_{b}}\frac{1}{r}d%
 \mathbf{r} \\
 &=&-\frac{\lambda }{2\pi \varepsilon _{o}}\ln \left( \frac{r_{b}}{r_{a}}%
-\right)
+\right) 
 \end{eqnarray*}%
 Using this, we can find the capacitance, We have a negative value for $%
 \Delta V,$ but this is just due to our choice of making the center of the
@@ -19980,7 +19881,7 @@ We want just the value of $\Delta V$ so we will plug in the absolute value
 of our result.%
 \begin{equation*}
 \left\vert \Delta V\right\vert =\frac{\lambda }{2\pi \varepsilon _{o}}\ln
-\left( \frac{b}{a}\right)
+\left( \frac{b}{a}\right) 
 \end{equation*}%
 Then, solving for $C$ gives%
 \begin{eqnarray*}
@@ -20010,21 +19911,6 @@ the cable must be taken into account.
 
 \section{Combinations of Capacitors}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.34.5}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.34.5}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.34.5}
-\end{minipage}
-}%
-%EndExpansion
 We don't want to have to do long calculations to combine capacitors that we
 buy from an electronics store. It would be convenient to come up with a way
 to combine capacitors using a simple rule.
@@ -20087,27 +19973,28 @@ and%
 Now think of conservation of energy. As we go around the circuit the battery
 gives $\Delta V_{bat}$ of potential energy to the circuit. We will loose
 this same amount of potential energy as we go from the positive side of the
-battery back to the negative side of the battery. Then as we go around the
-loop%
+battery back to the negative side of the battery (Kirchhoff's loop rule!).
+Then as we go around the loop%
 \begin{equation*}
 \Delta V_{bat}-\Delta V_{1}-\Delta V_{2}=0
 \end{equation*}%
 or 
 \begin{equation*}
 \Delta V_{bat}=\Delta V_{1}+\Delta V_{2}
-\end{equation*}
-We can again define an equivalent capacitance.%
+\end{equation*}%
+We can again define an equivalent capacitance for the combination of
+capacitors.%
 \begin{equation*}
-\Delta V=\frac{Q}{C_{tot}}
+\Delta V=\frac{Q}{C_{equ}}
 \end{equation*}%
 then%
 \begin{eqnarray*}
 \Delta V_{bat} &=&\Delta V_{1}+\Delta V_{2} \\
-\frac{Q}{C_{tot}} &=&\frac{Q}{C_{1}}+\frac{Q}{C_{2}}
+\frac{Q}{C_{_{equ}}} &=&\frac{Q}{C_{1}}+\frac{Q}{C_{2}}
 \end{eqnarray*}%
-The $Q$s are all the same. So%
+The $Q$ values are all the same. So%
 \begin{equation}
-\frac{1}{C_{tot}}=\frac{1}{C_{1}}+\frac{1}{C_{2}}
+\frac{1}{C_{_{equ}}}=\frac{1}{C_{1}}+\frac{1}{C_{2}}
 \end{equation}
 
 We call this type of set up a \emph{series circuit} because the capacitors
@@ -20116,9 +20003,9 @@ came one after the other as you go from one side of the battery to the other.
 Now after all this you might ask yourself how to know the capacitance of the
 parts you buy to build things. They are designed by engineers and tested at
 the factory, and the capacitance is usually printed on the side of the
-device. You can, of course, devise a test circuit based on what we have
-learned that could test the capacitance. Many multimeters have such a
-circuit in them for testing capacitors.
+device using a special code. You can, of course, devise a test circuit based
+on what we have learned that could test the capacitance. Many multimeters
+have such a circuit in them for testing capacitors.
 
 %TCIMACRO{%
 %\TeXButton{Basic Equations}{\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}}}%
