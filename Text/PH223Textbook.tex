@@ -11,7 +11,7 @@
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=Manual}
 %TCIDATA{Created=Thursday, March 21, 2024 14:45:27}
-%TCIDATA{LastRevised=Tuesday, June 18, 2024 11:05:03}
+%TCIDATA{LastRevised=Friday, June 21, 2024 14:37:05}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 %TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Standard LaTeX Book">}
 %TCIDATA{Language=American English}
@@ -19709,7 +19709,7 @@ C=\frac{Q}{\Delta V}
 The capacitance will have units of $\unit{C}/\unit{V}$ but we give this a
 name all it's own, the \emph{Farad} $\left( \unit{F}\right) .$ A Farad is a
 very large capacitance. Many capacitors in electronic devices are measured
-in microfarads. 
+in microfarads.
 
 \subsection{Capacitors and sources of potential}
 
@@ -19817,7 +19817,7 @@ C=\frac{Q}{\Delta V}
 \end{equation*}
 
 We need $\Delta V$ to find $C,$ but we need the field to find $\Delta V.$
-Let's begin with our equation relating potential change to field.  
+Let's begin with our equation relating potential change to field. 
 \begin{equation}
 V_{b}-V_{a}=-\int_{a}^{b}\mathbf{\vec{E}}\cdot d\mathbf{\vec{s}}
 \end{equation}%
@@ -19866,7 +19866,7 @@ V_{b}-V_{a} &=&-\int_{r_{a}}^{r_{b}}\frac{\lambda }{2\pi r\varepsilon _{o}}d%
 &=&-\frac{\lambda }{2\pi \varepsilon _{o}}\int_{r_{a}}^{r_{b}}\frac{1}{r}d%
 \mathbf{r} \\
 &=&-\frac{\lambda }{2\pi \varepsilon _{o}}\ln \left( \frac{r_{b}}{r_{a}}%
-\right) 
+\right)
 \end{eqnarray*}%
 Using this, we can find the capacitance, We have a negative value for $%
 \Delta V,$ but this is just due to our choice of making the center of the
@@ -19881,7 +19881,7 @@ We want just the value of $\Delta V$ so we will plug in the absolute value
 of our result.%
 \begin{equation*}
 \left\vert \Delta V\right\vert =\frac{\lambda }{2\pi \varepsilon _{o}}\ln
-\left( \frac{b}{a}\right) 
+\left( \frac{b}{a}\right)
 \end{equation*}%
 Then, solving for $C$ gives%
 \begin{eqnarray*}
@@ -20043,7 +20043,7 @@ In series capacitors capacitances combine as
 %EndExpansion
 
 \begin{itemize}
-\item Dielectrics and capacitors
+\item Dielectrics modify the capacitance
 
 \item Microscopic nature of electric current
 
@@ -20089,11 +20089,11 @@ fight against this potential difference to add more charge. This is sort of
 like transferring rocks up a hill. The more rocks that we carry, the higher
 the hill gets, and the more work it takes to bring up more rocks.
 
-From our formula%
+From our formula, the amount of work we get will be%
 \begin{equation*}
-w=q\left( V_{B}-V_{A}\right)
+w=q\left( V_{B}-V_{A}\right) 
 \end{equation*}%
-we can see that if we have just a small amount of charge, $\Delta Q,$ we
+And we can see that if we have just a small amount of charge, $\Delta Q,$ we
 will have a small amount of work 
 \begin{equation*}
 \Delta w=\Delta Q\Delta V
@@ -20110,7 +20110,7 @@ would see a potential rise as shown in the graph below.\FRAME{dhF}{2.7984in}{%
 'SAPYRBE3.wmf';tempfile-properties "XPR";}}The quantity $\Delta Q\Delta V$
 is the area of the shaded (green) rectangle. So $\Delta W$ is given by the
 area of a rectangle under a stair-step on our graph. The shaded rectangle is
-just one of many rectangles in the graph. we can write%
+just one of many rectangles in the graph. For our capacitor we can write%
 \begin{equation}
 C=\frac{\Delta Q}{\Delta V}
 \end{equation}%
@@ -20118,14 +20118,15 @@ or
 \begin{equation*}
 \Delta V=\frac{\Delta Q}{C}
 \end{equation*}%
-As $\Delta Q$ gets small we can go to a continuous charge model 
+As $\Delta Q$ gets small we can go to a continuous charge model. Our amout
+of work is 
 \begin{equation*}
 \Delta w=\Delta Q\Delta V
 \end{equation*}%
-We can replaced the small unit of charge $\Delta Q$ with a continuous
-variable $q$ to obtain%
+but for a very small amount of charge can replaced the small unit of charge $%
+\Delta Q$ with a continuous variable $q$ to obtain%
 \begin{equation*}
-dw=dq\left( \Delta V\right)
+dw=dq\left( \Delta V\right) 
 \end{equation*}%
 Recall that%
 \begin{equation*}
@@ -20133,7 +20134,7 @@ Recall that%
 \end{equation*}%
 so we can write $dW$ as 
 \begin{eqnarray*}
-dw &=&dq\left( \frac{q}{C}\right) \\
+dw &=&dq\left( \frac{q}{C}\right)  \\
 dw &=&\frac{1}{C}qdq
 \end{eqnarray*}
 
@@ -20159,44 +20160,14 @@ from one plate to another through the air in between. If the potential
 difference is very high, the Coulomb force between the charges on opposite
 plates will force charge to leave one plate and jump to the other even if
 there is no air! 
-%TCIMACRO{%
-%\TeXButton{Question 223.34.6}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.34.6}
-%\end{minipage}
-%}} }%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.34.6}
-\end{minipage}
-}
-%EndExpansion
-%TCIMACRO{%
-%\TeXButton{Question 223.34.7}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.34.7}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.34.7}
-\end{minipage}
-}%
-%EndExpansion
 
 \subsection{Field storage}
 
-We usually consider the energy stored in the capacitor to be stored in the
-electric field. The field is proportional to the amount of charge and
-related to the potential energy, so this seems reasonable. Let's find the
-potential energy stored in the field in the capacitor. Recall for an ideal
-parallel plate capacitor 
+We consider the energy stored in the capacitor to be stored in the electric
+field. The field is proportional to the amount of charge and related to the
+potential energy, so this seems reasonable. Let's find the potential energy
+stored in the field in the capacitor. Recall for an ideal parallel plate
+capacitor 
 \begin{equation*}
 \Delta V=Ed
 \end{equation*}%
@@ -20208,14 +20179,14 @@ We assume that energy provided by the work to move the charges on the
 capacitor is all stored as potential energy. We just found that work to be 
 \begin{equation}
 w=\frac{1}{2}C\Delta V^{2}
-\end{equation}
+\end{equation}%
 and we know that 
 \begin{equation*}
 w=-\Delta U
 \end{equation*}%
 tells us how much energy we can store. In the previous example we had to
 provide a battery or something to force the charge onto the capacitor. This
-outside force did the work to move the charge, $\omega .$ This mans that
+outside force did the work to move the charge, $\omega .$ This means that
 work done \emph{by the electric field }would be the negative of the work we
 calculated $\left( -\omega \right) $, so the potential energy stored would
 be positive. 
@@ -20245,34 +20216,19 @@ physically real thing. They can store energy, so they must be a real thing.
 
 \section{Dielectrics and capacitors}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.35.1}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.35.1}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.35.1}
-\end{minipage}
-}%
-%EndExpansion
 We should ask ourselves a question about our capacitors, does it matter that
 there is air in between the plates? For making capacitors, it might be
 convenient to coat two sides of a plastic block with metal and solder wires
 to the coated sides. Does the plastic have an effect?
 
-Plastic is an insulator, and another name for \textquotedblleft
-insulator\textquotedblright\ is \emph{dielectric}. If we perform the
-experiment, we will find that when a dielectric is placed in the plates, the
-potential difference decreases! \FRAME{dhF}{2.7657in}{2.6256in}{0pt}{}{}{%
-Figure}{\special{language "Scientific Word";type
-"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-2.7657in;height 2.6256in;depth 0pt;original-width 3.1798in;original-height
-3.0175in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+Plastic is an insulator, and another name for insulator\ is \emph{dielectric}%
+. If we perform the experiment, we will find that when ain insulator or
+dielectric material is placed in the plates, the potential difference
+decreases! \FRAME{dhF}{2.7657in}{2.6256in}{0pt}{}{}{Figure}{\special%
+{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
+TRUE;display "USEDEF";valid_file "T";width 2.7657in;height 2.6256in;depth
+0pt;original-width 3.1798in;original-height 3.0175in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
 'SAPYRBE4.wmf';tempfile-properties "XPR";}}We are lucky, though, from
 experimentation we have found that it seems to decrease in a nice, linear
 way. We can write this as 
@@ -20282,94 +20238,52 @@ way. We can write this as
 where $\kappa $ is a constant that depends on what material we choose as our
 dielectric\footnote{%
 This symbol $\kappa ,$ is the greek letter \textquotedblleft
-kappa.\textquotedblright} and $\Delta V_{wo}$ is the potential difference
+kappa.\textquotedblright } and $\Delta V_{wo}$ is the potential difference
 without the dielectric (the subscripts $wo$ will stand for \textquotedblleft
-without the dielectric.\textquotedblright\ But what is happening?
+(w)ith(o)ut the dielectric.\textquotedblright\ But what is happening?
 
 The plates of the capacitor are becoming charged. These charges will
 polarize the material in the middle.
 
-\FRAME{dtbpF}{2.6403in}{2.4465in}{0in}{}{}{Figure}{\special{language
+\FRAME{dtbpF}{2.6403in}{2.4465in}{0pt}{}{}{Figure}{\special{language
 "Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
 "USEDEF";valid_file "T";width 2.6403in;height 2.4465in;depth
-0in;original-width 2.5979in;original-height 2.405in;cropleft "0";croptop
+0pt;original-width 2.5979in;original-height 2.405in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
-'SAPYRBE5.wmf';tempfile-properties "XPR";}}%
-%TCIMACRO{%
-%\TeXButton{Question 223.35.2}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.35.2}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.35.2}
-\end{minipage}
-}%
-%EndExpansion
-Notice how the polarized molecules or atoms sill have a net zero charge in
-the middle, 
-%TCIMACRO{%
-%\TeXButton{Ubalanced Handedness Demo}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Ubalanced Handedness Demo, Stick out your hands, one side of room has extra left hands, one side extra right hands}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Ubalanced Handedness Demo, Stick out your hands, one side of room has extra left hands, one side extra right hands}
-\end{minipage}
-}%
-%EndExpansion
-but on the ends, there is a net charge. It is like we have oppositely
-charged plates next to our capacitor plates. That reduces the net charge
-seen by the capacitor, and so the potential difference is less. There is
-effectively less separated charge.
+'SAPYRBE5.wmf';tempfile-properties "XPR";}}Notice how the polarized
+molecules or atoms sill have a net zero charge in the middle, but on the
+ends, there is a net charge. It is like we have oppositely charged plates
+next to our capacitor plates. That reduces the net charge seen by the
+capacitor, and so the potential difference is less. There is effectively
+less separated charge.
 
-%TCIMACRO{%
-%\TeXButton{Question 223.35.3}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.35.3}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.35.3}
-\end{minipage}
-}%
-%EndExpansion
-But since our capacitor is not connected to a battery or any other
-electrical device, the amount of actual charge on the capacitor plates can't
-have changed. So if $\Delta V$ changed, but $Q$ did not , then since 
+But since our capacitor is not connected to a battery (or any other
+electrical device that changes the amount of charge), the amount of actual
+charge on the capacitor plates can't have changed. So if $\Delta V$ changed,
+but $Q$ did not, we can reason that since 
 \begin{equation*}
 Q=C\Delta V
 \end{equation*}%
-we suspect the material properties part--the capacitance--must have changed.%
+the material properties part--the capacitance--must have changed.%
 \begin{equation*}
 C=\frac{Q_{wo}}{\Delta V}=\frac{Q_{wo}}{\frac{\Delta V_{wo}}{\kappa }}=\frac{%
-\kappa Q_{wo}}{\Delta V_{o}}
+\kappa Q_{wo}}{\Delta V_{wo}}
 \end{equation*}%
 but this is just%
 \begin{equation}
 C=\kappa C_{wo}  \label{DielectricCapacitanceChange}
 \end{equation}%
-For a parallel plate capacitor, we have 
+For a parallel plate capacitor, we can account for all this by inserting a $%
+\kappa $ in our parallel plate capacitor equation 
 \begin{equation}
 C=\kappa \varepsilon _{o}\frac{A}{d}
 \label{DielectricParallelPlateCapacitance}
-\end{equation}
+\end{equation}%
+and let $\kappa =1$ if there is no dielectric.
 
-So where do you find values for $\kappa ?$ For this class, we will look them
-up in the tables in books or on the internet. Here are a few values for our
+But if we do have a dilectric we need its $\kappa $ value. So where do you
+find values for $\kappa ?$ For this class, we will look them up in the
+tables in books or on the internet. Here are a few values for our
 use.\smallskip 
 \begin{equation*}
 \begin{tabular}{|c|c|c|c|c|}
@@ -20455,45 +20369,16 @@ plates, so a force is required (and work is required) to remove the
 dielectric once it is in place. If we draw out the dielectric, we can see
 that the weaker field outside the capacitor causes little induced charge,
 but the stronger field inside the capacitor causes a large induced charge. A
-net inward force will result.\FRAME{dtbpF}{1.4356in}{2.2416in}{0in}{}{}{%
+net inward force will result.\FRAME{dtbpF}{1.4356in}{2.2416in}{0pt}{}{}{%
 Figure}{\special{language "Scientific Word";type
 "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-1.4356in;height 2.2416in;depth 0in;original-width 1.4001in;original-height
+1.4356in;height 2.2416in;depth 0pt;original-width 1.4001in;original-height
 2.2027in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
-'SAPYRBE7.wmf';tempfile-properties "XPR";}}
+'SAPYRBE7.wmf';tempfile-properties "XPR";}}Engineers use this force on a
+dielectric between capacitor plates to make clever actuators.
 
 \section{Electric current}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.35.4}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.35.4}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.35.4}
-\end{minipage}
-}%
-%EndExpansion
-%TCIMACRO{%
-%\TeXButton{Question 223.35.5}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.35.5}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.35.5}
-\end{minipage}
-}%
-%EndExpansion
 For some time now, we have been talking about charge moving. We have had
 charge move from a battery to the plates of a conductor. We have had charge
 flow from one side to another of a conductor, etc. It is time to become more
@@ -20516,10 +20401,10 @@ along the wire (in the $x$-direction in this case) is called the \emph{drift
 speed}, $v_{d},$ because the electrons just drift from place to place with a
 fairly small speed. This drift speed could be due mostly to thermal energy,
 so it can be very small or even zero (if no electric potential is applied).
-Of course, $v_{d},$ must be an average, each charge carrier will be moving
-random directions with slightly different speeds, so the $x$-component of
-the velocity will be different for each charge carrier, but on average they
-will move at a speed $v_{d}.$
+Of course, $v_{d},$ must be an average, each electron will be moving random
+directions with slightly different speeds, so the $x$-component of the
+velocity will be different for each electron, but on average they will move
+at a speed $v_{d}.$
 
 \FRAME{dtbpF}{3.1142in}{1.222in}{0pt}{}{}{Figure}{\special{language
 "Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
@@ -20536,21 +20421,6 @@ The volume of the shaded piece of wire is
 \begin{equation*}
 =A\Delta x
 \end{equation*}%
-%TCIMACRO{%
-%\TeXButton{Question 223.35.6}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.35.6}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.35.6}
-\end{minipage}
-}%
-%EndExpansion
 if there are 
 \begin{equation*}
 n=\frac{\#}{\mathbb{V}}
@@ -20573,7 +20443,7 @@ $\Delta t$
 \begin{equation}
 \frac{\Delta Q}{\Delta t}=nAv_{d}q_{e}  \label{CurrentDefenition}
 \end{equation}%
-to get a charge flow rate. This is very like our volume or mass flow rate in
+to get a charge flow rate. This is very like a volume or mass flow rate in
 fluid flow. We have an amount of charge going by in a time $\Delta t.$
 
 I gave the flow velocity a special name, $v_{d}.$ But I did not give all the
@@ -20618,21 +20488,6 @@ electrons near the near the switch start to flow at $v_{d}.$ But there are
 already free electrons in all the wire. These experience a
 Pascal's-principle-like-push that makes the light turn on almost instantly.
 
-%TCIMACRO{%
-%\TeXButton{Question 223.35.7}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.35.7}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.35.7}
-\end{minipage}
-}%
-%EndExpansion
 There is a historical oddity with current flow. It is that the current
 direction is the direction positive charges would flow. This may seem
 strange, since in good conductors, we have said that electrons are doing the
@@ -20733,21 +20588,6 @@ carriers would go
 
 \section{Current and resistance}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.36.1}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.36.1}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.36.1}
-\end{minipage}
-}%
-%EndExpansion
 We now have flowing charges, but our PH121 or Dynamics experience tells us
 that there is more. If we push or pull an object, we expect that most of the
 time there will be dissipative forces. There will be friction. \FRAME{dhF}{%
