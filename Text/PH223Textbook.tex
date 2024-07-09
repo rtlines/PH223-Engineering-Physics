@@ -11,7 +11,7 @@
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=Manual}
 %TCIDATA{Created=Thursday, March 21, 2024 14:45:27}
-%TCIDATA{LastRevised=Friday, June 28, 2024 11:48:26}
+%TCIDATA{LastRevised=Tuesday, July 09, 2024 14:49:35}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 %TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Standard LaTeX Book">}
 %TCIDATA{Language=American English}
@@ -22326,7 +22326,7 @@ derivative and then take the magnitude (absolute value).%
 This derivative was not obvious! We had to use the quotient rule. But once
 we have found it we can rewrite $dx$ as 
 \begin{equation*}
-dx=\left\vert \frac{-a}{\sin ^{2}\theta }d\theta \right\vert 
+dx=\left\vert \frac{-a}{\sin ^{2}\theta }d\theta \right\vert
 \end{equation*}%
 \smallskip (now with the absolute value inserted) and since neither $a$ nor $%
 \sin ^{2}\theta $ can be negative we can just write this as $dx=\frac{a}{%
@@ -22341,7 +22341,7 @@ which we should simplify before we try to integrate.
 \begin{eqnarray*}
 \overrightarrow{\mathbf{B}}_{b} &=&\frac{\mu _{o}I}{4\pi }\int \frac{-\sin
 \theta d\theta \mathbf{\hat{k}}}{a} \\
-&=&-\frac{\mu _{o}I}{4\pi a}\mathbf{\hat{k}}\int \sin \theta d\theta 
+&=&-\frac{\mu _{o}I}{4\pi a}\mathbf{\hat{k}}\int \sin \theta d\theta
 \end{eqnarray*}%
 which is really not too bad considering the integral we had at the start.
 When we get to the corner of the left hand side $\theta =\frac{3\pi }{4}$
@@ -22351,11 +22351,11 @@ the bottom wire $\theta $ will be somewhere in between $\frac{\pi }{4}$ and $%
 of integration. We can perform this integral 
 \begin{eqnarray*}
 \overrightarrow{\mathbf{B}}_{b} &=&-\frac{\mu _{o}I}{4\pi a}\mathbf{\hat{k}}%
-\int_{\frac{\pi }{4}}^{\frac{3\pi }{4}}\sin \theta d\theta  \\
+\int_{\frac{\pi }{4}}^{\frac{3\pi }{4}}\sin \theta d\theta \\
 &=&-\frac{\mu _{o}I}{4\pi a}\mathbf{\hat{k}}\left[ -\cos \theta \mathstrut
 \right\vert _{\frac{\pi }{4}}^{\frac{3\pi }{4}} \\
 &=&-\frac{\mu _{o}I}{4\pi a}\mathbf{\hat{k}}\left( \frac{\sqrt{2}}{2}-\left(
--\frac{\sqrt{2}}{2}\right) \right)  \\
+-\frac{\sqrt{2}}{2}\right) \right) \\
 &=&-\frac{\mu _{o}I\sqrt{2}}{4\pi a}\mathbf{\hat{k}}
 \end{eqnarray*}
 
@@ -22400,7 +22400,7 @@ watching the field change!
 In our last example, we found that the magnitude of the field due to a wire
 is 
 \begin{equation*}
-B=\left\vert -\frac{\mu _{o}I}{4\pi a}\int \sin \theta d\theta \right\vert 
+B=\left\vert -\frac{\mu _{o}I}{4\pi a}\int \sin \theta d\theta \right\vert
 \end{equation*}%
 Of course, we would like to relate this to our standard charge
 configuration, in this case an infinite line of (now moving) charge. If the
@@ -22408,9 +22408,9 @@ wire is infinitely long, then the limits of integration are just from $%
 \theta =0$ to $\theta =\pi $ 
 \begin{eqnarray*}
 B &=&\left\vert -\frac{\mu _{o}I}{4\pi a}\int_{0}^{\pi }\sin \theta d\theta
-\right\vert  \\
+\right\vert \\
 &=&\left\vert -\left. \frac{\mu _{o}I}{4\pi a}\left( -\cos \theta \right)
-\right\vert _{0}^{\pi }\right\vert  \\
+\right\vert _{0}^{\pi }\right\vert \\
 &=&\frac{\mu _{o}I}{2\pi a}
 \end{eqnarray*}%
 This is an important result. We can add a new geometry to our list of
@@ -22418,7 +22418,7 @@ special cases, a long straight wire that is carrying a current $I.$ The
 direction of the magnetic field, we already know, is given by our
 right-hand-rule. Of course, if our wire is not infinitely long, we now know
 how to find the actual field. It is all a matter of finding the right limits
-of integration. 
+of integration.
 
 \section{Magnetic dipoles}
 
@@ -22489,7 +22489,7 @@ equation again.
 Starting with step $1,$ we realize that, in general, our value of $d%
 \overrightarrow{\mathbf{s}}\times \mathbf{\hat{r}}$ is 
 \begin{equation*}
-d\overrightarrow{\mathbf{s}}\times \mathbf{\hat{r}}=ds\sin \phi 
+d\overrightarrow{\mathbf{s}}\times \mathbf{\hat{r}}=ds\sin \phi
 \end{equation*}%
 where $\phi $ is the angle between $d\overrightarrow{\mathbf{s}}$ and $%
 \mathbf{\hat{r}.}$ We can see that for this case $\phi $ will still be $90%
@@ -22722,8 +22722,9 @@ easy ones. This still required special symmetry, but when it worked, it was
 a fantastic time saver. For non-symmetric problems, there is always the
 integration method, and a computer.
 
-Likewise, for magnetostatics there is an easier method. To see how it works,
-let's review some math.
+Likewise, for magnetostatics (constant currents, so constant magnetic
+fields) there is an easier method. To see how it works, let's review some
+math.
 
 In the figure there is a line, divided up into many little segments. \FRAME{%
 dhF}{2.2295in}{1.4555in}{0pt}{}{}{Figure}{\special{language "Scientific
@@ -22773,11 +22774,9 @@ The integral would look like this%
 \begin{equation*}
 \int_{a}^{b}\overrightarrow{B}\cdot d\overrightarrow{s}
 \end{equation*}%
-This may not look like an improvement over integrating using the Biot-Savart
-law, but our goal will be to use symmetry to make this integral very easy.
-The key is in the dot product. We want only the component of the magnetic
-field that is in the $d\overrightarrow{s_{i}}$ direction. There are two
-special cases.
+Our goal will be to use symmetry to make this integral very easy. The key is
+in the dot product. We want only the component of the magnetic field that is
+in the $d\overrightarrow{s_{i}}$ direction. There are two special cases.
 
 If the field is perpendicular to the $d\overrightarrow{s_{i}}$ direction,
 then 
@@ -23123,12 +23122,12 @@ favorite right hand rule to help us remember.\FRAME{dhF}{1.286in}{1.3673in}{%
 1.286in;height 1.3673in;depth 0pt;original-width 1.2505in;original-height
 1.3327in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
 'SAPYRCFX.wmf';tempfile-properties "XPR";}}We start with our hand pointing
-in the direction of $\mathbf{\vec{v}}.$ Curl your fingers in the direction
-of $\mathbf{\vec{B}.}$ And your fingers will point in the direction of the
-force. We saw this type of right hand rule before with torque, but there is
-one big difference. This really is the direction the charge will accelerate!
-Note that this works for a positive charge. If the charge is negative, then
-the $\ q$ in 
+in the direction of $\overrightarrow{\mathbf{v}}.$ Curl your fingers in the
+direction of $\overrightarrow{\mathbf{B}}\mathbf{.}$ And your fingers will
+point in the direction of the force. We saw this type of right hand rule
+before with torque, but there is one big difference. This really is the
+direction the charge will accelerate! Note that this works for a positive
+charge. If the charge is negative, then the $\ q$ in 
 \begin{equation*}
 \overrightarrow{\mathbf{F}}_{B}=q\overrightarrow{\mathbf{v}}\times 
 \overrightarrow{\mathbf{B}}
@@ -23149,66 +23148,6 @@ F=qvB\sin \theta
 
 \section{Motion of a charged particle in a $B$-Field}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.40.1}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.40.1}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.40.1}
-\end{minipage}
-}%
-%EndExpansion
-%TCIMACRO{%
-%\TeXButton{Question 223.40.2}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.40.2}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.40.2}
-\end{minipage}
-}%
-%EndExpansion
-%TCIMACRO{%
-%\TeXButton{Question 223.40.3}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.40.3}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.40.3}
-\end{minipage}
-}%
-%EndExpansion
-%TCIMACRO{%
-%\TeXButton{Question 223.40.5}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.40.5}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.40.5}
-\end{minipage}
-}%
-%EndExpansion
 We refer to the magnetic field as a $B$-field for short.
 
 Let's set up a constant $B$-field as shown in the figure. We draw a $B$%
@@ -23219,37 +23158,22 @@ paper\textquotedblright\ so all we can see is their tails. \FRAME{dtbpF}{%
 "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
 2.514in;height 1.9995in;depth 0pt;original-width 5.1249in;original-height
 4.0698in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
-'SAPYRCFY.wmf';tempfile-properties "XPR";}}%
-%TCIMACRO{%
-%\TeXButton{Question 223.40.6}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.40.6}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.40.6}
-\end{minipage}
-}%
-%EndExpansion
-If I\ have a charged particle, with velocity $\mathbf{\vec{v},}$ what will
-be the motion of the particle in the field? First off, we should recall that 
-$\mathbf{\vec{F}}$ is in a direction perpendicular to $\mathbf{\vec{v}}$ and 
-$\overrightarrow{\mathbf{B}}$.. Using our right hand rule we see that it
-will go to the left. \FRAME{dtbpF}{2.4829in}{1.9752in}{0pt}{}{}{Figure}{%
-\special{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
-TRUE;display "USEDEF";valid_file "T";width 2.4829in;height 1.9752in;depth
-0pt;original-width 5.1249in;original-height 4.0698in;cropleft "0";croptop
+'SAPYRCFY.wmf';tempfile-properties "XPR";}}If I\ have a charged particle,
+with velocity $\mathbf{\vec{v},}$ what will be the motion of the particle in
+the field? First off, we should recall that $\mathbf{\vec{F}}$ is in a
+direction perpendicular to $\mathbf{\vec{v}}$ and $\overrightarrow{\mathbf{B}%
+}$.. Using our right hand rule we see that it will go to the left. \FRAME{%
+dtbpF}{2.4829in}{1.9752in}{0pt}{}{}{Figure}{\special{language "Scientific
+Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
+"T";width 2.4829in;height 1.9752in;depth 0pt;original-width
+5.1249in;original-height 4.0698in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'SAPYRCFZ.wmf';tempfile-properties "XPR";}}%
+Remember that $F=ma,$ so the charge will accelerate in the $-x$ direction.%
+\FRAME{dhF}{2.0686in}{1.6881in}{0pt}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+"USEDEF";valid_file "T";width 2.0686in;height 1.6881in;depth
+0pt;original-width 2.0297in;original-height 1.6518in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
-'SAPYRCFZ.wmf';tempfile-properties "XPR";}}Remember that $F=ma,$ so the
-charge will accelerate in the $-x$ direction.\FRAME{dhF}{2.0686in}{1.6881in}{%
-0pt}{}{}{Figure}{\special{language "Scientific Word";type
-"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-2.0686in;height 1.6881in;depth 0pt;original-width 2.0297in;original-height
-1.6518in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
 'SAPYRCG0.wmf';tempfile-properties "XPR";}}Now, if we allow the charged
 particle to move, we see that the $v$ direction changes. This makes the
 direction of $F$ change. Since $v$ and $a$ are always at $90\unit{%
@@ -23335,51 +23259,6 @@ TRUE;display "USEDEF";valid_file "T";width 3.0237in;height 1.7979in;depth
 systems, like the CMS, charged product particles can be tracked along curved
 paths for identification.
 
-%TCIMACRO{%
-%\TeXButton{Question 223.40.7}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.40.7}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.40.7}
-\end{minipage}
-}%
-%EndExpansion
-%TCIMACRO{%
-%\TeXButton{Question 223.40.8}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.40.8}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.40.8}
-\end{minipage}
-}%
-%EndExpansion
-%TCIMACRO{%
-%\TeXButton{Question 223.40.9}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.40.9}
-%\end{minipage}
-%}} }%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.40.9}
-\end{minipage}
-}
-%EndExpansion
 Charged particles that enter a magnetic field with some initial speed will
 gain a circular motion as well. The combined motion is a helix. \FRAME{dhF}{%
 2.4881in}{1.6881in}{0pt}{}{}{Figure}{\special{language "Scientific
@@ -23408,22 +23287,6 @@ the confinement of charged particles in a magnetic field for fusion reaction.
 
 \subsection{The velocity selector}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.40.10}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.40.10}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.40.10}
-\end{minipage}
-}%
-%EndExpansion
-
 \FRAME{dhF}{2.7812in}{1.7158in}{0in}{}{}{Figure}{\special{language
 "Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
 "USEDEF";valid_file "T";width 2.7812in;height 1.7158in;depth
@@ -23433,8 +23296,10 @@ the confinement of charged particles in a magnetic field for fusion reaction.
 
 This device shows up on tests, especially finals, because it has both an
 electric field and a magnetic field--you test two sets of knowledge at once!
-So let's see how it works. Our question should be, what is the velocity of a
-charged particle that travels through the field without being deflected?
+But it is also the first stage of a mass spectrometer, which is a device
+used by chemists. So let's see how it works. Our question should be, what is
+the velocity of a charged particle that travels through the field without
+being deflected?
 
 $E$\textbf{-field}
 
@@ -23475,20 +23340,21 @@ as the speed that will be \textquotedblleft selected.\textquotedblright\
 \subsection{Bainbridge Mass Spectrometer}
 
 A mass spectrometer is the second most likely place to find a velocity
-selector (the first was a test). You may use a mass-spec some time in your
-careers. I have had samples identified by mass-spectrometers several times
-in my industrial career. They are very useful devices--especially when
-chemical identification is hard or impossible.\medskip \FRAME{dhF}{4.011in}{%
-2.5676in}{0pt}{}{}{Figure}{\special{language "Scientific Word";type
+selector (the first was a test). Chemists will likely use a mass-spec often
+in their careers, but even mechanical engineers may use one some time in
+your careers. I have had samples identified by mass-spectrometers several
+times in my industrial career. They are very useful devices--especially when
+chemical identification is hard or impossible.\medskip \FRAME{dtbpF}{4.5982in%
+}{2.9438in}{0in}{}{}{Figure}{\special{language "Scientific Word";type
 "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-4.011in;height 2.5676in;depth 0pt;original-width 3.9617in;original-height
-2.5261in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
-'SAPYRCG6.wmf';tempfile-properties "XPR";}}\medskip The Bainbridge device is
+4.5982in;height 2.9438in;depth 0in;original-width 4.5455in;original-height
+2.9006in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'SFYJAZ00.wmf';tempfile-properties "XPR";}}\medskip The Bainbridge device is
 one type that we can easily understand. It starts with a velocity selector
 which sends charged particles at a particular speed into a region of uniform
 magnetic field. The charged particles then follow curved paths on their way
 to an array of detectors. When they hit the array, their spatial location is
-recorded. Where they hit depends on their ration of charge to mass. From our
+recorded. Where they hit depends on their ratio of charge to mass. From our
 study of the rotational motion we found 
 \begin{equation*}
 r=\frac{mv}{qB_{o}}
@@ -23542,11 +23408,11 @@ kinetic energy equal to the potential energy difference across the gap%
 \begin{equation*}
 \Delta K=q\Delta V
 \end{equation*}%
-As the particle travels around the D to the other side of the, the
-cyclotron, the cyclotron switches the polarity of the potential difference.
-So as the particle passes the gap on the other side of the cyclotron, it is
-again accelerated with an additional $\Delta K=q\Delta V.$ Since $r$ does
-depend on the speed,%
+As the particle travels around the D to the other side of the cyclotron, the
+cyclotron switches the polarity of the potential difference. So as the
+particle passes the gap on the other side of the cyclotron, it is again
+accelerated with an additional $\Delta K=q\Delta V.$ Since $r$ does depend
+on the speed,%
 \begin{equation*}
 r=\frac{mv}{qB}
 \end{equation*}%
@@ -23565,21 +23431,6 @@ K &=&\frac{1}{2}mv^{2} \\
 
 \section{Hall Effect}
 
-%TCIMACRO{%
-%\TeXButton{Hall Effect Demo}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Hall Effect Demo}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Hall Effect Demo}
-\end{minipage}
-}%
-%EndExpansion
 The Hall probe is a cool little device that measures the magnitude of the
 magnetic field. It is used in rotation and angle detection in engineering.
 We should find out how it works.\FRAME{dtbpF}{2.0721in}{1.9847in}{0pt}{}{}{%
@@ -23593,12 +23444,12 @@ Let's take a piece of material that has a current going through it. If we
 place it in a magnetic field, then the charge carriers will feel a force.
 Suppose it is a metal, and that the charge carriers are electrons. The force
 is perpendicular to the current direction. So the electrons are accelerated
-toward the top of the piece of metal as shown in the drawing. This creates a
-negative charge on the top side of the metal piece. Then the bottom side
-will be positively charged relative to the top. With separated charge like
+toward the left of the piece of metal as shown in the drawing. This creates
+a negative charge on the left side of the metal piece. Then the right side
+will be positively charged relative to the left. With separated charge like
 this, we think of a capacitor and the electric field created by such a
 separation of charges. There will be a field in the conductor with a
-potential difference between the top and bottom of the conductor. We call
+potential difference between the left and right of the conductor. We call
 this potential difference%
 \begin{equation*}
 \Delta V_{H}
@@ -23716,36 +23567,6 @@ where $\mathbf{\mu }=I\mathbf{A}$
 
 \section{Magnetic forces on Current-Carrying wires}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.41.1}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.41.1}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.41.1}
-\end{minipage}
-}%
-%EndExpansion
-%TCIMACRO{%
-%\TeXButton{Question 223.41.2}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.41.2}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.41.2}
-\end{minipage}
-}%
-%EndExpansion
 If there is a force on a single moving charge due to a magnetic field, then
 there must be a force on lots of moving charges! We call lots of moving
 charges an electric current%
@@ -23793,24 +23614,26 @@ and the direction of the current. We can write this as a cross product%
 \end{equation}%
 where $\overrightarrow{\mathbf{L}}$ is in the current direction.
 
-\subsection{Force between two wires}
+You might wonder how $\overrightarrow{\mathbf{L}}$ became a vector. We
+started with $\overrightarrow{\mathbf{F}}_{B}=q\overrightarrow{\mathbf{v}}%
+\times \overrightarrow{\mathbf{B}}$ and ended up with $\overrightarrow{%
+\mathbf{F}}_{I}=I\overrightarrow{\mathbf{L}}\mathbf{\times }\overrightarrow{%
+\mathbf{B}}.$ The velocity $\overrightarrow{\mathbf{v}}$ has a direction and
+so does $I.$ So why did we define a vector $\overrightarrow{\mathbf{L}}$
+that is in the direction of the current flow instead of just using $%
+\overrightarrow{\mathbf{I}}?$ But if we remember the Biot-Savart law that
+started all of our magnetic study%
+\begin{equation*}
+\overrightarrow{\mathbf{B}}=\frac{\mu _{o}I}{4\pi }\int \frac{d%
+\overrightarrow{\mathbf{s}}\times \mathbf{\hat{r}}}{r^{2}}
+\end{equation*}
+we see the same pattern. We have $Id\overrightarrow{\mathbf{s}}$ where $d%
+\overrightarrow{\mathbf{s}}$ is in the direction of the current. And $%
+\overrightarrow{\mathbf{L}}=\int d\overrightarrow{\mathbf{s}}$ so this is
+not so crazy as it seems. Let's use our new force quation to get experience
+with how it works!
 
-%TCIMACRO{%
-%\TeXButton{Question 223.41.2.3}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.41.2.3}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.41.2.3}
-\end{minipage}
-}%
-%EndExpansion
-We can use what we have learned to find the force between two wires.
+\subsection{Force between two wires}
 
 If I\ have two wires with current, I will have a field created by each wire.
 Let's suppose that $I_{1}$ and $I_{2}$ are in the same direction\FRAME{dhF}{%
@@ -23820,11 +23643,14 @@ Let's suppose that $I_{1}$ and $I_{2}$ are in the same direction\FRAME{dhF}{%
 2.2485in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
 'SAPYR700.wmf';tempfile-properties "XPR";}}and let's calculate the force on
 wire $1$ due to the field of wire $2.$ The field due to wire $2$ at the
-location of wire $1$ will be 
+location of wire $1$ will be like 
 \begin{equation*}
 B_{12}=\frac{\mu _{o}I_{2}}{2\pi d}
 \end{equation*}%
-where $d$ is how far away wire $1$ is from wire $2.$ We know%
+if the wire is sufficiently long, where $d$ is how far away wire $1$ is from
+wire $2.$ This is the field at the location of wire $1$ due to the current
+in wire $2.$ We can use our new force on a wire equation to find the force
+on wire $1$ due to the field from wire $2.$%
 \begin{equation*}
 F_{12}=I_{1}LB_{2}\sin \theta
 \end{equation*}%
@@ -23832,8 +23658,7 @@ We can see that $\sin \theta =1$ since $I_{1}$ will be perpendicular to $%
 B_{12.}$%
 \begin{equation*}
 F_{12}=I_{1}LB_{12}
-\end{equation*}
-
+\end{equation*}%
 and using our expression for $B_{12}$%
 \begin{eqnarray}
 F_{12} &=&I_{1}L\frac{\mu _{o}I_{2}}{2\pi d}  \notag \\
@@ -23843,36 +23668,6 @@ Would you expect $F_{21}$ to be very different?
 
 \section{Torque on a Current Loop}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.41.4}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.41.4}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.41.4}
-\end{minipage}
-}%
-%EndExpansion
-%TCIMACRO{%
-%\TeXButton{Question 223.41.5}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.41.5}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.41.5}
-\end{minipage}
-}%
-%EndExpansion
 Remember that in PH121 or Statics and Dynamics we defined angular
 displacement%
 \begin{equation}
@@ -23892,10 +23687,11 @@ We also defined an angular acceleration%
 \begin{equation}
 \alpha =\frac{\Delta \omega }{\Delta t}
 \end{equation}%
-and we used angular acceleration in combination with a moment of inertia to
-express a rotational form of Newton's second law%
+and we used angular acceleration $\left( \alpha \right) $ in combination
+with a moment of inertia $\left( \mathbb{I}\right) $ to express a rotational
+form of Newton's second law%
 \begin{equation}
-\sum \tau =I\alpha
+\sum \tau =\mathbb{I}\alpha
 \end{equation}%
 where $\tau $ is a torque. We found torque with the expression 
 \begin{equation}
@@ -23929,9 +23725,8 @@ where $\theta $ is the angle between $I$ and $B$ so if $\theta =0$ or if $%
 \theta =\pi \unit{rad}$, then $\sin \theta $ will be zero. The magnitude of
 the force will then be zero. So the top and bottom parts of the loop will
 not experience a force. The sides will, though, and since for $\theta =\frac{%
-\pi }{2}$ or $\theta =-\frac{\pi }{2}$ ($\theta =-\frac{\pi }{2}$ is the
-same as $\theta =\frac{3\pi }{2}$) then $\sin \theta =1$ and the force will
-be a maximum.%
+\pi }{2}$ or $\theta =-\frac{\pi }{2}$ then $\sin \theta =1$ and the force
+will be a maximum%
 \begin{equation*}
 F_{I}=IbB
 \end{equation*}%
@@ -24043,22 +23838,6 @@ magnetic moment.
 U=-\overrightarrow{\mathbf{\mu }}\cdot \overrightarrow{\mathbf{B}}
 \end{equation}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.41.5}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.41.5}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.41.5}
-\end{minipage}
-}%
-%EndExpansion
-
 \subsection{Galvanometer}
 
 We finally know enough to understand how to measure a current. The device is
@@ -24079,21 +23858,6 @@ the current, a galvanometer can easily measure current.
 
 \subsection{Electric Motors}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.41.6}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.41.6}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.41.6}
-\end{minipage}
-}%
-%EndExpansion
 With our new understanding of torque on a current loop, we should be able to
 see how an electric motor works. A current loop is placed in between two
 magnets to form a magnetic field. The loop will turn because of the torque
@@ -24136,6 +23900,21 @@ same direction.
 \hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}%
 %EndExpansion
 
+\begin{equation}
+\overrightarrow{\mathbf{F}}_{I}=I\overrightarrow{\mathbf{L}}\mathbf{\times }%
+\overrightarrow{\mathbf{B}}
+\end{equation}%
+\begin{equation}
+F_{12}=L\frac{\mu _{o}I_{2}I_{1}}{2\pi d}
+\end{equation}%
+\begin{equation}
+\overrightarrow{\mathbf{\tau }}\mathbf{=}\overrightarrow{\mathbf{\mu }}%
+\times \overrightarrow{\mathbf{B}}
+\end{equation}%
+\begin{equation}
+U=-\overrightarrow{\mathbf{\mu }}\cdot \overrightarrow{\mathbf{B}}
+\end{equation}
+
 \chapter{Permanent Magnets, Induction}
 
 %TCIMACRO{%
@@ -24159,40 +23938,25 @@ spinning electrons.
 \item A changing magnetic field can create an emf.
 \end{itemize}
 
-\section{Finally, why magnets work}
+\section{Finally, why bar magnets work}
 
 We started our study of magnetism by looking at bar magnets and considering
 that if we break one, we end up with two magnets. We don't end up with a
 north end and a south end as separate pieces. This is different than charge
 and electric fields. Then we studied how moving charge makes a magnetic
-field. But we didn't say how bar magnets work yet.%
-%TCIMACRO{%
-%\TeXButton{Question 223.42.1}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.42.1}
-%\end{minipage}
-%}} }%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.42.1}
-\end{minipage}
-}
-%EndExpansion
-Can a permanent magnet have something to do with current loops?\FRAME{dhF}{%
-3.4696in}{1.6224in}{0pt}{}{}{Figure}{\special{language "Scientific
-Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
-"T";width 3.4696in;height 1.6224in;depth 0pt;original-width
-5.0194in;original-height 2.3315in;cropleft "0";croptop "1";cropright
-"1";cropbottom "0";tempfilename 'SAPYRCGH.wmf';tempfile-properties "XPR";}}%
-Well, lets look at the field due to a current loop. It looks a lot like the
-field due to a magnet. Could there be current loops inside a bar magnet? The
-answer is well, sort of... We have electrons that sort of travel around the
-atom. Suppose the electrons orbit like planets. (Chemists, just restrain
-your dismay at this idea for a moment). Then there would be a current as
-they travel. For one electron the current would be%
+field. But we didn't say how bar magnets work yet. Can a permanent magnet
+have something to do with current loops?\FRAME{dhF}{3.4696in}{1.6224in}{0pt}{%
+}{}{Figure}{\special{language "Scientific Word";type
+"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
+3.4696in;height 1.6224in;depth 0pt;original-width 5.0194in;original-height
+2.3315in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'SAPYRCGH.wmf';tempfile-properties "XPR";}}Well, lets look at the field due
+to a current loop. It looks a lot like the field due to a magnet. Could
+there be current loops inside a bar magnet? The answer is well, sort of...
+We have electrons that sort of travel around the atom. Suppose the electrons
+orbit like planets. (Chemists, just restrain your dismay at this idea for a
+moment). Then there would be a current as they travel. For one electron the
+current would be%
 \begin{equation*}
 I=\frac{q_{e}}{T}
 \end{equation*}%
@@ -24245,25 +24009,10 @@ so the magnetic moment of the orbiting electron would be%
 which gives us a magnetic moment related to the angular momentum of the
 electron. And if we have a magnetic moment this not only means the atoms
 would orient in an external field but it also means that the atoms work as
-little magnets. We will have a magnetic field
+little magnets. We will have a magnetic field.
 
 \subsection{Quantum effects}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.42.2}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.42.2}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.42.2}
-\end{minipage}
-}%
-%EndExpansion
 All of this kind of works for Hydrogen. We find that individual hydrogen
 atoms do act like small magnets. But if the hydrogen is in a compound, it is
 more complicated because we then have many electrons and they are
@@ -24272,26 +24021,37 @@ even true that most atoms have many electrons, and within the atom these
 electrons fly around in all different directions. The magnetic field due to
 one electron in the atom cancels out the magnetic field due to another, so
 there is no net magnetic field do to the \textquotedblleft
-motion\textquotedblright\ of the electrons in their orbitals. So in general
+motion\textquotedblright\ of the electrons in their orbits. So in general
 there is no net magnetic field from orbital motion. Even for Hydrogen in a
 compound the overall magnetic moment of the compound tends to cancel out.
 
-Further, we know that electrons do not travel like planets in circular
-orbits. So our model for magnetism is not really correct yet.\footnote{%
-Strictly speaking, the electrons don't move like little planets around the
+Worse yet, the electrons don't really move like little planets around the
 nucleus. So it is not clear that orbital \textquotedblleft
 motion\textquotedblright\ makes much sense. The electrons form standing
-waves around the nucleus that oscillate in time. But they do have angular
-momentum, and that orbital angular momentum cancels out for most atoms. For
-more on this, take PH279, Modern Physics.} To understand the current model
-of electron orbitals takes some quantum mechanics (and a few more years of
-physics). But we can understand a little, because quantum mechanics does
-tell us that the electrons have angular momentum. The big difference is that
-the angular momentum is \emph{quantized} meaning it can have only certain
-values (think of the quantized modes of an oscillating string). This means
-that the magnetic moment has a smallest value and that the other values will
-be (complicated) multiples of this value. The smallest magnetic moment for
-an electron turns out to be 
+waves around the nucleus that oscillate in time. You have probably seen
+these standing waves drawn in chemistry books. \FRAME{dtbpFU}{3.9167in}{%
+2.2243in}{0pt}{\Qcb{{\protect\small Collection of 16 atomic single-electron
+orbitals for the lowest four n quantum numbers. Image courtesy Geek3
+(https://commons.wikimedia.org/wiki/File:Atomic\_orbitals\_spdf%
+\_m-eigenstates.png)}}}{}{Figure}{\special{language "Scientific Word";type
+"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
+3.9167in;height 2.2243in;depth 0pt;original-width 7.0802in;original-height
+4.0084in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'SG5VQ401.bmp';tempfile-properties "XPR";}}Because they are three
+dimensional standing waves their shapes are strange. But these odd standing
+waves do have angular momentum, and that orbital angular momentum cancels
+out for most atoms. For more on this, take PH279, Modern Physics.
+
+So our model for magnetism is not really correct yet. To understand the
+current model of electron orbitals takes some quantum mechanics (and a few
+more years of physics or one wonderful semester of physical chemistry). But
+we can understand a little, because quantum mechanics does tell us that the
+electrons have angular momentum. The big difference is that the angular
+momentum is \emph{quantized} meaning it can have only certain values (think
+of the quantized standing wave modes for waves on strings). This means that
+the magnetic moment has a smallest value and that the other values will be
+(complicated) multiples of this value. The smallest magnetic moment for an
+electron turns out to be 
 \begin{equation}
 \mu =\sqrt{2}\frac{q_{e}}{2m_{e}}\hslash
 \end{equation}%
@@ -24303,8 +24063,8 @@ is pronounced \textquotedblleft h-bar\textquotedblright\ and is a constant.
 
 It would seem that with only certain values being available the magnetic
 moments might be more likely to line up. But it turns out that even in
-quantum mechanics, the magnetic moments of the electrons due to their orbits
-cancel each other out most of the time.
+quantum mechanics, the magnetic moments of the electrons due to their
+orbitals cancel each other out most of the time.
 
 But there is another contribution to the magnetic moment, this time from the
 electron, itself. The electron has an amount of angular momentum. It is as
@@ -24340,31 +24100,17 @@ honor of Niels Bohr. If there are many electrons in the atom, there will be
 many contributions to the total atomic magnetic moment. The nucleus also has
 a magnetic moment (a detail we will not discuss at any length in our class)
 and there are other details like electron spin states pairing up. But those
-are topics for PH279 and our senior quantum mechanics class. It turns out
-that this spin magnetic moment is the major cause that produces permanent
-magnetism in some metals because this spin contribution does not all cancel
-out for those metals. We don't want to wade though a senior level physics
-class now (well, you probably don't anyway) so we need a more macroscopic
-description of magnetism. But fundamentally, if we can get the electrons
-spins in a material to line up, we will have a magnet.
+are topics for PH279 and our senior quantum mechanics class (and probably
+our physical chemistry class). It turns out that this spin magnetic moment
+is the major cause that produces permanent magnetism in some metals because
+this spin contribution does not all cancel out for those metals. We don't
+want to wade though a senior level physics class now (well, you probably
+don't anyway) so we need a more macroscopic description of magnetism. But
+fundamentally, if we can get the electrons spins in a material to line up,
+we will have a magnet.
 
 \subsection{Ferromagnetism}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.42.3}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.42.3}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.42.3}
-\end{minipage}
-}%
-%EndExpansion
 Because of the spin magnetic moment, we can see some hope for how a
 permanent might work. But these spin magnetic moments are also mostly
 randomly arranged. So again, most atoms won't have an overall magnetic
@@ -24383,22 +24129,23 @@ TRUE;display "USEDEF";valid_file "T";width 1.3837in;height 1.3396in;depth
 0pt;original-width 1.3482in;original-height 1.305in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
 'SAPYRCGJ.wmf';tempfile-properties "XPR";}}If we place these materials in a
-magnetic field, we can make the domains align, and then we have something!%
-\FRAME{dhF}{1.2756in}{1.2445in}{0pt}{}{}{Figure}{\special{language
-"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
-"USEDEF";valid_file "T";width 1.2756in;height 1.2445in;depth
+magnetic field, we can make the domains align like little compass needles,
+and then we have something!\FRAME{dhF}{1.2756in}{1.2445in}{0pt}{}{}{Figure}{%
+\special{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
+TRUE;display "USEDEF";valid_file "T";width 1.2756in;height 1.2445in;depth
 0pt;original-width 1.8075in;original-height 1.7634in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
 'SAPYRCGK.wmf';tempfile-properties "XPR";}}Few materials can do this. The
-ones that can are called ferromagnetic. Iron is one such material. We can
-make the domains align, but the alignment decays quickly. That is why iron
-objects stick to a magnet, but don't stick to each other when they are taken
-away from the magnet. But if we can force the domains to stay in one
-direction, say, by heating the ferromagnetic metal in a magnetic field and
-letting it cool and form crystals, then we can make a magnet that will last
-longer. The magnetic moments will get stuck all pointing about the same
-direction as the ferromagnetic metal cools. Some materials like Cobalt form
-very long lasting permanent magnets.
+ones that can are called ferromagnetic. Iron is one such material. While the
+piece of iron is next to the magnet that piece of iron is also a magnet. We
+can make the domains align, but the alignment decays quickly. That is why
+iron objects stick to a magnet, but don't stick to each other when they are
+taken away from the magnet. But if we can force the domains to stay in one
+direction, say, by heating the ferromagnetic metal while it is in a magnetic
+field and letting it cool and form crystals, then we can make a magnet that
+will last longer. The magnetic moments will get stuck all pointing about the
+same direction as the ferromagnetic metal cools. Some materials like Cobalt
+form very long lasting permanent magnets.
 
 \subsection{Magnetization vector}
 
@@ -24431,18 +24178,18 @@ they have magnetic moments.
 0pt;original-width 4.4836in;original-height 1.506in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
 'SAPYRCGL.wmf';tempfile-properties "XPR";}}notice that in between the loops,
-the currents go opposite directions. We could think of them as canceling. We
-get a net current that is to the outside of the loops\FRAME{dtbpF}{2.1638in}{%
-0.9444in}{0pt}{}{}{Figure}{\special{language "Scientific Word";type
+the currents go opposite directions. We could think of them as canceling in
+the middle. We get a net current that is to the outside of the loops\FRAME{%
+dtbpF}{2.1638in}{0.9444in}{0pt}{}{}{Figure}{\special{language "Scientific
+Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
+"T";width 2.1638in;height 0.9444in;depth 0pt;original-width
+4.5916in;original-height 1.9887in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'SAPYRCGM.wmf';tempfile-properties "XPR";}}%
+Now let's take many current loops.\FRAME{dtbpF}{1.8637in}{1.9847in}{0pt}{}{}{%
+Figure}{\special{language "Scientific Word";type
 "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-2.1638in;height 0.9444in;depth 0pt;original-width 4.5916in;original-height
-1.9887in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
-'SAPYRCGM.wmf';tempfile-properties "XPR";}}Now let's take many current loops.%
-\FRAME{dtbpF}{1.8637in}{1.9847in}{0pt}{}{}{Figure}{\special{language
-"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
-"USEDEF";valid_file "T";width 1.8637in;height 1.9847in;depth
-0pt;original-width 4.6464in;original-height 4.9476in;cropleft "0";croptop
-"1";cropright "1";cropbottom "0";tempfilename
+1.8637in;height 1.9847in;depth 0pt;original-width 4.6464in;original-height
+4.9476in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
 'SAPYRCGN.wmf';tempfile-properties "XPR";}}again, the inside currents
 cancel, leaving an overall current along the outside. Now if we view a
 material as a stack of such current loops\FRAME{dtbpF}{1.2756in}{1.1in}{0pt}{%
@@ -24495,21 +24242,6 @@ So the total field is given by
 
 \subsection{Magnetic Field Strength (another confusing name)}
 
-%TCIMACRO{%
-%\TeXButton{Only do this if you have extra time}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Only do this if you have extra time}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Only do this if you have extra time}
-\end{minipage}
-}%
-%EndExpansion
 Sometimes we physicists just can't let things alone. So when we arrived at
 the equation%
 \begin{equation}
@@ -24605,21 +24337,6 @@ is not true for ferromagnetic materials.
 
 \subsection{Ferromagnetism revisited}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.42.4}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.42.4}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.42.4}
-\end{minipage}
-}%
-%EndExpansion
 But why is ferromagnetism different? To try to understand, let's take a iron
 toroid (doughnut shape) and wrap it with a coil as shown. \FRAME{dtbpF}{%
 2.2978in}{2.4647in}{0pt}{}{}{Figure}{\special{language "Scientific
@@ -24750,29 +24467,13 @@ Well, that will take more theory to discover (a great topic for our junior
 level electrodynamics class). But the phenomena is called the Meissner
 effect.
 
-%TCIMACRO{%
-%\TeXButton{Meissner effect demo}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Meissner effect demo}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Meissner effect demo}
-\end{minipage}
-}%
-%EndExpansion
-
 \section{Back to the Earth}
 
 So now we can see that the Earth is a magnet and we know how magnets are
 formed. But wait, why is the Earth a magnet? The real answer is that we
 don't know. But we believe that again it is because of current loops. We
-believe there is a current of ionized Nickel and Iron in near the center of
-the Earth. So the flow of these charged liquid metals will create a magnetic
+believe there is a current of ionized Nickel and Iron near the center of the
+Earth. So the flow of these charged liquid metals will create a magnetic
 field. This is a vary large current loop! The evidence for this is that
 magnetic field seems proportional to the spin rate of the planet. But this
 is an area of active research.
@@ -24791,24 +24492,8 @@ for the difference in pole location.
 \section{Induced currents}
 
 We spend most of the last two lectures building a relationship between
-moving charge (current) and magnetic fields.%
-%TCIMACRO{%
-%\TeXButton{Question 223.42.5}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.42.5}
-%\end{minipage}
-%}} }%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.42.5}
-\end{minipage}
-}
-%EndExpansion
-But suppose we have moving magnetic fields. Could a moving magnetic field
-make a current?
+moving charge (current) and magnetic fields. But suppose we have moving
+magnetic fields. Could a moving magnetic field make a current?
 
 If we think of relative motion, it seems like it should. After all, how do
 we know that it is the charge that is moving and not a moving $B$-field. In
@@ -24856,10 +24541,51 @@ changing magnetic fields. We will do this next lecture with our concept of
 flux.
 
 %TCIMACRO{%
-%\TeXButton{Basic Equations}{\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}}}%
+%\TeXButton{Basic Equations}{\vspace{0.2in}\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}}}%
 %BeginExpansion
-\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}%
+\vspace{0.2in}\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}%
 %EndExpansion
+
+\begin{equation*}
+\mu =\frac{q_{e}v_{t}r}{2}
+\end{equation*}%
+\begin{equation}
+\mu =\frac{q_{e}L}{2m}
+\end{equation}%
+\begin{equation}
+M=\frac{\mu }{\mathbb{V}}
+\end{equation}%
+\begin{equation*}
+\overrightarrow{\mathbf{H}}=\frac{\overrightarrow{\mathbf{B}}_{o}}{\mu _{o}}
+\end{equation*}%
+\begin{equation}
+\overrightarrow{\mathbf{B}}=\overrightarrow{\mathbf{B}}_{o}+\mu _{o}%
+\overrightarrow{\mathbf{M}}
+\end{equation}%
+\begin{equation}
+\overrightarrow{\mathbf{B}}=\mu _{o}\left( \overrightarrow{\mathbf{H}}+%
+\overrightarrow{\mathbf{M}}\right)
+\end{equation}%
+\begin{equation}
+\overrightarrow{\mathbf{B}}=\mu _{o}\left( 1+\chi \right) \overrightarrow{%
+\mathbf{H}}
+\end{equation}%
+\begin{equation}
+\mu _{m}=\mu _{o}\left( 1+\chi \right)
+\end{equation}%
+\begin{equation*}
+\begin{tabular}{ll}
+Paramagnetic & $\mu _{m}>\mu _{o}$ \\ 
+Diamagnetic & $\mu _{m}<\mu _{o}$ \\ 
+Free Space & $\mu _{m}=\mu _{o}$%
+\end{tabular}%
+\end{equation*}%
+\begin{equation*}
+\overrightarrow{\mathbf{M}}=\chi \overrightarrow{\mathbf{H}}
+\end{equation*}%
+\begin{equation}
+M=C\frac{B_{o}}{T}
+\end{equation}
 
 \chapter{Induction}
 
@@ -24903,10 +24629,10 @@ that separated charge creates a potential difference. We often call this
 induced potential difference the \emph{motional emf }because it is created
 by moving our apparatus.
 
-Let's take an example to see how it works. \FRAME{dhF}{2.9776in}{2.3999in}{%
+Let's take an example to see how it works. \FRAME{dhF}{2.3108in}{1.8628in}{%
 0pt}{}{}{Figure}{\special{language "Scientific Word";type
 "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-2.9776in;height 2.3999in;depth 0pt;original-width 2.9334in;original-height
+2.3108in;height 1.8628in;depth 0pt;original-width 2.9334in;original-height
 2.3592in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
 'SAPYRCGU.wmf';tempfile-properties "XPR";}}For this example, let's look at a
 piece of wire moving in a constant field. To make the math easy, let's move
@@ -24954,23 +24680,7 @@ where $L$ is the length of our wire. So
 
 This is like a battery. The magnetic field is \textquotedblleft
 pumping\textquotedblright\ charge. If we connected the two ends somehow with
-a wire that is not moving, a current will flow (that is tricky to actually
-do!).%
-%TCIMACRO{%
-%\TeXButton{Question 223.43.0.1}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.43.0.1}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.43.0.1}
-\end{minipage}
-}%
-%EndExpansion
+a wire that is not moving, a current will flow.
 
 \FRAME{dhF}{3.7775in}{1.708in}{0pt}{}{}{Figure}{\special{language
 "Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
@@ -25019,37 +24729,7 @@ the velocity, so the bar will slow down.
 
 \section{Eddy Currents}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.43.1}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.43.1}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.43.1}
-\end{minipage}
-}%
-%EndExpansion
-%TCIMACRO{%
-%\TeXButton{Pendulum-loop}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Pendulum-loop}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Pendulum-loop}
-\end{minipage}
-}%
-%EndExpansion
-So if we have a conductive loop and part of that loop moves in a magnetic
+If we have a conductive loop and part of that loop moves in a magnetic
 field, we get a current. I chose to make our apparatus a pendulum. \FRAME{%
 dtbpF}{1.1185in}{1.3979in}{0pt}{}{}{Figure}{\special{language "Scientific
 Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
@@ -25058,99 +24738,26 @@ Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
 "1";cropbottom "0";tempfilename 'SAPYRCGW.wmf';tempfile-properties "XPR";}}%
 So as the pendulum swings, through the magnetic field, we get a current.
 What if we have a solid sheet of conductor and we move that sheet through
-the magnetic field, will there be a current?%
-%TCIMACRO{%
-%\TeXButton{Pendulum-plate}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Pendulum-plate}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Pendulum-plate}
-\end{minipage}
-}%
-%EndExpansion
-%TCIMACRO{%
-%\TeXButton{Question 223.43.2}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.43.2}
-%\end{minipage}
-%}} }%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.43.2}
-\end{minipage}
-}
-%EndExpansion
-\FRAME{dtbpF}{1.5336in}{2.0347in}{0pt}{}{}{Figure}{\special{language
-"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
-"USEDEF";valid_file "T";width 1.5336in;height 2.0347in;depth
-0pt;original-width 1.5345in;original-height 2.0445in;cropleft "0";croptop
-"1";cropright "1";cropbottom "0";tempfilename
-'SAPYRCGX.wmf';tempfile-properties "XPR";}}The answer is yes. We call this
-current an \emph{eddy current}. Let's see that this must be true with
-another experiment.%
-%TCIMACRO{%
-%\TeXButton{Question 223.43.3}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.43.3}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.43.3}
-\end{minipage}
-}%
-%EndExpansion
-Let's cut groves in the plate. \FRAME{dtbpF}{1.6658in}{2.15in}{0in}{}{}{%
-Figure}{\special{language "Scientific Word";type
+the magnetic field, will there be a current? \FRAME{dtbpF}{1.5336in}{2.0347in%
+}{0pt}{}{}{Figure}{\special{language "Scientific Word";type
 "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-1.6658in;height 2.15in;depth 0in;original-width 1.6684in;original-height
+1.5336in;height 2.0347in;depth 0pt;original-width 1.5345in;original-height
+2.0445in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'SAPYRCGX.wmf';tempfile-properties "XPR";}}The answer is yes. After all,
+there are free valence electrons in the metal sheet, and they can flow in
+the sheet just like they can flow in a wire. We call this current in the
+sheet an \emph{eddy current}. And if you have a chance to see this
+demonstrated live, you will notice that it slows the sheet as it moves
+through the magnetic field. Let's see that this must be true with another
+experiment. Let's cut groves in the plate. \FRAME{dtbpF}{1.6658in}{2.15in}{%
+0pt}{}{}{Figure}{\special{language "Scientific Word";type
+"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
+1.6658in;height 2.15in;depth 0pt;original-width 1.6684in;original-height
 2.1625in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
 'SAPYRCGY.wmf';tempfile-properties "XPR";}}The current is broken by the
-grooves, so there is little opposing magnetic field%
-%TCIMACRO{%
-%\TeXButton{Al plate and strong magnets}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Al plate and strong magnets}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Al plate and strong magnets}
-\end{minipage}
-}%
-%EndExpansion
-This effect due to the eddy currents is often used to slow down machines.
-Rotating blades, and even trains use this effect to provide breaking.%
-%TCIMACRO{%
-%\TeXButton{Floating Plate Demo}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Floating Plate Demo}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Floating Plate Demo}
-\end{minipage}
-}%
-%EndExpansion
+grooves, so there is little opposing magnetic field. This effect due to the
+eddy currents is often used to slow down machines. Rotating blades, and even
+trains use this effect to provide breaking.
 
 \section{Magnetic flux}
 
@@ -25170,7 +24777,7 @@ Figure}{\special{language "Scientific Word";type
 "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
 2.3091in;height 2.2355in;depth 0pt;original-width 2.7389in;original-height
 2.6507in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
-'SAPYRCH0.wmf';tempfile-properties "XPR";}}We define a magnetic flux 
+'SAPYRCH0.wmf';tempfile-properties "XPR";}}We can define a magnetic flux 
 \begin{equation}
 \Phi _{B}=\overrightarrow{B}\cdot \overrightarrow{A}
 \end{equation}
@@ -25245,53 +24852,28 @@ our right hand rules. \FRAME{dhFX}{2.8141in}{2.0755in}{0pt}{}{}{Figure}{%
 TRUE;display "PICT";valid_file "T";width 2.8141in;height 2.0755in;depth
 0pt;original-width 8.9672in;original-height 6.6072in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
-'SAPYRCH5.wmf';tempfile-properties "XPR";}}%
-%TCIMACRO{%
-%\TeXButton{Question 223.43.4}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.43.4}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.43.4}
-\end{minipage}
-}%
-%EndExpansion
-%TCIMACRO{%
-%\TeXButton{Question 223.43.5}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.43.5}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.43.5}
-\end{minipage}
-}%
-%EndExpansion
-The flux through the green rectangular area is almost constant. The little
-area is given by%
+'SAPYRCH5.wmf';tempfile-properties "XPR";}}The flux through the green
+rectangular area is almost constant. We could take an even smaller piece of
+our loop area \FRAME{dtbpF}{1.6449in}{1.3275in}{0in}{}{}{Figure}{\special%
+{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
+TRUE;display "USEDEF";valid_file "T";width 1.6449in;height 1.3275in;depth
+0in;original-width 1.6086in;original-height 1.2929in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
+'SGBF8P00.wmf';tempfile-properties "XPR";}}%
 \begin{equation*}
 dA=dydr
 \end{equation*}%
-The area is perpendicular to the field, so the angle between $B$ and $A$ is $%
-90\unit{%
+This area is perpendicular to the field, so the angle between $B$ and $A$ is 
+$90\unit{%
 %TCIMACRO{\U{b0}}%
 %BeginExpansion
 {{}^\circ}%
 %EndExpansion
-}.$ Then 
+}.$ Then we would have a small amount of flux through $dA$ 
 \begin{equation*}
 d\Phi _{B}=\frac{\mu _{o}I}{2\pi r}dydr\left( 1\right)
 \end{equation*}%
-and we can integrate this to find the total flux%
+and we can integrate this to find the total flux through the whole loop%
 \begin{eqnarray*}
 \Phi _{B} &=&\int_{r_{o}}^{r=a}\int_{o}^{b}\frac{\mu _{o}I}{2\pi r}dydr \\
 &=&\frac{\mu _{o}I}{2\pi }\int_{r_{o}}^{r=a}\frac{1}{r}dr\int_{o}^{b}dy \\
@@ -25326,68 +24908,30 @@ between induced emf and magnetic flux is called \emph{Faraday's law} after
 the scientist that discovered it. We will study this law in our next lecture.
 
 %TCIMACRO{%
-%\TeXButton{Basic Equations}{\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}}}%
+%\TeXButton{Basic Equations}{\vspace{0.02in}\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}}}%
 %BeginExpansion
-\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}%
+\vspace{0.02in}\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}%
 %EndExpansion
+\begin{equation}
+\Delta V\approx vBL
+\end{equation}%
+\begin{equation*}
+F_{resistive}=\frac{vB^{2}L^{2}}{R}
+\end{equation*}
+
+\begin{equation}
+\Phi _{B}=\overrightarrow{B}\cdot \overrightarrow{A}
+\end{equation}%
+\begin{equation}
+\Phi _{B}=\int_{A}\overrightarrow{B}\cdot d\overrightarrow{A}
+\end{equation}
 
 \chapter{Faraday and Lenz}
 
-%TCIMACRO{%
-%\TeXButton{Fundamental Concepts}{\hspace{-1.3in}{\LARGE Fundamental Concepts\vspace{0.25in}}}}%
-%BeginExpansion
-\hspace{-1.3in}{\LARGE Fundamental Concepts\vspace{0.25in}}%
-%EndExpansion
-
 We talked about an induced electric field created by a magnetic field last
-lecture. We want to formalize that relationship in this lecture.%
-%TCIMACRO{%
-%\TeXButton{Question 223.44.1}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.44.1}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.44.1}
-\end{minipage}
-}%
-%EndExpansion
-%TCIMACRO{%
-%\TeXButton{Question 223.44.2}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.44.2}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.44.2}
-\end{minipage}
-}%
-%EndExpansion
-%TCIMACRO{%
-%\TeXButton{Question 223.44.3}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.44.3}
-%\end{minipage}
-%}} }%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.44.3}
-\end{minipage}
-}
-%EndExpansion
-Let's go back to our motional emf problem. \FRAME{dhF}{1.8092in}{1.7781in}{%
-0pt}{}{}{Figure}{\special{language "Scientific Word";type
+lecture. We want to formalize that relationship in this lecture. Let's go
+back to our motional emf problem. \FRAME{dhF}{1.8092in}{1.7781in}{0pt}{}{}{%
+Figure}{\special{language "Scientific Word";type
 "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
 1.8092in;height 1.7781in;depth 0pt;original-width 2.6974in;original-height
 2.6507in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
@@ -25416,7 +24960,11 @@ coil makes a current. In this case, the strength of the magnetic field
 changes, so the flux changes. Really any change in magnetic flux makes a
 current flow.
 
-\section{Fundamental Concepts in the Lecture}
+%TCIMACRO{%
+%\TeXButton{Fundamental Concepts}{\hspace{-1.3in}{\LARGE Fundamental Concepts\vspace{0.25in}}}}%
+%BeginExpansion
+\hspace{-1.3in}{\LARGE Fundamental Concepts\vspace{0.25in}}%
+%EndExpansion
 
 \begin{itemize}
 \item Changing magnetic flux makes an electric field--which has an
@@ -25448,37 +24996,30 @@ This takes a moment to digest. Let's take an example \FRAME{dtbpF}{2.3177in}{%
 2.3177in;height 2.0064in;depth 0pt;original-width 2.9274in;original-height
 2.5296in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
 'SAZ2HY00.wmf';tempfile-properties "XPR";}}Consider the case shown in the
-picture. Suppose the $B$-field gets smaller in time. If that is the case,
-then the induced current will try to keep the same number of field lines
-going through the loop. To do this, it will have to add field lines, because
-our field that is getting smaller will have fewer and fewer field lines. So
-in this case, the induced field $\mathbf{\vec{B}}_{ind}$ will be in the same
-direction as $\mathbf{\vec{B}}$ to try to keep the number of field lines the
-same. \FRAME{dhF}{2.1586in}{2.002in}{0pt}{}{}{Figure}{\special{language
-"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
-"USEDEF";valid_file "T";width 2.1586in;height 2.002in;depth
-0pt;original-width 3.1142in;original-height 2.8859in;cropleft "0";croptop
-"1";cropright "1";cropbottom "0";tempfilename
+picture. We have an environmental $B$-field. One made by, say, some
+electromagnet that isn't in the picture. We will call this and \emph{external%
+} $B$-field. Suppose the external $B$-field gets smaller in time (e.g.
+someone turns down the current in the electromagnet). If that is the case,
+then the induced current will try to keep the same number of magnetic field
+lines going through the loop the same. To do this, it will have to add field
+lines, because our field that is getting smaller will have fewer and fewer
+field lines. So in this case, the induced field $\mathbf{\vec{B}}_{ind}$
+created by the current in the wire will be in the same direction as $\mathbf{%
+\vec{B}}$ to try to keep the number of field lines the same. \FRAME{dhF}{%
+2.1586in}{2.002in}{0pt}{}{}{Figure}{\special{language "Scientific Word";type
+"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
+2.1586in;height 2.002in;depth 0pt;original-width 3.1142in;original-height
+2.8859in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
 'SAZ2J701.wmf';tempfile-properties "XPR";}}We find the current using our
 current-carrying wire right hand rule\ for magnetism. We imagine grabbing
 the wire such that our fingers curl into the loop the way $\mathbf{\vec{B}}%
 _{ind}$ goes through the loop. Then our thumb is in the direction of the
 current. 
-%TCIMACRO{%
-%\TeXButton{Question 223.44.4 - 223.44.11}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.44.4 - 223.44.11}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.44.4 - 223.44.11}
-\end{minipage}
-}%
-%EndExpansion
+
+We can think of this as two step process. The changing external field makes
+a current in the wire. The current in the wire makes an induced magnetic
+field. That induced field will be in the direction that tries to keep the
+flux through the loop from changing.
 
 \section{Faraday}
 
@@ -25497,16 +25038,16 @@ change in flux causes a current. Then any change in flux must create an emf.
 'SAPYRCH8.wmf';tempfile-properties "XPR";}}In this case the area is getting
 larger, and so the flux is getting larger. The induced current will oppose
 the change. So the induced magnetic field should go up through the center of
-the loop. Imagine sticking your fingers through the loop out of the page,
-then grabbing the loop (fingers still out of the page in the inside of the
-loop). Anywhere you grab the wire, your thumb is in the induced current
-direction.
+the loop towards us. Imagine sticking your fingers through the loop out of
+the page, then grabbing the loop (fingers still out of the page in the
+inside of the loop). Anywhere you grab the wire, your thumb is in the
+induced current direction.
 
 \subsection{Faraday's law of Magnetic Induction}
 
-Faraday wrote an equation to describe the emf that was given by changing a $%
-B $-field. It combines what we know about magnetic flux and current from
-Lenz's law. Faraday did not know the source of the emf, it is a purely
+Faraday wrote an equation to describe the emf that was given by changing a $B
+$-field. It combines what we know about magnetic flux and current from
+Lenz's law. Faraday did not know the source of the emf, it was a purely
 empirical equation. Here it is
 
 \begin{center}
@@ -25520,14 +25061,15 @@ empirical equation. Here it is
 \end{center}
 
 The $N$ is the number of turns in the coil (remember he used a coil, not
-just one loop). $d\Phi _{B}$ is the change in the magnetic flux. Our
+just one loop). $\Delta \Phi _{B}$ is the change in the magnetic flux. Our
 definition of magnetic flux is 
 \begin{equation*}
 \Phi _{B}=\int \overrightarrow{\mathbf{B}}\cdot d\overrightarrow{\mathbf{A}}
 \end{equation*}%
-but for simple open surfaces we can gain some insight by writing the flux as 
+but for simple open surfaces and uniform (but changing) field we can gain
+some insight by writing the flux as 
 \begin{equation*}
-\Phi _{B}=BA\cos \theta
+\Phi _{B}=BA\cos \theta 
 \end{equation*}%
 Then the induced emf would be given by%
 \begin{eqnarray}
@@ -25557,21 +25099,6 @@ the moving magnet in the coil case.
 
 There are some great applications of induced emfs, from another design for
 circuit breakers to electric guitar pickups! 
-%TCIMACRO{%
-%\TeXButton{Question 223.44.12 - Question 223.44.17}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.44.12 - Question 223.44.17}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.44.12 - Question 223.44.17}
-\end{minipage}
-}%
-%EndExpansion
 
 \subsection{Return to Lenz's law}
 
@@ -25611,11 +25138,12 @@ that if we pull it to the right, it will leave the field.\FRAME{dhF}{2.5019in%
 induced emf and current.
 
 The Magnetic flux through the loop is changing. We can find an expression
-for the flux%
+for the flux. In this case the field is constant and the area isn't changing
+or tilting.%
 \begin{equation*}
 \Phi _{B}=\overrightarrow{\mathbf{B}}\cdot \overrightarrow{\mathbf{A}}
 \end{equation*}%
-or in this case 
+We get just where $x$ is the length of the loop and $\ell $ is the width.   
 \begin{equation*}
 \Phi _{B}=B\ell x
 \end{equation*}%
@@ -25625,7 +25153,7 @@ We know the emf from Faraday's law
 \end{equation*}%
 then 
 \begin{equation*}
-\mathcal{E}=-\left( 1\right) \frac{d}{dt}\left( B\ell x\right)
+\mathcal{E}=-\left( 1\right) \frac{d}{dt}\left( B\ell x\right) 
 \end{equation*}%
 The field is not changing strength, and the length $\ell $ is not changing.
 But along the $x$ side, we are losing field. Remember that $A$ in our flux
@@ -25734,6 +25262,24 @@ flux creates an electric field.
 %BeginExpansion
 \hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}%
 %EndExpansion
+
+\begin{eqnarray*}
+\mathcal{E} &=&-N\frac{\Delta \Phi }{\Delta t} \\
+&=&-N\frac{\left( B_{2}A_{2}\cos \theta _{2}-B_{1}A_{1}\cos \theta
+_{1}\right) }{\Delta t}
+\end{eqnarray*}%
+\begin{equation*}
+\mathcal{E}=-N\frac{d\Phi _{B}}{dt}
+\end{equation*}%
+\begin{equation*}
+I=\frac{B\ell v}{R}
+\end{equation*}%
+\begin{equation*}
+W=\frac{B^{2}\ell ^{2}xv}{R}
+\end{equation*}%
+\begin{equation*}
+P=\frac{B^{2}\ell ^{2}v^{2}}{R}
+\end{equation*}
 
 \chapter{Induced Fields}
 
