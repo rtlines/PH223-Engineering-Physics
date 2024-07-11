@@ -11,7 +11,7 @@
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=Manual}
 %TCIDATA{Created=Thursday, March 21, 2024 14:45:27}
-%TCIDATA{LastRevised=Tuesday, July 09, 2024 14:49:35}
+%TCIDATA{LastRevised=Thursday, July 11, 2024 10:50:59}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 %TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Standard LaTeX Book">}
 %TCIDATA{Language=American English}
@@ -25014,7 +25014,7 @@ created by the current in the wire will be in the same direction as $\mathbf{%
 current-carrying wire right hand rule\ for magnetism. We imagine grabbing
 the wire such that our fingers curl into the loop the way $\mathbf{\vec{B}}%
 _{ind}$ goes through the loop. Then our thumb is in the direction of the
-current. 
+current.
 
 We can think of this as two step process. The changing external field makes
 a current in the wire. The current in the wire makes an induced magnetic
@@ -25045,8 +25045,8 @@ induced current direction.
 
 \subsection{Faraday's law of Magnetic Induction}
 
-Faraday wrote an equation to describe the emf that was given by changing a $B
-$-field. It combines what we know about magnetic flux and current from
+Faraday wrote an equation to describe the emf that was given by changing a $%
+B $-field. It combines what we know about magnetic flux and current from
 Lenz's law. Faraday did not know the source of the emf, it was a purely
 empirical equation. Here it is
 
@@ -25069,7 +25069,7 @@ definition of magnetic flux is
 but for simple open surfaces and uniform (but changing) field we can gain
 some insight by writing the flux as 
 \begin{equation*}
-\Phi _{B}=BA\cos \theta 
+\Phi _{B}=BA\cos \theta
 \end{equation*}%
 Then the induced emf would be given by%
 \begin{eqnarray}
@@ -25098,7 +25098,7 @@ But the second term shows that if the field changes, we get an emf. This is
 the moving magnet in the coil case.
 
 There are some great applications of induced emfs, from another design for
-circuit breakers to electric guitar pickups! 
+circuit breakers to electric guitar pickups!
 
 \subsection{Return to Lenz's law}
 
@@ -25143,7 +25143,7 @@ or tilting.%
 \begin{equation*}
 \Phi _{B}=\overrightarrow{\mathbf{B}}\cdot \overrightarrow{\mathbf{A}}
 \end{equation*}%
-We get just where $x$ is the length of the loop and $\ell $ is the width.   
+We get just where $x$ is the length of the loop and $\ell $ is the width. 
 \begin{equation*}
 \Phi _{B}=B\ell x
 \end{equation*}%
@@ -25153,7 +25153,7 @@ We know the emf from Faraday's law
 \end{equation*}%
 then 
 \begin{equation*}
-\mathcal{E}=-\left( 1\right) \frac{d}{dt}\left( B\ell x\right) 
+\mathcal{E}=-\left( 1\right) \frac{d}{dt}\left( B\ell x\right)
 \end{equation*}%
 The field is not changing strength, and the length $\ell $ is not changing.
 But along the $x$ side, we are losing field. Remember that $A$ in our flux
@@ -25392,11 +25392,11 @@ the area%
 \begin{equation*}
 A=\ell a
 \end{equation*}%
-Then the projected area is 
+Then the flix is 
 \begin{equation*}
-A_{proj}=\ell a\cos \theta
-\end{equation*}
-Let's check to make sure this works. When the loop is standing up straight
+\Phi _{B}=B\ell a\cos \theta 
+\end{equation*}%
+Let's think about what this means. When the loop is standing up straight
 along the $y$-direction $\theta =0\unit{%
 %TCIMACRO{\U{b0}}%
 %BeginExpansion
@@ -25404,34 +25404,54 @@ along the $y$-direction $\theta =0\unit{%
 %EndExpansion
 },$ and $\cos \theta =1$ so 
 \begin{equation*}
-A_{_{proj}\max }=\ell a\cos \theta =\ell a
+\Phi _{B}=B\ell a\cos \theta =B\ell a=\Phi _{\max }
 \end{equation*}%
-so this works.
+and when we turn the loop a quarter turn we get the loop being in teh $x$%
+-direction so $\theta =90\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+},$ and $\cos \theta =0$ so 
+\begin{equation*}
+\Phi _{B}=B\ell a\cos \theta =0=\Phi _{\min }
+\end{equation*}%
+If we turn the loop so it has $\theta =180\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}$ then 
+\begin{equation*}
+\Phi _{B}=B\ell a\cos \left( 180\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) =-B\ell a=-\Phi _{\max }
+\end{equation*}%
+and we see the flux has changed directions.
 
 To find the emf generated, we\ need 
 \begin{equation*}
 \mathcal{E}=-\frac{d\Phi _{B}}{dt}
 \end{equation*}%
-and only the area is changing. so 
+We recognize that $\theta $ changes as the loop turns Since $B$ and $A$ are
+not changing. 
 \begin{equation*}
-\mathcal{E}=-\frac{d\Phi _{B}}{dt}=-B\frac{dA_{proj}}{dt}
+\mathcal{E}=-\frac{d\Phi _{B}}{dt}=-B\ell a\frac{d}{dt}\left( \cos \theta
+\right) 
 \end{equation*}%
-We realize that $\theta $ must change in time. We remember from Dynamics or
-PH121 that we can use $\theta =\omega t$ where $\omega $ is the angular
-speed of the rotating loop. Then%
+We remember from PH121 that we can use $\theta =\omega t$ where $\omega $ is
+the angular speed of the rotating loop. Then%
 \begin{equation*}
-A_{proj}=\ell a\cos \omega t
+\mathcal{E}=-\frac{d\Phi _{B}}{dt}=-B\ell a\frac{d}{dt}\left( \cos \omega
+t\right) 
 \end{equation*}%
-and%
-\begin{equation*}
-\mathcal{E}=-\frac{d\Phi _{B}}{dt}=-B\frac{d}{dt}\ell a\cos \omega t
-\end{equation*}%
-We recognize that $\theta $ changes as the loop turns Since $B$ is not
-changing, the change in flux per unit time is just $B$ times the change in
-area with time.
+or simply
 
 \begin{equation*}
-\mathcal{E}=B\ell a\omega \sin \left( \omega t\right)
+\mathcal{E}=B\ell a\omega \sin \left( \omega t\right) 
 \end{equation*}%
 Look at what we got! it is a sinusoidal emf. This will make a sinusoidal
 current! 
@@ -25441,14 +25461,14 @@ I &=&\frac{\mathcal{E}}{R} \\
 \end{eqnarray*}%
 for a circuit. Our emf looks like 
 \begin{equation}
-\mathcal{E}=\mathcal{E}_{\max }\sin \left( \omega t\right)
+\mathcal{E}=\mathcal{E}_{\max }\sin \left( \omega t\right) 
 \end{equation}%
 where%
 \begin{equation}
-\mathcal{E}_{\max }=B\ell a\omega
+\mathcal{E}_{\max }=B\ell a\omega 
 \end{equation}%
-Here is a plot of the function \FRAME{dtbpFX}{2.6161in}{1.4192in}{0pt}{}{}{%
-Plot}{\special{language "Scientific Word";type "MAPLEPLOT";width
+Here is a plot of the emf function \FRAME{dtbpFX}{2.6161in}{1.4192in}{0pt}{}{%
+}{Plot}{\special{language "Scientific Word";type "MAPLEPLOT";width
 2.6161in;height 1.4192in;depth 0pt;display "USEDEF";plot_snapshots
 TRUE;mustRecompute FALSE;lastEngine "MuPAD";xmin "0";xmax "0.035";xviewmin
 "0";xviewmax "0.035";yviewmin "-1";yviewmax
@@ -25467,11 +25487,12 @@ Of course this sinusoidal emf will create what we call an \emph{alternating
 current}. This is how the current in the outlets in your house is generated.
 
 Of course, our generator only has one coil. Actual generators have multiple
-coils. \FRAME{dhFU}{2.9274in}{1.7478in}{0pt}{\Qcb{Double Armature Generator
-(Public Domain Image)}}{}{Figure}{\special{language "Scientific Word";type
-"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-2.9274in;height 1.7478in;depth 0pt;original-width 2.7389in;original-height
-1.6233in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+coils. \FRAME{dhFU}{2.9274in}{1.7478in}{0pt}{\Qcb{{\protect\small Double
+Armature Generator (Public Domain Image)}}}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+"USEDEF";valid_file "T";width 2.9274in;height 1.7478in;depth
+0pt;original-width 2.7389in;original-height 1.6233in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
 'SAPYRCHD.wmf';tempfile-properties "XPR";}}and we need a source of work to
 turn the generator. A water turbine is an example,\FRAME{dtbpFU}{2.5374in}{%
 2.6437in}{0pt}{\Qcb{{\protect\small Water Turbine driven Generator (Public
@@ -25600,8 +25621,10 @@ t\right) \right) $};linecolor "blue";linestyle 2;pointstyle
 Root of the Mean of the Square of the emf. We can call this process the
 root-mean-square process or rms for short. This is more useful than the mean
 voltage--which is zero for alternating voltages. It is a better estimate of
-the overall potential than the peak voltage value. So we often use rms
-voltages to describe sources of alternating current.
+the overall potential than the peak voltage value. So although it is still
+not ideal, we often use rms voltages to describe sources of alternating
+current. Many multimeters give rms values as their default for alternating
+voltages.
 
 We can come up with a convenient way to find the rms emf. Consider that our
 alternating emf is given by 
@@ -25710,21 +25733,6 @@ or
 
 \section{Transformers}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.45.3}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.45.3}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.45.3}
-\end{minipage}
-}%
-%EndExpansion
 The power comes into our houses at about $120V$. Your iPhone probably
 requires $3\unit{V}$ to $5\unit{V}.$ How do we get the voltage we want out
 of what the power company delivers? You know the answer is to plug in your
@@ -25780,23 +25788,8 @@ If we solve for $\mathcal{E}_{2}\left( t\right) $ we can find the emf in
 coil $2.$%
 \begin{equation}
 \frac{N_{2}}{N_{1}}\mathcal{E}_{1}\left( t\right) =\mathcal{E}_{2}\left(
-t\right)
+t\right) 
 \end{equation}%
-%TCIMACRO{%
-%\TeXButton{Question 223.45.4}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.45.4}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.45.4}
-\end{minipage}
-}%
-%EndExpansion
 You have probably already guessed how we make $\mathcal{E}_{2}$ to be some
 emf amount we want. We take, say, our wall current that has a $rms$ value of 
 $\mathcal{E}_{1}=120\unit{V}$. We pass it through this device we have built.
@@ -25820,22 +25813,6 @@ This device is called a transformer. Real transformers do lose power. Some
 loss is due to the fact that not all the $B$-field from coil $1$ makes it
 inside coil $2.$ But real transformers are not too bad with efficiencies
 ranging from $90\%$ to $99\%$.
-
-%TCIMACRO{%
-%\TeXButton{Question 223.45.5}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.45.5}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.45.5}
-\end{minipage}
-}%
-%EndExpansion
 
 \section{Induced Electric Fields}
 
@@ -25872,50 +25849,19 @@ wire.\FRAME{dhF}{3.0191in}{2.4137in}{0pt}{}{}{Figure}{\special{language
 "USEDEF";valid_file "T";width 3.0191in;height 2.4137in;depth
 0pt;original-width 2.975in;original-height 2.373in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
-'SAPYRCHN.wmf';tempfile-properties "XPR";}}%
-%TCIMACRO{%
-%\TeXButton{Question 223.45.6}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.45.6}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.45.6}
-\end{minipage}
-}%
-%EndExpansion
-%TCIMACRO{%
-%\TeXButton{Question 223.45.7}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.45.7}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.45.7}
-\end{minipage}
-}%
-%EndExpansion
-In fact, the electric field is there in every place the magnetic field
-exists so long as the magnetic field continues to increase.\FRAME{dhF}{%
-3.0191in}{2.4137in}{0pt}{}{}{Figure}{\special{language "Scientific
-Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
-"T";width 3.0191in;height 2.4137in;depth 0pt;original-width
-2.975in;original-height 2.373in;cropleft "0";croptop "1";cropright
-"1";cropbottom "0";tempfilename 'SAPYRCHO.wmf';tempfile-properties "XPR";}}%
-This is quite a profound statement. We have said that a changing magnetic
-field \emph{creates} an electric field. Before, only charges could create
-electric fields, but in this case, the magnetic field is creating the
-electric field. Of course, we know that somewhere there are moving charges
-that are making the magnetic field, so it is not totally surprising that the
-fields would be related.
+'SAPYRCHN.wmf';tempfile-properties "XPR";}}In fact, the electric field is
+there in every place the magnetic field exists so long as the magnetic field
+continues to increase.\FRAME{dhF}{3.0191in}{2.4137in}{0pt}{}{}{Figure}{%
+\special{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
+TRUE;display "USEDEF";valid_file "T";width 3.0191in;height 2.4137in;depth
+0pt;original-width 2.975in;original-height 2.373in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
+'SAPYRCHO.wmf';tempfile-properties "XPR";}}This is quite a profound
+statement. We have said that a changing magnetic field \emph{creates} an
+electric field. Before, only charges could create electric fields, but in
+this case, the magnetic field is creating the electric field. Of course, we
+know that somewhere there are moving charges that are making the magnetic
+field, so it is not totally surprising that the fields would be related.
 
 This electric field is just like a field produced by charges in that it
 exerts a force 
@@ -25927,31 +25873,16 @@ on a charge $q_{o}.$ But the electric field source is now very different.
 \section{Relationship between induced fields}
 
 It would be nice to have a relationship between the changing $B$-field and
-the $E$-field that is created. 
-%TCIMACRO{%
-%\TeXButton{Question 223.45.8}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.45.8}
-%\end{minipage}
-%}} }%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.45.8}
-\end{minipage}
-}
-%EndExpansion
-It would be good to obtain the most general relationship we can that relates
-the electric field to the magnetic field. By understanding this
-relationship, we can\ hope to gain insight into how to build things, and
-into how the universe works. Let's start with a thought experiment. \FRAME{%
-dtbpF}{2.0868in}{1.8299in}{0pt}{}{}{Figure}{\special{language "Scientific
-Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
-"T";width 2.0868in;height 1.8299in;depth 0pt;original-width
-5.1249in;original-height 4.491in;cropleft "0";croptop "1";cropright
-"1";cropbottom "0";tempfilename 'SB2WNC03.wmf';tempfile-properties "XPR";}}
+the $E$-field that is created.  It would be good to obtain the most general
+relationship we can that relates the electric field to the magnetic field.
+By understanding this relationship, we can\ hope to gain insight into how to
+build things, and into how the universe works. Let's start with a thought
+experiment. \FRAME{dtbpF}{2.0868in}{1.8299in}{0pt}{}{}{Figure}{\special%
+{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
+TRUE;display "USEDEF";valid_file "T";width 2.0868in;height 1.8299in;depth
+0pt;original-width 5.1249in;original-height 4.491in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
+'SB2WNC03.wmf';tempfile-properties "XPR";}}
 
 Suppose we have a uniform but time varying magnetic field into the paper. In
 this field, we have a conducting ring. If the field strength is increasing,
@@ -26044,7 +25975,7 @@ different from those made by static charges. We call this field that does
 not return the charge to the same energy state on traversing the loop a 
 \emph{nonconservative field}. It is still just an electric field, but we are 
 \emph{gaining energy} from the magnetic field, so $\Delta V$ around the loop
-is not zero.
+should not be not zero because of the input energy from the magnetic field.
 
 The equation 
 \begin{equation}
@@ -26054,27 +25985,12 @@ The equation
 is the most general form of Faraday's equation, but it is hard to use in
 calculation for normal circuits where there is no magnetic field or where
 the fields are weak. So we won't use it as we design normal circuits. We
-will use the idea of inductance instead. But it plays a large part in the
-electromagnetic theory of optics (PH375). We will just get a taste of this
-here.
+will use the idea of inductance instead (next lecture). But it plays a large
+part in the electromagnetic theory of optics (PH375). We will just get a
+taste of this here.
 
 \section{Electromagnetic waves}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.45.9}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.45.9}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.45.9}
-\end{minipage}
-}%
-%EndExpansion
 Let's return to the idea that a changing magnetic field makes an electric
 field.\FRAME{dhF}{3.0882in}{1.8836in}{0pt}{}{}{Figure}{\special{language
 "Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
