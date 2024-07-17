@@ -11,7 +11,7 @@
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=Manual}
 %TCIDATA{Created=Thursday, March 21, 2024 14:45:27}
-%TCIDATA{LastRevised=Thursday, July 11, 2024 10:50:59}
+%TCIDATA{LastRevised=Tuesday, July 16, 2024 10:49:54}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 %TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Standard LaTeX Book">}
 %TCIDATA{Language=American English}
@@ -25394,7 +25394,7 @@ A=\ell a
 \end{equation*}%
 Then the flix is 
 \begin{equation*}
-\Phi _{B}=B\ell a\cos \theta 
+\Phi _{B}=B\ell a\cos \theta
 \end{equation*}%
 Let's think about what this means. When the loop is standing up straight
 along the $y$-direction $\theta =0\unit{%
@@ -25440,18 +25440,18 @@ We recognize that $\theta $ changes as the loop turns Since $B$ and $A$ are
 not changing. 
 \begin{equation*}
 \mathcal{E}=-\frac{d\Phi _{B}}{dt}=-B\ell a\frac{d}{dt}\left( \cos \theta
-\right) 
+\right)
 \end{equation*}%
 We remember from PH121 that we can use $\theta =\omega t$ where $\omega $ is
 the angular speed of the rotating loop. Then%
 \begin{equation*}
 \mathcal{E}=-\frac{d\Phi _{B}}{dt}=-B\ell a\frac{d}{dt}\left( \cos \omega
-t\right) 
+t\right)
 \end{equation*}%
 or simply
 
 \begin{equation*}
-\mathcal{E}=B\ell a\omega \sin \left( \omega t\right) 
+\mathcal{E}=B\ell a\omega \sin \left( \omega t\right)
 \end{equation*}%
 Look at what we got! it is a sinusoidal emf. This will make a sinusoidal
 current! 
@@ -25461,11 +25461,11 @@ I &=&\frac{\mathcal{E}}{R} \\
 \end{eqnarray*}%
 for a circuit. Our emf looks like 
 \begin{equation}
-\mathcal{E}=\mathcal{E}_{\max }\sin \left( \omega t\right) 
+\mathcal{E}=\mathcal{E}_{\max }\sin \left( \omega t\right)
 \end{equation}%
 where%
 \begin{equation}
-\mathcal{E}_{\max }=B\ell a\omega 
+\mathcal{E}_{\max }=B\ell a\omega
 \end{equation}%
 Here is a plot of the emf function \FRAME{dtbpFX}{2.6161in}{1.4192in}{0pt}{}{%
 }{Plot}{\special{language "Scientific Word";type "MAPLEPLOT";width
@@ -25788,7 +25788,7 @@ If we solve for $\mathcal{E}_{2}\left( t\right) $ we can find the emf in
 coil $2.$%
 \begin{equation}
 \frac{N_{2}}{N_{1}}\mathcal{E}_{1}\left( t\right) =\mathcal{E}_{2}\left(
-t\right) 
+t\right)
 \end{equation}%
 You have probably already guessed how we make $\mathcal{E}_{2}$ to be some
 emf amount we want. We take, say, our wall current that has a $rms$ value of 
@@ -25873,7 +25873,7 @@ on a charge $q_{o}.$ But the electric field source is now very different.
 \section{Relationship between induced fields}
 
 It would be nice to have a relationship between the changing $B$-field and
-the $E$-field that is created.  It would be good to obtain the most general
+the $E$-field that is created. It would be good to obtain the most general
 relationship we can that relates the electric field to the magnetic field.
 By understanding this relationship, we can\ hope to gain insight into how to
 build things, and into how the universe works. Let's start with a thought
@@ -26137,30 +26137,23 @@ M_{12}=\frac{N_{2}\Phi _{12}}{I_{1}}$
 
 \section{Self Inductance}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.46.1}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.46.1}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.46.1}
-\end{minipage}
-}%
-%EndExpansion
 When we put capacitors and resisters in a circuit, we found that the current
 did not jump to it's ultimate current value all at once. There was a time
-dependence. But really, even if we just have a resister (and we always have
-some resistance) the current does not reach it's full value instantaneously.
-Think of our circuits, they are current \emph{loops}! So as the current
-starts to flow, Lenz's law tells us that there will be a magnetic field that
-forms, and an induced emf that will oppose the flow. The potential drop
-across the resister in a simple battery-resister circuit is the potential
-drop due to the battery emf, \emph{minus the induced emf}.
+dependence. But really, even if we just have a resister the current does not
+reach it's full value instantaneously (and we nearly always have some
+resistance). Think of our circuits, they are current \emph{loops}! So as the
+current starts to flow, Lenz's law tells us that there will be a magnetic
+field that forms, and an induced emf that will oppose the flow. The
+potential drop across the resister in a simple battery-resister circuit is
+the potential drop due to the battery emf, \emph{minus the induced emf}.
+Hopefully you just did problems where loops fell more slowly in a magnetic
+field. Some of the energy went into making an induced current. So there was
+less kinetic energy for the loop's fall. Since we can make an emf (a
+potential energy per unit charge) with a magnetic field, we need to account
+for this energy in our circult. We will have 
+\begin{equation*}
+\Delta V_{resistor}=\mathcal{E}_{battery}-\mathcal{E}_{induced}
+\end{equation*}
 
 We can use this fact to control current in circuits. To see how, we can
 study a new case\FRAME{dhF}{1.977in}{1.0378in}{0pt}{}{}{Figure}{\special%
@@ -26169,7 +26162,10 @@ TRUE;display "USEDEF";valid_file "T";width 1.977in;height 1.0378in;depth
 0pt;original-width 2.9058in;original-height 1.5134in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
 'SAPYRCHT.wmf';tempfile-properties "XPR";}}Let's take a coil of wire wound
-around an iron cylindrical core. We start with a current as shown in the
+around an iron cylindrical core.\footnote{%
+Note that the wire will need to be coated with an insulator or the current
+will just skip through the iron core to the end. We generally consider the
+wire in our cases to be isolated.} We start with a current as shown in the
 figure above. Using our right hand rule we can find the direction of the $B$%
 -field. But we now will allow the current to change. As it gets larger, we
 know 
@@ -26178,8 +26174,9 @@ know
 \end{equation*}%
 and we know that as the current changes, the magnitude of the $B$-field will
 change, so the flux through the coil will change. We will have an induced
-emf. We could derive this expression, but I think you can see that the
-induced emf is proportional to the \emph{rate of change} of the current.%
+emf that will oppose the change. It will act like a resistance. We could
+derive this expression, but I think you can see that the induced emf is
+proportional to the \emph{rate of change} of the current.%
 \begin{equation*}
 \mathcal{E}\equiv -L\frac{\Delta I}{\Delta t}
 \end{equation*}
@@ -26191,7 +26188,7 @@ inductance}. It will hold all the material properties of the iron cored coil.%
 \begin{equation*}
 \mathcal{E}=-N\frac{d\Phi _{B}}{dt}\equiv -L\frac{dI}{dt}
 \end{equation*}%
-so for this case%
+so for this specific case%
 \begin{equation*}
 -N\frac{d\Phi _{B}}{dt}\frac{dt}{dI}\equiv -L
 \end{equation*}%
@@ -26222,21 +26219,6 @@ plates, the parallel plate capacitor. It was somewhat ideal in the way we
 treated it. Our treatment of the special case of a coil will likewise be
 somewhat ideal.}}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.46.2}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.46.2}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.46.2}
-\end{minipage}
-}%
-%EndExpansion
 Let's extend our inductance calculation for a coil. Really the only easy
 case we can do is that of a solenoid (that's probably a hint for the test).
 So let's do it! We will just fill our solenoid with air instead of iron (if
@@ -26272,30 +26254,18 @@ solenoids. So this really is a somewhat practical solution.
 
 \section{Energy in a Magnetic Field}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.46.3}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.46.3}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.46.3}
-\end{minipage}
-}%
-%EndExpansion
-An inductor, like a capacitor, stores energy in it's field. We would like to
-know how much energy an inductor can store. From our previous study of power
-we know the power in a circuit will be%
+An inductor, like a capacitor, stores energy in it's field. And in a
+transformer that energy is shared into another circuit. You can see us
+weaving our way toward wireless chargers and wireless power connections!.
+
+We would like to know how much energy an inductor can store. From our
+previous study of power we know the power in a circuit will be%
 \begin{equation*}
 \mathcal{P}=I\Delta V
 \end{equation*}%
 If we just have an inductor, then the power removed from the circuit is 
 \begin{eqnarray*}
-\mathcal{P}_{cir} &=&I\Delta V=I\mathcal{E} \\
+\mathcal{P}_{cir} &=&I\Delta V=I\mathcal{E}_{induced} \\
 &=&I\left( -L\frac{dI}{dt}\right) \\
 &=&-LI\frac{dI}{dt}
 \end{eqnarray*}%
@@ -26336,52 +26306,39 @@ us the dependence of $U_{L}$ on $I.$
 "Scientific Word";type "MAPLEPLOT";width 2.6039in;height 1.7365in;depth
 0pt;display "USEDEF";plot_snapshots TRUE;mustRecompute FALSE;lastEngine
 "MuPAD";xmin "0";xmax "4";xviewmin "0";xviewmax "4";yviewmin "0";yviewmax
-"0.375037";viewset"XY";rangeset"X";plottype 4;labeloverrides 3;x-label
-"I";y-label "U";axesFont "Times New
+"0.375037";viewset"XY";rangeset"X";plottype 4;labeloverrides 3;x-label "I
+(A)";y-label "U (J)";axesFont "Times New
 Roman,12,0000000000,useDefault,normal";numpoints 100;plotstyle
 "patch";axesstyle "normal";axestips FALSE;xis \TEXUX{v73};var1name
 \TEXUX{$I$};function \TEXUX{$\frac{1}{2}30.0\times 10^{-3}I^{2}$};linecolor
 "blue";linestyle 1;pointstyle "point";linethickness 2;lineAttributes
 "Solid";var1range "0,4";num-x-gridlines 100;curveColor
 "[flat::RGB:0x000000ff]";curveStyle "Line";VCamFile
-'SAPYRD04.xvz';valid_file "T";tempfilename
-'SAPYRCHU.wmf';tempfile-properties "XPR";}}
+'SGIVON01.xvz';valid_file "T";tempfilename
+'SGIVON00.wmf';tempfile-properties "XPR";}}
 
 We should take a moment to see how our inductor compares to a capacitor as
 an energy storage device. The energy stored in the electric field of a
-capacitor%
-\begin{equation*}
-U_{L}=\frac{1}{2}L\left( I\right) ^{2}
-\end{equation*}%
+capacitor is%
 \begin{equation*}
 U_{C}=\frac{1}{2}C\left( \Delta V\right) ^{2}
+\end{equation*}%
+and for our inductor we found%
+\begin{equation*}
+U_{L}=\frac{1}{2}L\left( I\right) ^{2}
 \end{equation*}%
 Notice that Remarkable similarity!
 
 \subsection{Energy Density in the magnetic field}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.46.4}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.46.4}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.46.4}
-\end{minipage}
-}%
-%EndExpansion
 We found that there was energy stored in the electric field of a capacitor.
 Is the energy stored in the inductor really stored in the magnetic field of
-the inductor? We believe that this is just the case, the energy, $U_{L},$ is
-stored in the field. We would like to have an expression for the density of
-the energy in the field.
+the inductor? We hope so, because then we can transfer that energy through
+the magnetic field. We can start with the energy, $U_{L},$ is stored in the
+field and find the density of the energy in the field.
 
-To see this, let's start with the inductance of a solenoid.%
+Let's take a specific case, the field inside a solenoid. And start with the
+inductance of a solenoid.%
 \begin{equation*}
 L=\mu _{o}n^{2}A\ell
 \end{equation*}%
@@ -26398,8 +26355,8 @@ U_{B} &=&\frac{1}{2}LI^{2} \\
 If we rearrange this, we can see the solenoid field is found in the
 expression twice%
 \begin{eqnarray*}
-U_{B} &=&\frac{1}{2}\left( \mu _{o}nI\right) A\ell \frac{\mu _{o}}{\mu _{o}}%
-nI \\
+U_{B} &=&\frac{1}{2}\left( \mu _{o}nI\right) A\ell \frac{\left( \mu
+_{o}nI\right) }{\mu _{o}} \\
 &=&\frac{1}{2\mu _{o}}B^{2}A\ell
 \end{eqnarray*}%
 and the energy density is 
@@ -26417,14 +26374,17 @@ u_{E}=\frac{1}{2}\epsilon _{o}E^{2}
 \end{equation*}%
 Again, note the similarity!
 
+So we have energy storred in our magnetic field. We should see what we can
+do with that energy.
+
 \subsection{Oscillations in an LC Circuit}
 
-We introduce a new circuit symbol for inductors\FRAME{dhF}{1.3284in}{0.2093in%
-}{0pt}{}{}{Figure}{\special{language "Scientific Word";type
+We introduce a new circuit symbol for inductors\FRAME{dtbpF}{1.9761in}{%
+0.2767in}{0pt}{}{}{Figure}{\special{language "Scientific Word";type
 "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-1.3284in;height 0.2093in;depth 0pt;original-width 1.2929in;original-height
-0.1807in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
-'SAPYRCHV.wmf';tempfile-properties "XPR";}}It looks like a coil, for obvious
+1.9761in;height 0.2767in;depth 0pt;original-width 3.4091in;original-height
+0.4549in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'SGIVY101.wmf';tempfile-properties "XPR";}}It looks like a coil, for obvious
 reasons. We can place this new circuit element in a circuit. But what will
 it do? To investigate this, let's start with a simple case, a circuit with a
 charged capacitor and an inductor and nothing else.\FRAME{dtbpF}{2.1958in}{%
@@ -26445,21 +26405,6 @@ Given these two assumptions, there is no mechanism for energy to escape the
 circuit. Energy must be conserved. Can we describe the charge on the
 capacitor, the current, and the energy as a function of time?
 
-%TCIMACRO{%
-%\TeXButton{Question 223.46.5}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.46.5}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.46.5}
-\end{minipage}
-}%
-%EndExpansion
 It may pay off to recall some details of oscillators.
 
 \subsubsection{Energy of the Simple Harmonic Oscillator}
@@ -26843,7 +26788,10 @@ such a circuit in the next section.
 A few decades ago, we could have stopped here in an engineering class in
 considering and LRC\ circuit. But as electrical devices become ever more
 complicated, it might be good if we examine circuits with inductors and
-resistors more carefully. A few lectures ago we found that 
+resistors more carefully. After all, we have wireless chargers and
+bluetooth. We now have to be more careful. We actually
+
+A few lectures ago we found that 
 \begin{equation*}
 \int \mathbf{E}\cdot d\mathbf{s}=-\frac{d\Phi _{B}}{dt}
 \end{equation*}%
@@ -26896,250 +26844,18 @@ that
 \left\vert V_{1}\right\vert &=&I_{1}R_{i}\approx IR_{1} \\
 \left\vert V_{2}\right\vert &=&I_{2}R_{i}\approx IR_{2}
 \end{eqnarray*}%
-This seems crazy. Each volt meter reads a different voltage.
-
-To understand this, remember that our induced field is not a conservative
-field. It is providing some energy. As we go around the loop we no longer
-expect to get back to our starting voltage. We have gained (or lost) some
-energy from the changing magnetic field. And for non-conservative fields, $%
-\doint \mathbf{E}\cdot ds$ \emph{is path dependent}.
-
-So as crazy as it seems, this is actually what we would find, each volt
-meter reads a different voltage.
-
-To try to make this idea of inductance make some sense, let's take another
-strange circuit.\FRAME{dtbpF}{1.382in}{0.8077in}{0pt}{}{}{Figure}{\special%
-{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
-TRUE;display "USEDEF";valid_file "T";width 1.382in;height 0.8077in;depth
-0pt;original-width 3.8246in;original-height 2.2241in;cropleft "0";croptop
-"1";cropright "1";cropbottom "0";tempfilename
-'SAPYRCI6.wmf';tempfile-properties "XPR";}}There is a battery, and resister,
-and a single loop inductor. When the switch is thrown, the current will flow
-as shown. The current will create a magnetic field that is out of the page
-in the center of the loop. Since the loop, itself, is creating this field,
-let's call this field a \emph{self field}.\FRAME{dtbpF}{1.3733in}{0.9409in}{%
-0pt}{}{}{Figure}{\special{language "Scientific Word";type
-"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-1.3733in;height 0.9409in;depth 0pt;original-width 3.8246in;original-height
-2.6122in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
-'SAPYRCI7.wmf';tempfile-properties "XPR";}}Consider this self-field for a
-moment. When we studied charge, we found that charge created an electric
-field. That electric field could make \emph{another} charge accelerate. But
-the electric field crated by a charge does not make the charge that created
-it accelerate. This is an instance of a self-field, an electric self-field.
-Now with this background, let's return to our magnetic self-field.
-
-Let's take Faraday's law and apply it to this circuit. Let me choose an area
-vector $\mathbf{A}$ that is the area of the big loop and positive out of the
-page. Again, let's use conservation of energy (Kirchhoff's loop law). Let's
-find $\doint \mathbf{E}\cdot ds$ for the entire circuit. We can start with
-the battery. Since there is an electric field inside the battery we will
-have a component of $\doint_{bat}\mathbf{E}\cdot ds$ as we cross it. The
-battery field goes from positive to negative. If we go counter-clockwise,
-our $ds$ direction traverses this from negative to positive, so the electric
-field is up and the $ds$ direction is down, we have 
-\begin{equation*}
-\doint_{bat}\mathbf{E}\cdot ds=-\mathcal{E}_{bat}
-\end{equation*}%
-for this section of the circuit. Suppose we have ideal wires. If the wire
-has no resistance, then it takes no work to move the charges through the
-wire. In this case, an electron launched by the electric field in the
-battery just coasts from the battery to the resister. There is no need to
-have an acceleration in the ideal wire. The electric potential won't change
-from the battery to the resister. So there doesn't need to be a field in
-this ideal wire part to keep the charges going. But let's consider the
-resister. There is a potential change as we go across it. And if there is a
-change in potential, there must be an electric field. So the resister also
-has an electric field inside of it. We have a component of $\doint_{R}%
-\mathbf{E}\cdot ds$ that is equal to $\mathcal{E}_{R}=IR$ from this field. 
-\begin{equation*}
-\doint_{R}\mathbf{E}\cdot ds=IR
-\end{equation*}%
-Now we come to the big loop part. Since we have ideal wire, there is no
-resistance in this part so there is no voltage drop for this part of the
-circuit. All the energy that was given to the electrons by the battery was
-lost in the resister. They just coast back to the other terminal of the
-battery. Since there is no voltage drop in the big loop, 
-\begin{equation*}
-\mathcal{E}_{\text{big loop}}=0
-\end{equation*}%
-there is no electric field in the big loop either. Along the big loop, $ds$
-is certainly not zero. so 
-\begin{equation*}
-\mathcal{E}_{\text{big loop}}=\doint_{\text{big loop}}\mathbf{E}\cdot ds=0
-\end{equation*}
-
-For the total loop we would have%
+This seems crazy. Each volt meter reads a different voltage. But really it
+is isn't so strange because there \emph{is} energy coming into the circuit
+from outside. Energy for the circuit should \emph{not} be conserved. This is
+just what we want for a wireless charger or a Bluetooth communication
+device. We will leave this non-conservative field issue for now. If you are
+interested in persuing it a little further see Appendix . But for now we can
+say that the additional energy from the field could be given by calculating
+the induced emf%
 \begin{equation}
-\doint \mathbf{E}\cdot ds=-\mathcal{E}_{batt}+IR+0
+\mathcal{E}_{induced}=L\frac{dI}{dt}
 \end{equation}%
-Normally, conservation of energy would tell us that all this must be zero,
-since the sum of the energy changes around the loop must be zero if no
-energy is lost. But now we know energy \emph{is} lost in making a magnetic
-field.
-
-Consider the magnetic flux through the circuit. The magnetic field is made
-by the current in the circuit. Note that we\ arranged the circuit so the
-battery and resister are in a part that has very little area, so we can
-ignore the flux through that part of the circuit. Most of the flux will go
-through the big loop part. The magnetic field is out of the paper inside of
-the loop. The flux is 
-\begin{equation}
-\Phi _{B}=\doint \mathbf{B}\cdot d\mathbf{A}
-\end{equation}%
-and $\mathbf{B}$ and $\mathbf{A}$ are in the same direction. $\Phi _{B}$ is
-positive.
-
-Then from Biot-Savart%
-\begin{equation}
-\mathbf{B}=\frac{\mu _{o}I}{4\pi }\doint \frac{d\mathbf{s}\times \mathbf{%
-\hat{r}}}{r^{2}}
-\end{equation}%
-Let's write this as 
-\begin{eqnarray}
-\mathbf{B} &=&I\left( \frac{\mu _{o}}{4\pi }\doint \frac{d\mathbf{s}\times 
-\mathbf{\hat{r}}}{r^{2}}\right) \\
-&=&I\left( \text{geometry factor}\right)  \notag
-\end{eqnarray}%
-If the geometry of the situation does not change, then $B$ and $I$ are
-proportional. Since $B\varpropto I,$ then $\Phi _{B}\varpropto I$ since the
-integral in Biot-Savart is the surface integral of $\mathbf{B,}$ and $%
-\mathbf{B}$ is everywhere proportional to $I.$ Instead of using Biot-Savart,
-let's just define a constant of proportionality that will contain all the
-geometric factors. We could give it the symbol, $L$. Then 
-\begin{equation}
-\Phi _{B}=LI
-\end{equation}%
-where $L$ is my geometry factor. But we recognize this geometry factor. It
-is just our inductance! This is what inductance is. It is all the geometry
-factors that make up our loop that will make the magnetic field if we put a
-current through it.
-
-Assuming I don't change the geometry, then the inductance won't change and
-we have 
-\begin{equation}
-\frac{d\Phi _{B}}{dt}=L\frac{dI}{dt}
-\end{equation}%
-and Faraday's law gives us 
-\begin{equation}
-\mathcal{E}=-\frac{d\Phi _{B}}{dt}=-L\frac{dI}{dt}
-\end{equation}
-
-Which says that we should not have expected $\doint \mathbf{E}\cdot ds=0$
-for our case as we traverse the entire circuit. Integrating $\doint \mathbf{E%
-}\cdot ds$ around the whole circuit including the big loop should not bring
-us back to zero voltage. We have lost energy in making the field. Instead it
-gives 
-\begin{equation*}
-\doint \mathbf{E}\cdot ds=-L\frac{dI}{dt}
-\end{equation*}%
-We are dealing with non-conservative fields. So we have some energy loss
-like we would with a frictional force. It took some energy to make the
-magnetic field!
-
-With this insight, we can now make a new statement of conservation of energy
-for such a situation. Integrating around the whole circuit gives%
-\begin{equation*}
-\doint \mathbf{E}\cdot ds=-\mathcal{E}_{bat}+\mathcal{E}_{R}
-\end{equation*}%
-Which we now realize should give $-L\frac{dI}{dt}$ so 
-\begin{equation*}
-\doint \mathbf{E}\cdot ds=-\mathcal{E}_{bat}+\mathcal{E}_{R}=-L\frac{dI}{dt}
-\end{equation*}%
-or more succinctly 
-\begin{equation*}
--\mathcal{E}_{batt}+IR=-L\frac{dI}{dt}
-\end{equation*}%
-Now I\ can take the RHS to the left and find%
-\begin{equation}
-\mathcal{E}_{batt}-IR-L\frac{dI}{dt}=0
-\end{equation}%
-which accounts for all of the energy in the situation, so now we see that
-energy is conserved. For those of you who go on in your study of
-electronics. this looks like a Kirchhoff's rule with $-L\frac{dI}{dt}$ being
-a voltage drop across the single loop inductor. Under most conditions we can
-just treat $-L\frac{dI}{dt}$ as a voltage drop and it works fine. Most of
-the time thinking this way does not cause much of a problem. But technically
-it is not right!
-
-We should consider where our magnetic flux came from. The magnetic flux was
-created by the current. It is a self-field. The current can't make a
-magnetic flux that would then modify that current. This self-flux won't make
-an electric field in the wire. So there is no electric field in the big
-loop, so there is no potential drop in that part of the circuit. It is just
-that $\doint \mathbf{E}\cdot ds\neq 0$ because our field is not
-conservative. We had to take some energy to create the magnetic field.
-
-Now, if you are doing simple circuit design, you can pretend you don't know
-about Faraday's law and this complication and just treat $-L\frac{dI}{dt}$
-as though it were a voltage drop. But really it is just that going around
-the loop we should expect 
-\begin{equation*}
-\doint \mathbf{E}\cdot ds=L\frac{dI}{dt}
-\end{equation*}%
-not%
-\begin{equation*}
-\doint \mathbf{E}\cdot ds=0
-\end{equation*}%
-The danger is that if you are designing a complicated device that depends on
-there being an electric field in the inductor, your device will not work. We
-have \emph{no external magnetic field,} our only magnetic field is the \emph{%
-self-field} which will not produce an electric field (or at least will form
-a very small electric field compared to the electric fields in the resistor
-and the battery, due to the small resistance in the real wire we use to make
-the big loop). And perhaps just as important, there \emph{is} a magnetic
-field that would not be predicted by just treating $L\frac{dI}{dt}$ as a
-voltage drop. This magnetic field could interfear with other parts of your
-circuits!
-
-This is very subtile, and I struggle to remember this! Fortunately in most
-circuit design it does not matter. We just treat the inductor as though it
-were a true voltage drop.
-
-I can make it even more exasperating by asking what you will see if you
-place a voltmeter across the inductor. What I measure is a \textquotedblleft
-voltage drop\textquotedblright\ of $LdI/dt,$ so maybe the there is a voltage
-drop after all! But no, that is not right. The problem is that in
-introducing the voltmeter, we have created a new loop. For this loop, the
-field from our big loop \emph{is} an external field. .
-
-\FRAME{dtbpF}{2.2442in}{1.4313in}{0pt}{}{}{Figure}{\special{language
-"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
-"USEDEF";valid_file "T";width 2.2442in;height 1.4313in;depth
-0pt;original-width 5.8538in;original-height 3.7284in;cropleft "0";croptop
-"1";cropright "1";cropbottom "0";tempfilename
-'SAPYRCI8.wmf';tempfile-properties "XPR";}}So the changing magnetic field
-through this voltmeter loop will produce an emf that will just match $LdI/dt$%
-. And there will be an electric field--but it will be in the internal
-resistor in the voltmeter. And that is what you will measure!
-
-This may all seem very far fetched. But if you are designing radio
-communications you \emph{want} to have a loss into the magnetic field,
-because that energy transferred to the magnetic field becomes your radio
-signal. This could be important!
-
-%TCIMACRO{%
-%\TeXButton{Pick it up here}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Pick it up here}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Pick it up here}
-\end{minipage}
-}%
-%EndExpansion
-The bottom line is that for non-conservative fields you need to be careful.
-If you are just designing simple circuits, you can just treat $LdI/dt$ \emph{%
-as though it were a voltage drop}, but you may be badly burned by this if
-your system is more complicated, depending on the existence of a real
-electric field. You can see that if you are designing complicated sensing
-devices, you may need to deeply understand the underlying physics to get
-them to work. When in doubt, consult with a really good electrical engineer!
+that is coming from the changing magnetic field.
 
 \subsection{RL Circuits: Solving for the current as a function of time}
 
@@ -27150,8 +26866,20 @@ them to work. When in doubt, consult with a really good electrical engineer!
 "1";cropright "1";cropbottom "0";tempfilename
 'SAPYRCI9.wmf';tempfile-properties "XPR";}}
 
-The equation we found from Faraday's law or incorrectly from Kirchhoff's
-rule is%
+Let's consider a simple battery, resistor, and inductor circuit. We can call
+this an RL circuit because of the resistor and inductor. We can try to
+account for all the changes in potential energy using Kirchhoff's loop rule.
+The battery gives us $\Delta V_{bat}=+\mathcal{E}$ and from the resistor we
+get a loss $\Delta V_{ristor}=-IR.$ And from the inductor we will have
+another loss because we are removing energy from the circuit and putting it
+in a magnetic field $\Delta V_{inductor}=L\frac{dI}{dt}.$ Note that this
+last $\Delta V$ is different. It is a loss of potential energy $\Delta
+U=q\Delta V_{inductor}$ but it does not come from an electric field like a
+true voltage would. It comes from moving energy out of the circuit and into
+a magnetic field. But we can treat it as a voltage loss because voltage
+losses are potential energy losses.
+
+Putting this all together we have.%
 \begin{equation}
 \mathcal{E}-IR-L\frac{dI}{dt}=0  \label{Potential Equation}
 \end{equation}%
@@ -27174,8 +26902,8 @@ and so%
 x=-\frac{L}{R}\frac{dx}{dt}
 \end{equation*}%
 You might be able to guess the solution at this point from your M316
-experience. But let's work it out as a review. We see that our $x$ equation
-separates into 
+experience if you have had the class. But let's work it out as a review. We
+see that our $x$ equation separates into 
 \begin{equation*}
 \frac{dx}{x}=-\frac{R}{L}dt
 \end{equation*}
@@ -27254,8 +26982,8 @@ I=I_{o}e^{-\frac{t}{\tau }}
 
 \section{Magnetic Field Energy in Circuits}
 
-We found that just like with a $RC$ circuit, we should expect there to be
-energy stored in a $RL$ circuit. 
+Let's try a problem. We found that just like with a $RC$ circuit, we should
+expect there to be energy stored in a $RL$ circuit. 
 \begin{equation*}
 U_{L}=\frac{1}{2}LI^{2}=\frac{1}{2}C\left( \Delta V\right) ^{2}
 \end{equation*}%
@@ -27270,9 +26998,9 @@ right-hand loop decays exponentially with time according to the expression
 I=I_{o}e^{-\frac{t}{\tau }}
 \end{equation*}%
 where $I_{o}=\mathcal{E}/R$ is the initial current in the circuit and $\tau
-=L/R$ is the time constant. As an example problem, let's show that all the
-energy initially stored in the magnetic field of the inductor appears as
-internal energy in the resistor as the current decays to zero.
+=L/R$ is the time constant. Let's show that all the energy initially stored
+in the magnetic field of the inductor appears as internal energy in the
+resistor as the current decays to zero.
 
 Recall that energy is delivered to the resister%
 \begin{equation*}
@@ -27299,7 +27027,7 @@ U=\int_{0}^{\infty }I_{o}^{2}e^{-2\frac{t}{\tau }}Rdt
 \begin{equation*}
 U=I_{o}^{2}R\int_{0}^{\infty }e^{-2\frac{t}{\tau }}dt
 \end{equation*}%
-Use your calculator, or an integral table, or Maple, or your very good
+Use your calculator, or an integral table, or Mathamatica, or your very good
 memory to recall that%
 \begin{equation*}
 \int e^{-ax}dx=-\frac{1}{a}e^{-ax}
@@ -27326,26 +27054,28 @@ that started in the inductor was delivered to the resistor.
 
 \section{Mutual Induction}
 
-Suppose we have two coils near each other. If either of the coils carries a
-current, will there be an induced current in the other coil?\FRAME{dtbpF}{%
-2.4863in}{2.0038in}{0pt}{}{}{Figure}{\special{language "Scientific
-Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
-"T";width 2.4863in;height 2.0038in;depth 0pt;original-width
-4.4547in;original-height 3.5846in;cropleft "0";croptop "1";cropright
-"1";cropbottom "0";tempfilename 'SAPYRDIC.wmf';tempfile-properties "XPR";}}
+Finely, let's consider wireless transfer of energy. Suppose we have two
+coils near each other. If either of the coils carries a current, will there
+be an induced current in the other coil?\FRAME{dtbpF}{2.4863in}{2.0038in}{0pt%
+}{}{}{Figure}{\special{language "Scientific Word";type
+"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
+2.4863in;height 2.0038in;depth 0pt;original-width 4.4547in;original-height
+3.5846in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'SAPYRDIC.wmf';tempfile-properties "XPR";}}
 
 We define $\Phi _{21}$ as the flux through coil $2$ due to the current in
 coil $1$. Likewise if the battery is placed on coil $2$ we would have $\Phi
-_{12},$ the flux through coil $1$ due to the current in coil $2$.
-
-We define the mutual inductance 
+_{12},$ the flux through coil $1$ due to the current in coil $2$. Since we
+have two coils, the inductance is more complicated. Let's define a new term,
+the mutual inductance 
 \begin{equation}
 M_{21}=\frac{N_{2}\Phi _{21}}{I_{1}}
 \end{equation}
 
 BE CAREFUL! Not all books write the subscripts in the same order!
 
-We can write the flux as%
+Like the inductance, this term contains all the geometry and design
+considerations of our two coil system. We can write the flux as%
 \begin{equation*}
 \Phi _{21}=\frac{M_{21}I_{1}}{N_{2}}
 \end{equation*}%
@@ -27355,7 +27085,8 @@ Then, using Faraday's law, we find the induced emf in coil 2%
 &=&-N_{2}\frac{d}{dt}\left( \frac{M_{21}I_{1}}{N_{2}}\right) \\
 &=&-M_{21}\frac{d}{dt}\left( I_{1}\right)
 \end{eqnarray*}%
-We state without proof the $M_{12}=M_{21}.$ Then%
+We won't prove this, but it makes sense that the coil system should work
+backwards. So $M_{12}=M_{21}.$ Then%
 \begin{equation*}
 \mathcal{E}_{2}=-M\frac{dI_{1}}{dt}
 \end{equation*}
@@ -27427,7 +27158,7 @@ M_{21}=\frac{N_{2}\Phi _{21}}{I_{1}}
 \doint \mathbf{B\cdot }d\mathbf{A}=\Phi _{B}
 \end{equation*}
 
-The field from the wire 
+We can find the field from the wire with Ampere's law%
 \begin{equation*}
 \doint \mathbf{B\cdot }d\mathbf{s}=\mu _{o}I
 \end{equation*}%
@@ -27447,30 +27178,40 @@ the loop
 \begin{equation*}
 \doint \mathbf{B\cdot }d\mathbf{A=\Phi }_{B}
 \end{equation*}%
+Using the little blue rectanglular area in the loop figure we have a $dA=ydr$
+so our flux is 
 \begin{eqnarray*}
 \mathbf{\Phi }_{B} &=&\int Bydr \\
 &=&\int_{a}^{b+a}\frac{\mu _{o}I}{2\pi r}ydr \\
 &=&\frac{\mu _{o}Iy}{2\pi }\ln \frac{b+a}{a}
 \end{eqnarray*}%
 then%
-\begin{equation*}
-M=N\frac{\mu _{o}y}{2\pi }\ln \frac{b+a}{a}
-\end{equation*}%
-Suppose the loop has $N=100$ turns, $a=1\unit{cm}$, $b=8\unit{cm}$, $y=30%
+\begin{eqnarray*}
+M &=&\frac{N_{2}\Phi _{21}}{I_{1}} \\
+&=&\frac{N_{2}}{I_{1}}\frac{\mu _{o}I_{i}y}{2\pi }\ln \frac{b+a}{a} \\
+&=&N_{2}\frac{\mu _{o}y}{2\pi }\ln \frac{b+a}{a}
+\end{eqnarray*}%
+Suppose the loop has $N_{2}=100$ turns, $a=1\unit{cm}$, $b=8\unit{cm}$, $y=30%
 \unit{cm}$, $\mu _{o}=4\pi \times 10^{-7}\frac{\unit{T}\unit{m}}{\unit{A}}$
 what is the value of the mutual inductance?
 
-\begin{equation*}
-M=N\frac{\mu _{o}y}{2\pi }\ln \frac{b+a}{a}=\allowbreak \frac{%
-1.\,\allowbreak 318\,3\times 10^{-3}}{\unit{A}}\unit{T}\unit{m}\unit{cm}%
-=\allowbreak \frac{1.\,\allowbreak 318\,3\times 10^{-5}}{\unit{A}^{2}}\frac{%
-\unit{m}^{2}}{\unit{s}^{2}}\unit{kg}
-\end{equation*}
+\begin{eqnarray*}
+M &=&N\frac{\mu _{o}y}{2\pi }\ln \frac{b+a}{a}=\allowbreak \frac{%
+1.\,\allowbreak 318\,3\times 10^{-3}}{\unit{A}}\unit{T}\unit{m}\unit{cm} \\
+&=&\allowbreak \frac{1.\,\allowbreak 318\,3\times 10^{-5}}{\unit{A}^{2}}%
+\frac{\unit{m}^{2}}{\unit{s}^{2}}\unit{kg} \\
+&=&1.\,\allowbreak 318\,3\times 10^{-5}\unit{H}
+\end{eqnarray*}
+
+$\allowbreak $where $\unit{H}$ stands for the Henry, our unit of mutual
+inductance.
 
 \begin{equation*}
 \unit{H}=\allowbreak \allowbreak \frac{1}{\unit{A}^{2}}\frac{\unit{m}^{2}}{%
 \unit{s}^{2}}\unit{kg}
 \end{equation*}
+
+From here we can calculate the induced emf.
 
 %TCIMACRO{%
 %\TeXButton{Basic Equations}{\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}} }%
@@ -27600,66 +27341,6 @@ prime in the $S^{\prime }$ frame.
 "1";cropright "1";cropbottom "0";tempfilename
 'SAPYRDIF.wmf';tempfile-properties "XPR";}}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.47.1}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.47.1}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.47.1}
-\end{minipage}
-}%
-%EndExpansion
-%TCIMACRO{%
-%\TeXButton{Question 223.47.1.5}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.47.1.5}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.47.1.5}
-\end{minipage}
-}%
-%EndExpansion
-%TCIMACRO{%
-%\TeXButton{Question 223.47.2}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.47.2}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.47.2}
-\end{minipage}
-}%
-%EndExpansion
-%TCIMACRO{%
-%\TeXButton{Question 223.47.3}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.47.3}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.47.3}
-\end{minipage}
-}%
-%EndExpansion
 Now let's assume we have a magnetic field in the region of space where our
 two reference frames exist. Let's say that the magnetic field is stationary
 in frame $S.$ This will be our environment. Let's also give a charge to the
@@ -27714,10 +27395,11 @@ correct. Both are equally valid.
 "1";cropright "1";cropbottom "0";tempfilename
 'SAPYRDIH.wmf';tempfile-properties "XPR";}}In our case, we are considering
 that person $S$ sees a moving charge. We have learned that a moving charge
-will make \emph{both} an electric field \emph{and} a magnetic field. This is
-the situation from frame $S.$ But person $S^{\prime }$ sees a static charge.
-This charge will \emph{only} make an electric field. We need a way to
-resolve this apparent contradiction.
+will make \emph{both} an electric field \emph{and} a magnetic field; the
+electric field just because it is a charge, and the magnetic field because
+it is a charge that is moving. This is the situation from frame $S.$ But
+person $S^{\prime }$ sees a static charge. This charge will \emph{only} make
+an electric field. We need a way to resolve this apparent contradiction.
 
 \subsection{Galilean transformation}
 
@@ -27733,25 +27415,25 @@ see acceleration of a particle. Since by Newton's second law
 \begin{equation*}
 F=ma
 \end{equation*}%
-we will know if there is an acceleration and therefore we will know if there
-is a force! So are the forces and accelerations of a charged particle the
-same in each frame? Let's find out.
+we will know if there is an acceleration, and therefore we will know if
+there is a force! So are the forces and accelerations of a charged particle
+the same in each frame? Let's find out.
 
 Remember from Dynamics or PH121 that the speed of a particle transforms like
 this%
 \begin{eqnarray}
 \overrightarrow{\mathbf{v}}^{\prime } &=&\overrightarrow{\mathbf{v}}-%
-\overrightarrow{\mathbf{V}}_{S^{\prime }S} \\
+\overrightarrow{\mathbf{v}}_{S^{\prime }S} \\
 \overrightarrow{\mathbf{v}} &=&\overrightarrow{\mathbf{v}}^{\prime }+%
-\overrightarrow{\mathbf{V}}_{S^{\prime }S}  \notag
+\overrightarrow{\mathbf{v}}_{S^{\prime }S}  \notag
 \end{eqnarray}%
 where $V_{S^{\prime }S}$ is the relative speed between the two frames. What
 this means is that if we have a particle moving with speed $v^{\prime }$ in
 frame $S^{\prime }$ and we observe this particle in frame $S$ the speed of
 that particle will seem to be $\overrightarrow{\mathbf{v}}=\overrightarrow{%
-\mathbf{v}}^{\prime }+\overrightarrow{\mathbf{V}}_{S^{\prime }S}$. In our
-case, $\overrightarrow{\mathbf{V}}_{SS^{\prime }}=V_{x}\hat{\imath}$ so $%
-\overrightarrow{\mathbf{v}}=\overrightarrow{\mathbf{v}}^{\prime }+V_{x}\hat{%
+\mathbf{v}}^{\prime }+\overrightarrow{\mathbf{v}}_{S^{\prime }S}$. In our
+case, $\overrightarrow{\mathbf{v}}_{SS^{\prime }}=v_{x}\hat{\imath}$ so $%
+\overrightarrow{\mathbf{v}}=\overrightarrow{\mathbf{v}}^{\prime }+v_{x}\hat{%
 \imath}.$
 
 A quick example might help. Suppose we have a person in the gym running on a
@@ -27761,19 +27443,19 @@ TRUE;display "USEDEF";valid_file "T";width 1.5973in;height 1.094in;depth
 0pt;original-width 1.5618in;original-height 1.0603in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
 'SAPYRDIJ.wmf';tempfile-properties "XPR";}}The treadmill track belt has a
-relative speed $\overrightarrow{\mathbf{V}}_{S^{\prime }S}=-2\frac{\unit{m}}{%
+relative speed $\overrightarrow{\mathbf{v}}_{S^{\prime }S}=-2\frac{\unit{m}}{%
 \unit{s}}\hat{\imath}$ where the $S$ frame in this case is the gym room and
-the $S^{\prime }$ frame is the tredmill belt. A person standing on the
+the $S^{\prime }$ frame is the treadmill belt. A person standing on the
 treadmill in frame $S^{\prime }$ could view themselves as not moving, and
 the rest of the room as moving the opposite direction. \FRAME{dtbpF}{2.5244in%
 }{2.0254in}{0pt}{}{}{Figure}{\special{language "Scientific Word";type
 "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
 2.5244in;height 2.0254in;depth 0pt;original-width 2.4837in;original-height
 1.9873in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
-'SAPYRDIK.wmf';tempfile-properties "XPR";}}The notation $V_{S^{\prime }S}$
+'SAPYRDIK.wmf';tempfile-properties "XPR";}}The notation $v_{S^{\prime }S}$
 means the speed of the reference frame $S^{\prime }$ with respect to frame $%
 S $ or in our case the speed of the treadmill with respect to the room $%
-\overrightarrow{\mathbf{V}}_{S^{\prime }S}=-2\frac{\unit{m}}{\unit{s}}\hat{%
+\overrightarrow{\mathbf{v}}_{S^{\prime }S}=-2\frac{\unit{m}}{\unit{s}}\hat{%
 \imath}.$
 
 Now suppose the person starts running on the treadmill at speed $%
@@ -27797,7 +27479,7 @@ The person is going to fall off the end of the treadmill unless they pick up
 the pace! This example just used the second equation in our transformation.%
 \begin{equation*}
 \overrightarrow{\mathbf{v}}=\overrightarrow{\mathbf{v}}^{\prime }+%
-\overrightarrow{\mathbf{V}}_{S^{\prime }S}
+\overrightarrow{\mathbf{v}}_{S^{\prime }S}
 \end{equation*}%
 likewise, if we want to know how fast the person is walking with respect to
 the treadmill frame, we take the room speed $\overrightarrow{\mathbf{v}}=-0.1%
@@ -27815,24 +27497,24 @@ Armed with the Galilean transform, we can find the acceleration by taking a
 derivative%
 \begin{eqnarray*}
 \frac{d\overrightarrow{\mathbf{v}}^{\prime }}{dt} &=&\frac{d\overrightarrow{%
-\mathbf{v}}}{dt}-\frac{d\overrightarrow{\mathbf{V}}_{S^{\prime }S}}{dt} \\
+\mathbf{v}}}{dt}-\frac{d\overrightarrow{\mathbf{v}}_{S^{\prime }S}}{dt} \\
 \frac{d\overrightarrow{\mathbf{v}}}{dt} &=&\frac{d\overrightarrow{\mathbf{v}}%
-^{\prime }}{dt}+\frac{d\overrightarrow{\mathbf{V}}_{S^{\prime }S}}{dt}
+^{\prime }}{dt}+\frac{d\overrightarrow{\mathbf{v}}_{S^{\prime }S}}{dt}
 \end{eqnarray*}%
 then 
 \begin{eqnarray*}
 \overrightarrow{\mathbf{a}}^{\prime } &=&\overrightarrow{\mathbf{a}}-\frac{d%
-\overrightarrow{\mathbf{V}}_{S^{\prime }S}}{dt} \\
+\overrightarrow{\mathbf{v}}_{S^{\prime }S}}{dt} \\
 \overrightarrow{\mathbf{a}} &=&\overrightarrow{\mathbf{a}}^{\prime }+\frac{d%
-\overrightarrow{\mathbf{V}}_{S^{\prime }S}}{dt}
+\overrightarrow{\mathbf{v}}_{S^{\prime }S}}{dt}
 \end{eqnarray*}%
-but we will only consider constant relative motion\footnote{%
+but we will only consider constant relative motion in our class\footnote{%
 Accelerating reference frames are treated by General Relatively and are
 treated with the notation of contravariant and covariant vectors, which are
 beyond this course. They are taken up in a graduate level electricity and
 magnetism course.}, so 
 \begin{equation*}
-\frac{d\overrightarrow{\mathbf{V}}_{S^{\prime }S}}{dt}=0
+\frac{d\overrightarrow{\mathbf{v}}_{S^{\prime }S}}{dt}=0
 \end{equation*}%
 then both equations tell us 
 \begin{equation*}
@@ -27865,8 +27547,8 @@ Using this, let's consider the view point of each frame.
 Going back to our two guys on different frames, In frame $S,$ the person
 sees 
 \begin{eqnarray*}
-\overrightarrow{\mathbf{F}} &=&q\left( 0+\overrightarrow{\mathbf{V}}%
-_{S^{\prime }S}\times \overrightarrow{\mathbf{B}}\right) =qV_{x}\hat{\imath}%
+\overrightarrow{\mathbf{F}} &=&q\left( 0+\overrightarrow{\mathbf{v}}%
+_{S^{\prime }S}\times \overrightarrow{\mathbf{B}}\right) =qv_{x}\hat{\imath}%
 \times B\left( -\hat{k}\right) \\
 &=&qVB\hat{\jmath}
 \end{eqnarray*}%
@@ -27879,73 +27561,28 @@ and in frame $S^{\prime }$ the person sees
 It seems that the only way that $\overrightarrow{\mathbf{F}}=\overrightarrow{%
 \mathbf{F}}^{\prime }$ is that $\overrightarrow{\mathbf{E}}^{\prime }\neq 0$
 in the primed frame! So in frame $S^{\prime }$ our person must conclude that
-there is an external electric field that produces the force $\overrightarrow{%
-\mathbf{F}}^{\prime }.$ In frame $S$ the person is convinced that the
-magnetic field, $\overrightarrow{\mathbf{B}}\mathbf{,}$ is making the force.
-In frame $S^{\prime }$ the person is convinced that the electric field $%
-\overrightarrow{\mathbf{E}}^{\prime }$ is making the force.
+there is an \emph{external} electric field that produces the force $%
+\overrightarrow{\mathbf{F}}^{\prime }.$ In frame $S$ the person is convinced
+that the magnetic field, $\overrightarrow{\mathbf{B}}\mathbf{,}$ is making
+the force. In frame $S^{\prime }$ the person is convinced that the electric
+field $\overrightarrow{\mathbf{E}}^{\prime }$ is making the force.
 
-%TCIMACRO{%
-%\TeXButton{Question 223.47.4}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.47.4}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.47.4}
-\end{minipage}
-}%
-%EndExpansion
 We can find the strength of this electric field by setting the forces equal%
 \begin{eqnarray*}
 \overrightarrow{\mathbf{F}} &=&\overrightarrow{\mathbf{F}}^{\prime } \\
-q\overrightarrow{\mathbf{V}}_{S^{\prime }S}\times \overrightarrow{\mathbf{B}}
+q\overrightarrow{\mathbf{v}}_{S^{\prime }S}\times \overrightarrow{\mathbf{B}}
 &\mathbf{=}&q\overrightarrow{\mathbf{E}}^{\prime }
 \end{eqnarray*}%
 so%
 \begin{equation*}
-\overrightarrow{\mathbf{E}}^{\prime }=\overrightarrow{\mathbf{V}}_{S^{\prime
+\overrightarrow{\mathbf{E}}^{\prime }=\overrightarrow{\mathbf{v}}_{S^{\prime
 }S}\times \overrightarrow{\mathbf{B}}
 \end{equation*}%
 and the direction must be 
 \begin{equation*}
-\overrightarrow{\mathbf{E}}^{\prime }=V_{S^{\prime }S}B\hat{\jmath}
+\overrightarrow{\mathbf{E}}^{\prime }=v_{S^{\prime }S}B\hat{\jmath}
 \end{equation*}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.47.5}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.47.5}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.47.5}
-\end{minipage}
-}%
-%EndExpansion
-%TCIMACRO{%
-%\TeXButton{Question 223.47.6}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.47.6}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.47.6}
-\end{minipage}
-}%
-%EndExpansion
 Our interpretation of this result is mind-blowing. It seems that whether we
 see a magnetic field or an electric field causing the force depends on our
 reference frame! The implication is that the electric and magnetic fields
@@ -27965,13 +27602,13 @@ due to the charge, itself $\overrightarrow{\mathbf{E}}_{\text{self}},$ or
 \begin{eqnarray*}
 \overrightarrow{\mathbf{E}}_{tot}^{\prime } &=&\overrightarrow{\mathbf{E}}_{%
 \text{self}}+\overrightarrow{\mathbf{E}}_{\text{environment}}^{\prime } \\
-&=&\overrightarrow{\mathbf{E}}_{\text{self}}+\overrightarrow{\mathbf{V}}%
+&=&\overrightarrow{\mathbf{E}}_{\text{self}}+\overrightarrow{\mathbf{v}}%
 _{S^{\prime }S}\times \overrightarrow{\mathbf{B}}_{\text{environment}}
 \end{eqnarray*}%
 which we usually just write as%
 \begin{equation*}
 \overrightarrow{\mathbf{E}}^{\prime }=\overrightarrow{\mathbf{E}}_{\text{self%
-}}+\overrightarrow{\mathbf{V}}_{S^{\prime }S}\times \overrightarrow{\mathbf{B%
+}}+\overrightarrow{\mathbf{v}}_{S^{\prime }S}\times \overrightarrow{\mathbf{B%
 }}_{\text{environment}}
 \end{equation*}
 
@@ -27979,25 +27616,26 @@ We would predict that if we had a charge that is stationary in frame $S$ and
 we rode along with frame $S^{\prime }$ that we would see a field 
 \begin{equation*}
 \overrightarrow{\mathbf{E}}=\mathbf{E}_{\text{self}}^{\prime }-%
-\overrightarrow{\mathbf{V}}_{S^{\prime }S}\times \overrightarrow{\mathbf{B}}%
+\overrightarrow{\mathbf{v}}_{S^{\prime }S}\times \overrightarrow{\mathbf{B}}%
 _{\text{environment}}^{\prime }
 \end{equation*}%
 Of course, $\overrightarrow{\mathbf{E}}_{\text{self}}$ can't create a force
-on the charge, because it is a self-field. So we only need to be concerned
-with $\overrightarrow{\mathbf{E}}_{\text{self}}$ if we have other charges
-that could move. We could actually have a group of charges riding along with
+on the moving charge, because it is a self-field. The field made by a charge
+can't move that same charge. So we only need to be concerned with $%
+\overrightarrow{\mathbf{E}}_{\text{self}}$ if we have other charges that
+could move. We could actually have a group of charges riding along with
 frame $S^{\prime }.$ In that case we would have an additional field $E_{%
-\text{charges }}^{\prime }.$ We could write this as 
+\text{charges }}^{\prime }.$ We could write this as%
 \begin{equation*}
-\overrightarrow{\mathbf{E}}=\mathbf{E}_{\text{charges in }S\prime }^{\prime
-}-\overrightarrow{\mathbf{V}}_{S^{\prime }S}\times \overrightarrow{\mathbf{B}%
-}_{\text{environment}}^{\prime }
+\overrightarrow{\mathbf{E}}_{total}=\mathbf{E}_{\text{charges in }S\prime
+}^{\prime }-\overrightarrow{\mathbf{v}}_{S^{\prime }S}\times \overrightarrow{%
+\mathbf{B}}_{\text{environment}}^{\prime }
 \end{equation*}%
 or just 
 \begin{equation*}
-\overrightarrow{\mathbf{E}}=\mathbf{E}_{\text{charges}}^{\prime }-%
-\overrightarrow{\mathbf{V}}_{S^{\prime }S}\times \overrightarrow{\mathbf{B}}%
-_{\text{environment}}^{\prime }
+\overrightarrow{\mathbf{E}}=\mathbf{E}_{\text{charges in }S\prime }^{\prime
+}-\overrightarrow{\mathbf{v}}_{S^{\prime }S}\times \overrightarrow{\mathbf{B}%
+}_{\text{environment}}^{\prime }
 \end{equation*}
 
 What we have developed is important! We have an equation that let's us
@@ -28007,27 +27645,12 @@ another frame.
 We would expect that a similar thing would happen if we replaced the
 magnetic fields with electric fields. Suppose we have an electric field in
 the region of our frames and that this electric field is stationary with
-respect to frame $S^{\prime }$ this time. 
-%TCIMACRO{%
-%\TeXButton{Question 223.47.7}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.47.7}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.47.7}
-\end{minipage}
-}%
-%EndExpansion
-Will frame $S$ see a magnetic field?\FRAME{dhF}{3.5125in}{1.9806in}{0pt}{}{}{%
-Figure}{\special{language "Scientific Word";type
-"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-3.5125in;height 1.9806in;depth 0pt;original-width 5.3476in;original-height
-3.0033in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+respect to frame $S^{\prime }$ this time. Will frame $S$ see a magnetic
+field?\FRAME{dhF}{3.5125in}{1.9806in}{0pt}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+"USEDEF";valid_file "T";width 3.5125in;height 1.9806in;depth
+0pt;original-width 5.3476in;original-height 3.0033in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
 'SAPYRDIM.wmf';tempfile-properties "XPR";}}
 
 To see that this is true, let's examine the case where we have no external
@@ -28040,18 +27663,18 @@ Then in frame $S^{\prime }$ we have the fields
 \end{eqnarray*}%
 in frame $S$ the electric field is 
 \begin{eqnarray*}
-\overrightarrow{\mathbf{E}} &=&\overrightarrow{\mathbf{E}}_{\text{charges}%
-}^{\prime }-\overrightarrow{\mathbf{V}}_{S^{\prime }S}\times \overrightarrow{%
+\overrightarrow{\mathbf{E}} &=&\overrightarrow{\mathbf{E}}_{\text{self}%
+}^{\prime }-\overrightarrow{\mathbf{v}}_{S^{\prime }S}\times \overrightarrow{%
 \mathbf{B}}_{\text{environment}}^{\prime } \\
 &=&\frac{1}{4\pi \epsilon _{o}}\frac{q}{r^{2}}\mathbf{\hat{r}}+%
-\overrightarrow{\mathbf{V}}_{S^{\prime }S}\times \mathbf{0} \\
+\overrightarrow{\mathbf{v}}_{S^{\prime }S}\times \mathbf{0} \\
 &=&\frac{1}{4\pi \epsilon _{o}}\frac{q}{r^{2}}\mathbf{\hat{r}}
 \end{eqnarray*}
 
 so 
 \begin{equation*}
-\overrightarrow{\mathbf{E}}=\overrightarrow{\mathbf{E}}_{\text{ }}^{\prime }=%
-\frac{1}{4\pi \epsilon _{o}}\frac{q}{r^{2}}\mathbf{\hat{r}}
+\overrightarrow{\mathbf{E}}=\overrightarrow{\mathbf{E}}_{\text{self }%
+}^{\prime }=\frac{1}{4\pi \epsilon _{o}}\frac{q}{r^{2}}\mathbf{\hat{r}}
 \end{equation*}%
 We see the same electric field due to the point charge being there in both
 frames.
@@ -28066,28 +27689,29 @@ since our charge is moving along with the $S^{\prime }$ frame $%
 \overrightarrow{\mathbf{v}}=\overrightarrow{\mathbf{V}}_{S^{\prime }S}$ so 
 \begin{equation*}
 \overrightarrow{\mathbf{B}}=\frac{\mu _{o}}{4\pi }\frac{q}{r^{2}}\left( 
-\overrightarrow{\mathbf{V}}_{S^{\prime }S}\times \mathbf{\hat{r}}\right)
+\overrightarrow{\mathbf{v}}_{S^{\prime }S}\times \mathbf{\hat{r}}\right) 
 \end{equation*}%
 but we can rewrite this by rearranging terms%
 \begin{eqnarray*}
 \overrightarrow{\mathbf{B}} &=&\frac{\mu _{o}}{4\pi }\frac{q}{r^{2}}\left( 
-\overrightarrow{\mathbf{V}}_{S^{\prime }S}\times \mathbf{\hat{r}}\right) \\
-&=&\left( \overrightarrow{\mathbf{V}}_{S^{\prime }S}\times \frac{\mu _{o}}{%
-4\pi }\frac{q}{r^{2}}\mathbf{\hat{r}}\right)
+\overrightarrow{\mathbf{v}}_{S^{\prime }S}\times \mathbf{\hat{r}}\right)  \\
+&=&\left( \overrightarrow{\mathbf{v}}_{S^{\prime }S}\times \frac{\mu _{o}}{%
+4\pi }\frac{q}{r^{2}}\mathbf{\hat{r}}\right) 
 \end{eqnarray*}%
-which looks vaguely familiar. Let's multiply top and bottom by $\epsilon
-_{o} $%
+which looks vaguely familiar. Let's multiply top and bottom by $\epsilon _{o}
+$%
 \begin{eqnarray*}
-\overrightarrow{\mathbf{B}} &=&\left( \overrightarrow{\mathbf{V}}_{S^{\prime
+\overrightarrow{\mathbf{B}} &=&\left( \overrightarrow{\mathbf{v}}_{S^{\prime
 }S}\times \frac{\mu _{o}\epsilon _{o}}{4\pi \epsilon _{o}}\frac{q}{r^{2}}%
-\mathbf{\hat{r}}\right) \\
-&=&\left( \overrightarrow{\mathbf{V}}_{S^{\prime }S}\times \mu _{o}\epsilon
+\mathbf{\hat{r}}\right)  \\
+&=&\left( \overrightarrow{\mathbf{v}}_{S^{\prime }S}\times \mu _{o}\epsilon
 _{o}\left( \frac{1}{4\pi \epsilon _{o}}\frac{q}{r^{2}}\mathbf{\hat{r}}%
-\right) \right) \\
-&=&\left( \overrightarrow{\mathbf{V}}_{S^{\prime }S}\times \mu _{o}\epsilon
-_{o}\left( \overrightarrow{\mathbf{E}}_{\text{ }}^{\prime }\right) \right) \\
-&=&\mu _{o}\epsilon _{o}\left( \overrightarrow{\mathbf{V}}_{S^{\prime
-}S}\times \overrightarrow{\mathbf{E}}_{\text{ }}^{\prime }\right)
+\right) \right)  \\
+&=&\left( \overrightarrow{\mathbf{v}}_{S^{\prime }S}\times \mu _{o}\epsilon
+_{o}\left( \overrightarrow{\mathbf{E}}_{\text{ }}^{\prime }\right) \right) 
+\\
+&=&\mu _{o}\epsilon _{o}\left( \overrightarrow{\mathbf{v}}_{S^{\prime
+}S}\times \overrightarrow{\mathbf{E}}_{\text{ }}^{\prime }\right) 
 \end{eqnarray*}%
 which is really quite astounding! Our $B$-fields have apparently always just
 been due to moving electric fields after all! Of course, we could have an
@@ -28097,22 +27721,23 @@ case, let's include a term $\overrightarrow{\mathbf{B}}_{\text{magnet}%
 \begin{equation*}
 \overrightarrow{\mathbf{B}}_{total}=\overrightarrow{\mathbf{B}}_{\text{%
 magnets in }S^{\prime }}^{\prime }+\mu _{o}\epsilon _{o}\left( 
-\overrightarrow{\mathbf{V}}_{S^{\prime }S}\times \overrightarrow{\mathbf{E}}%
-_{\text{environment }}^{\prime }\right)
+\overrightarrow{\mathbf{v}}_{S^{\prime }S}\times \overrightarrow{\mathbf{E}}%
+_{\text{environment }}^{\prime }\right) 
 \end{equation*}%
 or just 
 \begin{equation*}
-\overrightarrow{\mathbf{B}}=\overrightarrow{\mathbf{B}}_{\text{magnets}%
-}^{\prime }+\mu _{o}\epsilon _{o}\left( \overrightarrow{\mathbf{V}}%
-_{S^{\prime }S}\times \overrightarrow{\mathbf{E}}_{\text{environment }%
-}^{\prime }\right)
+\overrightarrow{\mathbf{B}}=\overrightarrow{\mathbf{B}}_{\text{magnets in }%
+S^{\prime }}^{\prime }+\mu _{o}\epsilon _{o}\left( \overrightarrow{\mathbf{v}%
+}_{S^{\prime }S}\times \overrightarrow{\mathbf{E}}_{\text{environment }%
+}^{\prime }\right) 
 \end{equation*}%
 and we would expect that if we worked this problem from the other frame's
 point of view we would likewise find 
 \begin{equation*}
 \overrightarrow{\mathbf{B}}^{\prime }=\overrightarrow{\mathbf{B}}_{\text{%
-magnet}}-\mu _{o}\epsilon _{o}\left( \overrightarrow{\mathbf{V}}_{S^{\prime
-}S}\times \overrightarrow{\mathbf{E}}_{\text{environment}}\right)
+magnets in }S}-\mu _{o}\epsilon _{o}\left( \overrightarrow{\mathbf{v}}%
+_{S^{\prime }S}\times \overrightarrow{\mathbf{E}}_{\text{environment}%
+}\right) 
 \end{equation*}%
 where the minus sign comes from the relative velocity being in the other
 direction. Again $\overrightarrow{\mathbf{B}}_{\text{magnet}}$ is a
@@ -28151,52 +27776,55 @@ that Maxwell used to discover that light is a wave in what we will now call
 the \emph{electromagnetic field} (because they are different aspects of one
 thing).
 
-We can write the transformation equations for the fields as 
+We can write the transformation equations for the fields for a single
+charged particle as 
 \begin{eqnarray*}
 \overrightarrow{\mathbf{E}}^{\prime } &=&\overrightarrow{\mathbf{E}}_{\text{%
-charges}}+\overrightarrow{\mathbf{V}}_{S^{\prime }S}\times \overrightarrow{%
-\mathbf{B}}_{\text{environment}} \\
+charges in }S}+\overrightarrow{\mathbf{v}}_{S^{\prime }S}\times 
+\overrightarrow{\mathbf{B}}_{\text{environment}} \\
 \overrightarrow{\mathbf{B}}^{\prime } &=&\overrightarrow{\mathbf{B}}_{\text{%
-magnet}}-\frac{1}{c^{2}}\left( \overrightarrow{\mathbf{V}}_{S^{\prime
-}S}\times \overrightarrow{\mathbf{E}}_{\text{environment}}\right) \\
-\overrightarrow{\mathbf{E}} &=&\mathbf{E}_{\text{charges}}^{\prime }-%
-\overrightarrow{\mathbf{V}}_{S^{\prime }S}\times \overrightarrow{\mathbf{B}}%
-_{\text{environment}}^{\prime } \\
-\overrightarrow{\mathbf{B}} &=&\overrightarrow{\mathbf{B}}_{\text{magnet}%
-}^{\prime }+\frac{1}{c^{2}}\left( \overrightarrow{\mathbf{V}}_{S^{\prime
-}S}\times \overrightarrow{\mathbf{E}}_{\text{ environment}}^{\prime }\right)
+magnets in }S}-\frac{1}{c^{2}}\left( \overrightarrow{\mathbf{v}}_{S^{\prime
+}S}\times \overrightarrow{\mathbf{E}}_{\text{environment}}\right)  \\
+\overrightarrow{\mathbf{E}} &=&\mathbf{E}_{\text{charges in }S\prime
+}^{\prime }-\overrightarrow{\mathbf{v}}_{S^{\prime }S}\times \overrightarrow{%
+\mathbf{B}}_{\text{environment}}^{\prime } \\
+\overrightarrow{\mathbf{B}} &=&\overrightarrow{\mathbf{B}}_{\text{magnets in 
+}S^{\prime }}^{\prime }+\frac{1}{c^{2}}\left( \overrightarrow{\mathbf{v}}%
+_{S^{\prime }S}\times \overrightarrow{\mathbf{E}}_{\text{ environment}%
+}^{\prime }\right) 
 \end{eqnarray*}
 
 Let's do a problem. Suppose we have a metal loop moving into an area where
 there is a magnetic field as shown. Let's show that there is a force on
 charges in this loop no matter what frame we consider. First, lets consider
-the frame where the magnetic field is stationary and the loop moves.\FRAME{%
-dtbpF}{2.9297in}{1.664in}{0pt}{}{}{Figure}{\special{language "Scientific
-Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
-"T";width 2.9297in;height 1.664in;depth 0pt;original-width
-2.9572in;original-height 1.6666in;cropleft "0";croptop "1";cropright
-"1";cropbottom "0";tempfilename 'SAPYRDIN.wmf';tempfile-properties "XPR";}}%
-There should be an upward force on the positive charge because the charge is
-moving in a magnetic field. Let's say that \textquotedblleft
-up\textquotedblright\ is the $\hat{\jmath}$ direction and that
-\textquotedblleft to the right\textquotedblright\ is the $\hat{\imath}$
-direction. Then The Lorentz force is 
+the frame where the magnetic field is stationary and the loop moves. Let's
+call that the $S$ frame.\FRAME{dtbpF}{2.9297in}{1.664in}{0pt}{}{}{Figure}{%
+\special{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
+TRUE;display "USEDEF";valid_file "T";width 2.9297in;height 1.664in;depth
+0pt;original-width 2.9572in;original-height 1.6666in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
+'SAPYRDIN.wmf';tempfile-properties "XPR";}}There should be an upward force
+on the positive charge because the charge is moving in a magnetic field.
+Let's say that \textquotedblleft up\textquotedblright\ is the $\hat{\jmath}$
+direction and that \textquotedblleft to the right\textquotedblright\ is the $%
+\hat{\imath}$ direction. Then The Lorentz force is 
 \begin{eqnarray*}
 \overrightarrow{\mathbf{F}} &=&q\left( \overrightarrow{\mathbf{E}}+%
 \overrightarrow{\mathbf{v}}\times \overrightarrow{\mathbf{B}}\right) \\
-&=&q\left( \overrightarrow{\mathbf{E}}+\overrightarrow{\mathbf{V}}%
+&=&q\left( \overrightarrow{\mathbf{E}}+\overrightarrow{\mathbf{v}}%
 _{S^{\prime }S}\times \overrightarrow{\mathbf{B}}\right)
 \end{eqnarray*}%
-Now $\overrightarrow{\mathbf{V}}_{S^{\prime }S}$ means the speed of the
-reference frame $S^{\prime }$ with respect to frame $S.$ That is $+V\hat{%
-\imath}.$ And there is no electric field in frame $S,$ so 
+Now $\overrightarrow{\mathbf{v}}_{S^{\prime }S}$ means the speed of the
+reference frame $S^{\prime }$ (the loop frame) with respect to frame $S.$
+That is $+v\hat{\imath}.$ And there is no external electric field in frame $%
+S,$ so 
 \begin{eqnarray*}
 \overrightarrow{\mathbf{F}} &=&q\left( \overrightarrow{\mathbf{E}}+%
-\overrightarrow{\mathbf{V}}_{S^{\prime }S}\times \overrightarrow{\mathbf{B}}%
+\overrightarrow{\mathbf{v}}_{S^{\prime }S}\times \overrightarrow{\mathbf{B}}%
 \right) \\
-&=&q\left( 0+V\hat{\imath}\times B\left( -\hat{k}\right) \right) \\
-&=&q\left( V\hat{\imath}\times \mathbf{B}\left( -\hat{k}\right) \right) \\
-&=&qVB\hat{\jmath}
+&=&q\left( 0+v\hat{\imath}\times B\left( -\hat{k}\right) \right) \\
+&=&q\left( v\hat{\imath}\times \mathbf{B}\left( -\hat{k}\right) \right) \\
+&=&qvB\hat{\jmath}
 \end{eqnarray*}%
 Now suppose we change reference frames so we are riding along with the loop
 in frame, $S^{\prime }.$ In this frame, the loop is not moving, and the
@@ -28211,41 +27839,46 @@ force if we change frames to ride along with the loop. \FRAME{dtbpF}{3.9763in%
 find the $E$ and $B$-fields in the new reference frame. Then 
 \begin{eqnarray*}
 \overrightarrow{\mathbf{E}}^{\prime } &=&\overrightarrow{\mathbf{E}}_{\text{%
-self-charge}}+\overrightarrow{\mathbf{V}}_{S^{\prime }S}\times 
-\overrightarrow{\mathbf{B}}_{\text{environment}} \\
+self}}+\overrightarrow{\mathbf{v}}_{S^{\prime }S}\times \overrightarrow{%
+\mathbf{B}}_{\text{environment}} \\
 \overrightarrow{\mathbf{B}}^{\prime } &=&\overrightarrow{\mathbf{B}}_{\text{%
-magnet}}-\frac{1}{c^{2}}\left( \overrightarrow{\mathbf{V}}_{S^{\prime
+self}}-\frac{1}{c^{2}}\left( \overrightarrow{\mathbf{v}}_{S^{\prime
 }S}\times \overrightarrow{\mathbf{E}}_{\text{environment}}\right)
 \end{eqnarray*}%
 so in the prime frame we have an electric field%
 \begin{equation*}
-\overrightarrow{\mathbf{E}}^{\prime }=\overrightarrow{\mathbf{E}}_{\text{%
-charges}}+\overrightarrow{\mathbf{V}}_{S^{\prime }S}\times \overrightarrow{%
-\mathbf{B}}_{\text{environment}}
+\overrightarrow{\mathbf{E}}^{\prime }=\overrightarrow{\mathbf{E}}_{\text{self%
+}}+\overrightarrow{\mathbf{v}}_{S^{\prime }S}\times \overrightarrow{\mathbf{B%
+}}_{\text{environment}}
 \end{equation*}%
-and in particular, we have an external field%
+The self term can't created a force on the charge that makes it so we can
+drop it.
+
+Then we have an external electric field in the prime frame that is 
 \begin{equation*}
 \overrightarrow{\mathbf{E}}_{\text{environment}}^{\prime }=\overrightarrow{%
-\mathbf{V}}_{S^{\prime }S}\times \overrightarrow{\mathbf{B}}_{\text{%
+\mathbf{v}}_{S^{\prime }S}\times \overrightarrow{\mathbf{B}}_{\text{%
 environment}}
 \end{equation*}%
-(we left off the $\overrightarrow{\mathbf{E}}_{\text{charge}}$ because it
-can't move the charge that made it, so it is not part of the force).
+To be very clear, the field $\overrightarrow{\mathbf{E}}_{\text{charge}}$
+exists and would affect a different charge. But we left off the $%
+\overrightarrow{\mathbf{E}}_{\text{charge}}$ because it can't move the
+charge that made it, so it is not part of the force we are looking for.
 
-Note that $\overrightarrow{\mathbf{V}}_{S^{\prime }S}$ is the speed of the
-primed frame as viewed from the unprimed frame. So $\overrightarrow{\mathbf{V%
-}}_{S^{\prime }S}=+V\hat{\imath}$ 
+Note that $\overrightarrow{\mathbf{v}}_{S^{\prime }S}$ is the speed of the
+primed frame (loop) as viewed from the unprimed frame. So $\overrightarrow{%
+\mathbf{v}}_{S^{\prime }S}=+v\hat{\imath}$ 
 \begin{eqnarray*}
-\overrightarrow{\mathbf{E}}^{\prime } &=&V\left( \hat{\imath}\right) \times
+\overrightarrow{\mathbf{E}}^{\prime } &=&v\left( \hat{\imath}\right) \times
 B\left( -\hat{k}\right) \\
-&=&VB\hat{\jmath}
+&=&vB\hat{\jmath}
 \end{eqnarray*}%
 That is our electric field in the primed frame.
 
 The magnetic field in the primed frame is given by 
 \begin{equation*}
 \overrightarrow{\mathbf{B}}^{\prime }=\overrightarrow{\mathbf{B}}_{\text{%
-magnet}}-\frac{1}{c^{2}}\left( \overrightarrow{\mathbf{V}}_{S^{\prime
+magnet}}-\frac{1}{c^{2}}\left( \overrightarrow{\mathbf{v}}_{S^{\prime
 }S}\times \overrightarrow{\mathbf{E}}_{\text{environment}}\right)
 \end{equation*}%
 but there is no external electric field in the unprimed frame, so 
@@ -28256,11 +27889,12 @@ magnet}}-\frac{1}{c^{2}}\left( \overrightarrow{\mathbf{V}}_{S^{\prime
 &=&\overrightarrow{\mathbf{B}}_{\text{magnet}}
 \end{eqnarray*}%
 where here \textquotedblleft magnet\textquotedblright\ means what ever is
-making the magnetic field in the unprimed frame. Something must be there
-making the field, and it is not our charge. It could be an electromagnet, or
-a permanent magnet, we have not been told. But it is not our charge, so we
-know $\overrightarrow{\mathbf{B}}_{\text{magnet}}$ must be there and can act
-on our charge. So 
+making the magnetic field in the unprimed frame. It is not our moving charge
+that is creating this field. But something must be there making the field,
+and it is not our charge. It could be an electromagnet, or a permanent
+magnet, we have not been told. But it is not our charge, so we know $%
+\overrightarrow{\mathbf{B}}_{\text{magnet}}$ must be there and can act on
+our charge. So 
 \begin{equation*}
 \overrightarrow{\mathbf{B}}^{\prime }=\overrightarrow{\mathbf{B}}
 \end{equation*}%
@@ -28301,25 +27935,9 @@ incloses some charge is%
 \end{equation*}%
 We called this Gauss' law.
 
-But consider the situation with a magnet.%
-%TCIMACRO{%
-%\TeXButton{Question 223.47.8}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.47.8}
-%\end{minipage}
-%}} }%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.47.8}
-\end{minipage}
-}
-%EndExpansion
-We can define a magnetic flux just like we defined the electric flux. And
-now we know they must be related. Is there a Gauss' law for magnetism? Let's
-consider the magnetic flux. 
+But consider the situation with a magnet. We can define a magnetic flux just
+like we defined the electric flux. And now we know they must be related. Is
+there a Gauss' law for magnetism? Let's consider the magnetic flux. 
 \begin{equation*}
 \Phi _{B}=\oint \mathbf{B}\cdot d\mathbf{A}
 \end{equation*}%
@@ -28383,17 +28001,17 @@ equations.
 Rules for finding fields in different coordinate systems%
 \begin{eqnarray*}
 \overrightarrow{\mathbf{E}}^{\prime } &=&\overrightarrow{\mathbf{E}}_{\text{%
-charges}}+\overrightarrow{\mathbf{V}}_{S^{\prime }S}\times \overrightarrow{%
-\mathbf{B}}_{\text{environment}} \\
+charges in RF}}+\overrightarrow{\mathbf{V}}_{S^{\prime }S}\times 
+\overrightarrow{\mathbf{B}}_{\text{environment}} \\
 \overrightarrow{\mathbf{B}}^{\prime } &=&\overrightarrow{\mathbf{B}}_{\text{%
-magnet}}-\frac{1}{c^{2}}\left( \overrightarrow{\mathbf{V}}_{S^{\prime
-}S}\times \overrightarrow{\mathbf{E}}_{\text{environment}}\right) \\
-\overrightarrow{\mathbf{E}} &=&\mathbf{E}_{\text{charges}}^{\prime }-%
+magnet in RF}}-\frac{1}{c^{2}}\left( \overrightarrow{\mathbf{V}}_{S^{\prime
+}S}\times \overrightarrow{\mathbf{E}}_{\text{environment}}\right)  \\
+\overrightarrow{\mathbf{E}} &=&\mathbf{E}_{\text{charges in RF}}^{\prime }-%
 \overrightarrow{\mathbf{V}}_{S^{\prime }S}\times \overrightarrow{\mathbf{B}}%
 _{\text{environment}}^{\prime } \\
-\overrightarrow{\mathbf{B}} &=&\overrightarrow{\mathbf{B}}_{\text{magnet}%
-}^{\prime }+\frac{1}{c^{2}}\left( \overrightarrow{\mathbf{V}}_{S^{\prime
-}S}\times \overrightarrow{\mathbf{E}}_{\text{ environment}}^{\prime }\right)
+\overrightarrow{\mathbf{B}} &=&\overrightarrow{\mathbf{B}}_{\text{magnet in
+RF}}^{\prime }+\frac{1}{c^{2}}\left( \overrightarrow{\mathbf{V}}_{S^{\prime
+}S}\times \overrightarrow{\mathbf{E}}_{\text{ environment}}^{\prime }\right) 
 \end{eqnarray*}%
 Gauss' law for magnetic fields%
 \begin{equation*}
@@ -28485,21 +28103,6 @@ B=\frac{\mu _{o}I}{2\pi r}
 which is very familiar, just the equation for a field from a long straight
 wire.
 
-%TCIMACRO{%
-%\TeXButton{Question 223.48.1}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.48.1}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.48.1}
-\end{minipage}
-}%
-%EndExpansion
 Now Let's try this at $P_{2}.$ What would we expect? Will the magnetic field
 change much as we pass by the capacitor?\FRAME{dtbpF}{2.0686in}{1.3344in}{0pt%
 }{}{}{Figure}{\special{language "Scientific Word";type
@@ -28507,9 +28110,9 @@ change much as we pass by the capacitor?\FRAME{dtbpF}{2.0686in}{1.3344in}{0pt%
 2.0686in;height 1.3344in;depth 0pt;original-width 3.9157in;original-height
 2.5151in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
 'SAPYRDIV.wmf';tempfile-properties "XPR";}}Again we could use Biot-Savart,
-but think about what the current does at the plate. It would be very hard to
-do the integration!. So again let's try Ampere's law. If we use the same
-size surface 
+but think about what the current does at the plate. It would be very very
+hard to do the integration!. So again let's try Ampere's law. If we use the
+same size surface 
 \begin{equation*}
 \doint \mathbf{B}\cdot d\ell =B\doint d\ell =B2\pi r
 \end{equation*}%
@@ -28537,21 +28140,6 @@ us
 at $P_{1}$! So we have two different results with Ampere's law for the same
 point. This can't be!
 
-%TCIMACRO{%
-%\TeXButton{Question 223.48.2}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.48.2}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.48.2}
-\end{minipage}
-}%
-%EndExpansion
 Ampere knew this was a problem, but did not find a solution. Maxwell solved
 this. He asked himself, what was different inside the capacitor that might
 be making a difference. Of course, there is an electric field inside the
@@ -28622,30 +28210,14 @@ I_{d}=\varepsilon _{o}\frac{d\Phi _{E}}{dt}
 Maxwell decided that, since this looked like equivalent to a current, he
 would call it a current and include it in Ampere's law.%
 \begin{eqnarray*}
-\doint \mathbf{B}\cdot d\ell &=&\mu _{o}\left( I+I_{d}\right) \\
-&=&\mu _{o}\left( I+\varepsilon _{o}\frac{d\Phi _{E}}{dt}\right)
+\doint \mathbf{B}\cdot d\ell  &=&\mu _{o}\left( I+I_{d}\right)  \\
+&=&\mu _{o}\left( I+\varepsilon _{o}\frac{d\Phi _{E}}{dt}\right) 
 \end{eqnarray*}%
 but remember it is not really a current. What we have is a changing electric
 field that is making a magnetic field \emph{as though there were a current }$%
-I_{d}.$ 
-%TCIMACRO{%
-%\TeXButton{Question 223.48.3}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.48.3}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.48.3}
-\end{minipage}
-}%
-%EndExpansion
-We can try this on or capacitor problem. We have done our capacitor problem
-for $S_{1}$ where we expect $\frac{d\Phi _{E}}{dt}\approx 0$ so our original
-calculation stands 
+I_{d}.$ We can try this on or capacitor problem. We have done our capacitor
+problem for $S_{1}$ where we expect $\frac{d\Phi _{E}}{dt}\approx 0$ so our
+original calculation stands 
 \begin{equation*}
 B_{S_{1}}=\frac{\mu _{o}I}{2\pi r}
 \end{equation*}%
@@ -28653,29 +28225,30 @@ but now we know that if we use $S_{2}$ we have $\frac{d\Phi _{E}}{dt}\neq 0$%
 , and we realize that at $P_{2}$ the current $I=0$ so 
 \begin{equation*}
 \doint \mathbf{B}\cdot d\ell =\mu _{o}\left( 0+\varepsilon _{o}\frac{d\Phi
-_{E}}{dt}\right)
+_{E}}{dt}\right) 
 \end{equation*}%
 and for our geometry we found$\frac{d\Phi _{E}}{dt}$ 
 \begin{equation*}
 \doint \mathbf{B}\cdot d\ell =\mu _{o}\left( 0+\pi R^{2}\varepsilon _{o}%
-\frac{dE}{dt}\right)
+\frac{dE}{dt}\right) 
 \end{equation*}%
 and we calculated $\frac{dE}{dt}$ so we can substitute it in%
 \begin{equation*}
 \doint \mathbf{B}\cdot d\ell =\mu _{o}\left( 0+\pi R^{2}\varepsilon _{o}%
-\frac{I}{\pi R^{2}\varepsilon _{o}}\right)
+\frac{I}{\pi R^{2}\varepsilon _{o}}\right) 
 \end{equation*}%
 where we remember that the current $I$ is the current making the electric
 field--the current in the wire. Then we have 
 \begin{equation*}
-B2\pi r=\mu _{o}\left( 0+I\right)
+B2\pi r=\mu _{o}\left( 0+I\right) 
 \end{equation*}%
 and our field is%
 \begin{equation*}
 B=\frac{\mu _{o}I}{2\pi r}
 \end{equation*}%
 which is just what we found using $S_{1}.$ Maxwell seems to have saved the
-day! There is no dip in the magnetic field magnitude.
+day! There is no contradiction in our field calculation at $P_{1}$ if we use 
+$S_{1}$ or $S_{2}.$ We get the same answer!
 
 There is one more fix we will have to do to Ampere's law eventually. We
 found this form of Ampere's law with the capacitor empty--not even
@@ -30030,6 +29603,227 @@ Conceptual understanding is a guiding principle for a successful design
 career. I hope this class has contributed to that conceptual understanding.
 
 \appendix
+
+\chapter{More insight into inductance and non-conservative fields}
+
+To try to make this idea of inductance make more sense, let's take another
+strange circuit.\FRAME{dtbpF}{1.382in}{0.8077in}{0pt}{}{}{Figure}{\special%
+{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
+TRUE;display "USEDEF";valid_file "T";width 1.382in;height 0.8077in;depth
+0pt;original-width 3.8246in;original-height 2.2241in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
+'SGJ3GP02.wmf';tempfile-properties "XPR";}}There is a battery, and resister,
+and a single loop inductor. When the switch is thrown, the current will flow
+as shown. The current will create a magnetic field that is out of the page
+in the center of the loop. Since the loop, itself, is creating this field,
+let's call this field a \emph{self field}.\FRAME{dtbpF}{1.3733in}{0.9409in}{%
+0pt}{}{}{Figure}{\special{language "Scientific Word";type
+"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
+1.3733in;height 0.9409in;depth 0pt;original-width 3.8246in;original-height
+2.6122in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'SGJ3GP03.wmf';tempfile-properties "XPR";}}Consider this self-field for a
+moment. When we studied charge, we found that charge created an electric
+field. That electric field could make \emph{another} charge accelerate. But
+the electric field crated by a charge does not make the charge that created
+it accelerate. This is an instance of a self-field, an electric self-field.
+Now with this background, let's return to our magnetic self-field.
+
+Let's take Faraday's law and apply it to this circuit. Let me choose an area
+vector $\mathbf{A}$ that is the area of the big loop and positive out of the
+page. Again, let's use conservation of energy (Kirchhoff's loop law). Let's
+find $\doint \mathbf{E}\cdot ds$ for the entire circuit. We can start with
+the battery. Since there is an electric field inside the battery we will
+have a component of $\doint_{bat}\mathbf{E}\cdot ds$ as we cross it. The
+battery field goes from positive to negative. If we go counter-clockwise,
+our $ds$ direction traverses this from negative to positive, so the electric
+field is up and the $ds$ direction is down, we have 
+\begin{equation*}
+\doint_{bat}\mathbf{E}\cdot ds=-\mathcal{E}_{bat}
+\end{equation*}%
+for this section of the circuit. Suppose we have ideal wires. If the wire
+has no resistance, then it takes no work to move the charges through the
+wire. In this case, an electron launched by the electric field in the
+battery just coasts from the battery to the resister. There is no need to
+have an acceleration in the ideal wire. The electric potential won't change
+from the battery to the resister. So there doesn't need to be a field in
+this ideal wire part to keep the charges going. But let's consider the
+resister. There is a potential change as we go across it. And if there is a
+change in potential, there must be an electric field. So the resister also
+has an electric field inside of it. We have a component of $\doint_{R}%
+\mathbf{E}\cdot ds$ that is equal to $\mathcal{E}_{R}=IR$ from this field. 
+\begin{equation*}
+\doint_{R}\mathbf{E}\cdot ds=IR
+\end{equation*}%
+Now we come to the big loop part. Since we have ideal wire, there is no
+resistance in this part so there is no voltage drop for this part of the
+circuit. All the energy that was given to the electrons by the battery was
+lost in the resister. They just coast back to the other terminal of the
+battery. Since there is no voltage drop in the big loop, 
+\begin{equation*}
+\mathcal{E}_{\text{big loop}}=0
+\end{equation*}%
+there is no electric field in the big loop either. Along the big loop, $ds$
+is certainly not zero. so 
+\begin{equation*}
+\mathcal{E}_{\text{big loop}}=\doint_{\text{big loop}}\mathbf{E}\cdot ds=0
+\end{equation*}
+
+For the total loop we would have%
+\begin{equation}
+\doint \mathbf{E}\cdot ds=-\mathcal{E}_{batt}+IR+0
+\end{equation}%
+Normally, conservation of energy would tell us that all this must be zero,
+since the sum of the energy changes around the loop must be zero if no
+energy is lost. But now we know energy \emph{is} lost in making a magnetic
+field.
+
+Consider the magnetic flux through the circuit. The magnetic field is made
+by the current in the circuit. Note that we\ arranged the circuit so the
+battery and resister are in a part that has very little area, so we can
+ignore the flux through that part of the circuit. Most of the flux will go
+through the big loop part. The magnetic field is out of the paper inside of
+the loop. The flux is 
+\begin{equation}
+\Phi _{B}=\doint \mathbf{B}\cdot d\mathbf{A}
+\end{equation}%
+and $\mathbf{B}$ and $\mathbf{A}$ are in the same direction. $\Phi _{B}$ is
+positive.
+
+Then from Biot-Savart%
+\begin{equation}
+\mathbf{B}=\frac{\mu _{o}I}{4\pi }\doint \frac{d\mathbf{s}\times \mathbf{%
+\hat{r}}}{r^{2}}
+\end{equation}%
+Let's write this as 
+\begin{eqnarray}
+\mathbf{B} &=&I\left( \frac{\mu _{o}}{4\pi }\doint \frac{d\mathbf{s}\times 
+\mathbf{\hat{r}}}{r^{2}}\right) \\
+&=&I\left( \text{geometry factor}\right)  \notag
+\end{eqnarray}%
+If the geometry of the situation does not change, then $B$ and $I$ are
+proportional. Since $B\varpropto I,$ then $\Phi _{B}\varpropto I$ since the
+integral in Biot-Savart is the surface integral of $\mathbf{B,}$ and $%
+\mathbf{B}$ is everywhere proportional to $I.$ Instead of using Biot-Savart,
+let's just define a constant of proportionality that will contain all the
+geometric factors. We could give it the symbol, $L$. Then 
+\begin{equation}
+\Phi _{B}=LI
+\end{equation}%
+where $L$ is my geometry factor. But we recognize this geometry factor. It
+is just our inductance! This is what inductance is. It is all the geometry
+factors that make up our loop that will make the magnetic field if we put a
+current through it.
+
+Assuming I don't change the geometry, then the inductance won't change and
+we have 
+\begin{equation}
+\frac{d\Phi _{B}}{dt}=L\frac{dI}{dt}
+\end{equation}%
+and Faraday's law gives us 
+\begin{equation}
+\mathcal{E}=-\frac{d\Phi _{B}}{dt}=-L\frac{dI}{dt}
+\end{equation}
+
+Which says that we should not have expected $\doint \mathbf{E}\cdot ds=0$
+for our case as we traverse the entire circuit. Integrating $\doint \mathbf{E%
+}\cdot ds$ around the whole circuit including the big loop should not bring
+us back to zero voltage. We have lost energy in making the field. Instead it
+gives 
+\begin{equation*}
+\doint \mathbf{E}\cdot ds=-L\frac{dI}{dt}
+\end{equation*}%
+We are dealing with non-conservative fields. So we have some energy loss
+like we would with a frictional force. It took some energy to make the
+magnetic field!
+
+With this insight, we can now make a new statement of conservation of energy
+for such a situation. Integrating around the whole circuit gives%
+\begin{equation*}
+\doint \mathbf{E}\cdot ds=-\mathcal{E}_{bat}+\mathcal{E}_{R}
+\end{equation*}%
+Which we now realize should give $-L\frac{dI}{dt}$ so 
+\begin{equation*}
+\doint \mathbf{E}\cdot ds=-\mathcal{E}_{bat}+\mathcal{E}_{R}=-L\frac{dI}{dt}
+\end{equation*}%
+or more succinctly 
+\begin{equation*}
+-\mathcal{E}_{batt}+IR=-L\frac{dI}{dt}
+\end{equation*}%
+Now I\ can take the RHS to the left and find%
+\begin{equation}
+\mathcal{E}_{batt}-IR-L\frac{dI}{dt}=0
+\end{equation}%
+which accounts for all of the energy in the situation, so now we see that
+energy is conserved. For those of you who go on in your study of
+electronics. this looks like a Kirchhoff's rule with $-L\frac{dI}{dt}$ being
+a voltage drop across the single loop inductor. Under most conditions we can
+just treat $-L\frac{dI}{dt}$ as a voltage drop and it works fine. Most of
+the time thinking this way does not cause much of a problem. But technically
+it is not right!
+
+We should consider where our magnetic flux came from. The magnetic flux was
+created by the current. It is a self-field. The current can't make a
+magnetic flux that would then modify that current. This self-flux won't make
+an electric field in the wire. So there is no electric field in the big
+loop, so there is no potential drop in that part of the circuit. It is just
+that $\doint \mathbf{E}\cdot ds\neq 0$ because our field is not
+conservative. We had to take some energy to create the magnetic field.
+
+Now, if you are doing simple circuit design, you can pretend you don't know
+about Faraday's law and this complication and just treat $-L\frac{dI}{dt}$
+as though it were a voltage drop. But really it is just that going around
+the loop we should expect 
+\begin{equation*}
+\doint \mathbf{E}\cdot ds=L\frac{dI}{dt}
+\end{equation*}%
+not%
+\begin{equation*}
+\doint \mathbf{E}\cdot ds=0
+\end{equation*}%
+The danger is that if you are designing a complicated device that depends on
+there being an electric field in the inductor, your device will not work. We
+have \emph{no external magnetic field,} our only magnetic field is the \emph{%
+self-field} which will not produce an electric field (or at least will form
+a very small electric field compared to the electric fields in the resistor
+and the battery, due to the small resistance in the real wire we use to make
+the big loop). And perhaps just as important, there \emph{is} a magnetic
+field that would not be predicted by just treating $L\frac{dI}{dt}$ as a
+voltage drop. This magnetic field could interfear with other parts of your
+circuits!
+
+This is very subtile, and I struggle to remember this! Fortunately in most
+circuit design it does not matter. We just treat the inductor as though it
+were a true voltage drop.
+
+I can make it even more exasperating by asking what you will see if you
+place a voltmeter across the inductor. What I measure is a \textquotedblleft
+voltage drop\textquotedblright\ of $LdI/dt,$ so maybe the there is a voltage
+drop after all! But no, that is not right. The problem is that in
+introducing the voltmeter, we have created a new loop. For this loop, the
+field from our big loop \emph{is} an external field. .
+
+\FRAME{dtbpF}{2.2442in}{1.4313in}{0pt}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+"USEDEF";valid_file "T";width 2.2442in;height 1.4313in;depth
+0pt;original-width 5.8538in;original-height 3.7284in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
+'SGJ3GP04.wmf';tempfile-properties "XPR";}}So the changing magnetic field
+through this voltmeter loop will produce an emf that will just match $LdI/dt$%
+. And there will be an electric field--but it will be in the internal
+resistor in the voltmeter. And that is what you will measure!
+
+This may all seem very far fetched. But if you are designing radio
+communications you \emph{want} to have a loss into the magnetic field,
+because that energy transferred to the magnetic field becomes your radio
+signal. This could be important!
+
+The bottom line is that for non-conservative fields you need to be careful.
+If you are just designing simple circuits, you can just treat $LdI/dt$ \emph{%
+as though it were a voltage drop}, but you may be badly burned by this if
+your system is more complicated, depending on the existence of a real
+electric field. You can see that if you are designing complicated sensing
+devices, you may need to deeply understand the underlying physics to get
+them to work. When in doubt, consult with a really good electrical engineer!
 
 \chapter{Summary of Right Hand Rules}
 
