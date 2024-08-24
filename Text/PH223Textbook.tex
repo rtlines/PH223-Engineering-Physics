@@ -11,7 +11,7 @@
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=Manual}
 %TCIDATA{Created=Thursday, March 21, 2024 14:45:27}
-%TCIDATA{LastRevised=Tuesday, July 16, 2024 10:49:54}
+%TCIDATA{LastRevised=Friday, August 23, 2024 15:33:59}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 %TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Standard LaTeX Book">}
 %TCIDATA{Language=American English}
@@ -43,19 +43,22 @@
 \begin{document}
 
 \frontmatter
-\title{{\Huge PH223: Physics for Chemists and Mechanical Engineers }}
+\title{{\Huge PH223: Physics for Chemists and Mechanical Engineers}}
 \author{R. Todd Lines}
-\date{W 2024}
+\date{F 2024}
 \maketitle
 \tableofcontents
 
-\chapter*{Preface}
+\chapter{Copyright Information}
 
-This document contains my lecture notes for a new, experimental course. The
-
-goal of the course is to teach the introductory physics of waves, optics,
-
-and electricity and magnetism for mechanical engineering students.
+Copyright 
+%TCIMACRO{\TeXButton{Copyright}{\copyright} }%
+%BeginExpansion
+\copyright
+%EndExpansion
+2024 by Author. Permission to use this work is granted for BYU-I students
+and faculty for educational purposes. For all other uses, contact the author
+for licensing.
 
 \mainmatter
 
@@ -71,15 +74,22 @@ and electricity and magnetism for mechanical engineering students.
 
 This class is designed to teach the physics of wave motion, electricity and
 magnetism, and optics. We have three major goals. One is to teach the
-physics that is not covered by Statics, Dynamics, and the Engineering
-Electronics Course. This physics can affect the mechanical systems you will
-design, build, or test, so knowing this physics is a very good thing. The
-second objective is to teach a different method of thinking about how things
-work. The third goal is to describe electrical and wave motion enough that
-the quantum nature of atoms and molecules make sense as our chemists take
-physical chemistry.
+physics of electrical attraction that forms the basis for chemical bonding.
+The same physical principles of electricity and magnetism affect many
+electrical designs as well, so this is also a goal for our mechanical
+engineers. The second goal is to teach wave motion well enough that the
+quantum nature of atoms and molecules make sense as our chemists take
+physical chemistry. Of course wave motion is also a major design tool for
+mechanical engineers and is also a major design problem for structural
+designs. The third goal is to teach optics enough that both chemists and
+engineers can understand the basics of optical instruments that will be used
+in chemistry or machine vision. For the chemists we need to understand the
+fundamental physics. For the engineers we need practical physics that can
+affect mechanical systems that our engineers will design, build, or test. We
+will need to spend time both on the fundamentals and on the practical use of
+those fundamentals.
 
-In engineering, the design parameters are often the goal. In physics, the
+In engineering, the design parameters are often the goal. In science, the
 physical relationship is the goal. For design engineers, both views are
 useful and important. The design is no good if the underlying principles
 preclude it from working!
@@ -173,7 +183,7 @@ something but we did not cover that concept in class because most people
 were \textquotedblleft getting it,\textquotedblright\ you can come and see
 me in my office.
 
-\section{SHM}
+\section{Simple Harmonic Motion}
 
 Let's consider a mass attached to a spring resting on a frictionless surface%
 \footnote{%
@@ -203,11 +213,11 @@ universe works. Long ago it was noticed that the pull of a spring grew in
 strength as the spring was pulled out of equilibrium. The mathematical
 expression of this is 
 \begin{equation}
-F_{s}=-kx
-\end{equation}
+F_{s}=-k\Delta x_{eq}
+\end{equation}%
 The force, $F_{s}$ is directly proportional to the displacement from
-equilibrium, $x.$ Since a man named Hooke wrote this down, it is called
-Hooke's law.
+equilibrium, $\Delta x_{eq}.$ Since a man named Hooke wrote this down, it is
+called Hooke's law. It should be familiar from your PH121 experience.
 
 Hooke's Law is, strictly speaking, not a law that is always obeyed. It is a
 good model for most springs as long as we don't stretch them too far. We
@@ -228,12 +238,12 @@ Lets write Hooke's Law using Newton's second Law
 \end{equation*}%
 If we assume no friction, we have just 
 \begin{equation*}
--kx=ma_{x}
+-k\Delta x_{eq}=ma_{x}
 \end{equation*}
 
 We can write this as%
 \begin{equation}
-a_{x}=-\frac{k}{m}x
+a_{x}=-\frac{k}{m}\Delta x_{eq}
 \end{equation}
 
 This expression says the acceleration is directly proportional to the
@@ -250,15 +260,21 @@ This is a good definition of \emph{simple harmonic motion.}
 
 \section{Mathematical Representation of Simple Harmonic Motion}
 
-Recall from your Dynamics or PH121 classes that acceleration is the second
-derivative of position 
+Recall from your PH121 classes that acceleration is the second derivative of
+position 
 \begin{equation*}
 a=\frac{dv}{dt}=\frac{d^{2}x}{dt^{2}}
 \end{equation*}
 
 Hook's Law tells us%
+\begin{equation*}
+F=ma=-k\left( x-x_{eq}\right)
+\end{equation*}%
+where $x_{eq}$ it the equilibrium location. Suppose we define our coordinate
+system so that $x_{eq}$ is right at the origin. Then $x_{eq}=0$ and we would
+have%
 \begin{eqnarray*}
-F &=&ma=-kx \\
+F &=&ma=-k\left( x-0\right) \\
 m\frac{d^{2}x}{dt^{2}} &=&-kx
 \end{eqnarray*}%
 We have a new kind of equation. If you are taking this freshman physics
@@ -340,7 +356,7 @@ We still don't have a complete solution to our differential equation,
 because we don't know $A$ and $\phi _{o}.$ From trigonometry, we recognize $%
 \phi _{o}$ as the initial phase angle. We will call it the \emph{phase
 constant} in this class. We will have to find this by knowing the initial
-conditions of the motion. We will do this in a minute.
+conditions of the motion. We will do this in the paragraphs that follow.
 
 $A$ is the amplitude. We can find its value when the motion has reached its
 maximum displacement. Let's look at a specific case%
@@ -395,7 +411,7 @@ Since we know the derivatives of%
 \begin{equation}
 x\left( t\right) =A\cos \left( \omega t+\phi _{o}\right)
 \end{equation}%
-we can identify the velocity of the mass and its acceleration
+we can identify the instantaneous velocity of the mass and its acceleration
 
 \begin{equation*}
 v\left( t\right) =\frac{dx\left( t\right) }{dt}=-\omega A\sin \left( \omega
@@ -451,7 +467,9 @@ Roman,12,0000000000,useDefault,normal";numpoints 100;plotstyle
 the velocity, and blue is the acceleration. Note that each has a different
 maximum amplitude. That is a bit confusing until we recognize that they each
 have different units. We have just plotted them on the same graph to make it
-easy to compare their phases. Note that they are not in phase!
+easy to compare their shapes. Note that the peaks are not in the same
+places! We use a phrase to say the peaks happen at different times. We say
+they are \emph{not in phase}.
 
 \FRAME{dtbpF}{4.0655in}{3.8649in}{0pt}{}{}{Figure}{\special{language
 "Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
@@ -2259,7 +2277,7 @@ this class.\medskip
 \hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}%
 %EndExpansion
 
-Our geneal wave eqauation is 
+Our general wave equation is 
 \begin{equation}
 y\left( x,t\right) =A\cos \left( kx-\omega t+\phi _{o}\right)
 \end{equation}%
@@ -2284,11 +2302,11 @@ v=\sqrt{\frac{T}{\mu }}
 We found that all of 
 \begin{equation}
 \phi =kx-\omega t+\phi _{o}
-\end{equation}
-could be called the total phase of the wave, or to be breif, we could call
+\end{equation}%
+could be called the total phase of the wave, or to be brief, we could call
 it just the phase of the wave.
 
-The \emph{transverse} postion, speed, and acceleration of a part of the
+The \emph{transverse} position, speed, and acceleration of a part of the
 medium are given by
 
 \begin{equation}
@@ -2850,7 +2868,7 @@ source in frame $A$ as viewed in frame $B$ would be.%
 \begin{equation*}
 v_{aB}=v_{aA}+v_{AB}
 \end{equation*}%
-This is our normal Galilean transformation. We could abriviate the
+This is our normal Galilean transformation. We could abbreviate the
 subscripts as just. 
 \begin{equation*}
 v_{B}=v_{sound}+v_{x}
@@ -3095,8 +3113,8 @@ it's original shape. The wave form would have to change. Such a wave is not
 linear. There is a good rule of thumb for when waves are linear.
 
 \begin{quotation}
-A wave is generally linear when its amplitude is much smaller than
-itswavelength.
+A wave is generally linear when its amplitude is much smaller than its
+wavelength.
 \end{quotation}
 
 \subsection{Consequences of superposition}
@@ -4050,25 +4068,10 @@ frequencies would make standing waves.
 "1";cropright "1";cropbottom "0";tempfilename
 'SAPYR72M.wmf';tempfile-properties "XPR";}}
 
-%TCIMACRO{%
-%\TeXButton{Organ Pipe Demo}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Organ Pipe Demo}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Organ Pipe Demo}
-\end{minipage}
-}%
-%EndExpansion
 The organ pipe shown is closed at one end so we expect%
 \begin{equation}
-f_{n}=n\frac{v}{4L}\qquad n=1,3,5\ldots
-\end{equation}
+f_{n}=n\frac{v}{4L}\qquad n=1,3,5\ldots 
+\end{equation}%
 Measuring the pipe, and assuming about $20\unit{%
 %TCIMACRO{\U{2103}}%
 %BeginExpansion
@@ -4086,7 +4089,7 @@ There is a detail we have ignored in our analysis, the width of the pipe
 matters a little. I will include a fudge factor to account for this. With
 the fudge factor, the wavelength is 
 \begin{eqnarray*}
-\lambda _{1} &=&4\left( L+0.6R\right) \\
+\lambda _{1} &=&4\left( L+0.6R\right)  \\
 &=&178.\,\allowbreak 4\unit{cm}
 \end{eqnarray*}%
 then our fundamental frequency is 
@@ -4462,7 +4465,7 @@ at this point. Thus
 But $\Delta \phi _{o}$ is not the only term in our equation, we also have to
 remember the path difference. The part of the wave that entered the polymer
 travels farther. If that path difference, $\Delta r,$ is just right we can
-get destructive interfearance. For the $m=0$ case 
+get destructive interference. For the $m=0$ case 
 \begin{equation*}
 \Delta \phi =\left( \frac{2\pi }{\lambda }\Delta r\right) =\left( 2\left(
 0\right) +1\right) \pi =\pi
@@ -4749,21 +4752,6 @@ conditions we have.
 
 \section{Single frequency interference in more than one dimension}
 
-%TCIMACRO{%
-%\TeXButton{Two speaker demo}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Two speaker demo}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Two speaker demo}
-\end{minipage}
-}%
-%EndExpansion
 Suppose I put two speakers facing each other $3\unit{m}$ apart. And suppose
 I\ want four nodes in the middle so we can easily find them. Then I will
 need 
@@ -4781,23 +4769,8 @@ f &=&\frac{343\unit{m}/\unit{s}}{\frac{3}{2}\unit{m}.} \\
 &=&228.\,\allowbreak 67\unit{Hz}
 \end{eqnarray*}%
 If $\Delta \phi _{o}=0$ the nodes should be spaced symmetrically between the
-two speakers. 
-%TCIMACRO{%
-%\TeXButton{Are the nodes symmetrically placed?}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Are the nodes symmetrically placed?}
-%\end{minipage}
-%}} }%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Are the nodes symmetrically placed?}
-\end{minipage}
-}
-%EndExpansion
-The rest of the phase comes from the difference in starting positions.
+two speakers. The rest of the phase comes from the difference in starting
+positions.
 
 But what happens if our waves don't travel along the same line? Suppose you
 are at a dance, and there are two speakers. Further suppose that you are
@@ -5054,26 +5027,11 @@ the wave goes by is called the \emph{beat frequency}. The red envelope
 (solid heavy line in the last figure) has a frequency of%
 \begin{equation*}
 f_{A}=\frac{f_{1}-f_{2}}{2}
-\end{equation*}
+\end{equation*}%
 So our beat frequency is 
 \begin{equation*}
-f_{beat}=\left\vert f_{1}-f_{2}\right\vert
-\end{equation*}%
-%TCIMACRO{%
-%\TeXButton{Question 223.9.2}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.9.2}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.9.2}
-\end{minipage}
-}%
-%EndExpansion
+f_{beat}=\left\vert f_{1}-f_{2}\right\vert 
+\end{equation*}
 
 \section{Non Sinusoidal Waves}
 
@@ -5182,21 +5140,6 @@ The rich sound of the brass instrument includes more harmonics and this is
 achieved by the shape of the instrument (the flared bell is a big part of
 making these extra harmonics and providing the rich trumpet sound).
 
-%TCIMACRO{%
-%\TeXButton{Spectrometer Demo}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Spectrometer Demo}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Spectrometer Demo}
-\end{minipage}
-}%
-%EndExpansion
 We have a tool that you can download to your PC to detect the mix of
 harmonics of musical instruments, or mechanical systems. In music, the
 different harmonics are called \emph{partials} because they make up part of
@@ -6332,21 +6275,6 @@ Figure}{\special{language "Scientific Word";type
 1.887in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
 'SAPYR841.wmf';tempfile-properties "XPR";}}
 
-%TCIMACRO{%
-%\TeXButton{Rainbow Glasses}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Rainbow Glasses}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Rainbow Glasses}
-\end{minipage}
-}%
-%EndExpansion
 A diffraction grating is an optical element with many many parallel slits
 spaced very close together. Here is a typical diffraction grating created by
 etching lines in a piece of glass. The etchings scatter the light, but the
@@ -6358,9 +6286,9 @@ Scapha)}}}{}{Figure}{\special{language "Scientific Word";type
 "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
 1.9986in;height 1.625in;depth 0pt;original-width 2.4474in;original-height
 1.9847in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
-'SAPYR842.wmf';tempfile-properties "XPR";}}A typical grating might have $%
-5000 $ slits per unit centimeter. You have probably used a diffraction
-grating to see rainbow colors in a beginning science class.
+'SAPYR842.wmf';tempfile-properties "XPR";}}A typical grating might have $5000
+$ slits per unit centimeter. You have probably used a diffraction grating to
+see rainbow colors in a beginning science class.
 
 If we use $5000\frac{\text{slits}}{\unit{cm}}$ for an example, we see that
 the slit spacing is 
@@ -6411,22 +6339,7 @@ TRUE;display "USEDEF";valid_file "T";width 3.5958in;height 1.7465in;depth
 We could then record the intensity of the transmitted light as a function of
 angle, which is equivalent to $\lambda .$ We can again generate a spectrum.
 This is a traditional way to build a spectrometer and many such devices are
-available today.%
-%TCIMACRO{%
-%\TeXButton{Demo a student spectrometer with a gas tube}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Demo a student spectrometer with a gas tube}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Demo a student spectrometer with a gas tube}
-\end{minipage}
-}%
-%EndExpansion
+available today.
 
 \subsection{Resolving power of diffraction gratings}
 
@@ -6610,24 +6523,9 @@ and in general at%
 3\ldots  \label{Single Slit minima}
 \end{equation}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.11.1}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.11.1}
-%\end{minipage}
-%}} }%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.11.1}
-\end{minipage}
-}
-%EndExpansion
 We only found the dark spots in a single slit intensity pattern. The bright
 spots must be in between the dark spots, but finding them is a little more
-trouble than finding the dark spots. Do do this, let's lok at the intensity
+trouble than finding the dark spots. Do do this, let's look at the intensity
 function for a single slit interference pattern.
 
 \subsection{Intensity of the single-slit pattern}
@@ -6818,21 +6716,6 @@ and a width of
 \begin{equation}
 w=2.44\frac{\lambda }{D}L
 \end{equation}%
-%TCIMACRO{%
-%\TeXButton{Airy Pattern Demo}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Airy Pattern Demo}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Airy Pattern Demo}
-\end{minipage}
-}%
-%EndExpansion
 The picture in most books is a little bit deceptive. The pattern looks a
 little like the slit pattern. But the secondary maxima are actually very
 small for the circular aperture case. Much smaller than the secondary maxima
@@ -6889,21 +6772,6 @@ Figure}{\special{language "Scientific Word";type
 
 \section{Interferometers}
 
-%TCIMACRO{%
-%\TeXButton{Interferomenter Demo}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Interferomenter Demo}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Interferomenter Demo}
-\end{minipage}
-}%
-%EndExpansion
 Before we leave wave properties of physics and go to the ray approximation,
 we should study some devices that use interference.
 
@@ -6946,36 +6814,6 @@ and then back from the mirror (it travels the path twice!).
 
 \subsection{Holography}
 
-%TCIMACRO{%
-%\TeXButton{Hologram demo-picture of woman}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Hologram demo-picture of woman}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Hologram demo-picture of woman}
-\end{minipage}
-}%
-%EndExpansion
-%TCIMACRO{%
-%\TeXButton{Hologram demo-chess pieces}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Hologram demo-chess pieces}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Hologram demo-chess pieces}
-\end{minipage}
-}%
-%EndExpansion
 You may have seen holograms in the past. We have enough understanding of
 light to understand how they are generated now.
 
@@ -7054,21 +6892,6 @@ Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
 
 \section{Transition to the ray model}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.12.4}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.12.4}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.12.4}
-\end{minipage}
-}%
-%EndExpansion
 In the next figure, two waves of different wavelets go through a single
 opening. The wave representing the central maximum is shown in each case,
 but not the secondary maxima.\FRAME{dhF}{2.7951in}{2.776in}{0pt}{}{}{Figure}{%
@@ -7463,22 +7286,7 @@ randomly
 0pt;original-width 1.7936in;original-height 1.388in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
 'SAPYR853.wmf';tempfile-properties "XPR";}}This is called \emph{diffuse}
-reflection%
-%TCIMACRO{%
-%\TeXButton{Question 223.13.6}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.13.6}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.13.6}
-\end{minipage}
-}%
-%EndExpansion
+reflection.
 
 This difference can be seen in real life\FRAME{dhF}{3.8441in}{1.1718in}{0in}{%
 }{}{Figure}{\special{language "Scientific Word";type
@@ -7610,22 +7418,7 @@ NASA)}}}{}{Figure}{\special{language "Scientific Word";type
 'SAPYR858.wmf';tempfile-properties "XPR";}}We use this optical corner cube
 array to reflect light off of the moon. The time it takes the light to go to
 the moon and back can be converted into an Earth-Moon distance for
-monitoring how close the moon is to the Earth.%
-%TCIMACRO{%
-%\TeXButton{Question 223.13.9}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.13.9}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.13.9}
-\end{minipage}
-}%
-%EndExpansion
+monitoring how close the moon is to the Earth.
 
 \section{Reflections, Objects, and seeing}
 
@@ -7816,22 +7609,6 @@ We expect the same behavior from light.\FRAME{dhF}{2.8236in}{2.0237in}{0pt}{%
 side of the wave hits the slower (green) material first and slows down. The
 rest of the wave front moves quicker. The result is the turning of the wave.
 
-%TCIMACRO{%
-%\TeXButton{Question 223.14.1}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.14.1}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.14.1}
-\end{minipage}
-}%
-%EndExpansion
-
 \subsection{Change of wavelength}
 
 We have found that when a wave enters a material, its speed may change. But
@@ -7882,37 +7659,6 @@ and we again have our solution for the wavelength in the material%
 which agrees with our previous analysis.
 
 \subsection{Index of refraction and Snell's Law}
-
-%TCIMACRO{%
-%\TeXButton{Question 223.14.2}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.14.2}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.14.2}
-\end{minipage}
-}%
-%EndExpansion
-%TCIMACRO{%
-%\TeXButton{Question 223.14.3}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.14.3}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.14.3}
-\end{minipage}
-}%
-%EndExpansion
 
 Because the equation%
 \begin{equation*}
@@ -7969,55 +7715,10 @@ refraction from
 \begin{equation}
 n=\frac{\lambda }{\lambda _{material}}
 \end{equation}%
-where $\lambda _{material}$ is the wavelength in the material.%
-%TCIMACRO{%
-%\TeXButton{Question 223.14.4}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.14.4}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.14.4}
-\end{minipage}
-}%
-%EndExpansion
-%TCIMACRO{%
-%\TeXButton{Question 223.14.5}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.14.5}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.14.5}
-\end{minipage}
-}%
-%EndExpansion
+where $\lambda _{material}$ is the wavelength in the material.
 
 \section{Total Internal Reflection}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.14.6}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.14.6}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.14.6}
-\end{minipage}
-}%
-%EndExpansion
 Up to now we have assumed that light was coming from a region of low index
 of refraction into a region of high index of refraction. We should pause to
 look at what can happen if we go the other way.\FRAME{dhF}{3.0744in}{2.5815in%
@@ -8069,7 +7770,7 @@ _{1}=\allowbreak 0.850\,91\unit{rad}$ $(48.\,\allowbreak 754\unit{%
 this gives%
 \begin{eqnarray}
 \theta _{2} &=&\sin ^{-1}\left( n\sin \left( \allowbreak 0.850\,91\right)
-\right)  \notag \\
+\right)   \notag \\
 &=&1.\,\allowbreak 570\,8\unit{rad} \\
 &=&90\unit{%
 %TCIMACRO{\U{b0}}%
@@ -8078,27 +7779,11 @@ this gives%
 %EndExpansion
 }  \notag
 \end{eqnarray}%
-The light skims along the edge of the water!%
-%TCIMACRO{%
-%\TeXButton{Internal Reflection Demo}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Internal Reflection Demo}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Internal Reflection Demo}
-\end{minipage}
-}%
-%EndExpansion
-\FRAME{dhF}{2.3756in}{1.9251in}{0pt}{}{}{Figure}{\special{language
-"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
-"USEDEF";valid_file "T";width 2.3756in;height 1.9251in;depth
-0pt;original-width 2.3359in;original-height 1.887in;cropleft "0";croptop
-"1";cropright "1";cropbottom "0";tempfilename
+The light skims along the edge of the water!\FRAME{dhF}{2.3756in}{1.9251in}{%
+0pt}{}{}{Figure}{\special{language "Scientific Word";type
+"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
+2.3756in;height 1.9251in;depth 0pt;original-width 2.3359in;original-height
+1.887in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
 'SAPYR85P.wmf';tempfile-properties "XPR";}}We can find the value of $\theta
 _{1}$ that makes this happen without graphing. Set $\theta _{2}=90\unit{%
 %TCIMACRO{\U{b0}}%
@@ -8124,7 +7809,7 @@ n_{1}\sin \theta _{1}=\sin \left( 90\unit{%
 \end{equation*}%
 so then $\theta _{1}$ is given by%
 \begin{equation}
-\theta _{1}=\theta _{c}\equiv \sin ^{-1}\left( \frac{1}{n}\right)
+\theta _{1}=\theta _{c}\equiv \sin ^{-1}\left( \frac{1}{n}\right) 
 \end{equation}%
 We give this value of $\theta _{1}$ a special name. It is the \emph{critical
 angle} for internal reflection. But what happens if we go farther than this (%
@@ -8142,52 +7827,7 @@ sides of a fish tank appear to be mirrored when you look through the front.
 diamonds) sparkle. They capture the light with facets that are cut at angles
 that create total internal reflection. The light that enters the gem comes
 back out the front (We will study how to make the pretty colored sparkles
-next time).%
-%TCIMACRO{%
-%\TeXButton{Question 223.14.7}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.14.7}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.14.7}
-\end{minipage}
-}%
-%EndExpansion
-%TCIMACRO{%
-%\TeXButton{Question 223.14.8}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.14.8}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.14.8}
-\end{minipage}
-}%
-%EndExpansion
-%TCIMACRO{%
-%\TeXButton{Question 223.14.9}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.14.9}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.14.9}
-\end{minipage}
-}%
-%EndExpansion
+next time).
 
 \subsection{Fiber Optics}
 
@@ -8208,21 +7848,6 @@ TRUE;display "USEDEF";valid_file "T";width 3.4662in;height 1.535in;depth
 "1";cropright "1";cropbottom "0";tempfilename
 'SAPYR85S.wmf';tempfile-properties "XPR";}}
 
-%TCIMACRO{%
-%\TeXButton{Giant Fiber Demo}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Giant Fiber Demo}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Giant Fiber Demo}
-\end{minipage}
-}%
-%EndExpansion
 Modern fibers don't always have a hard boundary. The fibers have a gradual
 change in index of refraction that changes the direction of the light
 gradually. This keeps the light in the fiber but tends to direct along the
@@ -8233,27 +7858,12 @@ with different index material.
 
 \section{Images Formed by Refraction}
 
-Let's think about what an image is.%
-%TCIMACRO{%
-%\TeXButton{Make Images with Lens Demo}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Make Images with Lens Demo}
-%\end{minipage}
-%}} }%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Make Images with Lens Demo}
-\end{minipage}
-}
-%EndExpansion
-Take a piece of paper and a lens, and hold up the lens is a darkened room
-that has some bright object in it. Move the lens or the paper back and
-forth, and at just the right distance, a miniature picture of the bright
-object will appear. We should think about what the word \textquotedblleft
-picture\textquotedblright\ means in this sense.
+Let's think about what an image is. Take a piece of paper and a lens, and
+hold up the lens is a darkened room that has some bright object in it. Move
+the lens or the paper back and forth, and at just the right distance, a
+miniature picture of the bright object will appear. We should think about
+what the word \textquotedblleft picture\textquotedblright\ means in this
+sense.
 
 \FRAME{dhF}{2.6835in}{2.0237in}{0pt}{}{}{Figure}{\special{language
 "Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
@@ -8332,25 +7942,10 @@ distance like $s,$ because it appears to be where the rays come from, but it
 is a different distance because of the refraction of the rays. So to make it
 look different we put a prime mark on it.
 
-%TCIMACRO{%
-%\TeXButton{Do this math, you will circle back to this}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Do this math, you will circle back to this}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Do this math, you will circle back to this}
-\end{minipage}
-}%
-%EndExpansion
 We can find where the image is $\left( s^{\prime }\right) $ knowing $s.$ We
 can see from the figure that%
 \begin{eqnarray*}
-\ell &=&s\tan \theta _{1} \\
+\ell  &=&s\tan \theta _{1} \\
 &=&s^{\prime }\tan \theta _{2}
 \end{eqnarray*}%
 so%
@@ -8410,22 +8005,7 @@ rays.
 "USEDEF";valid_file "T";width 4.3613in;height 2.2745in;depth
 0pt;original-width 4.3102in;original-height 2.2347in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
-'SAPYR85Y.wmf';tempfile-properties "XPR";}}%
-%TCIMACRO{%
-%\TeXButton{Question 223.15.1}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.15.1}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.15.1}
-\end{minipage}
-}%
-%EndExpansion
+'SAPYR85Y.wmf';tempfile-properties "XPR";}}
 
 Who hasn't played with a prism? We immediately recognize a rainbow. But why
 does the prism make a rainbow? The secret lies in the nature of the
@@ -8469,22 +8049,6 @@ TRUE;display "USEDEF";valid_file "T";width 2.4379in;height 1.2816in;depth
 We call the change in direction measured from the original direction of
 travel, $\delta ,$ the \emph{angle of deviation}. The colors we can see are
 called the visible spectrum.
-
-%TCIMACRO{%
-%\TeXButton{Question 223.15.2}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.15.2}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.15.2}
-\end{minipage}
-}%
-%EndExpansion
 
 Let's look at a natural rainbow. The dispersion is caused buy small droplets
 of water. The white sunlight enters the drop and is dispersed. It bounces
@@ -8630,7 +8194,7 @@ light, we can start to understand lens systems and their challenges.
 \section{Ray Diagrams for Lenses}
 
 Before we do a lot of math to describe how lenses work, lets think about our
-early childhood experiences. You may have burned things with a magnifyin g
+early childhood experiences. You may have burned things with a magnifying
 glass. Using the idea of a ray diagram, here is what happens.\FRAME{dhF}{%
 3.8017in}{2.2329in}{0pt}{}{}{Figure}{\special{language "Scientific
 Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
@@ -8770,22 +8334,6 @@ voted on this) we say that an upside down image has a negative
 magnification. You just have to memorize this, there is no obvious reason
 for this except it is mathematically convenient.
 
-%TCIMACRO{%
-%\TeXButton{Question 223.15.4}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.15.4}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.15.4}
-\end{minipage}
-}%
-%EndExpansion
-
 \subsection{Thin Lenses}
 
 It is time to introduce another approximation Suppose the lens is very thin.
@@ -8793,22 +8341,7 @@ Then ray number $2$ would travel through the lens with no deviation at all.
 This is sometimes a good approximation, and will make the math easier, so
 for this class we will often use it. But there are times when it really does
 not work, so in practice you have to be careful. PH375 goes beyond the thin
-lens formulation.%
-%TCIMACRO{%
-%\TeXButton{Question 223.15.3}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.15.3}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.15.3}
-\end{minipage}
-}%
-%EndExpansion
+lens formulation.
 
 We should pause to realize that our new understanding of Snell's law tells
 us that we have a problem with our lenses. The index of refraction is
@@ -9170,52 +8703,7 @@ that gets the light from the object. \FRAME{dtbpF}{4.2717in}{1.5451in}{0pt}{%
 "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
 4.2717in;height 1.5451in;depth 0pt;original-width 4.324in;original-height
 1.5451in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
-'SAPYR96L.wmf';tempfile-properties "XPR";}}%
-%TCIMACRO{%
-%\TeXButton{Question 223.16.2}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.165.2}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.165.2}
-\end{minipage}
-}%
-%EndExpansion
-%TCIMACRO{%
-%\TeXButton{Question 223.16.3}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.165.3}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.165.3}
-\end{minipage}
-}%
-%EndExpansion
-%TCIMACRO{%
-%\TeXButton{Question 223.16.4}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.165.4}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.165.4}
-\end{minipage}
-}%
-%EndExpansion
+'SAPYR96L.wmf';tempfile-properties "XPR";}}
 
 We could go through the entire derivation and switch the indices of
 refraction (in effect, go along the same path, but going backwards). It
@@ -9317,38 +8805,22 @@ a dot, so our image will also be a dot. \FRAME{dhF}{4.0542in}{2.4561in}{0pt}{%
 "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
 4.0542in;height 2.4561in;depth 0pt;original-width 4.0041in;original-height
 2.4146in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
-'SAPYR96N.wmf';tempfile-properties "XPR";}}%
-%TCIMACRO{%
-%\TeXButton{Question 223.16.6}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.165.6}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.165.6}
-\end{minipage}
-}%
-%EndExpansion
-By now you have realized that this is not as boring as it sounds if we
-consider any object can be considered as a collection of dots.\FRAME{dhFU}{%
-1.7184in}{2.2329in}{0pt}{\Qcb{The Pont Neuf by Hippolyte Petitjean.
-Petitjean was a Pointillist, one who painted with dots of paint instead of
-continuous application of paint. This illustrates the thought that all
-objects can be though of collections of small points that reflect or emit
-light. So we can consider an optical system by considering individual points
-of light and how the system reacts to those points of light. (Image in the
-Public Domain)}}{\Qlb{Point Neuf}}{Figure}{\special{language "Scientific
-Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
-"T";width 1.7184in;height 2.2329in;depth 0pt;original-width
-1.6821in;original-height 2.1923in;cropleft "0";croptop "1";cropright
-"1";cropbottom "0";tempfilename 'SAPYR96O.wmf';tempfile-properties "XPR";}}%
-So we can consider anything as a collection of dots, and work out our
-formulas for a dot (because it is easier to think about just one dot at a
-time).
+'SAPYR96N.wmf';tempfile-properties "XPR";}}By now you have realized that
+this is not as boring as it sounds if we consider any object can be
+considered as a collection of dots.\FRAME{dhFU}{1.7184in}{2.2329in}{0pt}{%
+\Qcb{The Pont Neuf by Hippolyte Petitjean. Petitjean was a Pointillist, one
+who painted with dots of paint instead of continuous application of paint.
+This illustrates the thought that all objects can be though of collections
+of small points that reflect or emit light. So we can consider an optical
+system by considering individual points of light and how the system reacts
+to those points of light. (Image in the Public Domain)}}{\Qlb{Point Neuf}}{%
+Figure}{\special{language "Scientific Word";type
+"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
+1.7184in;height 2.2329in;depth 0pt;original-width 1.6821in;original-height
+2.1923in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'SAPYR96O.wmf';tempfile-properties "XPR";}}So we can consider anything as a
+collection of dots, and work out our formulas for a dot (because it is
+easier to think about just one dot at a time).
 
 Light enters at a spherical surface on the left hand side. We use a point
 object located at $S$ on the principal axis, and trace two rays. The ray
@@ -10429,7 +9901,7 @@ is called farsightedness or hyperopia. It is corrected with a converging lens
 
 \subsection{Diopters}
 
-Eye glass perscriptions use a different unit of measure to describe how they
+Eye glass prescriptions use a different unit of measure to describe how they
 bend light. The unit is the \emph{diopter} and it is equal one over the
 focal length%
 \begin{equation}
@@ -10464,7 +9936,7 @@ intelligence gathering.
 
 Magnification is so useful to scientists and engineers that we have designed
 many optical systems to do this job. We will look at three basic types, the
-simple magnifier, the microscopetelescope, and the telescope.
+simple magnifier, the microscope, and the telescope.
 
 \subsection{Simple Magnifier}
 
@@ -10607,9 +10079,8 @@ other instruments that magnify.
 To see things that are very small, we add another lens to our simple
 magnifier. We will place this lens near the object. Since this new lens is
 near the object, let's give it the name \emph{objective lens} or just \emph{%
-objective}. We gwill keep a simple magnifier and place it near the eye.
-Since our simple magnifier is near our eye, let's call it the \emph{eyepiece}%
-.
+objective}. We will keep a simple magnifier and place it near the eye. Since
+our simple magnifier is near our eye, let's call it the \emph{eyepiece}.
 
 The objective will have a very short focal length. The eyepiece will have a
 longer focal length (a few centimeters).\FRAME{dtbpF}{5.2146in}{3.7502in}{0in%
@@ -10698,7 +10169,7 @@ This ray is bent by the objective to pass through $f_{e.}$ Then
 \tan \theta =\frac{h^{\prime }}{f_{e}}\approx \theta
 \end{equation}
 
-A good extimate for the magnification is then%
+A good estimate for the magnification is then%
 \begin{equation}
 m=\frac{\theta }{\theta _{o}}=\frac{\frac{h^{\prime }}{f_{e}}}{-\frac{%
 h^{\prime }}{f_{o}}}=-\frac{f_{o}}{f_{e}}
@@ -10869,135 +10340,26 @@ be able to see the lettering on the car to tell what model it is, or you may
 not be able to distinguish between the gem stones in Aunt Matilda's necklace
 because the image is too blurry to see these features clearly).
 
-%TCIMACRO{%
-%\TeXButton{Question 223.19.2}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.19.2}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.19.2}
-\end{minipage}
-}%
-%EndExpansion
+In the next figure you can see two easily resolved intensity patterns, then
+two that can be resolved using Rayleigh's criterion, and finally a more
+modern astronomical resolution criterion made by a researcher called
+Sparrow. Finally there is figure with two intensity patterns that would not
+be resolvable (would look like just one point of light).
 
-In the next three figures you can see two easily resolved intensity
-patterns, then two that can be resolved using Rayleigh's criterion, and
-finally a more modern astronomical resolution criterion made by a researcher
-called Sparrow. Finally there is figure with two intensity patterns that
-would not be resolvable (would look like just one point of light).\FRAME{%
-dtbpFUX}{4.9061in}{1.8663in}{0pt}{\Qcb{{\protect\small Pattern from two
-circular sources.}}}{}{Plot}{\special{language "Scientific Word";type
-"MAPLEPLOT";width 4.9061in;height 1.8663in;depth 0pt;display
-"USEDEF";plot_snapshots TRUE;mustRecompute FALSE;lastEngine "MuPAD";xmin
-"-10";xmax "10";xviewmin "-10";xviewmax "10";yviewmin "1.000100E-6";yviewmax
-"1.000100";viewset"XY";rangeset"X";plottype 4;axesFont "Times New
-Roman,12,0000000000,useDefault,normal";numpoints 100;plotstyle
-"patch";axesstyle "normal";axestips FALSE;xis \TEXUX{JQSUB1ESUB};var1name
-\TEXUX{$J_{1}$};function \TEXUX{$\frac{1}{\allowbreak 0.25}\left( \text{
-}\frac{J_{1}\left( r+3.83\right) }{r+3.83}\right) ^{2}$};linecolor
-"maroon";linestyle 1;pointstyle "point";linethickness 1;lineAttributes
-"Solid";var1range "-10,10";num-x-gridlines 100;curveColor
-"[flat::RGB:0x00800000]";curveStyle "Line";function
-\TEXUX{$\frac{1}{\allowbreak 0.25}\left( \text{ }\frac{J_{1}\left(
-r-3.83\right) }{r-3.83}\right) ^{2}$};linecolor "blue";linestyle
-1;pointstyle "point";linethickness 1;lineAttributes "Solid";var1range
-"-10,10";num-x-gridlines 100;curveColor "[flat::RGB:0x000000ff]";curveStyle
-"Line";function \TEXUX{$\frac{1}{\allowbreak 0.25}\left( \text{
-}\frac{J_{1}\left( r+3.83\right) }{r+3.83}\right) ^{2}+\frac{1}{\allowbreak
-0.25}\left( \text{ }\frac{J_{1}\left( r-3.83\right) }{r-3.83}\right)
-^{2}$};linecolor "magenta";linestyle 1;pointstyle "point";linethickness
-3;lineAttributes "Solid";var1range "-10,10";num-x-gridlines 100;curveColor
-"[flat::RGB:0x00800080]";curveStyle "Line";valid_file "T";tempfilename
-'SAPYR97T.wmf';tempfile-properties "XPR";}}\FRAME{dtbpFUX}{4.9061in}{1.7936in%
-}{0pt}{\Qcb{{\protect\small Rayleigh Criteria: Pattern from two circular
-soruces where the sources are close enough that the maximum from one pattern
-is placed on the minimum of the other. Lord Rayleigh gave this as the
-criteria for just barily being resolved.}}}{}{Plot}{\special{language
-"Scientific Word";type "MAPLEPLOT";width 4.9061in;height 1.7936in;depth
-0pt;display "USEDEF";plot_snapshots TRUE;mustRecompute FALSE;lastEngine
-"MuPAD";xmin "-10";xmax "10";xviewmin "-10";xviewmax "10";yviewmin
-"1.000100E-6";yviewmax "1.000100";viewset"XY";rangeset"X";plottype
-4;axesFont "Times New Roman,12,0000000000,useDefault,normal";numpoints
-100;plotstyle "patch";axesstyle "normal";axestips FALSE;xis
-\TEXUX{JQSUB1ESUB};var1name \TEXUX{$J_{1}$};function
-\TEXUX{$\frac{1}{\allowbreak 0.25}\left( \text{ }\frac{J_{1}\left(
-r+2\right) }{r+2}\right) ^{2}$};linecolor "maroon";linestyle 1;pointstyle
-"point";linethickness 1;lineAttributes "Solid";var1range
-"-10,10";num-x-gridlines 100;curveColor "[flat::RGB:0x00800000]";curveStyle
-"Line";function \TEXUX{$\frac{1}{\allowbreak 0.25}\left( \text{
-}\frac{J_{1}\left( r-2\right) }{r-2}\right) ^{2}$};linecolor
-"blue";linestyle 1;pointstyle "point";linethickness 1;lineAttributes
-"Solid";var1range "-10,10";num-x-gridlines 100;curveColor
-"[flat::RGB:0x000000ff]";curveStyle "Line";function
-\TEXUX{$\frac{1}{\allowbreak 0.25}\left( \text{ }\frac{J_{1}\left(
-r+2\right) }{r+2}\right) ^{2}+\frac{1}{\allowbreak 0.25}\left( \text{
-}\frac{J_{1}\left( r-2\right) }{r-2}\right) ^{2}$};linecolor
-"magenta";linestyle 1;pointstyle "point";linethickness 3;lineAttributes
-"Solid";var1range "-10,10";num-x-gridlines 100;curveColor
-"[flat::RGB:0x00800080]";curveStyle "Line";valid_file "T";tempfilename
-'SAPYR97U.wmf';tempfile-properties "XPR";}}\FRAME{dtbpFUX}{4.9061in}{1.7936in%
-}{0pt}{\Qcb{Sparrow Criteria: This is a less concervative resolution
-criteria than Rayleigh. When the intenisty pattern is flat on the top, there
-must be two sources. This criterial is used in astronomy.}}{}{Plot}{\special%
-{language "Scientific Word";type "MAPLEPLOT";width 4.9061in;height
-1.7936in;depth 0pt;display "USEDEF";plot_snapshots TRUE;mustRecompute
-FALSE;lastEngine "MuPAD";xmin "-10";xmax "10";xviewmin "-10";xviewmax
-"10";yviewmin "1.000100E-6";yviewmax
-"2.000100";viewset"XY";rangeset"X";plottype 4;axesFont "Times New
-Roman,12,0000000000,useDefault,normal";numpoints 100;plotstyle
-"patch";axesstyle "normal";axestips FALSE;xis \TEXUX{JQSUB1ESUB};var1name
-\TEXUX{$J_{1}$};function \TEXUX{$\frac{1}{\allowbreak 0.25}\left( \text{
-}\frac{J_{1}\left( r+1.55\right) }{r+1.55}\right) ^{2}$};linecolor
-"maroon";linestyle 1;pointstyle "point";linethickness 1;lineAttributes
-"Solid";var1range "-10,10";num-x-gridlines 100;curveColor
-"[flat::RGB:0x00800000]";curveStyle "Line";function
-\TEXUX{$\frac{1}{\allowbreak 0.25}\left( \text{ }\frac{J_{1}\left(
-r-1.55\right) }{r-1.55}\right) ^{2}$};linecolor "blue";linestyle
-1;pointstyle "point";linethickness 1;lineAttributes "Solid";var1range
-"-10,10";num-x-gridlines 100;curveColor "[flat::RGB:0x000000ff]";curveStyle
-"Line";function \TEXUX{$\frac{1}{\allowbreak 0.25}\left( \text{
-}\frac{J_{1}\left( r+1.55\right) }{r+1.55}\right) ^{2}+\frac{1}{\allowbreak
-0.25}\left( \text{ }\frac{J_{1}\left( r-1.55\right) }{r-1.55}\right)
-^{2}$};linecolor "magenta";linestyle 1;pointstyle "point";linethickness
-3;lineAttributes "Solid";var1range "-10,10";num-x-gridlines 100;curveColor
-"[flat::RGB:0x00800080]";curveStyle "Line";valid_file "T";tempfilename
-'SAPYR97V.wmf';tempfile-properties "XPR";}}\FRAME{dtbpFUX}{4.9061in}{1.7936in%
-}{0pt}{\Qcb{{\protect\small Two circular sorces unresolved.}}}{}{Plot}{%
-\special{language "Scientific Word";type "MAPLEPLOT";width 4.9061in;height
-1.7936in;depth 0pt;display "USEDEF";plot_snapshots TRUE;mustRecompute
-FALSE;lastEngine "MuPAD";xmin "-10";xmax "10";xviewmin "-10";xviewmax
-"10";yviewmin "1.000100E-6";yviewmax
-"2.000100";viewset"XY";rangeset"X";plottype 4;axesFont "Times New
-Roman,12,0000000000,useDefault,normal";numpoints 100;plotstyle
-"patch";axesstyle "normal";axestips FALSE;xis \TEXUX{JQSUB1ESUB};var1name
-\TEXUX{$J_{1}$};function \TEXUX{$\frac{1}{\allowbreak 0.25}\left( \text{
-}\frac{J_{1}\left( r+1\right) }{r+1}\right) ^{2}$};linecolor
-"maroon";linestyle 1;pointstyle "point";linethickness 1;lineAttributes
-"Solid";var1range "-10,10";num-x-gridlines 100;curveColor
-"[flat::RGB:0x00800000]";curveStyle "Line";function
-\TEXUX{$\frac{1}{\allowbreak 0.25}\left( \text{ }\frac{J_{1}\left(
-r-1\right) }{r-1}\right) ^{2}$};linecolor "blue";linestyle 1;pointstyle
-"point";linethickness 1;lineAttributes "Solid";var1range
-"-10,10";num-x-gridlines 100;curveColor "[flat::RGB:0x000000ff]";curveStyle
-"Line";function \TEXUX{$\frac{1}{\allowbreak 0.25}\left( \text{
-}\frac{J_{1}\left( r+1\right) }{r+1}\right) ^{2}+\frac{1}{\allowbreak
-0.25}\left( \text{ }\frac{J_{1}\left( r-1\right) }{r-1}\right)
-^{2}$};linecolor "magenta";linestyle 1;pointstyle "point";linethickness
-3;lineAttributes "Solid";var1range "-10,10";num-x-gridlines 100;curveColor
-"[flat::RGB:0x00800080]";curveStyle "Line";valid_file "T";tempfilename
-'SAPYR97W.wmf';tempfile-properties "XPR";}}Here are our four cases again but
-with pictures that show what you would see in an image of the two light
-sources for each criterion. \FRAME{dtbpF}{3.5613in}{1.0793in}{0pt}{}{}{Figure%
-}{\special{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
-TRUE;display "USEDEF";valid_file "T";width 3.5613in;height 1.0793in;depth
-0pt;original-width 3.5146in;original-height 1.0456in;cropleft "0";croptop
+\FRAME{dtbpF}{2.8409in}{2.7899in}{0pt}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+"USEDEF";valid_file "T";width 2.8409in;height 2.7899in;depth
+0pt;original-width 2.7985in;original-height 2.7466in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
-'SAPYR97X.wmf';tempfile-properties "XPR";}}
+'SIOWJOJX.wmf';tempfile-properties "XPR";}}
+
+Here are our four cases again but with pictures that show what you would see
+in an image of the two light sources for each criterion. \FRAME{dtbpF}{%
+3.5613in}{1.0793in}{0pt}{}{}{Figure}{\special{language "Scientific
+Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
+"T";width 3.5613in;height 1.0793in;depth 0pt;original-width
+3.5146in;original-height 1.0456in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'SAPYR97X.wmf';tempfile-properties "XPR";}}
 
 From our equation we can see that we have better resolution if $D$ is
 bigger. This is why professional photographers use large lenses and not
@@ -11024,7 +10386,7 @@ application.
 So far we have claimed that light is a wave in an electromagnetic field. We
 talked about light waves being made in the electromagnetic field by moving
 charges. But we have not proved it this to be the case. We will find that it
-will take the rest of the semester to do so! We ned to start by looking at
+will take the rest of the semester to do so! We need to start by looking at
 charge and what makes charges move.
 
 But let's think about this conceptually and see if we can motivate our study.
@@ -11033,36 +10395,6 @@ We know that there is an electromagnetic spectrum, and that visible light is
 just a small part of that spectrum. Radio waves are also part of the
 spectrum of light.
 
-%TCIMACRO{%
-%\TeXButton{Question 223.19.3}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.19.3}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.19.3}
-\end{minipage}
-}%
-%EndExpansion
-%TCIMACRO{%
-%\TeXButton{PHET Radio Wave Applet}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{PHET Radio Wave Applet}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{PHET Radio Wave Applet}
-\end{minipage}
-}%
-%EndExpansion
 And we should review, how are radio waves produced? We know electricity is
 involved.
 
@@ -11086,73 +10418,12 @@ good evidence that those waves exist.
 Let's start with something we all know. Let's rub a balloon in someone's
 hair. If we do this we will find that the balloon sticks to the wall. Why?
 
-%TCIMACRO{%
-%\TeXButton{Baloon and 2 by 4 demo}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Baloon and 2 by 4 demo}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Baloon and 2 by 4 demo}
-\end{minipage}
-}%
-%EndExpansion
-%TCIMACRO{%
-%\TeXButton{Balloon on wall demo}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Balloon on wall demo}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Balloon on wall demo}
-\end{minipage}
-}%
-%EndExpansion
-%TCIMACRO{%
-%\TeXButton{Comb and bits of paper demo}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Comb and bits of paper demo}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Comb and bits of paper demo}
-\end{minipage}
-}%
-%EndExpansion
 We say the balloon and comb have become \emph{charged}. What does this mean?
 We will have to investigate this more as we learn more about how matter is
 structured, but for now let's assume charge is some property that provides
 this phenomena we have observed with the balloon (i.e. it sticks to the
 wall). Now lets try rubbing other things. We could rub two rubber or plastic
 rods.
-
-%TCIMACRO{%
-%\TeXButton{Glass and Rubber Rod Demo}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Glass and Rubber Rod Demo}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Glass and Rubber Rod Demo}
-\end{minipage}
-}%
-%EndExpansion
 
 \FRAME{dhFU}{3.2309in}{1.3171in}{0pt}{\Qcb{Two charged rubber rods are
 placed close together. The rods repel each other.}}{\Qlb{rubber_rods}}{Figure%
@@ -11210,59 +10481,14 @@ We now have reason to believe that there are at least two types of charge,
 one for rubber and one for glass. But are there more?
 
 Let's start by introducing a new object, only this time we won't rub it with
-anything.%
-%TCIMACRO{%
-%\TeXButton{No-rubbing demo}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{No-rubbing demo}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{No-rubbing demo}
-\end{minipage}
-}%
-%EndExpansion
+anything.
 
 Now this is strange. The new item is attracted to both rods! What is going
 on? Have we discovered a new type of charge, one that attracts the other two
 types we have found?
 
 Maybe, but maybe the explanation of this phenomena is a little different. To
-understand this, let's consider how charge moves around.%
-%TCIMACRO{%
-%\TeXButton{Question 223.19.4}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.19.4}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.19.4}
-\end{minipage}
-}%
-%EndExpansion
-%TCIMACRO{%
-%\TeXButton{Question 223.19.5}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.19.5}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.19.5}
-\end{minipage}
-}%
-%EndExpansion
+understand this, let's consider how charge moves around.
 
 \subsection{Movement of Charge}
 
@@ -11384,60 +10610,15 @@ We sometimes call the separation of charge in an insulator \emph{polarization%
 
 Let's start by introducing a new object, a salt shaker (my salt shaker is
 glass with a metal top). We will rub the salt shaker and see if it gets
-charged by placing it next to our charged rods.%
-%TCIMACRO{%
-%\TeXButton{Salt Shaker Demo}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Salt Shaker Demo}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Salt Shaker Demo}
-\end{minipage}
-}%
-%EndExpansion
+charged by placing it next to our charged rods.
 
 Now this is strange. We rubbed the object, but it was attracted to both rods
 as if there were no charge. We know glass can be charged. What is the
 problem?
 
-%TCIMACRO{%
-%\TeXButton{Question 223.19.6}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.19.6}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.19.6}
-\end{minipage}
-}%
-%EndExpansion
 It turns out that some materials allow charge carriers to flow through them.
 Our experience with the lighting in our house might suggest that metals will
-do this. Let's try some other metal objects and see what we find.%
-%TCIMACRO{%
-%\TeXButton{Metal Demo}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Metal Demo}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Metal Demo}
-\end{minipage}
-}%
-%EndExpansion
+do this. Let's try some other metal objects and see what we find.
 
 It seems that the atoms are not maintaining a charge separation in these
 metal atoms! Some materials allow charge carriers to move through them.
@@ -11520,28 +10701,12 @@ the conductor is neutralized.
 "USEDEF";valid_file "T";width 3.8674in;height 0.4895in;depth
 0pt;original-width 8.8522in;original-height 1.0974in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
-'SAPYR98C.wmf';tempfile-properties "XPR";}}%
-%TCIMACRO{%
-%\TeXButton{Scotch Tape Assignment}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Take home lab assignment (using Scotch Brand Tape)}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Take home lab assignment (using Scotch Brand Tape)}
-\end{minipage}
-}%
-%EndExpansion
-When we separate the rods, our conducting rod will have an excess of
-negative charge.\FRAME{dhF}{1.9649in}{0.4583in}{0pt}{}{}{Figure}{\special%
-{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
-TRUE;display "USEDEF";valid_file "T";width 1.9649in;height 0.4583in;depth
-0pt;original-width 4.4304in;original-height 1.0136in;cropleft "0";croptop
-"1";cropright "1";cropbottom "0";tempfilename
+'SAPYR98C.wmf';tempfile-properties "XPR";}}When we separate the rods, our
+conducting rod will have an excess of negative charge.\FRAME{dhF}{1.9649in}{%
+0.4583in}{0pt}{}{}{Figure}{\special{language "Scientific Word";type
+"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
+1.9649in;height 0.4583in;depth 0pt;original-width 4.4304in;original-height
+1.0136in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
 'SAPYR98D.wmf';tempfile-properties "XPR";}}
 
 Notice that there is something different in our study of this new force. In
@@ -11651,21 +10816,6 @@ remains unaffected.
 
 \section{Insulators and Conductors}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.20.5}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.20.5}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.20.5}
-\end{minipage}
-}%
-%EndExpansion
 Let's return to charges and atoms. We have an intuitive feeling for what is
 a conductor and what is an insulator, but let's see why conductors act the
 way they do.
@@ -11822,38 +10972,8 @@ A mental picture for this might be as shown in the next figure.
 "1";cropright "1";cropbottom "0";tempfilename
 'SAPYR98N.wmf';tempfile-properties "XPR";}}The insulator atoms keep their
 valence electrons bound to the nuclei of the atoms. But for a conductor, the
-valence electrons are free to travel from atom to atom.%
-%TCIMACRO{%
-%\TeXButton{Question 223.20.6}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.20.6}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.20.6}
-\end{minipage}
-}%
-%EndExpansion
+valence electrons are free to travel from atom to atom.
 
-%TCIMACRO{%
-%\TeXButton{Question 223.20.7}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.20.7}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.20.7}
-\end{minipage}
-}%
-%EndExpansion
 In an isolated conductor, normally the charge is balanced, so the electrons
 may move but generally they stay near a nucleus. But if a conductor has
 extra electrons, the electrons that can move will move because they repel
@@ -11890,21 +11010,6 @@ the exterior, it will reach what we call \emph{electrostatic equilibrium}.
 All of the repelling electrical forces are in balance, so the charges come
 to rest with respect to the conductor.
 
-%TCIMACRO{%
-%\TeXButton{Question 223.20.8}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.20.8}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.20.8}
-\end{minipage}
-}%
-%EndExpansion
 We can remove the extra charge by creating a path for the charge to follow.
 Consider charging a balloon by rubbing it on your hair. Then you connect a
 wire to the balloon that is also connected to a metal water pipe. The charge
@@ -11951,31 +11056,16 @@ can define a negative center of charge and a positive center of charge.%
 "USEDEF";valid_file "T";width 2.3341in;height 1.8697in;depth
 0pt;original-width 2.2943in;original-height 1.8317in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
-'SAPYR98S.wmf';tempfile-properties "XPR";}}%
-%TCIMACRO{%
-%\TeXButton{Question 223.20.9}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.20.9}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.20.9}
-\end{minipage}
-}%
-%EndExpansion
-Notice that the negative and positive center of charge are not in the same
-place when the atom is polarized. We have a name for a pair of positive and
-negative charges that are separated by a distance, but that are still bound
-together. We call it an \emph{electric dipole.} Often we just draw the
-centers of charge joined by a line.\FRAME{dhF}{2.1664in}{1.535in}{0pt}{}{}{%
-Figure}{\special{language "Scientific Word";type
-"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-2.1664in;height 1.535in;depth 0pt;original-width 2.1266in;original-height
-1.4987in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'SAPYR98S.wmf';tempfile-properties "XPR";}}Notice that the negative and
+positive center of charge are not in the same place when the atom is
+polarized. We have a name for a pair of positive and negative charges that
+are separated by a distance, but that are still bound together. We call it
+an \emph{electric dipole.} Often we just draw the centers of charge joined
+by a line.\FRAME{dhF}{2.1664in}{1.535in}{0pt}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+"USEDEF";valid_file "T";width 2.1664in;height 1.535in;depth
+0pt;original-width 2.1266in;original-height 1.4987in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
 'SAPYR98T.wmf';tempfile-properties "XPR";}}Using this we can explain why
 humidity affects our last lecture experiments so much. The water molecule
 has two hydrogen atoms and one oxygen atom. The covalent bond between the
@@ -11983,9 +11073,9 @@ oxygen and hydrogen atoms forms when the oxygen \textquotedblleft
 shares\textquotedblright\ the hydrogen's electrons. The electrons from the
 hydrogen atoms spend their time with the oxygen atom making one side of the
 molecule more positive and the other side more negative.\FRAME{dtbpF}{%
-1.8559in}{1.6864in}{0in}{}{}{Figure}{\special{language "Scientific
+1.8559in}{1.6864in}{0pt}{}{}{Figure}{\special{language "Scientific
 Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
-"T";width 1.8559in;height 1.6864in;depth 0in;original-width
+"T";width 1.8559in;height 1.6864in;depth 0pt;original-width
 1.8187in;original-height 1.6501in;cropleft "0";croptop "1";cropright
 "1";cropbottom "0";tempfilename 'SAPYR98U.wmf';tempfile-properties "XPR";}}%
 Thus if you have a charged balloon on a humid day, one side of the water
@@ -13479,21 +12569,6 @@ Charge densities:
 
 \section{Fields from Continuous Charge Distributions}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.23.1}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.23.1}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.23.1}
-\end{minipage}
-}%
-%EndExpansion
 Suppose we have a continuous distribution of charge with some mover charge $%
 q_{m}$ fairly far away. You might ask, how do we get a continuous
 distribution of charge? After all, charge seems to be quantized. Well, if we
@@ -13828,7 +12903,7 @@ R^{2}+z^{2}\right) ^{\frac{3}{2}}}\mathbf{\hat{k}}
 
 Once again we should check to see if this is a reasonable result. If we take
 the limit as $z$ goes to infinity, we get zero. That is comforting. Our ring
-of charge looks like a point charge from infinately far away. But if we just
+of charge looks like a point charge from infinitely far away. But if we just
 let $z$ be much larger than $R,$ but not too big%
 \begin{eqnarray*}
 \underset{z\gg R}{\lim }\overrightarrow{\mathbf{E}} &=&\underset{z\gg R}{%
@@ -14102,22 +13177,7 @@ other side. So this sheet of charge fills all of space with a constant field.%
 Of course this is not physically possible to build, but we will see that if
 we look at a large sheet of charge, like the plate of a capacitor, that near
 the center, the field approaches this limit, because the sides of the sheet
-are far away.%
-%TCIMACRO{%
-%\TeXButton{Visualization falstad 3D}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Visualization falstad 3D}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Visualization falstad 3D}
-\end{minipage}
-}%
-%EndExpansion
+are far away.
 
 Let's go back and consider the disk of charge. 
 \begin{equation*}
@@ -14659,21 +13719,6 @@ environment to be a constant electric field, and our mover to be a dipole.%
 "1";cropright "1";cropbottom "0";tempfilename
 'SAPYR9AD.wmf';tempfile-properties "XPR";}}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.25.1}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.25.1}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.25.1}
-\end{minipage}
-}%
-%EndExpansion
 Here is a diagram of the situation. \FRAME{dhF}{1.6976in}{1.1796in}{0pt}{}{}{%
 Figure}{\special{language "Scientific Word";type
 "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
@@ -14724,7 +13769,7 @@ If we know $\overrightarrow{\mathbf{E}}$, then we don't need any information
 about it's source to find the force. Since the field is the environment that
 the mover charges feel, the field is enough. Let's find the net force on the
 dipole due to the environmental field. Let's give the positive charge the
-sumbol $q_{+}$ and the negative charge the symbol $q_{-}$. The force on the
+symbol $q_{+}$ and the negative charge the symbol $q_{-}$. The force on the
 positive charge could be written as $F_{+E}$ where the subscript
 \textquotedblleft $+$\textquotedblright\ is for the positive charge and $E$
 is for the electric field. Then the force on the negative charge would be $%
@@ -15158,37 +14203,6 @@ positive by convention.
 
 \section{The Idea of Flux}
 
-%TCIMACRO{%
-%\TeXButton{Van de Graaff Generator Demo}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Van de Graaff Generator Demo}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Van de Graaff Generator Demo}
-\end{minipage}
-}%
-%EndExpansion
-%TCIMACRO{%
-%\TeXButton{Question 223.26.1}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.26.1}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.26.1}
-\end{minipage}
-}%
-%EndExpansion
-
 If you took PH123 or have had a class that deals with fluids, I\ can use an
 analogy (if not, you will probably be OK, because you have probably used a
 garden hose). Let's recall some fluid dynamics for a moment. Remember what
@@ -15235,21 +14249,6 @@ field lines we draw is greater if the field strength is higher, so this
 quantity, $\Phi ,$ tells us something about the strength of the field over
 the area.
 
-%TCIMACRO{%
-%\TeXButton{Question 223.26.2}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.26.2}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.26.2}
-\end{minipage}
-}%
-%EndExpansion
 But, what if the area, $A,$ is not perpendicular to the field?\FRAME{dhF}{%
 1.9873in}{1.9951in}{0pt}{}{}{Figure}{\special{language "Scientific
 Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
@@ -15278,30 +14277,14 @@ field lines passing through $A,$ but of course, now there are fewer lines
 passing through the area because it is tilted. We can find $\Phi $ using $%
 \theta $ as%
 \begin{equation}
-\Phi =EA\cos \theta
+\Phi =EA\cos \theta 
 \end{equation}%
 but let's consider what 
 \begin{equation*}
-A\cos \theta
+A\cos \theta 
 \end{equation*}%
-means. 
-%TCIMACRO{%
-%\TeXButton{Tip a flat object}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Tip a flat object}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Tip a flat object}
-\end{minipage}
-}%
-%EndExpansion
-We can start with our original area. \FRAME{dhF}{2.5088in}{1.2522in}{0pt}{}{%
-}{Figure}{\special{language "Scientific Word";type
+means. We can start with our original area. \FRAME{dhF}{2.5088in}{1.2522in}{%
+0pt}{}{}{Figure}{\special{language "Scientific Word";type
 "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
 2.5088in;height 1.2522in;depth 0pt;original-width 6.6565in;original-height
 3.3088in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
@@ -15330,25 +14313,10 @@ product. If $E$ and $A$ were both vectors. Then we could write the flux as%
 \begin{equation}
 \Phi =\overrightarrow{\mathbf{E}}\cdot \overrightarrow{\mathbf{A}}
 \end{equation}%
-%TCIMACRO{%
-%\TeXButton{Domenstrate with a document with writing on one side}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Domenstrate with a document with writing on one side}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Domenstrate with a document with writing on one side}
-\end{minipage}
-}%
-%EndExpansion
 Well, we can define a vector that has $A$ as it's magnitude and is in the
 right direction to make 
 \begin{equation*}
-\overrightarrow{\mathbf{E}}\cdot \overrightarrow{\mathbf{A}}=EA\cos \theta
+\overrightarrow{\mathbf{E}}\cdot \overrightarrow{\mathbf{A}}=EA\cos \theta 
 \end{equation*}%
 We define the \emph{area vector}%
 \begin{equation}
@@ -15362,21 +14330,6 @@ choice, we have to stick with it for the entire problem we are solving.
 
 \subsection{Flux and Curved Areas}
 
-%TCIMACRO{%
-%\TeXButton{Trifold paper }{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Trifold paper }
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Trifold paper }
-\end{minipage}
-}%
-%EndExpansion
 Suppose the area we have is not flat? Then what? Well let's recall that if
 we take a sphere the surface will be curved. But if we take a bigger sphere,
 and look at the same amount of area on that sphere, it looks less curved.%
@@ -15435,60 +14388,15 @@ Suppose we build a box with our areas. \FRAME{dhF}{3.3503in}{1.7461in}{0pt}{%
 'SAPYRAB1.wmf';tempfile-properties "XPR";}}Then we would have some lines
 going in and some going out. By convention we will call the flux formed by
 the ones going in negative and the flux formed by the ones going out
-positive. 
-%TCIMACRO{%
-%\TeXButton{Question 223.26.3 Required}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.26.3  Required}
-%\end{minipage}
-%}} }%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.26.3  Required}
-\end{minipage}
-}
-%EndExpansion
-%TCIMACRO{%
-%\TeXButton{Question 223.26.4  Required}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.26.4  Required}
-%\end{minipage}
-%}} }%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.26.4  Required}
-\end{minipage}
-}
-%EndExpansion
-%TCIMACRO{%
-%\TeXButton{Question 223.26.5}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.26.5}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.26.5}
-\end{minipage}
-}%
-%EndExpansion
-From these questions we see that if there is no charge inside of the box,
-the net flux must be zero. We could take any size or shape of closed surface
-and this would be true! But if we do have charge inside of the box we expect
-there to be a net flux. If it is a negative net charge, it will be an
-negative flux and if it is a positive net charge it will be a positive net
-flux. Next lecture we will formalize this as a new law of physics, but for
-now we need to remember from M215 or M113 how to write an integration over a
-closed surface. We use a special integral sign with a circle
+positive. From these questions we see that if there is no charge inside of
+the box, the net flux must be zero. We could take any size or shape of
+closed surface and this would be true! But if we do have charge inside of
+the box we expect there to be a net flux. If it is a negative net charge, it
+will be an negative flux and if it is a positive net charge it will be a
+positive net flux. Next lecture we will formalize this as a new law of
+physics, but for now we need to remember from M215 or M113 how to write an
+integration over a closed surface. We use a special integral sign with a
+circle
 
 \begin{equation}
 \Phi _{E}=\doint \overrightarrow{\mathbf{E}}\cdot d\overrightarrow{\mathbf{A}%
@@ -15730,23 +14638,8 @@ A}}=EdA.$ We can write our flux as
 }{r}dA
 \end{eqnarray*}%
 Integrated over the side surface. But we will need an element of surface
-area $dA$ for a cylinder side. 
-%TCIMACRO{%
-%\TeXButton{Question 223.26.6}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.26.6}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.26.6}
-\end{minipage}
-}%
-%EndExpansion
-Cylindrical coordinates seem logical so let's try%
+area $dA$ for a cylinder side. Cylindrical coordinates seem logical so let's
+try%
 \begin{equation*}
 dA=rd\theta dz
 \end{equation*}%
@@ -15757,7 +14650,7 @@ then%
 &=&\frac{2\left\vert \lambda \right\vert }{4\pi \epsilon _{o}}%
 \int_{0}^{L}\int_{0}^{2\pi }d\theta dz \\
 &=&\frac{\left\vert \lambda \right\vert }{2\pi \epsilon _{o}}\left( 2\pi
-L\right) \\
+L\right)  \\
 &=&\frac{\left\vert \lambda \right\vert }{\epsilon _{o}}L
 \end{eqnarray*}%
 So far we have, indeed, made integrals that look hard but are really easy to
@@ -15855,21 +14748,6 @@ To see if we can do this, first let's think of our answer.%
 \begin{equation*}
 \Phi _{sphere,point}=\frac{Q_{E}}{\epsilon _{o}}
 \end{equation*}%
-%TCIMACRO{%
-%\TeXButton{Question 223.27.1}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.27.1}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.27.1}
-\end{minipage}
-}%
-%EndExpansion
 It does not depend on the radius of the spherical surface. So any spherical
 surface centered on the charge will do! This makes sense. No matter how big
 the sphere, all the field lines must leave it. Since flux gives the amount
@@ -15994,21 +14872,6 @@ Gauss' law.
 
 \section{Examples of Gauss' Law}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.27.2}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.27.2}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.27.2}
-\end{minipage}
-}%
-%EndExpansion
 But why do we get so excited about flux? The reason is that we can use the
 idea of flux combined with Gauss' law gives us an easy way to calculate the
 electric field from a distribution of charge if we can find a suitable
@@ -16079,21 +14942,6 @@ F=qE
 \end{equation*}%
 if the net force is zero, then the field must be zero too.
 
-%TCIMACRO{%
-%\TeXButton{Question 223.27.3}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.27.3}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.27.3}
-\end{minipage}
-}%
-%EndExpansion
 Is there a field outside of the spherical shell? It is still true that%
 \begin{equation*}
 \Phi =\doint \overrightarrow{\mathbf{E}}\cdot d\overrightarrow{\mathbf{A}}%
@@ -16280,22 +15128,7 @@ part of the surface we invent.
 }}=\frac{Q_{in}}{\epsilon _{o}}$ integrating over our carefully invented
 surface to find the field. If our surface that we imagined was good, then $%
 \doint \overrightarrow{\mathbf{E}}\cdot d\overrightarrow{\mathbf{A}}$ will
-be very easy.%
-%TCIMACRO{%
-%\TeXButton{Question 223.27.4}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.27.4}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.27.4}
-\end{minipage}
-}%
-%EndExpansion
+be very easy.
 \end{enumerate}
 
 \section{Derivation of Gauss' Law}
@@ -18810,7 +17643,7 @@ Pb\left( \text{solid}\right) +H_{2}SO_{4}^{-}\left( \text{aqueous}\right)
 \right) +2e^{-}\left( \text{in conductor}\right)
 \end{equation*}%
 producing lead sulfate on the electrode, some hydrogen ions in solution and
-some extra electrons that are left in the metal plate. This is the begining
+some extra electrons that are left in the metal plate. This is the beginning
 of our separated charge!\FRAME{dtbpF}{2.5157in}{2.5296in}{0pt}{}{}{Figure}{%
 \special{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
 TRUE;display "USEDEF";valid_file "T";width 2.5157in;height 2.5296in;depth
@@ -18827,7 +17660,7 @@ Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
 "1";cropbottom "0";tempfilename 'SAPYRBD9.wmf';tempfile-properties "XPR";}}%
 But importantly, It also uses some some electrons from the lead plate. The
 coated lead plate is neutral, so this reaction is using some of the free
-electrons from the lead. The reacion goes like this, the PbO$_{2}$ splits
+electrons from the lead. The reaction goes like this, the PbO$_{2}$ splits
 apart and the Pb$^{+4}$ combines with the SO$_{4}^{-2}$ and the two
 electrons. The left over O$_{2}$ combines with the hydrogens to form water.
 The reaction equation is 
@@ -18924,20 +17757,20 @@ from the bottom of the first to the top of the last of
 Think for a moment what the potential energy would be if we followed our
 charge around the circuit. The battery \textquotedblleft
 pumps\textquotedblright\ us up an amount $\Delta V_{battery}.$ Then we lose
-voltage (think energy) as the charge does work (lights the lightbulb). When
-we get back to the battery again we need to have a netl $\Delta V$ of zero.
+voltage (think energy) as the charge does work (lights the light bulb). When
+we get back to the battery again we need to have a net $\Delta V$ of zero.
 For our circuit we can write this as 
 \begin{equation*}
 \Delta V_{loop}=\sum_{i}\Delta V_{i}=0
 \end{equation*}%
 That is, if we go around a loop, we should end up at the same potential
-where we started.It helps to think of our water analogy. If we start at the
+where we started. It helps to think of our water analogy. If we start at the
 lower tank, then travel through the pump to the upper tank, then through the
 turbine to the lower tank we have 
 \begin{equation*}
 \Delta U_{total}=\Delta U_{pump}+\Delta U_{turbine}=0
 \end{equation*}%
-The water gains potential energy by beign pumped up higher, then loses that
+The water gains potential energy by being pumped up higher, then loses that
 potential energy by falling back down. The water ends up losing all the
 potential energy the pump gave it. The water is back at the same elevation,
 it lost all the potential energy it gained by being pumped up when it fell
@@ -19191,36 +18024,6 @@ The total field will be the vector sum of it's components%
 &=&-\frac{dV}{dx}\mathbf{\hat{\imath}-}\frac{dV}{dy}\mathbf{\hat{\jmath}-}%
 \frac{dV}{dz}\mathbf{\hat{k}}
 \end{eqnarray*}%
-%TCIMACRO{%
-%\TeXButton{Question 223.33.1}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.33.1}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.33.1}
-\end{minipage}
-}%
-%EndExpansion
-%TCIMACRO{%
-%\TeXButton{Question 223.33.2}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.33.2}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.33.2}
-\end{minipage}
-}%
-%EndExpansion
 which we can cryptically write as 
 \begin{equation*}
 \overrightarrow{\mathbf{E}}=-\left( \frac{d}{dx}\mathbf{\hat{\imath}}+\frac{d%
@@ -19230,7 +18033,7 @@ The odd group of operations in the parenthesis is call a \emph{gradient} and
 is written as 
 \begin{equation*}
 \overrightarrow{\mathbf{\nabla }}=\left( \frac{d}{dx}\mathbf{\hat{\imath}}+%
-\frac{d}{dy}\mathbf{\hat{\jmath}+}\frac{d}{dz}\mathbf{\hat{k}}\right)
+\frac{d}{dy}\mathbf{\hat{\jmath}+}\frac{d}{dz}\mathbf{\hat{k}}\right) 
 \end{equation*}%
 using this we have%
 \begin{equation*}
@@ -19248,22 +18051,7 @@ steepest way down! Our relationship tells us that the electric field points
 in this steepest direction, and the minus sign tells us that the electric
 field points down hill away from a positive charge, never up hill (think of
 the acceleration due to gravity being negative). Let's see if this makes
-sense for our geometries that we know.%
-%TCIMACRO{%
-%\TeXButton{Stamp in a circle}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Stamp in a circle: mimic a blindfolded person swiveling on one foot and testing the slope with the other}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Stamp in a circle: mimic a blindfolded person swiveling on one foot and testing the slope with the other}
-\end{minipage}
-}%
-%EndExpansion
+sense for our geometries that we know.
 
 Here is our capacitor. We see that indeed the field points from the high
 potential to the low potential. The steepest way \textquotedblleft down the
@@ -19423,21 +18211,6 @@ of math functions will have various versions of $\overrightarrow{\mathbf{%
 "1";cropright "1";cropbottom "0";tempfilename
 'SAPYRBDO.wmf';tempfile-properties "XPR";}}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.33.3}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.33.3}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.33.3}
-\end{minipage}
-}%
-%EndExpansion
 We know that there is no field inside a conductor in electrostatic
 equilibrium, but we should ask what that means for the electric potential.
 To build circuits or electronic actuators, we will need to know this. Let's
@@ -19510,22 +18283,7 @@ accelerated away from the conductor. These electrons hit other atoms,
 ionizing them as well. We get a small avalanche of electrons. Eventually the
 electrons recombine with ionized atoms, producing an eerie glow. This is
 called \emph{corona discharge}. It can be used to find faults in high
-tension wires and other high voltage situations.%
-%TCIMACRO{%
-%\TeXButton{Coronal Discharge Clips}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Coronal Discharge Clips}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Coronal Discharge Clips}
-\end{minipage}
-}%
-%EndExpansion
+tension wires and other high voltage situations.
 
 \subsection{Cavities in conductors}
 
@@ -20118,7 +18876,7 @@ or
 \begin{equation*}
 \Delta V=\frac{\Delta Q}{C}
 \end{equation*}%
-As $\Delta Q$ gets small we can go to a continuous charge model. Our amout
+As $\Delta Q$ gets small we can go to a continuous charge model. Our amount
 of work is 
 \begin{equation*}
 \Delta w=\Delta Q\Delta V
@@ -20222,7 +18980,7 @@ convenient to coat two sides of a plastic block with metal and solder wires
 to the coated sides. Does the plastic have an effect?
 
 Plastic is an insulator, and another name for insulator\ is \emph{dielectric}%
-. If we perform the experiment, we will find that when ain insulator or
+. If we perform the experiment, we will find that when an insulator or
 dielectric material is placed in the plates, the potential difference
 decreases! \FRAME{dhF}{2.7657in}{2.6256in}{0pt}{}{}{Figure}{\special%
 {language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
@@ -20281,7 +19039,7 @@ C=\kappa \varepsilon _{o}\frac{A}{d}
 \end{equation}%
 and let $\kappa =1$ if there is no dielectric.
 
-But if we do have a dilectric we need its $\kappa $ value. So where do you
+But if we do have a dielectric we need its $\kappa $ value. So where do you
 find values for $\kappa ?$ For this class, we will look them up in the
 tables in books or on the internet. Here are a few values for our
 use.\smallskip 
@@ -20795,7 +19553,7 @@ charges will accelerate, forming a current inside the wire.
 
 Note that these free charges are not just on the surface, they are inside
 the wire, even on the axis of the wire in the center. We no longer have a
-static equilibrium, so our existing freecharge in the wire begins to move.
+static equilibrium, so our existing free charge in the wire begins to move.
 The extra charge from the capacitor has made a field that moves the existing
 free charge in the wire.
 
@@ -21826,21 +20584,6 @@ field direction is given by our fingers.\FRAME{dhF}{1.8083in}{1.8862in}{0pt}{%
 3.8441in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
 'SAPYRBF4.wmf';tempfile-properties "XPR";}}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.38.2}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.38.2}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.38.2}
-\end{minipage}
-}%
-%EndExpansion
 Although this is true, it takes some interpretation Let's take some time to
 see what it means. Let's redraw the figure. \FRAME{dhF}{1.9986in}{2.4561in}{%
 0pt}{}{}{Figure}{\special{language "Scientific Word";type
@@ -21871,27 +20614,12 @@ Figure}{\special{language "Scientific Word";type
 "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
 2.1802in;height 2.4699in;depth 0pt;original-width 2.1404in;original-height
 2.4284in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
-'SAPYRBF8.wmf';tempfile-properties "XPR";}}%
-%TCIMACRO{%
-%\TeXButton{Question 223.38.3}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.38.3}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.38.3}
-\end{minipage}
-}%
-%EndExpansion
-But again, this figure is not so good, because the entire wire makes a field
-that has a constant value for $B$ at a distance $r$ away. So we could also
-draw the field above our hand.\FRAME{dhF}{1.855in}{2.4768in}{0pt}{}{}{Figure%
-}{\special{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
-TRUE;display "USEDEF";valid_file "T";width 1.855in;height 2.4768in;depth
+'SAPYRBF8.wmf';tempfile-properties "XPR";}}But again, this figure is not so
+good, because the entire wire makes a field that has a constant value for $B$
+at a distance $r$ away. So we could also draw the field above our hand.%
+\FRAME{dhF}{1.855in}{2.4768in}{0pt}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+"USEDEF";valid_file "T";width 1.855in;height 2.4768in;depth
 0pt;original-width 2.3635in;original-height 3.1644in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
 'SAPYRBF9.wmf';tempfile-properties "XPR";}}Maybe a better way to draw this
@@ -21908,28 +20636,13 @@ long too...\FRAME{dhF}{1.8723in}{2.4837in}{0pt}{}{}{Figure}{\special%
 TRUE;display "USEDEF";valid_file "T";width 1.8723in;height 2.4837in;depth
 0pt;original-width 1.8351in;original-height 2.4431in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
-'SAPYRBFB.wmf';tempfile-properties "XPR";}}%
-%TCIMACRO{%
-%\TeXButton{Question 223.38.4}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.38.4}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.38.4}
-\end{minipage}
-}%
-%EndExpansion
-And the field does not stop after a few cylinders, it reaches $B=0$ only
-when $r=\infty .$ So the field fills all of space.\FRAME{dhF}{2.5019in}{%
-1.8836in}{0pt}{}{}{Figure}{\special{language "Scientific Word";type
-"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-2.5019in;height 1.8836in;depth 0pt;original-width 2.4613in;original-height
-1.8455in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'SAPYRBFB.wmf';tempfile-properties "XPR";}}And the field does not stop after
+a few cylinders, it reaches $B=0$ only when $r=\infty .$ So the field fills
+all of space.\FRAME{dhF}{2.5019in}{1.8836in}{0pt}{}{}{Figure}{\special%
+{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
+TRUE;display "USEDEF";valid_file "T";width 2.5019in;height 1.8836in;depth
+0pt;original-width 2.4613in;original-height 1.8455in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
 'SAPYRBFC.wmf';tempfile-properties "XPR";}}This is a more accurate way to
 draw the magnetic field due to a long straight wire, but it takes a long
 time to draw such a diagram, so usually we will just draw one circle, and
@@ -22100,102 +20813,22 @@ d\overrightarrow{\mathbf{B}}=\frac{\mu _{o}}{4\pi }\frac{Id\overrightarrow{%
 Some things to note about this result
 
 \begin{enumerate}
-\item 
-%TCIMACRO{%
-%\TeXButton{Question 223.39.1}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.39.1}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.39.1}
-\end{minipage}
-}%
-%EndExpansion
-The vector $d\overrightarrow{\mathbf{B}}$ is perpendicular to $d%
+\item The vector $d\overrightarrow{\mathbf{B}}$ is perpendicular to $d%
 \overrightarrow{\mathbf{s}}$ and to the unit vector $\mathbf{\hat{r}}$
 directed from $d\overrightarrow{\mathbf{s}}$ to some point $P.$
 
-\item 
-%TCIMACRO{%
-%\TeXButton{Question 223.39.2}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.39.2}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.39.2}
-\end{minipage}
-}%
-%EndExpansion
-The magnitude of $d\overrightarrow{\mathbf{B}}$ is inversely proportional to 
-$r^{2}$
+\item The magnitude of $d\overrightarrow{\mathbf{B}}$ is inversely
+proportional to $r^{2}$
 
-\item 
-%TCIMACRO{%
-%\TeXButton{Question 223.39.3}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.39.3}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.39.3}
-\end{minipage}
-}%
-%EndExpansion
-The magnitude of $d\overrightarrow{\mathbf{B}}$ is proportional to the
+\item The magnitude of $d\overrightarrow{\mathbf{B}}$ is proportional to the
 current
 
-\item 
-%TCIMACRO{%
-%\TeXButton{Question 223.39.4}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.39.4}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.39.4}
-\end{minipage}
-}%
-%EndExpansion
-The magnitude of $d\overrightarrow{\mathbf{B}}$ is proportional to the
+\item The magnitude of $d\overrightarrow{\mathbf{B}}$ is proportional to the
 length of $d\overrightarrow{\mathbf{s}}$
 
-\item 
-%TCIMACRO{%
-%\TeXButton{Question 223.39.5}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.39.5}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.39.5}
-\end{minipage}
-}%
-%EndExpansion
-The magnitude of $d\overrightarrow{\mathbf{B}}$ is proportional to $\sin
-\theta $ where $\theta $ is the angle between $d\overrightarrow{\mathbf{s}}$
-and $\mathbf{\hat{r}}$
+\item The magnitude of $d\overrightarrow{\mathbf{B}}$ is proportional to $%
+\sin \theta $ where $\theta $ is the angle between $d\overrightarrow{\mathbf{%
+s}}$ and $\mathbf{\hat{r}}$
 \end{enumerate}
 
 Where there is $d\overrightarrow{\mathbf{B}}$ we will surely integrate. The
@@ -23058,22 +21691,7 @@ where $q$ is the mover charge and $B$ is the magnetic field environment.
 
 We have a device that can shoot out electrons. The electrons show up because
 they hit a phosphorescent screen. When we bring a magnet close to our beam
-of electrons, we find it moves!%
-%TCIMACRO{%
-%\TeXButton{Magnetic Deflection Demo}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Magnetic Deflection Demo}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Magnetic Deflection Demo}
-\end{minipage}
-}%
-%EndExpansion
+of electrons, we find it moves!
 
 But we did this with moving electrons, what happens if they are not moving?
 We might expect the electrons to accelerate just the same--and we would be
@@ -23626,11 +22244,11 @@ started all of our magnetic study%
 \begin{equation*}
 \overrightarrow{\mathbf{B}}=\frac{\mu _{o}I}{4\pi }\int \frac{d%
 \overrightarrow{\mathbf{s}}\times \mathbf{\hat{r}}}{r^{2}}
-\end{equation*}
+\end{equation*}%
 we see the same pattern. We have $Id\overrightarrow{\mathbf{s}}$ where $d%
 \overrightarrow{\mathbf{s}}$ is in the direction of the current. And $%
 \overrightarrow{\mathbf{L}}=\int d\overrightarrow{\mathbf{s}}$ so this is
-not so crazy as it seems. Let's use our new force quation to get experience
+not so crazy as it seems. Let's use our new force equation to get experience
 with how it works!
 
 \subsection{Force between two wires}
@@ -25301,28 +23919,13 @@ s}=-\frac{d\Phi _{B}}{dt}$
 
 \section{Generators}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.45.1}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.45.1}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.45.1}
-\end{minipage}
-}%
-%EndExpansion
 Whether you are just plugging in an appliance, or preparing for an
 emergency, you likely would think of a generator as a source of electrical
 energy. Our studies so far have strongly hinted on how we would build an
 electric generator. In this lecture, we will fill in the details.\FRAME{dhF}{%
-2.8651in}{2.3851in}{0in}{}{}{Figure}{\special{language "Scientific
+2.8651in}{2.3851in}{0pt}{}{}{Figure}{\special{language "Scientific
 Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
-"T";width 2.8651in;height 2.3851in;depth 0in;original-width
+"T";width 2.8651in;height 2.3851in;depth 0pt;original-width
 2.8219in;original-height 2.3454in;cropleft "0";croptop "1";cropright
 "1";cropbottom "0";tempfilename 'SAPYRCHA.wmf';tempfile-properties "XPR";}}
 
@@ -25339,21 +23942,6 @@ but maintain an electrical connection, are placed on the rings. So as the
 rings turn, current can still flow through the connected wires (to the light
 bulb in this case).
 
-%TCIMACRO{%
-%\TeXButton{Question 223.45.2}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.45.2}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.45.2}
-\end{minipage}
-}%
-%EndExpansion
 This should look familiar. This is the same basic setup as the motor, with a
 few exceptions. An important exception is that the commutator has been
 replaced by the set of rings. We will call these ring contacts \emph{slip
@@ -25380,7 +23968,7 @@ TRUE;display "USEDEF";valid_file "T";width 3.3001in;height 3.0502in;depth
 the loop. The definition we have for flux is%
 \begin{eqnarray*}
 \Phi _{B} &=&\mathbf{B}\cdot \mathbf{A} \\
-&=&BA\cos \theta \\
+&=&BA\cos \theta  \\
 &=&BA_{proj}
 \end{eqnarray*}%
 where $\theta $ is the angle between the loop area vector and the magnetic
@@ -25406,7 +23994,7 @@ along the $y$-direction $\theta =0\unit{%
 \begin{equation*}
 \Phi _{B}=B\ell a\cos \theta =B\ell a=\Phi _{\max }
 \end{equation*}%
-and when we turn the loop a quarter turn we get the loop being in teh $x$%
+and when we turn the loop a quarter turn we get the loop being in the $x$%
 -direction so $\theta =90\unit{%
 %TCIMACRO{\U{b0}}%
 %BeginExpansion
@@ -26005,25 +24593,9 @@ TRUE;display "USEDEF";valid_file "T";width 3.4523in;height 2.2883in;depth
 "1";cropright "1";cropbottom "0";tempfilename
 'SAPYRCHR.wmf';tempfile-properties "XPR";}}For the electric and magnetic
 field equations to be symmetric, the changing electric field must create a
-magnetic field.%
-%TCIMACRO{%
-%\TeXButton{Question 223.45.10}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.45.10}
-%\end{minipage}
-%}} }%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.45.10}
-\end{minipage}
-}
-%EndExpansion
-There is no requirement that the universe display such symmetry, but we have
-found that it usually does. Indeed, a changing electric field creates a
-magnetic field.
+magnetic field. There is no requirement that the universe display such
+symmetry, but we have found that it usually does. Indeed, a changing
+electric field creates a magnetic field.
 
 This foreshadows our final study of light. We learned earlier that light is
 an \emph{electromagnetic} wave. What this means is that light is a wave in
@@ -26150,7 +24722,7 @@ Hopefully you just did problems where loops fell more slowly in a magnetic
 field. Some of the energy went into making an induced current. So there was
 less kinetic energy for the loop's fall. Since we can make an emf (a
 potential energy per unit charge) with a magnetic field, we need to account
-for this energy in our circult. We will have 
+for this energy in our circuit. We will have 
 \begin{equation*}
 \Delta V_{resistor}=\mathcal{E}_{battery}-\mathcal{E}_{induced}
 \end{equation*}
@@ -26374,8 +24946,8 @@ u_{E}=\frac{1}{2}\epsilon _{o}E^{2}
 \end{equation*}%
 Again, note the similarity!
 
-So we have energy storred in our magnetic field. We should see what we can
-do with that energy.
+So we have energy stored in our magnetic field. We should see what we can do
+with that energy.
 
 \subsection{Oscillations in an LC Circuit}
 
@@ -26470,21 +25042,6 @@ something like this.
 "1";cropright "1";cropbottom "0";tempfilename
 'SAPYRCHY.wmf';tempfile-properties "XPR";}}
 
-%TCIMACRO{%
-%\TeXButton{Question 223.46.6}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Question 223.46.6}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Question 223.46.6}
-\end{minipage}
-}%
-%EndExpansion
 One of the important uses of an inductor is to create \emph{electrical
 oscillations.} Having recalled what oscillations look like, we can see that
 a LC circuit will have an oscillating current.
@@ -26849,7 +25406,7 @@ is isn't so strange because there \emph{is} energy coming into the circuit
 from outside. Energy for the circuit should \emph{not} be conserved. This is
 just what we want for a wireless charger or a Bluetooth communication
 device. We will leave this non-conservative field issue for now. If you are
-interested in persuing it a little further see Appendix . But for now we can
+interested in pursuing it a little further see Appendix . But for now we can
 say that the additional energy from the field could be given by calculating
 the induced emf%
 \begin{equation}
@@ -27178,7 +25735,7 @@ the loop
 \begin{equation*}
 \doint \mathbf{B\cdot }d\mathbf{A=\Phi }_{B}
 \end{equation*}%
-Using the little blue rectanglular area in the loop figure we have a $dA=ydr$
+Using the little blue rectangular area in the loop figure we have a $dA=ydr$
 so our flux is 
 \begin{eqnarray*}
 \mathbf{\Phi }_{B} &=&\int Bydr \\
@@ -27689,29 +26246,28 @@ since our charge is moving along with the $S^{\prime }$ frame $%
 \overrightarrow{\mathbf{v}}=\overrightarrow{\mathbf{V}}_{S^{\prime }S}$ so 
 \begin{equation*}
 \overrightarrow{\mathbf{B}}=\frac{\mu _{o}}{4\pi }\frac{q}{r^{2}}\left( 
-\overrightarrow{\mathbf{v}}_{S^{\prime }S}\times \mathbf{\hat{r}}\right) 
+\overrightarrow{\mathbf{v}}_{S^{\prime }S}\times \mathbf{\hat{r}}\right)
 \end{equation*}%
 but we can rewrite this by rearranging terms%
 \begin{eqnarray*}
 \overrightarrow{\mathbf{B}} &=&\frac{\mu _{o}}{4\pi }\frac{q}{r^{2}}\left( 
-\overrightarrow{\mathbf{v}}_{S^{\prime }S}\times \mathbf{\hat{r}}\right)  \\
+\overrightarrow{\mathbf{v}}_{S^{\prime }S}\times \mathbf{\hat{r}}\right) \\
 &=&\left( \overrightarrow{\mathbf{v}}_{S^{\prime }S}\times \frac{\mu _{o}}{%
-4\pi }\frac{q}{r^{2}}\mathbf{\hat{r}}\right) 
+4\pi }\frac{q}{r^{2}}\mathbf{\hat{r}}\right)
 \end{eqnarray*}%
-which looks vaguely familiar. Let's multiply top and bottom by $\epsilon _{o}
-$%
+which looks vaguely familiar. Let's multiply top and bottom by $\epsilon
+_{o} $%
 \begin{eqnarray*}
 \overrightarrow{\mathbf{B}} &=&\left( \overrightarrow{\mathbf{v}}_{S^{\prime
 }S}\times \frac{\mu _{o}\epsilon _{o}}{4\pi \epsilon _{o}}\frac{q}{r^{2}}%
-\mathbf{\hat{r}}\right)  \\
+\mathbf{\hat{r}}\right) \\
 &=&\left( \overrightarrow{\mathbf{v}}_{S^{\prime }S}\times \mu _{o}\epsilon
 _{o}\left( \frac{1}{4\pi \epsilon _{o}}\frac{q}{r^{2}}\mathbf{\hat{r}}%
-\right) \right)  \\
+\right) \right) \\
 &=&\left( \overrightarrow{\mathbf{v}}_{S^{\prime }S}\times \mu _{o}\epsilon
-_{o}\left( \overrightarrow{\mathbf{E}}_{\text{ }}^{\prime }\right) \right) 
-\\
+_{o}\left( \overrightarrow{\mathbf{E}}_{\text{ }}^{\prime }\right) \right) \\
 &=&\mu _{o}\epsilon _{o}\left( \overrightarrow{\mathbf{v}}_{S^{\prime
-}S}\times \overrightarrow{\mathbf{E}}_{\text{ }}^{\prime }\right) 
+}S}\times \overrightarrow{\mathbf{E}}_{\text{ }}^{\prime }\right)
 \end{eqnarray*}%
 which is really quite astounding! Our $B$-fields have apparently always just
 been due to moving electric fields after all! Of course, we could have an
@@ -27722,22 +26278,21 @@ case, let's include a term $\overrightarrow{\mathbf{B}}_{\text{magnet}%
 \overrightarrow{\mathbf{B}}_{total}=\overrightarrow{\mathbf{B}}_{\text{%
 magnets in }S^{\prime }}^{\prime }+\mu _{o}\epsilon _{o}\left( 
 \overrightarrow{\mathbf{v}}_{S^{\prime }S}\times \overrightarrow{\mathbf{E}}%
-_{\text{environment }}^{\prime }\right) 
+_{\text{environment }}^{\prime }\right)
 \end{equation*}%
 or just 
 \begin{equation*}
 \overrightarrow{\mathbf{B}}=\overrightarrow{\mathbf{B}}_{\text{magnets in }%
 S^{\prime }}^{\prime }+\mu _{o}\epsilon _{o}\left( \overrightarrow{\mathbf{v}%
 }_{S^{\prime }S}\times \overrightarrow{\mathbf{E}}_{\text{environment }%
-}^{\prime }\right) 
+}^{\prime }\right)
 \end{equation*}%
 and we would expect that if we worked this problem from the other frame's
 point of view we would likewise find 
 \begin{equation*}
 \overrightarrow{\mathbf{B}}^{\prime }=\overrightarrow{\mathbf{B}}_{\text{%
 magnets in }S}-\mu _{o}\epsilon _{o}\left( \overrightarrow{\mathbf{v}}%
-_{S^{\prime }S}\times \overrightarrow{\mathbf{E}}_{\text{environment}%
-}\right) 
+_{S^{\prime }S}\times \overrightarrow{\mathbf{E}}_{\text{environment}}\right)
 \end{equation*}%
 where the minus sign comes from the relative velocity being in the other
 direction. Again $\overrightarrow{\mathbf{B}}_{\text{magnet}}$ is a
@@ -27784,14 +26339,14 @@ charges in }S}+\overrightarrow{\mathbf{v}}_{S^{\prime }S}\times
 \overrightarrow{\mathbf{B}}_{\text{environment}} \\
 \overrightarrow{\mathbf{B}}^{\prime } &=&\overrightarrow{\mathbf{B}}_{\text{%
 magnets in }S}-\frac{1}{c^{2}}\left( \overrightarrow{\mathbf{v}}_{S^{\prime
-}S}\times \overrightarrow{\mathbf{E}}_{\text{environment}}\right)  \\
+}S}\times \overrightarrow{\mathbf{E}}_{\text{environment}}\right) \\
 \overrightarrow{\mathbf{E}} &=&\mathbf{E}_{\text{charges in }S\prime
 }^{\prime }-\overrightarrow{\mathbf{v}}_{S^{\prime }S}\times \overrightarrow{%
 \mathbf{B}}_{\text{environment}}^{\prime } \\
 \overrightarrow{\mathbf{B}} &=&\overrightarrow{\mathbf{B}}_{\text{magnets in 
 }S^{\prime }}^{\prime }+\frac{1}{c^{2}}\left( \overrightarrow{\mathbf{v}}%
 _{S^{\prime }S}\times \overrightarrow{\mathbf{E}}_{\text{ environment}%
-}^{\prime }\right) 
+}^{\prime }\right)
 \end{eqnarray*}
 
 Let's do a problem. Suppose we have a metal loop moving into an area where
@@ -28005,13 +26560,13 @@ charges in RF}}+\overrightarrow{\mathbf{V}}_{S^{\prime }S}\times
 \overrightarrow{\mathbf{B}}_{\text{environment}} \\
 \overrightarrow{\mathbf{B}}^{\prime } &=&\overrightarrow{\mathbf{B}}_{\text{%
 magnet in RF}}-\frac{1}{c^{2}}\left( \overrightarrow{\mathbf{V}}_{S^{\prime
-}S}\times \overrightarrow{\mathbf{E}}_{\text{environment}}\right)  \\
+}S}\times \overrightarrow{\mathbf{E}}_{\text{environment}}\right) \\
 \overrightarrow{\mathbf{E}} &=&\mathbf{E}_{\text{charges in RF}}^{\prime }-%
 \overrightarrow{\mathbf{V}}_{S^{\prime }S}\times \overrightarrow{\mathbf{B}}%
 _{\text{environment}}^{\prime } \\
 \overrightarrow{\mathbf{B}} &=&\overrightarrow{\mathbf{B}}_{\text{magnet in
 RF}}^{\prime }+\frac{1}{c^{2}}\left( \overrightarrow{\mathbf{V}}_{S^{\prime
-}S}\times \overrightarrow{\mathbf{E}}_{\text{ environment}}^{\prime }\right) 
+}S}\times \overrightarrow{\mathbf{E}}_{\text{ environment}}^{\prime }\right)
 \end{eqnarray*}%
 Gauss' law for magnetic fields%
 \begin{equation*}
@@ -28210,8 +26765,8 @@ I_{d}=\varepsilon _{o}\frac{d\Phi _{E}}{dt}
 Maxwell decided that, since this looked like equivalent to a current, he
 would call it a current and include it in Ampere's law.%
 \begin{eqnarray*}
-\doint \mathbf{B}\cdot d\ell  &=&\mu _{o}\left( I+I_{d}\right)  \\
-&=&\mu _{o}\left( I+\varepsilon _{o}\frac{d\Phi _{E}}{dt}\right) 
+\doint \mathbf{B}\cdot d\ell &=&\mu _{o}\left( I+I_{d}\right) \\
+&=&\mu _{o}\left( I+\varepsilon _{o}\frac{d\Phi _{E}}{dt}\right)
 \end{eqnarray*}%
 but remember it is not really a current. What we have is a changing electric
 field that is making a magnetic field \emph{as though there were a current }$%
@@ -28225,22 +26780,22 @@ but now we know that if we use $S_{2}$ we have $\frac{d\Phi _{E}}{dt}\neq 0$%
 , and we realize that at $P_{2}$ the current $I=0$ so 
 \begin{equation*}
 \doint \mathbf{B}\cdot d\ell =\mu _{o}\left( 0+\varepsilon _{o}\frac{d\Phi
-_{E}}{dt}\right) 
+_{E}}{dt}\right)
 \end{equation*}%
 and for our geometry we found$\frac{d\Phi _{E}}{dt}$ 
 \begin{equation*}
 \doint \mathbf{B}\cdot d\ell =\mu _{o}\left( 0+\pi R^{2}\varepsilon _{o}%
-\frac{dE}{dt}\right) 
+\frac{dE}{dt}\right)
 \end{equation*}%
 and we calculated $\frac{dE}{dt}$ so we can substitute it in%
 \begin{equation*}
 \doint \mathbf{B}\cdot d\ell =\mu _{o}\left( 0+\pi R^{2}\varepsilon _{o}%
-\frac{I}{\pi R^{2}\varepsilon _{o}}\right) 
+\frac{I}{\pi R^{2}\varepsilon _{o}}\right)
 \end{equation*}%
 where we remember that the current $I$ is the current making the electric
 field--the current in the wire. Then we have 
 \begin{equation*}
-B2\pi r=\mu _{o}\left( 0+I\right) 
+B2\pi r=\mu _{o}\left( 0+I\right)
 \end{equation*}%
 and our field is%
 \begin{equation*}
@@ -28422,21 +26977,6 @@ Our goal is to show that these equations tell us that we can have waves in
 the field. To do this, we will show that Maxwell's equations really contain
 the linear wave equation within them. As a reminder, here is the linear wave
 equation%
-%TCIMACRO{%
-%\TeXButton{Far Board}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Far Board}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Far Board}
-\end{minipage}
-}%
-%EndExpansion
 \begin{equation*}
 \frac{\partial ^{2}y}{\partial x^{2}}\mathbf{=}\frac{1}{v^{2}}\frac{\partial
 ^{2}y}{\partial t^{2}}
@@ -28449,21 +26989,6 @@ electromagnetic field.
 
 \subsection{Rewriting of Faraday's law}
 
-%TCIMACRO{%
-%\TeXButton{Skip this}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Skip this}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Skip this}
-\end{minipage}
-}%
-%EndExpansion
 Let's start with Faraday's law%
 \begin{equation}
 \doint \overrightarrow{\mathbf{E}}\cdot d\overrightarrow{\mathbf{s}}=-\frac{%
@@ -28476,10 +27001,10 @@ From our discussion of displacement currents we have a strong hint that the $%
 be perpendicular. So let's take the magnetic field as positive in the $z$
 direction. So as the light wave moves from the source along a line we could
 draw the $\overrightarrow{\mathbf{E}}$ and $\overrightarrow{\mathbf{B}}$
-fields something like this. \FRAME{dtbpF}{3.2301in}{2.5365in}{0in}{}{}{Figure%
+fields something like this. \FRAME{dtbpF}{3.2301in}{2.5365in}{0pt}{}{}{Figure%
 }{\special{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
 TRUE;display "USEDEF";valid_file "T";width 3.2301in;height 2.5365in;depth
-0in;original-width 3.1851in;original-height 2.4958in;cropleft "0";croptop
+0pt;original-width 3.1851in;original-height 2.4958in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
 'SAPYRDIY.wmf';tempfile-properties "XPR";}}Let's take a small rectangle of
 area to find $\doint \overrightarrow{\mathbf{E}}\cdot d\overrightarrow{%
@@ -28733,21 +27258,6 @@ the electric field, we can always find it from the electric field.
 
 \section{Properties of EM waves}
 
-%TCIMACRO{%
-%\TeXButton{Pick up here}{\marginpar {
-%\hspace{-0.5in}
-%\begin{minipage}[t]{1in}
-%\small{Pick up here}
-%\end{minipage}
-%}}}%
-%BeginExpansion
-\marginpar {
-\hspace{-0.5in}
-\begin{minipage}[t]{1in}
-\small{Pick up here}
-\end{minipage}
-}%
-%EndExpansion
 Knowing that the electric and magnetic fields form plane waves, we can
 investigate these plane wave solutions to see what they imply.
 
@@ -28880,17 +27390,13 @@ S_{ave} &=&\frac{1}{\epsilon _{o}\mu _{o}c}\frac{1}{2}\epsilon _{o}E^{2} \\
 If you have already taken your course on thermodynamics you, learned that we
 could transfer energy by radiation. This is our radiation! And we see that
 it does indeed transfer energy. We learned about this by discussing solar
-heating and by talking about Army weapons that apply energy to crowds.\FRAME{%
-dhFU}{2.2814in}{2.5002in}{0pt}{\Qcb{{\protect\small US Army Active Denial
-System (ADS). }{\protect\tiny %
-https://jnlwp.defense.gov/Portals/50/Documents/Resources/Presentations/Joint%
-\_Integration\_Program\_Advanced\_Planning\_Briefs\_to\_Industry/2017\%20DoD%
-\_OGA\%20NLW\%20APBI\%20Army.pdf?ver=2020-08-25-125259-783}}}{}{Figure}{%
-\special{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
-TRUE;display "USEDEF";valid_file "T";width 2.2814in;height 2.5002in;depth
-0pt;original-width 2.2955in;original-height 2.5199in;cropleft "0";croptop
-"1";cropright "1";cropbottom "0";tempfilename
-'SAPYRDJ1.wmf';tempfile-properties "XPR";}}but we really use this every day
+heating and by talking about Army weapons that apply energy to crowds. 
+\FRAME{dtbpFU}{2.3237in}{1.913in}{0pt}{\Qcb{{\protect\small US Army Active
+Denial System (ADS).}}}{}{Figure}{\special{language "Scientific Word";type
+"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
+2.3237in;height 1.913in;depth 0pt;original-width 2.284in;original-height
+1.8749in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'SGTWZ802.wmf';tempfile-properties "XPR";}}but we really use this every day
 when we microwave something. Microwaves are electromagnetic waves!
 
 \subsection{Momentum of light}
@@ -29040,11 +27546,11 @@ speed of light was strong evidence leading us to conclude that light was
 really a type of these waves. There are a few more types of electromagnetic
 waves. In the following chart you can see that visible light is just a small
 part of what we call the \emph{electromagnetic spectrum.}\FRAME{dtbpFU}{%
-4.5109in}{0.3537in}{0pt}{\Qcb{Electromagnetic Spectrum (Public Domain image
+4.8101in}{0.4947in}{0pt}{\Qcb{Electromagnetic Spectrum (Public Domain image
 courtesy NASA)}}{}{Figure}{\special{language "Scientific Word";type
-"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-4.5109in;height 0.3537in;depth 0pt;original-width 4.0309in;original-height
-0.2897in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+"GRAPHIC";display "USEDEF";valid_file "T";width 4.8101in;height
+0.4947in;depth 0pt;original-width 4.0309in;original-height 0.2897in;cropleft
+"0";croptop "1";cropright "1";cropbottom "0";tempfilename
 'SAPYRDJ5.wmf';tempfile-properties "XPR";}}
 
 The speed of light is always a constant in vacuum. This is strange. It
@@ -29281,12 +27787,12 @@ diminishes or even disappears! Light is often polarized on reflection. Let's
 consider a beam of light made of just two polarizations. We will define a
 plane of incidence. This plane is the plane of the paper or computer screen.
 This plane is perpendicular to the reflective or refractive surface in the
-figure below.\FRAME{dhF}{2.5996in}{2.1906in}{0in}{}{}{Figure}{\special%
+figure below.\FRAME{dtbpF}{3.3313in}{2.815in}{0pt}{}{}{Figure}{\special%
 {language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
-TRUE;display "USEDEF";valid_file "T";width 2.5996in;height 2.1906in;depth
-0in;original-width 2.5581in;original-height 2.1508in;cropleft "0";croptop
+TRUE;display "USEDEF";valid_file "T";width 3.3313in;height 2.815in;depth
+0pt;original-width 3.5544in;original-height 3in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
-'SAPYRDJA.wmf';tempfile-properties "XPR";}}
+'SGTXC403.wmf';tempfile-properties "XPR";}}
 
 One of our polarizations is defined as parallel to this plane. This
 direction is represented by orange (lighter grey in black and white) arrows
@@ -29338,12 +27844,12 @@ refracted rays until at $90\unit{%
 %BeginExpansion
 {{}^\circ}%
 %EndExpansion
-}$ there is no reflected ray in the parallel direction. \FRAME{dhF}{3.7057in%
-}{3.0753in}{0pt}{}{}{Figure}{\special{language "Scientific Word";type
-"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-3.7057in;height 3.0753in;depth 0pt;original-width 5.0055in;original-height
-4.1494in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
-'SAPYRDJC.wmf';tempfile-properties "XPR";}}
+}$ there is no reflected ray in the parallel direction. \FRAME{dtbpF}{%
+4.1035in}{3.4082in}{0in}{}{}{Figure}{\special{language "Scientific
+Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
+"T";width 4.1035in;height 3.4082in;depth 0in;original-width
+4.0542in;original-height 3.3624in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'SGTXD404.wmf';tempfile-properties "XPR";}}
 
 The incidence angle that creates an angular difference between the refracted
 and reflected rays of $90\unit{%
@@ -29557,11 +28063,11 @@ fail, because we talked about their valid ranges.
 
 It is important to remember that we are not done discovering new things, and
 proving old things false. The laws of Newton are approximations that work at
-low speeds. Relativity provides mechanical equations for very high speeds
-(e.g. the satellite motion involved in the GPS\ system). But is Relativity
-correct? We think it works pretty well, but really we don't know. We may
-never know for sure. But we know it works within the range of things we have
-tried.
+low speeds. Relativity provides mechanical equations for very high speeds or
+in gravitational acceleration fields (e.g. transmitting signals from the GPS
+satellites to the ground). But is Relativity correct? We think it works
+pretty well, but really we don't know. We may never know for sure in our
+Earth life. But we know it works within the range of things we have tried.
 
 There are physicists today that are working on a fundamentally new model of
 the universe. It is called \textquotedblleft String
@@ -29581,26 +28087,26 @@ course. That is what we should expect of an inductive process.
 
 It is also important to note that revealed truth is not an inductive
 process. It is still not static (see article of faith 9), but it \emph{can}
-prove something true as well as prove things false. I\ hope your FDSCI 101
+prove something true as well as prove things false. I\ hope your BYU-Idaho
 experience gave you some insight into doing science as well as learning
 about science.
 
 Some members view science and revelation as in opposition. But I\ think they
 are complementary. The scientific process allows us to eliminate things that
 are not true, allowing us to follow D\&C 9:8 in preparation for seeking
-revelation. During a recent convocation speech, Elder Scott described using
-this process as a nuclear engineer during his engineering career . We can
-use this combination in our personal lives as well. I hope you will consider
-this in your careers and lives.
+revelation. During a BYU-I convocation speech, Elder Richard G. Scott
+described using this process as a nuclear engineer during his engineering
+career . We can use this combination in our personal lives as well. I hope
+you will consider this in your careers and lives.
 
-I have tried to give at least equal time to conceptual understanding and
-mathematical solving. I hope you review and refresh the conceptual
-understanding of the physics of what you build. Most of my industrial
-career, we built what we designed very well. We always did our calculations
-well. But we did, at times, build the wrong thing because the conceptual
-basis of the design was wrong. Such mistakes are difficult to fix.
-Conceptual understanding is a guiding principle for a successful design
-career. I hope this class has contributed to that conceptual understanding.
+I have tried to give time to both conceptual understanding and mathematical
+solving. I hope you review and refresh the conceptual understanding of the
+physics of what you build. Most of my industrial career, we built what we
+designed very well. We always did our calculations well. But we did, at
+times, build the wrong thing because the conceptual basis of the design was
+wrong. Such mistakes are difficult to fix. Conceptual understanding is a
+guiding principle for a successful design career. I hope this class has
+contributed to that conceptual understanding for your careers.
 
 \appendix
 
@@ -29788,7 +28294,7 @@ a very small electric field compared to the electric fields in the resistor
 and the battery, due to the small resistance in the real wire we use to make
 the big loop). And perhaps just as important, there \emph{is} a magnetic
 field that would not be predicted by just treating $L\frac{dI}{dt}$ as a
-voltage drop. This magnetic field could interfear with other parts of your
+voltage drop. This magnetic field could interfere with other parts of your
 circuits!
 
 This is very subtile, and I struggle to remember this! Fortunately in most
