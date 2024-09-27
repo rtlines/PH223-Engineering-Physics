@@ -1,0 +1,99 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{Created=Friday, September 27, 2024 10:56:36}
+%TCIDATA{LastRevised=Friday, September 27, 2024 11:06:28}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Scientific Notebook\Blank Document">}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+We can combine these formulae to make one expression 
+\begin{equation}
+f_{B}=\frac{v_{sound}\pm v_{d}}{v_{sound}\mp v_{e}}f_{A}
+\end{equation}%
+\textbf{where we use the top sign for the speed when the mover (detector or
+emitter) is going toward the non-mover}.
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+& 
+\begin{tabular}{l}
+Stationary \\ 
+Detector%
+\end{tabular}
+& 
+\begin{tabular}{c}
+Detector  \\ 
+moves toward  \\ 
+Emitter%
+\end{tabular}
+& 
+\begin{tabular}{c}
+Detector  \\ 
+moves away from  \\ 
+Emitter%
+\end{tabular}
+\\ \hline
+\begin{tabular}{l}
+Stationary \\ 
+Emitter%
+\end{tabular}
+& $f_{B}=f_{A}$ & $f_{B}=\frac{v_{sound}+v_{d}}{v_{sound}}f_{A}$ & $f_{B}=%
+\frac{v_{sound}-v_{d}}{v_{sound}}f_{A}$ \\ \hline
+\begin{tabular}{c}
+Emitter \\ 
+moves toward  \\ 
+Detector%
+\end{tabular}
+& $f_{B}=\frac{v_{sound}}{v_{sound}-v_{e}}f_{A}$ & $f_{B}=\frac{%
+v_{sound}+v_{d}}{v_{sound}-v_{e}}f_{A}$ & $f_{B}=\frac{v_{sound}-v_{d}}{%
+v_{sound}-v_{e}}f_{A}$ \\ \hline
+\begin{tabular}{c}
+Emitter \\ 
+moves away from  \\ 
+Detector%
+\end{tabular}
+& $f_{B}=\frac{v_{sound}}{v_{sound}+v_{e}}f_{A}$ & $f_{B}=\frac{%
+v_{sound}+v_{d}}{v_{sound}+v_{e}}f_{A}$ & $f_{B}=\frac{v_{sound}-v_{d}}{%
+v_{sound}+v_{e}}f_{A}$ \\ \hline
+\end{tabular}
+\end{center}
+
+\end{document}
