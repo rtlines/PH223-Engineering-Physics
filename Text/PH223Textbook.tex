@@ -11,7 +11,7 @@
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=Manual}
 %TCIDATA{Created=Thursday, March 21, 2024 14:45:27}
-%TCIDATA{LastRevised=Monday, November 25, 2024 14:59:24}
+%TCIDATA{LastRevised=Friday, December 06, 2024 10:29:11}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 %TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Standard LaTeX Book">}
 %TCIDATA{Language=American English}
@@ -23750,8 +23750,10 @@ is given by $\mathcal{E}=-N\frac{\Delta \Phi _{B}}{\Delta t}$
 \section{Lenz}
 
 What we are saying is that if we change the magnetic flux through a loop, we
-will get a current. The direction of current flow is not obvious. Lenz
-experimentally determined which way it will go. Here is his rule
+will get a current. The direction of current flow is not obvious. We found
+it last lecture in our motional emf example. But we couldn't just look at
+the situation to tell which way the current would go. Lenz experimentally
+foun a rule to tell which way it will go. Here is his rule
 
 \begin{quotation}
 The current caused by the induced emf travels in the direction that creates
@@ -23785,10 +23787,10 @@ the wire such that our fingers curl into the loop the way $\mathbf{\vec{B}}%
 _{ind}$ goes through the loop. Then our thumb is in the direction of the
 current.
 
-We can think of this as two step process. The changing external field makes
-a current in the wire. The current in the wire makes an induced magnetic
-field. That induced field will be in the direction that tries to keep the
-flux through the loop from changing.
+We can think of this as a two step process. The changing external field
+makes a current in the wire. The current in the wire makes an induced
+magnetic field. That induced field will be in the direction that tries to
+keep the flux through the loop from changing.
 
 \section{Faraday}
 
@@ -24027,9 +24029,9 @@ pause to think philosophically about what it means that a changing magnetic
 flux creates an electric field.
 
 %TCIMACRO{%
-%\TeXButton{Basic Equations}{\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}}}%
+%\TeXButton{Basic Equations}{\vspace{0.2in}\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}}}%
 %BeginExpansion
-\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}%
+\vspace{0.2in}\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}%
 %EndExpansion
 
 \begin{eqnarray*}
@@ -25557,9 +25559,9 @@ is isn't so strange because there \emph{is} energy coming into the circuit
 from outside. Energy for the circuit should \emph{not} be conserved. This is
 just what we want for a wireless charger or a Bluetooth communication
 device. We will leave this non-conservative field issue for now. If you are
-interested in pursuing it a little further see Appendix . But for now we can
-say that the additional energy from the field could be given by calculating
-the induced emf%
+interested in pursuing it a little further see Appendix \ref%
+{appendix_field_stuff}. But for now we can say that the additional energy
+from the field could be given by calculating the induced emf%
 \begin{equation}
 \mathcal{E}_{induced}=L\frac{dI}{dt}
 \end{equation}%
@@ -26067,7 +26069,7 @@ charge is moving along with frame $S^{\prime }$ with a velocity $%
 \begin{eqnarray*}
 \overrightarrow{\mathbf{F}} &=&q\overrightarrow{\mathbf{v}}\times 
 \overrightarrow{\mathbf{B}} \\
-&=&qv\hat{\imath}\times B\left( -\hat{\jmath}a\right) \\
+&=&qv\hat{\imath}\times B\left( -\hat{k}a\right)  \\
 &=&qVB\hat{\jmath}
 \end{eqnarray*}%
 in the $\widehat{j}$ direction.
@@ -28261,7 +28263,8 @@ contributed to that conceptual understanding for your careers.
 
 \appendix
 
-\chapter{More insight into inductance and non-conservative fields}
+\chapter{More insight into inductance and non-conservative fields \label%
+{appendix_field_stuff}}
 
 To try to make this idea of inductance make more sense, let's take another
 strange circuit.\FRAME{dtbpF}{1.382in}{0.8077in}{0pt}{}{}{Figure}{\special%
