@@ -11,7 +11,7 @@
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=Manual}
 %TCIDATA{Created=Thursday, March 21, 2024 14:45:27}
-%TCIDATA{LastRevised=Thursday, September 04, 2025 13:30:04}
+%TCIDATA{LastRevised=Friday, September 26, 2025 17:18:41}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 %TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Standard LaTeX Book">}
 %TCIDATA{Language=American English}
@@ -1173,7 +1173,7 @@ another bit of mass.
 
 Now let's look at the electric force. Suppose we have many charges in some
 configuration (maybe a round ball of charge). We could call the total
-charge, $Q_{E}.$ Then our force magnitude on a mover charge $q_{m},$ would
+charge, $Q_{E}.$ Then our force magnitude on a movable charge $q_{m},$ would
 be 
 \begin{equation*}
 F_{e}=k_{e}\frac{\left\vert Q_{E}\right\vert \left\vert q_{m}\right\vert }{%
@@ -1211,11 +1211,8 @@ and then only following the idea of that their forces add as vectors
 (remember that for electricity they can cancel, because we have both
 positive and negative charges).
 
-Recall that in our study of waves, when we had two waves in a medium we
-found we could just added up displacements point for point. We called this 
-\emph{superposition}. We will use the same word here, but it has a slightly
-different meaning. We are not adding up wave displacements. We are adding up
-forces. But we still do it point for point.
+When we add up the forces on a charge made by several other charges we say
+the forces are \emph{superimposed. }
 
 Now where there are forces, there will be Newton's second law! Let's
 consider a problem. Suppose we have three charges, equally spaced apart as
@@ -1676,8 +1673,11 @@ charge.\FRAME{dhF}{2.9213in}{2.7069in}{0pt}{}{}{Figure}{\special{language
 'T1OKTF9E.wmf';tempfile-properties "XPR";}}Notice that the number of field
 lines is proportional to the field, but there is no set proportionality. If
 the field from one charge is twice that of the other, we pick a number of
-field lines for, say, the negative charge, and double the lines on the
-larger positive charge.
+field lines for the bigger charge that is twice the number we picked for the
+smaller charge. You can see this in the last figure. There are more lines
+attached to the smaller negative charge than there are for the bigger
+positive charge. So the positive charge has a larger charge amount than the
+negative charge.
 
 This gives us a way to picture the electric field in our minds!
 
@@ -2381,28 +2381,38 @@ To find the field due to a continuous charge distribution, we break up the
 charged object into small pieces in a calculus sense. Each small piece is
 still a continuous distribution of charge. It will have an amount of charge $%
 \Delta q,$ where here the $\Delta $ means \textquotedblleft a small amount
-of.\textquotedblright\ Then we calculate the field due to this element of
-charge. We repeat the process for each element using the superposition
-principle to sum up all the individual field contributions. This is very
-like our method of finding the field from individual charges, only instead
-of a sum we want to let $\Delta q$ become very small and use an integral.
-The field due to this bit of charge is%
+of.\textquotedblright\ Then we calculate the field due to this small piece
+of charge. We repeat the process for each small bit of charge using the
+superposition principle to sum up all the individual field contributions.
+This is very like our method of finding the field from individual charges,
+only now instead of just a single $q$ we have a small amount of charge $%
+\Delta q.$ The field due to this bit of charge is%
 \begin{equation*}
 \Delta \overrightarrow{\mathbf{E}}=\frac{1}{4\pi \epsilon _{o}}\frac{\Delta q%
 }{r^{2}}\mathbf{\hat{r}}
 \end{equation*}%
-Recall that here $\Delta $ means \textquotedblleft a small bit
-of\textquotedblright\ and is not a difference between two charge values or
-two field values. We learned that we can sum up the fields from each piece%
+From last lecture, we know that the field for two or three charges looks
+like the field for a point charge with twice or three times the single
+charge when we get far away from the group of charges. \newline
+We are using that here. Recall that here $\Delta $ means \textquotedblleft a
+small bit of\textquotedblright\ and is not a difference between two charge
+values or two field values. We want $\Delta q$ to be enough charge (and to
+be far enough away from it) so it looks continuous. We need more than just
+two or three charges in $\Delta q.$ And we need to be far enough away so the
+empty space between the charges isn't noticable. The amount of charge in $%
+\Delta q$ is small, but not so small so you notice it is just a charge or
+two.
+
+We learned that we can sum up the fields from each bit of charge%
 \begin{eqnarray*}
 \overrightarrow{\mathbf{E}} &\approx &\sum_{i}\Delta \overrightarrow{\mathbf{%
 E}}_{i} \\
 &\mathbf{\approx }&\frac{1}{4\pi \epsilon _{o}}\dsum\limits_{i}\frac{\Delta
 q_{i}}{r_{i}^{2}}\mathbf{\hat{r}}_{i}
 \end{eqnarray*}%
-and now we use our M215 (or M113) tricks to convert this into an integral.
-We let our small element of charge become very small (but not so small that
-we violate our assumption that the charge distribution of $\Delta q$ is
+and now we use our second semester calculus tricks to convert this into an
+integral. We let our small bit of charge be very small (but not so small
+that we violate our assumption that the charge distribution of $\Delta q$ is
 continuous).%
 \begin{eqnarray*}
 \overrightarrow{\mathbf{E}} &\mathbf{=}&\lim_{\Delta q_{i}\rightarrow 0}%
@@ -2446,14 +2456,28 @@ small, we can use our integral formula to do the summation.
 \overrightarrow{\mathbf{E}}=\frac{1}{4\pi \epsilon _{o}}\int \frac{dq}{r^{2}}%
 \mathbf{\hat{r}}
 \end{equation*}%
-Then, let's start by finding an amount of charge for our $dq$ units. Let's
-say that the charge is evenly distributed along the line. Then we can use
-the linear charge density 
+We need to make a way to define how much charge is in our $dq$ bit. It can't
+be too bit, but it hast to be big enough to not have individual charges.
+Let's start with all the charge and split it up into small amounts. For this
+simple problem let's say that the charge is evenly distributed along the
+line. Then we can use the linear charge density. Take all the charge and
+divide by all the length of the wire. 
 \begin{equation*}
 \lambda =Q/\ell
 \end{equation*}%
-to define our small amount of charge $dq.$ The quantity $Q$ is the total
-amount of charge on the wire and $\ell $ is the length of the wire. Then%
+Since the charge is placed uniformely along the wire, a small amout of wire
+length $\Delta \ell $ would have a small amout of charge $\Delta q$ on it
+and the ratio $\Delta q/\Delta \ell $ would have to be the same as the ratio 
+$Q/\ell .$%
+\begin{equation*}
+\frac{\Delta q}{\Delta \ell }=\frac{Q}{\ell }
+\end{equation*}%
+then 
+\begin{equation*}
+\Delta q=\frac{Q}{\ell }\Delta \ell =\lambda \Delta \ell
+\end{equation*}%
+This should work for any small length of wire $\Delta \ell .$ We could even
+do this for a smaller length of sire $d\ell .$ Then%
 \begin{equation*}
 dq=\frac{Q}{\ell }dy=\lambda dy
 \end{equation*}
@@ -2464,10 +2488,14 @@ have
 \begin{equation*}
 dq=\lambda \left( y\right) dy
 \end{equation*}%
-but for now, let's assume the linear charge density is constant. Our basic
-formula tells us that we should add up all the field contributions from all
-the $dq$ elements. But we have an obstacle. We need a different $\mathbf{%
-\hat{r}}_{i}$ for every $dq_{i}.$ How do we deal with this?
+but for now, let's assume the linear charge density is constant. Our total
+charge $Q$ is the sum of all the $dq$ bits or elements. Our basic formula
+tells us that we should add up all the field contributions from all the $dq$
+elements. But we have an obstacle. We need a different $\mathbf{\hat{r}}_{i}$
+for every $dq_{i}.$ How do we deal with this?
+
+We take components and sum up all the $x$-components separately and then sum
+up all the $y$-components separately.
 
 Just like with last lecture, we only need the component of the part of the
 field that does not cancel. Here we need to have drawn a good picture. 
@@ -2515,6 +2543,12 @@ r^{2}}\cos \theta
 which is much more likely be be integrable with what we know from M113 or
 M215.
 
+If the $y$-component didn't cancel we would have 
+\begin{equation*}
+E_{y}=\frac{1}{4\pi \epsilon _{o}}\int_{-y_{\max }}^{y_{\max }}\frac{dq}{%
+r^{2}}\sin \theta
+\end{equation*}
+
 The quantity $r$ is still the distance from the environmental charge to the
 point $P$ where we want to know the field just like it was in our last
 lecture. We can use the same geometry technique to get an expression for $r.$%
@@ -2533,15 +2567,19 @@ E_{z} &=&\frac{1}{4\pi \epsilon _{o}}\int_{-y_{\max }}^{y_{\max }}\frac{%
 &=&\frac{\lambda z}{4\pi \epsilon _{o}}\int_{-y_{\max }}^{y_{\max }}\frac{dy%
 }{\left( y^{2}+z^{2}\right) ^{\frac{3}{2}}}
 \end{eqnarray*}%
-This now looks like a M215 or M113 problem. We can find this integral in an
-integral table or you can use your calculator, or a symbolic math package,
-or you can remember your M215 or M113 techniques and prove that 
+This now looks like a second semester calculus problem! In a calculus class
+we would try a bunch of different techniques to find the answer. But this
+integral has been solved by people in the past, and they made tables of the
+answers to integrals like this. You can look it up on an online table, or
+find one in a book of integrals. A symbolic math program would also give a
+good answer. I will demonstrate the integral table method because we will
+have integral tables on our tests. The table has an entry that looks like
+this 
 \begin{equation*}
 \int \frac{dx}{\left( x^{2}\pm a^{2}\right) ^{\frac{3}{2}}}=\frac{\pm x}{%
 a^{2}\sqrt{x^{2}\pm a^{2}}}
-\end{equation*}%
-This is what an integral table entry would look like. We just need to match
-it to our variables. Using it looks like this:%
+\end{equation*}
+We just need to match it to our variables. Using it looks like this:%
 \begin{eqnarray*}
 E_{z} &=&\frac{\lambda z}{4\pi \epsilon _{o}}\int_{-y_{\max }}^{y_{\max }}%
 \frac{dy}{\left( y^{2}+z^{2}\right) ^{\frac{3}{2}}} \\
@@ -2564,7 +2602,8 @@ E_{z} &=&\frac{\frac{Q}{2y_{\max }}}{4\pi z\epsilon _{o}}\frac{2y_{\max }}{%
 &=&\frac{1}{4\pi \epsilon _{o}}\frac{Q}{z\sqrt{\left( y_{\max }\right)
 ^{2}+z^{2}}}
 \end{eqnarray*}%
-This is the field due to a charged rod of length $\ell =2y_{\max }.$
+This is the field due to a charged rod of length $\ell =2y_{\max }$ that has
+a total charge $Q$ uniformely distributed alone the rod.
 
 Note that there are only a few integrals that we can solve in closed form to
 find electric fields. It might be a good idea to build your own integral
@@ -2598,22 +2637,30 @@ formula), we have%
 \overrightarrow{\mathbf{E}}_{z}=\frac{1}{4\pi \epsilon _{o}}\frac{2\lambda }{%
 r}\mathbf{\hat{k}}
 \end{equation*}%
-We should get a mental picture of what this means. \FRAME{dhF}{1.1364in}{%
-1.8758in}{0pt}{}{}{Figure}{\special{language "Scientific Word";type
-"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-1.1364in;height 1.8758in;depth 0pt;original-width 2.5996in;original-height
-4.3163in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
-'T1OKTF9V.wmf';tempfile-properties "XPR";}}The field around a long line of
-charge only depends on the distance away from the line, and on the linear
-charge density. As we would expect, the field gets weaker as we get farther
-away. But it does not get weaker as fast as the point charge case. That
-makes some sense, because our infinite line of charge is, well, really big.
-You are never really too far away from something that is infinitely big. So
-we should not expect such a charge configuration to look very like a point
-charge no matter how far away we go. Of course an infinite line of charge is
-not something we can really build. It is just a useful approximation near,
-say, a charged wire. But farther from the wire the approximation would not
-be so good and we would have to go back to our finite line solution.
+Suppose we had done this along the $x$-axis instead of the $z$-axis? Think
+of the symmetry. The electric field in the $y$-direction would still cancel
+out. And any direction perpendicular to the wire looks the same. \FRAME{dhF}{%
+1.1364in}{1.8758in}{0pt}{}{}{Figure}{\special{language "Scientific
+Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
+"T";width 1.1364in;height 1.8758in;depth 0pt;original-width
+2.5996in;original-height 4.3163in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'T1OKTF9V.wmf';tempfile-properties "XPR";}}%
+The field around a long line of charge only depends on the distance away
+from the line, and on the linear charge density. We could write this in
+cylindrical coordinates as just 
+\begin{equation*}
+\overrightarrow{\mathbf{E}}_{z}=\frac{1}{4\pi \epsilon _{o}}\frac{2\lambda }{%
+r}\mathbf{\hat{r}}
+\end{equation*}%
+As we would expect, the field gets weaker as we get farther away. But it
+does not get weaker as fast as the point charge case. That makes some sense,
+because our infinite line of charge is, well, really big. You are never
+really too far away from something that is infinitely big. So we should not
+expect such a charge configuration to look very like a point charge no
+matter how far away we go. Of course an infinite line of charge is not
+something we can really build. It is just a useful approximation near, say,
+a charged wire. But farther from the wire the approximation would not be so
+good and we would have to go back to our finite line solution.
 
 \subsection{Ring of charge}
 
@@ -2630,10 +2677,18 @@ will need to divide up the charge into $dq$ segments, find and expression
 for $r,$ and solve the problem of eliminating $\mathbf{\hat{r}}$ by taking
 components. Then we can integrate to find the total field.
 
-From the picture, we can see that we will only have a $z$-component again.
-So we can eliminate $\mathbf{\hat{r}}$ the same way as in the last problem.
-We model the ring as a line of charge of length $2\pi R$ that has been bent
-into a circle. Again we have the basic equation%
+From the picture, we can see that we will only have a $z$-component again. 
+\begin{equation*}
+E_{x}=\overrightarrow{\mathbf{E}}\cdot \mathbf{\hat{\imath}}=E\sin \theta
+\end{equation*}
+but look at the red arrows. The $x$-component from the top one cancels the $%
+x $-component for the bottom one. That will happen in the $y$-direction
+also. And it will happen for every $dq$ part of the ring because the $dq$ on
+the other side of the ring will make a field that cancels out all but the $z$%
+-component. So we can eliminate $\mathbf{\hat{r}}$ the same way as in the
+last problem by taking components and arguing that only one component
+survives. We model the ring as a line of charge of length $2\pi R$ that has
+been bent into a circle. Again we have the basic equation%
 \begin{equation*}
 \overrightarrow{\mathbf{E}}=\frac{1}{4\pi \epsilon _{o}}\int \frac{dq}{r^{2}}%
 \mathbf{\hat{r}}
@@ -2667,7 +2722,7 @@ segments to our point were we want to know the field.%
 \begin{equation*}
 r=\sqrt{y_{i}^{2}+z^{2}}
 \end{equation*}%
-but since this is a ring, our $y_{i}=R$ for all $i.$ So%
+But since this is a ring, our $y_{i}=R$ for all $i.$ So%
 \begin{equation*}
 r=\sqrt{R^{2}+z^{2}}
 \end{equation*}%
@@ -2678,8 +2733,7 @@ and using the same reasoning as in our last problem,
 Then we can set up our integral.%
 \begin{eqnarray*}
 E_{z} &=&\overrightarrow{\mathbf{E}}\cdot \mathbf{\hat{k}} \\
-&=&\frac{1}{4\pi \epsilon _{o}}\int \frac{dq}{r^{2}}\mathbf{\hat{r}}\cdot 
-\mathbf{\hat{k}}
+&=&\frac{1}{4\pi \epsilon _{o}}\int \frac{dq}{r^{2}}\cos \theta
 \end{eqnarray*}%
 Putting in all the parts we have found yields%
 \begin{eqnarray*}
@@ -2732,9 +2786,9 @@ problems:
 \item Use geometry to find an expressions for $r,$ the distance from $dq$ to
 the point, $P,$ where we want to know the field.
 
-\item Eliminate $\mathbf{\hat{r}}$
+\item Eliminate $\mathbf{\hat{r}}$ by taking components
 
-\item Solve the integral
+\item Solve the integral for the remaining components
 \end{itemize}
 
 If you have a harder problem, one where you need the field from a continuous
@@ -2780,6 +2834,15 @@ vector components, etc.)
 
 \chapter{Motion of Charged Particles in Electric Fields}
 
+Last lecture we started our study of continuous distributions of charge. We
+assumed we had a lot of charge spread out over some shape (like a big line
+or ring) and that we were far enough from the charge distribution that we
+didn't notice that it was made of discrete charges. We will practice the
+procedure for finding the field from such a configuration of charge again
+today. Of course, the reason we want the field is to find forces and motion
+of charged objects. So we will look at the motion of charged particles in a
+uniform electric field and a device for making a uniform electric field.
+
 %TCIMACRO{%
 %\TeXButton{Fundamental Concepts}{{\vspace{0.25in}\LARGE Fundamental Concepts\vspace{0.25in}}}}%
 %BeginExpansion
@@ -2808,6 +2871,12 @@ the amount of charge in that small area. The ratio should be the same for
 any area so long as $\eta $ is uniform. We will find the electric field to
 the right of the sheet at point $P$.
 
+We did something like this for the infinate line of charge, but remember we
+started with a finite line of charge and then took a limit to make the line
+infinate. Let's do that again. Let's start with a finite disk of charge, and
+then make the radius infinate (by taking a limit) to get a semi-infinate
+sheet of charge.
+
 \FRAME{dtbpF}{4.042in}{2.2866in}{0in}{}{}{Figure}{\special{language
 "Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
 "USEDEF";valid_file "T";width 4.042in;height 2.2866in;depth
@@ -2820,19 +2889,22 @@ Once again we start with%
 \overrightarrow{\mathbf{E}}=\frac{1}{4\pi \epsilon _{o}}\int \frac{dq}{r^{2}}%
 \mathbf{\hat{r}}
 \end{equation*}%
-We need to find $dq,$ an expression for $r,$ and to get rid of $\hat{r}$ by
-taking components.
+From last lecture we know we need to find $dq$ that includes our integration
+variable, an expression for $r,$ and to get rid of $\hat{r}$ by taking
+components.
 
-Since the disk is uniformly charged, then, knowing the surface charge
+Since the disk is uniformly charged, we would have a uniform surface charge
 density 
 \begin{equation*}
 \eta =\frac{Q}{A}
 \end{equation*}%
-we can find the total amount of charge for an area 
+Then, knowing that surface charge density, we can find the total amount of
+charge for an area 
 \begin{equation*}
 Q=\eta A
 \end{equation*}%
-and we can use this to find an expression for a small amount of charge, $dq$ 
+and we can use this to find an expression for a small amount of charge, $dq,$
+conatined on a very small area $dA.$ 
 \begin{equation*}
 dq=\eta dA
 \end{equation*}%
@@ -2849,10 +2921,14 @@ dA=Rd\phi dR
 Then our $dq$ is just $\eta $ times this 
 \begin{equation*}
 dq=\eta Rd\phi dR
-\end{equation*}
+\end{equation*}%
+We have an expression for $dq$ with variables $\phi $ and $R$ that could be
+used in integration! Let's go on to find $R$, hopefully in terms of the same
+variables.
 
-From geometry we identify that $r,$ the distance from our little charge $dq$
-to the point $P$ where we want to know the field, is%
+The quantity $r,$ is always the distance from our little charge $dq$ to the
+point $P$ where we want to know the field. From geometry we identify that $r 
+$ is%
 \begin{equation*}
 r=\sqrt{z^{2}+R^{2}}
 \end{equation*}%
@@ -2860,12 +2936,14 @@ And, due to symmetry we expect only the $z$-component of the field to
 survive. So to get rid of $\hat{r}$ we take the $z$-component by multiplying
 (dot product) by $\hat{k}.$ There will be an angle, $\theta ,$ between $\hat{%
 r}$ and $\hat{k}.$ So we expect the result of the dot product to be that we
-multiply by the cosine of $\theta $%
+multiply by the cosine of $\theta .$ But $\theta $ depends on $z$ and $R$ so
+we should write it in terms of our integration variables so we don't have
+dependent variables in the integral. We can try%
 \begin{equation*}
 \cos \theta =\frac{z}{\sqrt{z^{2}+R^{2}}}
 \end{equation*}
 
-We want to put all this into our basic equation. This time the radius $R$
+Now we want to put all this into our basic equation. This time the radius $R$
 changes, so let's call it $R^{\prime }$ so we recognize that it is a
 variable over which we must integrate, then%
 \begin{equation*}
@@ -2886,8 +2964,8 @@ E_{z}=\frac{1}{4\pi \epsilon _{o}}\int_{0}^{2\pi }\int_{0}^{R}\frac{z\eta
 R^{\prime }d\phi dR^{\prime }}{\left( z^{2}+R^{\prime 2}\right) ^{\frac{3}{2}%
 }}
 \end{equation*}%
-Performing the integration over $d\phi $ just gives us a factor of $2\pi $,
-leaving us with%
+Performing the integration over $d\phi $ is easy, it just gives us a factor
+of $2\pi $. Leaving us with%
 \begin{equation*}
 E_{z}=\frac{z\eta \pi }{4\pi \epsilon _{o}}\int_{0}^{R}\frac{2R^{\prime
 }dR^{\prime }}{\left( z^{2}+R^{\prime 2}\right) ^{\frac{3}{2}}}
@@ -2915,12 +2993,12 @@ and for $R^{\prime }=R$%
 \begin{equation*}
 u=z^{2}+R^{2}
 \end{equation*}%
-then our integral becomes%
+Then our integral becomes 
 \begin{equation*}
 E_{z}=\frac{z\pi \eta }{4\pi \epsilon _{o}}\int_{z^{2}}^{z^{2}+R^{2}}\frac{du%
 }{\left( u\right) ^{\frac{3}{2}}}
 \end{equation*}%
-We get%
+This is an integral we can do! We get%
 \begin{eqnarray*}
 E_{z} &=&\frac{z\pi \eta }{4\pi \epsilon _{o}}\left[ \frac{-2}{\left(
 u\right) ^{\frac{1}{2}}}\right\vert _{z^{2}}^{z^{2}+R^{2}} \\
@@ -3096,7 +3174,7 @@ will change, and we get the sort of behavior that we see in figure \ref%
 
 It is probably worth noting that outside the capacitor the field has a \emph{%
 magnitude of zero} (or nearly zero). It is not really correct to say that
-there is no field. In fact, there are two superimposed fields, or
+there is no field. In fact, \emph{there are two superimposed fields}, or
 alternately, a field from each of the charges on each plates, all
 superimposed. The fields are there, but their magnitude is zero.
 
@@ -3210,7 +3288,7 @@ There is actually some controversy about this. Apparently Millikan and his
 students threw out much of their data, keeping only data on drops that
 behaved like they thought they should. They were lucky that this poor
 analysis technique did not lead to invalid results! (William Broad and
-Nicholas Wade, $\emph{Betrayers}$ \emph{of the truth, }Simon and Schuster,
+Nicholas Wade, \emph{Betrayers} \emph{of the truth, }Simon and Schuster,
 1983)}. So the smallest charge the drops could have added to them was $%
 1\times q_{e}$ and any other larger charge would be a larger multiple of $%
 q_{e}.$ The conclusion is that charge comes in units of $q_{e}$. We
@@ -3605,9 +3683,9 @@ We remember that torque is given by
 \overrightarrow{\mathbf{F}}
 \end{equation*}%
 Substituting in our force and defining the distance between the charges to
-be $a$ we can write this out \FRAME{dhF}{1.7547in}{1.2298in}{0pt}{}{}{Figure%
+be $a$ we can write this out \FRAME{dhF}{2.1179in}{1.4842in}{0pt}{}{}{Figure%
 }{\special{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
-TRUE;display "USEDEF";valid_file "T";width 1.7547in;height 1.2298in;depth
+TRUE;display "USEDEF";valid_file "T";width 2.1179in;height 1.4842in;depth
 0pt;original-width 3.8934in;original-height 2.7207in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
 'T1OKTGAI.wmf';tempfile-properties "XPR";}}The magnitude of the torque is
@@ -3617,10 +3695,10 @@ given by
 \end{equation*}%
 where $\theta _{rF}$ is the angle between $\mathbf{r}$ and $\mathbf{F}.$ It
 is easier to find that angle if we redraw each displacement vector from the
-pivot and each force with their tails together\FRAME{dhF}{1.1398in}{1.0144in%
+pivot and each force with their tails together\FRAME{dhF}{1.3716in}{1.2208in%
 }{0pt}{}{}{Figure}{\special{language "Scientific Word";type
 "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-1.1398in;height 1.0144in;depth 0pt;original-width 4.4763in;original-height
+1.3716in;height 1.2208in;depth 0pt;original-width 4.4763in;original-height
 3.9825in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
 'T1OKTGAJ.wmf';tempfile-properties "XPR";}}Then for one charge, say, $q_{\_}$
 \begin{equation*}
@@ -3651,12 +3729,12 @@ where $\mathbf{\hat{n}}$ is perpendicular to both $\overrightarrow{\mathbf{A}%
 dipole torque as a cross product. We would have to make $p$ a vector,
 though. So let's define $\overrightarrow{\mathbf{p}}$ as a vector with
 magnitude $aq$ and make its direction along the line connecting the charge
-centers, with the direction from negative to positive. \FRAME{dtbpF}{1.0741in%
-}{1.2548in}{0pt}{}{}{Figure}{\special{language "Scientific Word";type
+centers, with the direction from negative to positive. \FRAME{dtbpF}{0.6379in%
+}{1.1911in}{0in}{}{}{Figure}{\special{language "Scientific Word";type
 "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-1.0741in;height 1.2548in;depth 0pt;original-width 1.6483in;original-height
-1.9311in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
-'T1OKTGAK.wmf';tempfile-properties "XPR";}}Then we can write the torque as 
+0.6379in;height 1.1911in;depth 0in;original-width 0.5947in;original-height
+1.1335in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'T30ILX00.wmf';tempfile-properties "XPR";}}Then we can write the torque as 
 \begin{equation}
 \overrightarrow{\mathbf{\tau }}=\overrightarrow{\mathbf{p}}\times 
 \overrightarrow{\mathbf{E}}
@@ -3821,7 +3899,8 @@ q &=&\frac{p}{a}=\frac{6.2\times 10^{-30}\unit{C}\unit{m}}{3.9\times 10^{-12}%
 \unit{m}} \\
 &=&1.\,\allowbreak 589\,7\times 10^{-18}\allowbreak \unit{C}
 \end{eqnarray*}%
-(how can this be true?) so if the dipole is abut a $0.01\unit{cm}$ away then 
+so if the dipole is abut a $0.01\unit{cm}$ away from the balloon charge,
+then 
 \begin{eqnarray*}
 F_{net} &=&\frac{\left( 1.0\times 10^{-19}\right) \left( 1.\,\allowbreak
 589\,7\times 10^{-18}\allowbreak \unit{C}\unit{s}\right) }{4\pi \left(
@@ -3985,6 +4064,37 @@ or any configuration of charge that is spherical.
 
 \chapter{Electric Flux}
 
+Flux might be a new word for us. But the idea is simple. We can think of
+fluid flow from something like a garden hose or a house plumbing pipe. The
+amount of fluid going through the pipe is called the \emph{flow rate}. And
+think about water flow through a pipe. The pipe size might change, but that
+can't create new water in the pipe. There is the same mount of water flowing
+per second as there was in the smaller pipe. But with a bigger pipe, the
+water can spread out. So the velocity of the water goes down. The mass in
+the section of pipe is bigger because more water is in the pipe, but the
+water moves slower. Then the flow rate is the same. The same amount of water
+flows per unit time even if the pipe changes size. If we were studying fluid
+flow we would write this as 
+\begin{equation*}
+v_{1}A_{1}=v_{2}A_{2}
+\end{equation*}%
+which is called the equation of continuity\FRAME{dtbpF}{2.917in}{1.6579in}{%
+0pt}{}{}{Figure}{\special{language "Scientific Word";type
+"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
+2.917in;height 1.6579in;depth 0pt;original-width 2.8729in;original-height
+1.6215in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'Electric_Flux/pipe0.wmf';tempfile-properties "XNPR";}}and we could do some
+great physics with this. But for us now, in our study of electrical forces,
+I just want us to think of this quantity, the flow rate, that tells us how
+much fluid is going through a cross section of the pipe per unit of time.
+It's a useful quantity that helps hydro-engineers and plumbers make sure the
+pressure in a pipe stays in safe regions.
+
+We don't have a fluid flowing, but we do have an electric field. So far that
+field doesn't move, but it can penetrate a surface a little like a fluid
+flow. Could we use the idea of a field penetrating a surface to find the
+magnitude of the field -- maybe even without a long integration?
+
 %TCIMACRO{%
 %\TeXButton{Fundamental Concepts}{{\vspace{0.25in}\LARGE Fundamental Concepts\vspace{0.25in}}}}%
 %BeginExpansion
@@ -4001,39 +4111,23 @@ equal to the area.
 positive by convention.
 \end{itemize}
 
-\section{The Idea of Flux}
-
-If you took PH123 or have had a class that deals with fluids, I\ can use an
-analogy (if not, you will probably be OK, because you have probably used a
-garden hose). Let's recall some fluid dynamics for a moment. Remember what
-we called a \emph{flow rate}? This was from the equation of continuity%
-\begin{equation*}
-v_{1}A_{1}=v_{2}A_{2}
-\end{equation*}%
-\FRAME{dtbpF}{2.917in}{1.6579in}{0pt}{}{}{Figure}{\special{language
-"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
-"USEDEF";valid_file "T";width 2.917in;height 1.6579in;depth
-0pt;original-width 2.8729in;original-height 1.6215in;cropleft "0";croptop
-"1";cropright "1";cropbottom "0";tempfilename
-'Electric_Flux/pipe0.wmf';tempfile-properties "XNPR";}}We wanted to know how
-much liquid was going by a particular part of the pipe in a given unit of
-time. We called $vA$ a \emph{flow rate}.
-
 \subsection{The idea of electric flux}
 
-I want to introduce an analogous concept. But this time I\ want to use the
-electric field instead of water speed%
+Let's call the amount of field that goes through a surface the \emph{%
+electric flux.} It's like a flow rate in a way, but this time we have an
+electric field instead of water and it just pokes through the area instead
+of flowing by it.%
 \begin{equation*}
 \Phi =EA
 \end{equation*}%
-This is just like our flow rate in some ways. It is something multiplied by
-an area. In fact, it is how much of something goes through an area. We could
-guess that it is the amount of electric field that passes through the area, $%
-A.$ Now the electric fields we have dealt with so far don't flow. They just
-stay put (we will let them change later in the course). So it is only \emph{%
-like }a flow rate. Our field doesn't pass by an area, it more penetrates the
-area. Like an arrow stuck through a target. But it is useful to think of
-this as \textquotedblleft how much of something passes by an
+But still, this is like our flow rate in some ways. It is something
+multiplied by an area. In fact, it is how much of something goes through an
+area. It is the amount of electric field that passes through the area, $A.$
+Now the electric fields we have dealt with so far don't flow. They just stay
+put (we will let them change later in the course). So it is only \emph{like }%
+a flow rate. Our field doesn't pass by an area, it more penetrates the area.
+Like an arrow stuck through a target. But it is useful to think of this as
+\textquotedblleft how much of something passes by an
 area,\textquotedblright\ and the \textquotedblleft
 something\textquotedblright\ is the electric field in this case. Let's
 consider a picture \FRAME{dhF}{2.1326in}{2.0799in}{0pt}{}{}{Figure}{\special%
@@ -4095,10 +4189,8 @@ TRUE;display "USEDEF";valid_file "T";width 3.32in;height 1.2894in;depth
 0pt;original-width 8.5694in;original-height 3.3088in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
 'Electric_Flux/flux_definition_5.wmf';tempfile-properties "XNPR";}}The
-smaller area is called the \emph{projected area}.
-
-We can see that by tipping our area, we get fewer field lines that penetrate
-that area.
+smaller area is called the \emph{projected area}. We can see that by tipping
+our area, we get fewer field lines that penetrate that area.
 
 Really the number of field lines is just proportional to $E,$ so we won't
 ever really count field lines. But this is a good mental picture for what
@@ -4113,7 +4205,7 @@ product. If $E$ and $A$ were both vectors. Then we could write the flux as%
 \begin{equation}
 \Phi =\overrightarrow{\mathbf{E}}\cdot \overrightarrow{\mathbf{A}}
 \end{equation}%
-Well, we can define a vector that has $A$ as it's magnitude and is in the
+where, we can define a vector that has $A$ as it's magnitude and is in the
 right direction to make 
 \begin{equation*}
 \overrightarrow{\mathbf{E}}\cdot \overrightarrow{\mathbf{A}}=EA\cos \theta
@@ -4175,8 +4267,8 @@ surface to be%
 \overrightarrow{\mathbf{E}}\cdot d\overrightarrow{\mathbf{A}}
 \end{equation}%
 Notice that this is a \emph{surface integral}. It may be that you have not
-done surface integrals for some time, but we will practice in the upcoming
-lectures.
+done surface integrals for some time, but we will practice this in the
+upcoming lectures.
 
 \subsection{Closed surfaces}
 
@@ -4206,8 +4298,8 @@ You will also see this written as%
 \begin{equation}
 \Phi _{E}=\doint E_{n}dA
 \end{equation}%
-where $E_{n}$ is the component of the field normal to the surface at the
-point area increment $dA.$
+where $E_{n}$ is the component of the field perpendicular (normal) to the
+surface at the point area increment $dA.$
 
 \subsection{Flux example: a sphere}
 
@@ -4299,7 +4391,7 @@ length formula again to find
 \begin{equation}
 s_{\phi }=\left( r\sin \theta \right) \phi
 \end{equation}%
-a change in arch length will be%
+A change in this arch length will be%
 \begin{equation}
 \Delta s_{\phi }=\left( r\sin \theta \right) \Delta \phi
 \end{equation}%
@@ -4345,8 +4437,8 @@ A &=&\int_{0}^{\pi }\int_{0}^{2\pi }r^{2}\sin \theta d\phi d\theta \\
 \end{eqnarray}%
 as we expect.
 
-We are now ready to do a simple problem.\FRAME{dhF}{1.8749in}{1.0118in}{0pt}{%
-}{}{Figure}{\special{language "Scientific Word";type
+We are now ready to do a simple flux problem.\FRAME{dhF}{1.8749in}{1.0118in}{%
+0pt}{}{}{Figure}{\special{language "Scientific Word";type
 "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
 1.8749in;height 1.0118in;depth 0pt;original-width 3.2119in;original-height
 1.7201in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
@@ -4363,16 +4455,22 @@ then the flux through the surface is
 &=&\doint \frac{1}{4\pi \epsilon _{o}}\frac{Q_{E}}{r^{2}}\mathbf{\hat{r}%
 \cdot d\vec{A}}
 \end{eqnarray*}%
-but $\mathbf{\hat{r}}$ is always in the same direction as $\mathbf{d\vec{A}}$
-for this case, so 
+Because our surface is closed, let's let the direction of $\mathbf{d\vec{A}}$
+be outward. We will always make $\mathbf{d\vec{A}}$ point out ward for
+closed surfaces. And look, the direction of $\mathbf{\hat{r}}$ is also
+outward. For this problem the direction of $\mathbf{\hat{r}}$ is always in
+the same direction as $\mathbf{d\vec{A}}$, so 
 \begin{equation*}
 \mathbf{\hat{r}\cdot d\vec{A}}=(1)dA\cos \left( 0\right) =dA
 \end{equation*}%
 which gives us just 
+\begin{equation*}
+\Phi _{E}=\frac{Q_{E}}{4\pi \epsilon _{o}}\doint \frac{1}{r^{2}}dA
+\end{equation*}%
+and we have just built an expression for $dA$ for a spherical geometry!%
 \begin{eqnarray*}
-\Phi _{E} &=&\frac{Q_{E}}{4\pi \epsilon _{o}}\doint \frac{1}{r^{2}}dA \\
-&=&\frac{Q_{E}}{4\pi \epsilon _{o}}\doint \frac{1}{r^{2}}r^{2}\sin \theta
-d\theta d\phi \\
+\Phi _{E} &=&\frac{Q_{E}}{4\pi \epsilon _{o}}\doint \frac{1}{r^{2}}r^{2}\sin
+\theta d\theta d\phi \\
 &=&\frac{Q_{E}}{4\pi \epsilon _{o}}\int_{0}^{\pi }\left( \int_{0}^{2\pi
 }d\phi \right) \sin \theta d\theta \\
 &=&\frac{Q_{E}}{4\pi \epsilon _{o}}4\pi \\
@@ -4408,11 +4506,17 @@ We remember that the field from a long straight wire is approximately
 \begin{equation*}
 E=\frac{1}{4\pi \epsilon _{o}}\frac{2\left\vert \lambda \right\vert }{r}
 \end{equation*}%
+We got this by integrating the field from small $dq$ sized bits of charge
+and summing each field contribution to get the total field. Let's look at
+this equation. It is constant except for the factor of $1/r.$ So if we pick
+a particular $r$ value, the $E$ is constant all around the wire for that
+value of $r.$
+
 The symmetry of the field suggests an imaginary surface for measuring the
-flux. A cylinder matches the geometry well. Let's find the flux through an
-imaginary cylinder that is $L$ tall and has a radius $r$ and is concentric
-with the line of charge. Note that we are totally making up the cylindrical
-surface. There is not really any surface there at all.
+flux, and in this case a cylinder matches the geometry well. Let's find the
+flux through an imaginary cylinder that is $L$ tall and has a radius $r$ and
+is concentric with the line of charge. Note that we are totally making up
+the cylindrical surface. There is not really any surface there at all.
 
 The flux will be 
 \begin{equation*}
@@ -4430,8 +4534,11 @@ Let's consider the end caps first. For both the top and the bottom ends, $%
 ends. So there is no flux through the ends of the cylinder.
 
 There is flux through the side of the cylinder. Note that the field is
-perpendicular to the side surface everywhere. So $\mathbf{\vec{E}\cdot d\vec{%
-A}}=EdA.$ We can write our flux as 
+perpendicular to the side surface everywhere. Then $\mathbf{\vec{E}}$ is
+outward, and we agreed before to make $\mathbf{d\vec{A}}$ outward for closed
+surfaces. Then $\mathbf{\vec{E}}$ and $\mathbf{d\vec{A}}$ are once again in
+the same direction everywhere on the curved surface. So, $\mathbf{\vec{E}%
+\cdot d\vec{A}}=EdA.$ We can write our flux as 
 \begin{eqnarray*}
 \Phi _{E} &=&\doint_{side}EdA \\
 &=&\doint \frac{1}{4\pi \epsilon _{o}}\frac{2\left\vert \lambda \right\vert 
@@ -4452,6 +4559,11 @@ then%
 &=&\frac{\left\vert \lambda \right\vert }{2\pi \epsilon _{o}}\left( 2\pi
 L\right) \\
 &=&\frac{\left\vert \lambda \right\vert }{\epsilon _{o}}L
+\end{eqnarray*}%
+We could substitute in for $\lambda $%
+\begin{eqnarray*}
+\Phi _{E} &=&\frac{\frac{Q}{_{L}}}{\epsilon _{o}}L \\
+&=&\frac{Q}{\epsilon _{o}}
 \end{eqnarray*}%
 So far we have, indeed, made integrals that look hard but are really easy to
 do. But note that this would be \emph{much} harder if the wire were not at
@@ -4487,6 +4599,9 @@ and for a curved area, we integrate
 \end{equation*}
 
 \chapter{Gauss' Law and its Applications}
+
+Last lecture we learned about electrical flux. In this lecture we will use
+electric flux to find the electric field.
 
 %TCIMACRO{%
 %\TeXButton{Fundamental Concepts}{{\vspace{0.25in}\LARGE Fundamental Concepts\vspace{0.25in}}}}%
@@ -4529,11 +4644,11 @@ Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
 \begin{equation*}
 \Phi _{cylindar,line}=\frac{\left\vert \lambda \right\vert }{\epsilon _{o}}L
 \end{equation*}%
-Let's rewrite the last one using 
+which we rewrote by substituting in 
 \begin{equation*}
 \lambda =\frac{Q}{L}
 \end{equation*}%
-then 
+so that 
 \begin{eqnarray*}
 \Phi _{cylindar,line} &=&\frac{\left\vert Q_{E}/L\right\vert }{\epsilon _{o}}%
 L \\
@@ -4599,12 +4714,12 @@ be exactly the same as when the charge was in the center of the sphere. To
 prove this, let's take our surface and approximate it using area segments.
 But let's have the area segments be either along a radius of a sphere
 centered on the charge, or along the surface of a sphere centered on the
-charge.\FRAME{dhF}{3.2984in}{2.162in}{0pt}{}{}{Figure}{\special{language
+charge.\FRAME{dtbpF}{2.2501in}{2.1526in}{0in}{}{}{Figure}{\special{language
 "Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
-"USEDEF";valid_file "T";width 3.2984in;height 2.162in;depth
-0pt;original-width 3.2534in;original-height 2.1231in;cropleft "0";croptop
+"USEDEF";valid_file "T";width 2.2501in;height 2.1526in;depth
+0in;original-width 2.1637in;original-height 2.0688in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
-'T1OKTGBD.wmf';tempfile-properties "XPR";}}No flux goes through the radial
+'T35M3F00.wmf';tempfile-properties "XPR";}}No flux goes through the radial
 pieces. And the rest of the pieces are all parts of spheres centered on the
 charge. But for the spherical segments, the field will be perpendicular to
 the segment no matter what sphere the segment is a part of, because we chose
@@ -4632,12 +4747,12 @@ Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
 Every field line that enters goes back out. We encountered this last time.
 The flux going in is negative, the flux going out is positive, and they must
 be the same because every line leaves that enters. So the net flux must be
-zero. The means we should still write our flux as%
+zero. We can still write our flux as%
 \begin{equation*}
 \Phi =\frac{Q_{inside}}{\epsilon _{o}}
 \end{equation*}%
-because outside charges won't contribute to the flux. So in a way, our
-expression works for charges outside our closed surface.
+because outside charges won't contribute to the flux, and there is no charge
+in side. So, our expression works for charges outside our closed surface.
 
 We know that fields superimpose, that is, they add up, so we would expect
 that if we have two charges inside a surface, \FRAME{dhF}{3.0191in}{2.4976in%
@@ -4662,7 +4777,7 @@ charge inside the surface multiplied by $4\pi k_{e}$. The closed surface is
 often called a \emph{Gaussian Surface.}
 
 \begin{equation*}
-\Phi _{E}=\int \overrightarrow{E}\cdot d\overrightarrow{A}=\frac{Q_{in}}{%
+\Phi _{E}=\doint \overrightarrow{E}\cdot d\overrightarrow{A}=\frac{Q_{in}}{%
 \epsilon _{o}}
 \end{equation*}
 \end{quotation}
@@ -4683,33 +4798,60 @@ Let's show how to do this by working some examples.
 \subsubsection{Charged Spherical Shell}
 
 First let's take a charged spherical shell and find the field inside.\FRAME{%
-fhF}{1.9147in}{2.0764in}{0pt}{}{}{Figure}{\special{language "Scientific
+dtbpF}{1.6223in}{1.6579in}{0in}{}{}{Figure}{\special{language "Scientific
 Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
-"T";width 1.9147in;height 2.0764in;depth 0pt;original-width
-3.4307in;original-height 3.7239in;cropleft "0";croptop "1";cropright
-"1";cropbottom "0";tempfilename
-'Electric_Flux/Ring_of_charge.wmf';tempfile-properties "XNPR";}}We need to
-be able to guess the shape of the field. We use symmetry. We can guess that
-the field will be radial both inside and outside of the shell. If it were
-not so, then our symmetry tests would fail.
+"T";width 1.6223in;height 1.6579in;depth 0in;original-width
+1.5529in;original-height 1.5867in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'T35MH704.wmf';tempfile-properties "XPR";}}%
+To use Gauss' law we need to be able to guess the shape of the field. We use
+symmetry to make our guess. We can guess that the field will be radial both
+inside and outside of the shell. If it were not so, then our symmetry tests
+would fail.
 
-The shell has a total charge of $+Q$. If we place a spherical surface inside
-the shell, then we can use Gauss's law.%
+\FRAME{dtbpF}{2.0501in}{2.0501in}{0in}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+"USEDEF";valid_file "T";width 2.0501in;height 2.0501in;depth
+0in;original-width 1.9697in;original-height 1.9688in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
+'T35MEP01.wmf';tempfile-properties "XPR";}}
+
+Suppose the shell has a total charge of $+Q$. If we place an imaginary
+Gaussian spherical surface inside the shell \FRAME{dtbpF}{2.5618in}{2.5618in%
+}{0pt}{}{}{Figure}{\special{language "Scientific Word";type
+"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
+2.5618in;height 2.5618in;depth 0pt;original-width 2.4669in;original-height
+2.4669in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'T35MGH03.wmf';tempfile-properties "XPR";}} Then we can use Gauss's law.%
 \begin{equation*}
 \Phi =\frac{Q_{inside}}{\epsilon _{o}}
 \end{equation*}%
 We can tell from the symmetry of the situation that $\overrightarrow{\mathbf{%
 E}}$ is everywhere colinear with (but in the opposite direction as) $d%
-\overrightarrow{\mathbf{A}}$ so 
+\overrightarrow{\mathbf{A}}$ when we are inside the shell, \FRAME{dtbpF}{%
+2.2001in}{2.2009in}{0pt}{}{}{Figure}{\special{language "Scientific
+Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
+"T";width 2.2001in;height 2.2009in;depth 0pt;original-width
+2.8973in;original-height 2.8982in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'T35MSD06.wmf';tempfile-properties "XPR";}}so%
+\begin{equation*}
+\overrightarrow{\mathbf{E}}\cdot d\overrightarrow{\mathbf{A}}=EdA\cos \left(
+180\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right)
+\end{equation*}%
+then our flux is 
 \begin{equation*}
 \Phi =\doint \overrightarrow{\mathbf{E}}\cdot d\overrightarrow{\mathbf{A}}%
 =-\doint EdA
-\end{equation*}%
-because the field is everywhere perpendicular to the surface. We can even
-make a guess that the field must be constant on this surface, because all
-along the spherical Gaussian surface there is extreme symmetry. No change in
-reflection, or rotation etc. will change the shape of the charge, so around
-the spherical surface the field must have the same value. Then 
+\end{equation*}
+We can even make a guess that the field must be constant on this surface,
+because all along the spherical Gaussian surface there is extreme symmetry.
+No change in reflection, or rotation etc. will change the shape of the
+charge distribution, so around the spherical surface the field must have the
+same value. Then we can take out $E$. 
 \begin{equation*}
 \Phi =-E\doint dA=-EA
 \end{equation*}%
@@ -4722,49 +4864,91 @@ or%
 \begin{equation*}
 E=-\frac{Q_{inside}}{A\epsilon _{o}}
 \end{equation*}%
-but what is $Q_{inside}?$ It is zero! so%
+but what is $Q_{inside}?$ It is zero! The inside of the shell is empty. Then%
 \begin{equation*}
 E=-\frac{0}{A\epsilon _{o}}=0
 \end{equation*}%
 There is no net field inside!
 
-This may seem surprising, but think of placing a test charge, $q_{o}$,
-inside the sphere. The next figure shows the forces acting on such a test
-charge. The force is stronger between the charge and the near surface, but
-there is more of the surface tugging the other way. \FRAME{dhF}{1.593in}{%
-1.7158in}{0pt}{}{}{Figure}{\special{language "Scientific Word";type
-"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-1.593in;height 1.7158in;depth 0pt;original-width 1.5575in;original-height
-1.6786in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+This may seem surprising, but think of placing a tiny moving charge
+(sometimes called a test charge, $q_{o}$), inside the sphere. The next
+figure shows the forces acting on such a test charge. The force is stronger
+between the charge and the near surface, but there is more of the surface
+tugging the other way. \FRAME{dhF}{1.593in}{1.7158in}{0pt}{}{}{Figure}{%
+\special{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
+TRUE;display "USEDEF";valid_file "T";width 1.593in;height 1.7158in;depth
+0pt;original-width 1.5575in;original-height 1.6786in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
 'T1OKTGBG.wmf';tempfile-properties "XPR";}}The forces just balance. Since 
 \begin{equation*}
 F=qE
 \end{equation*}%
 if the net force is zero, then the field must be zero too.
 
-Is there a field outside of the spherical shell? It is still true that%
+That was inside the spherical shell, but is there a field outside of the
+spherical shell? Let's repeat our process to find out.
+
+We can use the same picture of the field that we drew before \FRAME{dtbpF}{%
+2.1493in}{2.1493in}{0in}{}{}{Figure}{\special{language "Scientific
+Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
+"T";width 2.1493in;height 2.1493in;depth 0in;original-width
+2.0654in;original-height 2.0654in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'T35WU407.wmf';tempfile-properties "XPR";}}%
+but now we want an imaginary Gaussian surface that is outside the shell. We
+want our Gaussian surface to match the symmetry of the charge distribution
+so is seems like a spherical surface might be a good choice. \FRAME{dhF}{%
+1.567in}{1.6527in}{0pt}{}{}{Figure}{\special{language "Scientific Word";type
+"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
+1.567in;height 1.6527in;depth 0pt;original-width 3.6443in;original-height
+3.8458in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'Electric_Flux/ring_of_charge_2.wmf';tempfile-properties "XNPR";}}
+
+We need to draw the field and the $d\overrightarrow{\mathbf{A}}$ vectors to
+see if it is still true that%
 \begin{equation*}
 \Phi =\doint \overrightarrow{\mathbf{E}}\cdot d\overrightarrow{\mathbf{A}}%
 =\doint EdA
 \end{equation*}%
 but this time we have a positive sign on the last integral because $%
 \overrightarrow{\mathbf{E}}$ and $d\overrightarrow{\mathbf{A}}$ are in the
-same direction. Then 
+same direction.\FRAME{dtbpF}{2.1526in}{2.1798in}{0in}{}{}{Figure}{\special%
+{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
+TRUE;display "USEDEF";valid_file "T";width 2.1526in;height 2.1798in;depth
+0in;original-width 2.0688in;original-height 2.095in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
+'T35XAF08.wmf';tempfile-properties "XPR";}}This time we see that $%
+\overrightarrow{\mathbf{E}}$ and $d\overrightarrow{\mathbf{A}}$ are always
+in the same direction.%
+\begin{eqnarray*}
+\overrightarrow{\mathbf{E}}\cdot d\overrightarrow{\mathbf{A}} &=&EdA\cos
+\left( 0\unit{%
+%TCIMACRO{\U{b0}}%
+%BeginExpansion
+{{}^\circ}%
+%EndExpansion
+}\right) \\
+&=&EdA
+\end{eqnarray*}%
+Then our flux is 
+\begin{equation*}
+\Phi =\doint \overrightarrow{\mathbf{E}}\cdot d\overrightarrow{\mathbf{A}}%
+=\doint EdA
+\end{equation*}%
+Once again from the symmetry we expect $E$ to be constant on our Gaussian
+surface. So 
+\begin{equation*}
+\Phi =E\doint dA=EA
+\end{equation*}%
+and we can combine this with Gauss' law 
 \begin{equation*}
 EA=+\frac{Q_{inside}}{\epsilon _{o}}
-\end{equation*}%
-We now choose our surface around the entire shell. \FRAME{dhF}{1.567in}{%
-1.6527in}{0pt}{}{}{Figure}{\special{language "Scientific Word";type
-"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-1.567in;height 1.6527in;depth 0pt;original-width 3.6443in;original-height
-3.8458in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
-'Electric_Flux/ring_of_charge_2.wmf';tempfile-properties "XNPR";}}All of our
-analysis is the same as in our last problem, except now $Q_{inside}$ is not
-zero%
+\end{equation*}
+All of our analysis is the same as in our last problem, except now $%
+Q_{inside}$ is not zero%
 \begin{equation*}
 E=\frac{Q_{inside}}{A\epsilon _{o}}
 \end{equation*}%
-The area is the area of our imaginary sphere%
+The area is the area of our imaginary sphere is $4\pi r^{2}$%
 \begin{equation*}
 E=\frac{Q_{inside}}{\left( 4\pi r^{2}\right) \epsilon _{o}}
 \end{equation*}%
@@ -4772,11 +4956,18 @@ and since $Q_{inside}=+Q,$ then%
 \begin{equation*}
 E=\frac{+Q}{4\pi \epsilon _{o}r^{2}}
 \end{equation*}%
-and we have found the field.
+and we have found the field outside our spherical shell.
 
-Note that this field looks very like a point charge at the center of the
-spherical shell (at the center of charge), but by now that is not much of a
-surprise!
+So for a spherical shell there is no net field inside and outside the field
+is 
+\begin{equation*}
+\overrightarrow{\mathbf{E}}=\frac{+Q}{4\pi \epsilon _{o}r^{2}}\mathbf{\hat{r}%
+}
+\end{equation*}
+
+Note that this outside field looks very like a point charge at the center of
+the spherical shell (at the center of charge), but by now that is not much
+of a surprise!
 
 \subsubsection{Strategy for Gauss' law problems}
 
@@ -4864,12 +5055,12 @@ the $-y$-direction, I\ only drew some of the field lines in the figures.%
 
 Now we need to choose an imaginary surface over which to integrate $\doint 
 \vec{E}\cdot d\vec{A}.$ We want $\vec{E}\cdot d\vec{A}=EdA$ or $\vec{E}\cdot
-d\vec{A}=0$ over all parts of the surface. I suggest a cylinder. \FRAME{dhF}{%
-2.8089in}{1.7582in}{0pt}{}{}{Figure}{\special{language "Scientific
+d\vec{A}=0$ over all parts of the surface. I suggest a cylinder. \FRAME{dtbpF%
+}{2.8321in}{1.7519in}{0in}{}{}{Figure}{\special{language "Scientific
 Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
-"T";width 2.8089in;height 1.7582in;depth 0pt;original-width
-2.7665in;original-height 1.7201in;cropleft "0";croptop "1";cropright
-"1";cropbottom "0";tempfilename 'T1OKTGBQ.wmf';tempfile-properties "XPR";}}%
+"T";width 2.8321in;height 1.7519in;depth 0in;original-width
+2.7304in;original-height 1.6782in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'T35XM509.wmf';tempfile-properties "XPR";}}%
 Note that along the top of the cylinder, $E\parallel A$ so $\vec{E}\cdot d%
 \vec{A}=EdA\cos \theta =EdA.$ Along the side of the cylinder $E\perp A$ so $%
 \vec{E}\cdot d\vec{A}=EdA\cos \theta =0.$ We have a surface that works! This
@@ -5098,8 +5289,8 @@ side. They all repel each other. So at some point the force between a free
 electron and the charged rod, and the force between a free electrons and the
 rest of the free electrons will balance. At that point, there is zero net
 force (think of Newton's second law). The free electrons stop moving. We
-have a word from PH121 or Statics for when all the forces balance. We say
-the charges are in \emph{equilibrium}.
+have a word from Principles of Physics I (PH121) for when all the forces
+balance. We say the charges are in \emph{equilibrium}.
 
 Now suppose we have a conductor just on it's own and suppose we add charge
 to it. Where would the extra charge go? \ We have considered this before. In
@@ -5157,8 +5348,6 @@ creates a new field in the opposite direction of the original field. In
 equilibrium, just enough charge is moved to create a field that cancels the
 original field.
 
-\subsection{Return to charge being on the surface}
-
 Suppose we have a conductor in equilibrium. We can now ask, what does it
 mean that the charge is \textquotedblleft on the surface?\textquotedblright\
 Is there a small distance within the metal where we would find extra charge?
@@ -5167,10 +5356,10 @@ or is it all right at the edge of the metal?
 Let's look at this again now that we know Gauss' law. Let's envision a
 conducting object with a matching Gaussian surface.
 
-\FRAME{dtbpF}{1.6944in}{1.9491in}{0in}{}{}{Figure}{\special{language
+\FRAME{dtbpF}{1.6944in}{1.9491in}{0pt}{}{}{Figure}{\special{language
 "Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
 "USEDEF";valid_file "T";width 1.6944in;height 1.9491in;depth
-0in;original-width 1.6718in;original-height 1.9273in;cropleft "0";croptop
+0pt;original-width 1.6718in;original-height 1.9273in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
 'T1OKTGBW.wmf';tempfile-properties "XPR";}}We know the field inside the
 conductor is zero. So no field lines can leave or enter the Gaussian
@@ -5178,9 +5367,9 @@ surface. So no charge can be inside or we would have a net flux, and,
 therefor, a field. We can move the Gaussian surface from the center of the
 conductor and grow it until it is just barely smaller than the surface of
 the conductor, and there still must be no field, so no charge inside. \FRAME{%
-dtbpF}{1.7921in}{2.1654in}{0in}{}{}{Figure}{\special{language "Scientific
+dtbpF}{1.7921in}{2.1654in}{0pt}{}{}{Figure}{\special{language "Scientific
 Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
-"T";width 1.7921in;height 2.1654in;depth 0in;original-width
+"T";width 1.7921in;height 2.1654in;depth 0pt;original-width
 1.7703in;original-height 2.1444in;cropleft "0";croptop "1";cropright
 "1";cropbottom "0";tempfilename 'T1OKTGBX.wmf';tempfile-properties "XPR";}}%
 We can make this Gaussian surface as close to the actual surface as we like,
@@ -5278,11 +5467,11 @@ We remember studying energy back in PH121 or Statics and Dynamics. Remember
 the Work-Energy theorem?%
 \begin{equation}
 W_{nc}=\Delta K+\Delta U
-\end{equation}
-
-We started with gravitational potential energy, and, as we found
-conservative forces, we defined new potential energies to describe the work
-done by those forces. For example, we added spring potential energy%
+\end{equation}%
+We started with gravitational force and found the gravitational potential
+energy, and, as we found conservative forces, we defined new potential
+energies to describe the work done by those forces. For example, we learned
+about spring forces and added spring potential energy%
 \begin{equation}
 W_{nc}=\Delta K+\Delta U_{g}+\Delta U_{s}
 \end{equation}%
@@ -5302,14 +5491,15 @@ that the Coulomb force is conservative like gravity--and we would be right!
 
 \subsection{Energy of a Charge in a uniform field}
 
-Let's use our Coulomb force to calculate work. I\ would like a simple
-example, so let's assume we have a uniform electric field. We know that we
-can almost really make a uniform electric field by building a large
-capacitor.\FRAME{dhF}{3.6763in}{1.4512in}{0pt}{}{}{Figure}{\special{language
-"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
-"USEDEF";valid_file "T";width 3.6763in;height 1.4512in;depth
-0pt;original-width 3.6288in;original-height 1.4157in;cropleft "0";croptop
-"1";cropright "1";cropbottom "0";tempfilename
+Let's use our Coulomb force to calculate work. We always found potential
+energy as a stored energy from work. So starting again with work seems like
+a good plan. I\ would like a simple example, so let's assume we have a
+uniform electric field. We know that we can almost really make a uniform
+electric field by building a large capacitor.\FRAME{dhF}{3.6763in}{1.4512in}{%
+0pt}{}{}{Figure}{\special{language "Scientific Word";type
+"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
+3.6763in;height 1.4512in;depth 0pt;original-width 3.6288in;original-height
+1.4157in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
 'T1OKTGC4.wmf';tempfile-properties "XPR";}}
 
 We draw some field lines (from the + charges to the - charges). The field
@@ -5317,15 +5507,14 @@ lines will be mostly straight lines in between the plates. Of course,
 outside the plates, they will not be at all straight, but we will ignore
 this because we want to calculate work just in the uniform part of the field.
 
-I want to place a charge, $q,$ in this uniform field. The charge will
+I want to place a charge, $q_{m},$ in this uniform field. The charge will
 accelerate. Work will be done. I want to find out how much work is done on
-the charge.
-
-From our PH121 or Dynamics experience, we know that 
+the charge. From our Principles of Physics I (PH121) experience, we know
+that 
 \begin{eqnarray}
 W &=&\int \overrightarrow{\mathbf{F}}\cdot \mathbf{d}\overrightarrow{\mathbf{%
 x}} \\
-&=&F\Delta x\cos \theta  \notag
+&=&F\Delta x\cos \theta   \notag
 \end{eqnarray}%
 for constant forces. Because we have a constant field, we will have a
 constant force.
@@ -5333,16 +5522,15 @@ constant force.
 I will choose the $x$ direction to be vertical and $x=0$ to be near the
 positive plate. Then we can write the force due to the electric field as%
 \begin{eqnarray*}
-W &=&F\Delta x\cos \theta \\
+W &=&F\Delta x\cos \theta  \\
 &=&\left( q_{m}E\right) \Delta x\cos \left( 0\unit{%
 %TCIMACRO{\U{b0}}%
 %BeginExpansion
 {{}^\circ}%
 %EndExpansion
-}\right) \\
+}\right)  \\
 &=&q_{m}E\Delta x
-\end{eqnarray*}
-
+\end{eqnarray*}%
 If there are no non-conservative forces, and we ignore gravity, then we can
 say%
 \begin{eqnarray*}
@@ -5411,11 +5599,14 @@ then study the energy associated with individual charges and their very
 non-uniform fields. We will take this on next time.
 
 %TCIMACRO{%
-%\TeXButton{Basic Equations}{\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}}}%
+%\TeXButton{Basic Equations}{\vspace{0.5in}\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}}}%
 %BeginExpansion
-\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}%
+\vspace{0.5in}\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}%
 %EndExpansion
 
+\begin{equation}
+W_{nc}=\Delta K+\Delta U_{g}+\Delta U_{s}+\Delta U_{C}
+\end{equation}%
 \begin{equation*}
 \Delta U_{C}=-q_{m}Ed
 \end{equation*}
@@ -25266,7 +25457,7 @@ TRUE;display "USEDEF";valid_file "T";width 4.3777in;height 1.6734in;depth
 'T1OLWZPR.wmf';tempfile-properties "XPR";}}The ray diagram makes it easy to
 see that the image will appear to be $2\unit{m}$ behind the big mirror.
 
-\smallskip 
+\smallskip
 
 %TCIMACRO{%
 %\TeXButton{Basic Equations}{\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}}}%
@@ -25586,7 +25777,7 @@ _{1}=\allowbreak 0.850\,91\unit{rad}$ $(48.\,\allowbreak 754\unit{%
 this gives%
 \begin{eqnarray}
 \theta _{2} &=&\sin ^{-1}\left( n\sin \left( \allowbreak 0.850\,91\right)
-\right)   \notag \\
+\right)  \notag \\
 &=&1.\,\allowbreak 570\,8\unit{rad} \\
 &=&90\unit{%
 %TCIMACRO{\U{b0}}%
