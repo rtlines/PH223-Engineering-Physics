@@ -1,0 +1,217 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{Created=Thursday, October 02, 2025 11:03:35}
+%TCIDATA{LastRevised=Friday, October 03, 2025 16:19:05}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Scientific Notebook\Blank Document">}
+%TCIDATA{Language=American English}
+%TCIDATA{CSTFile=Math with theorems suppressed.cst}
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{AllPages=
+%F=36,\PARA{038<p type="texpara" tag="Body Text" >\hfill \thepage}
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+\begin{document}
+
+
+\subsubsection{Strategy for Gauss' law problems}
+
+Let's review what we have done before we go on to our last example. For each
+Gauss' law problem, we
+
+%TCIMACRO{\TeXButton{\small}{\small}}%
+%BeginExpansion
+\small%
+%EndExpansion
+
+\begin{tabular}{|l|l|}
+\hline
+\begin{tabular}{l}
+1. {\small Draw the charge distribution }%
+\end{tabular}
+& \FRAME{itbpF}{0.5038in}{0.5145in}{0pt}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+"USEDEF";valid_file "T";width 0.5038in;height 0.5145in;depth
+0pt;original-width 1.0475in;original-height 1.0706in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
+'T3KTF304.wmf';tempfile-properties "XPR";}} \\ \hline
+\begin{tabular}{l}
+2. {\small Draw the field lines using symmetry} \\ 
+{\small - Don's skip this step, it is essential}%
+\end{tabular}
+& \FRAME{itbpF}{0.8994in}{0.9003in}{0pt}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+"USEDEF";valid_file "T";width 0.8994in;height 0.9003in;depth
+0pt;original-width 1.6551in;original-height 1.656in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
+'T3KTF305.wmf';tempfile-properties "XPR";}} \\ \hline
+\begin{tabular}{l}
+3. {\small Choose (make up, invent) a closed surface that makes} \\ 
+{\small \ }$\overrightarrow{\mathbf{E}}\cdot d\overrightarrow{\mathbf{A}}$%
+{\small \ either just }$EdA${\small \ or }$0.${\small \ And hopefully } \\ 
+{\small on our Gaussian surface }$E${\small \ will be constant}%
+\end{tabular}
+& \FRAME{itbpF}{1.0972in}{1.0981in}{0pt}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+"USEDEF";valid_file "T";width 1.0972in;height 1.0981in;depth
+0pt;original-width 1.938in;original-height 1.9398in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
+'T3KTF306.wmf';tempfile-properties "XPR";}} \\ \hline
+$%
+\begin{tabular}{l}
+4. {\small Find }$Q_{in}.$%
+\end{tabular}%
+$ &  \\ \hline
+\begin{tabular}{l}
+5. {\small Solve }$\doint EdA=\frac{Q_{inside}}{\epsilon _{o}}${\small \ for
+the non, zero parts.} \\ 
+{\small The integral should be trivial now due to our use of} \\ 
+{\small \ symmetry. Usually, if we picked our surface well,} \\ 
+{\small \ }$\doint EdA=EA$%
+\end{tabular}%
+{\small \ } &  \\ \hline
+\begin{tabular}{l}
+6. {\small Solve for }$E${\small \ i.e. }$EA=\frac{Q_{inside}}{\epsilon _{o}}%
+\rightarrow EA=\frac{Q_{inside}}{\epsilon _{o}}$%
+\end{tabular}
+&  \\ \hline
+\end{tabular}
+
+%TCIMACRO{\TeXButton{\normalsize}{\normalsize}}%
+%BeginExpansion
+\normalsize%
+%EndExpansion
+
+\subsubsection{Example}
+
+{\small Find the field at a point inside at point }$P${\small \ inside a
+uniformly charged spherical insulator with total charge }$Q_{total}${\small %
+\ and radius }$R.${\small \ Let's say that }$P${\small \ is a distance }$r$%
+{\small \ from the center of the sphere.}
+
+%TCIMACRO{\TeXButton{\small}{\small}}%
+%BeginExpansion
+\small%
+%EndExpansion
+
+\begin{enumerate}
+\item {\small draw the charge distribution \FRAME{dtbpF}{0.659in}{0.651in}{%
+0pt}{}{}{Figure}{\special{language "Scientific Word";type
+"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
+0.659in;height 0.651in;depth 0pt;original-width 0.8214in;original-height
+0.8116in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'T3KTF301.wmf';tempfile-properties "XPR";}}}
+
+\item {\small Draw the field lines using symmetry- Don's skip this step, it
+is essential \FRAME{dtbpF}{1.4538in}{1.4538in}{0pt}{}{}{Figure}{\special%
+{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
+TRUE;display "USEDEF";valid_file "T";width 1.4538in;height 1.4538in;depth
+0pt;original-width 1.452in;original-height 1.452in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
+'T3KTF302.wmf';tempfile-properties "XPR";}}}
+
+\item {\small Choose (make up, invent) a closed surface that includes point }%
+$P${\small \ and makes }$\overrightarrow{\mathbf{E}}\cdot d\overrightarrow{%
+\mathbf{A}}${\small \ either just }$\pm EdA${\small \ or }$0.${\small \ And
+hopefully on our Gaussian surface }$E${\small \ will be constant\FRAME{dtbpF%
+}{1.4227in}{1.4227in}{0pt}{}{}{Figure}{\special{language "Scientific
+Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
+"T";width 1.4227in;height 1.4227in;depth 0pt;original-width
+1.4209in;original-height 1.4209in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'T3KTF303.wmf';tempfile-properties "XPR";}}}
+
+\item {\small Find }$Q_{in}.${\small \ This time it is harder. Since the
+charge is uniformly distributed }%
+\[
+\rho =\frac{Q_{total}}{%
+%TCIMACRO{\TeXButton{V}{\ooalign{\hfil$V$\hfil\cr\kern0.1em--\hfil\cr}}}%
+%BeginExpansion
+\ooalign{\hfil$V$\hfil\cr\kern0.1em--\hfil\cr}%
+%EndExpansion
+_{total}}=\frac{Q_{in}}{%
+%TCIMACRO{\TeXButton{V}{\ooalign{\hfil$V$\hfil\cr\kern0.1em--\hfil\cr}}}%
+%BeginExpansion
+\ooalign{\hfil$V$\hfil\cr\kern0.1em--\hfil\cr}%
+%EndExpansion
+_{in}}
+\]%
+{\small so }%
+\[
+Q_{in}=\frac{Q_{total}}{%
+%TCIMACRO{\TeXButton{V}{\ooalign{\hfil$V$\hfil\cr\kern0.1em--\hfil\cr}}}%
+%BeginExpansion
+\ooalign{\hfil$V$\hfil\cr\kern0.1em--\hfil\cr}%
+%EndExpansion
+_{total}}%
+%TCIMACRO{\TeXButton{V}{\ooalign{\hfil$V$\hfil\cr\kern0.1em--\hfil\cr}}}%
+%BeginExpansion
+\ooalign{\hfil$V$\hfil\cr\kern0.1em--\hfil\cr}%
+%EndExpansion
+_{in}
+\]%
+{\small We know how to do this for spheres }%
+\begin{eqnarray*}
+%TCIMACRO{\TeXButton{V}{\ooalign{\hfil$V$\hfil\cr\kern0.1em--\hfil\cr}}}%
+%BeginExpansion
+\ooalign{\hfil$V$\hfil\cr\kern0.1em--\hfil\cr}%
+%EndExpansion
+_{total} &=&\frac{4}{3}\pi R^{3} \\
+%TCIMACRO{\TeXButton{V}{\ooalign{\hfil$V$\hfil\cr\kern0.1em--\hfil\cr}}}%
+%BeginExpansion
+\ooalign{\hfil$V$\hfil\cr\kern0.1em--\hfil\cr}%
+%EndExpansion
+_{in} &=&\frac{4}{3}\pi r^{3}
+\end{eqnarray*}%
+\[
+Q_{in}=\frac{Q_{total}}{\frac{4}{3}\pi R^{3}}\frac{4}{3}\pi r^{3}=\frac{%
+Q_{total}}{R^{3}}r^{3}
+\]
+
+\item {\small Solve }$\doint EdA=\frac{Q_{inside}}{\epsilon _{o}}${\small \
+for the non, zero parts. The integral should be trivial now due to our use
+of symmetry. Usually, if we picked our surface well, }$\doint EdA=EA=E4\pi
+r^{2}$
+
+\item {\small Solve for }$E$%
+\begin{eqnarray*}
+EA &=&\frac{Q_{inside}}{\epsilon _{o}} \\
+E &=&\frac{\frac{Q_{total}}{R^{3}}r^{3}}{\epsilon _{o}4\pi r^{2}}=\frac{1}{%
+4\pi \varepsilon _{o}}\frac{Q_{total}r}{R^{3}}
+\end{eqnarray*}
+\end{enumerate}
+
+%TCIMACRO{\TeXButton{\normalsize}{\normalsize}}%
+%BeginExpansion
+\normalsize%
+%EndExpansion
+
+\end{document}

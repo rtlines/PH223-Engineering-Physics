@@ -11,7 +11,7 @@
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=Manual}
 %TCIDATA{Created=Thursday, March 21, 2024 14:45:27}
-%TCIDATA{LastRevised=Friday, September 26, 2025 17:18:41}
+%TCIDATA{LastRevised=Tuesday, October 07, 2025 12:14:52}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 %TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Standard LaTeX Book">}
 %TCIDATA{Language=American English}
@@ -4990,21 +4990,26 @@ Gauss' law problem, we
 'T1OKTGBI.wmf';tempfile-properties "XPR";}}
 
 \item Choose (make up, invent) a closed surface that makes $\overrightarrow{%
-\mathbf{E}}\cdot d\overrightarrow{\mathbf{A}}$ either just $EdA$ or $0.$%
-\FRAME{dtbpF}{1.9301in}{1.9318in}{0pt}{}{}{Figure}{\special{language
-"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
-"USEDEF";valid_file "T";width 1.9301in;height 1.9318in;depth
-0pt;original-width 1.938in;original-height 1.9398in;cropleft "0";croptop
-"1";cropright "1";cropbottom "0";tempfilename
+\mathbf{E}}\cdot d\overrightarrow{\mathbf{A}}$ either just $EdA$ or $0.$ And
+hopfeully on our Gaussian survace $E$ will be constant\FRAME{dtbpF}{1.9301in%
+}{1.9318in}{0pt}{}{}{Figure}{\special{language "Scientific Word";type
+"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
+1.9301in;height 1.9318in;depth 0pt;original-width 1.938in;original-height
+1.9398in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
 'T1OKTGBJ.wmf';tempfile-properties "XPR";}}
 
 \item Find $Q_{in}.$
 
 \item Solve $\doint EdA=\frac{Q_{inside}}{\epsilon _{o}}$ for the non, zero
-parts
-\end{enumerate}
+parts. The integral should be trivial now due to our use of symmetry.
+Usually, if we picked our surface well, $\doint EdA=EA$
 
-The integral should be trivial now due to our use of symmetry.
+\item Solve for $E$%
+\begin{eqnarray*}
+EA &=&\frac{Q_{inside}}{\epsilon _{o}} \\
+E &=&\frac{Q_{inside}}{\epsilon _{o}A}
+\end{eqnarray*}
+\end{enumerate}
 
 \subsubsection{An infinite sheet of charge.}
 
@@ -5514,7 +5519,7 @@ that
 \begin{eqnarray}
 W &=&\int \overrightarrow{\mathbf{F}}\cdot \mathbf{d}\overrightarrow{\mathbf{%
 x}} \\
-&=&F\Delta x\cos \theta   \notag
+&=&F\Delta x\cos \theta  \notag
 \end{eqnarray}%
 for constant forces. Because we have a constant field, we will have a
 constant force.
@@ -5522,13 +5527,13 @@ constant force.
 I will choose the $x$ direction to be vertical and $x=0$ to be near the
 positive plate. Then we can write the force due to the electric field as%
 \begin{eqnarray*}
-W &=&F\Delta x\cos \theta  \\
+W &=&F\Delta x\cos \theta \\
 &=&\left( q_{m}E\right) \Delta x\cos \left( 0\unit{%
 %TCIMACRO{\U{b0}}%
 %BeginExpansion
 {{}^\circ}%
 %EndExpansion
-}\right)  \\
+}\right) \\
 &=&q_{m}E\Delta x
 \end{eqnarray*}%
 If there are no non-conservative forces, and we ignore gravity, then we can
@@ -5611,7 +5616,7 @@ W_{nc}=\Delta K+\Delta U_{g}+\Delta U_{s}+\Delta U_{C}
 \Delta U_{C}=-q_{m}Ed
 \end{equation*}
 
-\chapter{Electric potential Energy}
+\chapter{Electric Potential Energy}
 
 %TCIMACRO{%
 %\TeXButton{Fundamental Concepts}{{\vspace{0.25in}\LARGE Fundamental Concepts\vspace{0.25in}}}}%
@@ -5627,7 +5632,7 @@ W_{nc}=\Delta K+\Delta U_{g}+\Delta U_{s}+\Delta U_{C}
 \item Electrical potential energy of dipoles
 \end{itemize}
 
-\section{Point charge potential energy}
+\section{Finding the Point charge Potential Energy}
 
 As we said last lecture, we want to use gravitation as an analogy for the
 electric potential energy. Gravitation is more intuitive. But chances are
@@ -5848,7 +5853,7 @@ approximated as a constant magnitude and direction and that the distribution
 of charge, $q_{m},$ is not spatially too big. With this understanding, we
 can understand electrical potential energy of point charges.
 
-\subsection{Point charges potential}
+\subsection{Potential Energy for a Point Charge}
 
 Suppose we now take a positive charge and define it's position as $r=0$ and
 place a negative mover charge near the positive charge. \FRAME{dhF}{4.4166in%
@@ -5932,17 +5937,21 @@ this will change all the signs in our solution%
 \Delta U_{e}=+\frac{1}{4\pi \epsilon _{o}}\frac{Q_{E}q_{m}}{R_{2}}-\frac{1}{%
 4\pi \epsilon _{o}}\frac{Q_{E}q_{m}}{R_{1}}
 \end{equation*}%
-then%
+This is still 
 \begin{equation*}
-U_{e}=+\frac{1}{4\pi \epsilon _{o}}\frac{Q_{E}q_{o}}{r}
+\Delta U_{e}=U_{e2}-U_{e1}
 \end{equation*}%
-\FRAME{dtbpFX}{4.4996in}{1.7988in}{0pt}{}{}{Plot}{\special{language
-"Scientific Word";type "MAPLEPLOT";width 4.4996in;height 1.7988in;depth
-0pt;display "USEDEF";plot_snapshots TRUE;mustRecompute FALSE;lastEngine
-"MuPAD";xmin "-6.049533E-12";xmax "6.050715E-8";xviewmin
-"-6.049533E-12";xviewmax "6.050715E-8";yviewmin "0";yviewmax
-"1.015097E-25";viewset"XY";rangeset"X";plottype 4;labeloverrides 3;x-label
-"r (m)";y-label "U (J)";axesFont "Times New
+so we can identify the general form for our electrical potential energy 
+\begin{equation*}
+U_{e}=+\frac{1}{4\pi \epsilon _{o}}\frac{Q_{E}q_{m}}{r}
+\end{equation*}%
+for this case. Note it is positive!\FRAME{dtbpFX}{4.4996in}{1.7988in}{0pt}{}{%
+}{Plot}{\special{language "Scientific Word";type "MAPLEPLOT";width
+4.4996in;height 1.7988in;depth 0pt;display "USEDEF";plot_snapshots
+TRUE;mustRecompute FALSE;lastEngine "MuPAD";xmin "-6.049533E-12";xmax
+"6.050715E-8";xviewmin "-6.049533E-12";xviewmax "6.050715E-8";yviewmin
+"0";yviewmax "1.015097E-25";viewset"XY";rangeset"X";plottype
+4;labeloverrides 3;x-label "r (m)";y-label "U (J)";axesFont "Times New
 Roman,12,0000000000,useDefault,normal";numpoints 100;plotstyle
 "patch";axesstyle "normal";axestips FALSE;xis \TEXUX{r};var1name
 \TEXUX{$r$};function \TEXUX{$\left( \frac{1}{4\pi \left( 8.85\times
@@ -5958,18 +5967,18 @@ make them get closer. This is clearly not a bound situation.
 
 \subsection{Three point charges.}
 
-Suppose we have three like charges. What will the potential energy of the
-three-charge system be?
+Suppose we have three like charges in an otherwise empty universe. What will
+the potential energy of the three-charge system be?
 
 Let's consider the charges one at a time. If I move one charge, $q_{1},$
-from infinitely far away. there is no environmental electric field, so there
-is no force, since we need two charges for there to be a force. Then there
-is no potential energy. This is like a rock floating in deep space far away
-from anything else in the universe. It just sits there, there is no
-potential to cause movement, so no potential energy. But when we bring in
-another charge, $q_{2},$ then $q_{1}$ is an environmental charge making a
-field and $q_{2}$ is our mover charge. Then $q_{2}$ will take an amount of
-work equal to 
+from infinitely far away into our empty universe, there is no environmental
+electric field, so there is no force, since we need two charges for there to
+be a force. Then there is no potential energy. This is like a rock floating
+in deep space far away from anything else in the universe. It just sits
+there, there is no potential to cause movement, so no potential energy. But
+when we bring in another charge, $q_{2},$ then $q_{1}$ is an environmental
+charge making a field and $q_{2}$ is our mover charge. Then $q_{2}$ will
+take an amount of work equal to 
 \begin{equation*}
 U_{12}=\frac{1}{4\pi \epsilon _{o}}\frac{q_{1}q_{2}}{r_{12}}
 \end{equation*}%
@@ -6011,7 +6020,10 @@ U=\frac{1}{4\pi \epsilon _{o}}\sum_{i<j}\frac{q_{i}q_{j}}{r_{ij}}
 for any number of charges. We simply add up all the potential energies. This
 is one reason to use electric potential energy in solving problems. The
 electric potential energies just add, and they are not vectors, so the
-addition is simple.
+addition is simple. But look at our sum. we sum over $i$ and $j$ but we
+can't have $i=j$ because that would have a potential energy for just one
+charge. And just one charge can't move itself, so it won't give itself
+energy.
 
 \section{Dipole potential energy}
 
@@ -6154,19 +6166,19 @@ and applying this to problems involving moving charges (like those in
 electric circuits).
 
 %TCIMACRO{%
-%\TeXButton{Basic Equations}{\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}}}%
+%\TeXButton{Basic Equations}{\vspace{0.5in}\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}}}%
 %BeginExpansion
-\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}%
+\vspace{0.5in}\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}%
 %EndExpansion
 
 We found the potential energy associated with the electric force.%
 \begin{equation*}
-\Delta U_{g}=-W_{g}=-\int \overrightarrow{\mathbf{F}}_{g}\cdot d%
+\Delta U_{e}=-W_{e}=-\int \overrightarrow{\mathbf{F}}_{e}\cdot d%
 \overrightarrow{\mathbf{r}}
 \end{equation*}%
 For a point charge this is%
 \begin{equation*}
-U_{e}=-\frac{1}{4\pi \epsilon _{o}}\frac{Q_{E}q_{m}}{r_{Em}}
+U_{e}=\mp \frac{1}{4\pi \epsilon _{o}}\frac{Q_{E}q_{m}}{r_{Em}}
 \end{equation*}%
 and remember 
 \begin{equation*}
@@ -6192,7 +6204,8 @@ missing piece. The gravitational environment property
 g=\left( G\frac{M_{E}}{R_{E}^{2}}\right)
 \end{equation*}%
 (where here the subscript $E$ is for the environmental object and $m$ is for
-our mover object) showed up in our equation for the gravitational potential 
+our mover object) showed up in our equation for the gravitational potential
+energy 
 \begin{equation*}
 U=-\left( G\frac{M_{E}}{R_{E}}\right) m_{m}
 \end{equation*}%
@@ -6216,9 +6229,9 @@ be a new quantity. We will need a name for this new representation of the
 environment created by $Q_{E}.\medskip $
 
 %TCIMACRO{%
-%\TeXButton{Fundamental Concepts}{\hspace{-1.3in}{\LARGE Fundamental Concepts\vspace{0.25in}}}}%
+%\TeXButton{Fundamental Concepts}{\vspace{0.3in}\hspace{-1.3in}{\LARGE Fundamental Concepts\vspace{0.25in}}}}%
 %BeginExpansion
-\hspace{-1.3in}{\LARGE Fundamental Concepts\vspace{0.25in}}%
+\vspace{0.3in}\hspace{-1.3in}{\LARGE Fundamental Concepts\vspace{0.25in}}%
 %EndExpansion
 
 \begin{itemize}
@@ -6242,8 +6255,8 @@ Let's give a symbol and a name to our new environment quantity.
 V_{12}=\frac{1}{4\pi \epsilon _{o}}\frac{Q_{E}}{r_{Eq}}
 \end{equation*}%
 where we understand that $Q_{E}$ is making the environment and we are
-measuring that environment a distance $r_{Eq}$ from $Q_{E}.$ Thus $Q_{E}$ is
-the environmental charge.
+measuring that environment a distance $r_{Eq}$ from $Q_{E}.$ Thus, $Q_{E}$
+is the environmental charge.
 
 Then 
 \begin{eqnarray*}
@@ -6266,7 +6279,7 @@ or
 V=\frac{U_{Em}}{q_{m}}
 \end{equation*}%
 This new environment representation appears to be an amount of potential
-energy per unit charge. In general any electrical potential energy $\left(
+energy per unit charge. In general, any electrical potential energy $\left(
 U\right) $ per unit charge $\left( q\right) $ is is called an \emph{electric
 potential}. 
 \begin{equation*}
@@ -6293,14 +6306,16 @@ by the amount of charge in each case%
 \end{eqnarray*}%
 which is convenient if I\ am accelerating many different charges. We do this
 in linear accelerators or at the Large Hadron Collider at CERN\ so this is
-important to physicists! \FRAME{dtbpFU}{2.6956in}{1.8005in}{0pt}{\Qcb{%
-{\protect\small CMS detector under repair. This is part of the Large Hadron
-Collider at CERN.}}}{}{Figure}{\special{language "Scientific Word";type
-"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-2.6956in;height 1.8005in;depth 0pt;original-width 2.6532in;original-height
-1.7634in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
-'T1OKTGCF.wmf';tempfile-properties "XPR";}}\vspace{0.1in}We can see that the
-units of $\Delta V$ must be 
+important to physicists!
+
+\FRAME{dtbpFU}{3.0663in}{2.0454in}{0pt}{\Qcb{{\protect\small CMS detector
+under repair. This is part of the Large Hadron Collider at CERN.}}}{}{Figure%
+}{\special{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
+TRUE;display "USEDEF";valid_file "T";width 3.0663in;height 2.0454in;depth
+0pt;original-width 3.8805in;original-height 2.5776in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
+'T3EVCE00.wmf';tempfile-properties "XPR";}} \vspace{0.1in}We can see that
+the units of $\Delta V$ must be 
 \begin{equation}
 \frac{\unit{J}}{\unit{C}}=\unit{V}
 \end{equation}%
@@ -6317,7 +6332,7 @@ would have ions in a solution. This is so convenient to express the
 potential energy per unit charge, that it is the common form or expressing
 the energy given by most electrical sources.
 
-\subsection{Electric Potential}
+\subsection{Using Electric Potential}
 
 Let's write out the electric potential difference between points $A$ and $B.$
 It is the change in potential energy per unit charge as the charge travels
@@ -6587,7 +6602,7 @@ scaffolding for scale.}}}{}{Figure}{\special{language "Scientific Word";type
 2.7155in;height 2.0427in;depth 0pt;original-width 2.739in;original-height
 2.0534in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
 'T1OKTGCM.wmf';tempfile-properties "XPR";}}\vspace{0.1in}Note that this
-energy would seem to provide a faster speed--faster than light! But with
+energy would seem to provide a faster speed -- faster than light! But with
 energies this high we have to use Einstein's theory of Special Relativity to
 calculate the particle speed. And, sadly, that is not part of this class. If
 you are planning to work on the GPS\ system, or future space craft, you
@@ -6719,20 +6734,23 @@ must be concentric spheres. Here is our situation:\FRAME{dtbpF}{2.0055in}{%
 from $A$ to $B$ finding the potential difference $\Delta V=V_{B}-V_{A}.$
 
 Remember that the field due to a charge $q$ is radially outward from the
-charge. To find the potential for this case we start again with a constant
-field. Our point charge is really not producing a constant field, but let's
-consider the constant field case (like from a capacitor) as a step in
-finding the actual potential for a point charge. So for our constant field
-case we start again with 
+charge. And remember that the magnitude of the field, $E,$ gets smaller the
+farther out you go. That is very inconvenient. It would be much more
+convenient if the field was constant. Then we could find the work done by
+moving our charge and convert to a change in potential energy.
+
+Suppose we do have a constant field. Say, from point $A$ to point $B$ the
+field, $E,$ didn't change. It's really not true, but let's consider how we
+would find the work if the field were constant. We could start with 
 \begin{equation*}
 w=\int F_{e}\cdot ds
 \end{equation*}%
 but this time let's say that we have previously moved the charge across the
-capacitor (like in last lecture) and now we are ready to let it go. This is
-like carrying the rock up the hill before throwing it back down. Once the
-charge has been moved across the capacitor, the electric force will
-accelerate the charge back to the other side. The field will do work. And
-this time the force is in the same direction as the displacement.%
+constant field (like in our capacitor in last lecture) and now we are ready
+to let it go. This is like carrying the rock up the hill before throwing it
+back down. Once the charge has been moved across the capacitor, the electric
+force will accelerate the charge back to the other side. The field will do
+work. And this time the force is in the same direction as the displacement.%
 \begin{eqnarray*}
 w &=&\int F_{e}\cdot ds \\
 &=&\int F_{e}\cos \left( \theta _{Fs}\right) ds \\
@@ -6769,17 +6787,18 @@ we need to allow for $\overrightarrow{\mathbf{E}}$ and $\overrightarrow{%
 still constant, but now it doesn't have to be in exactly the same direction
 as the displacement.
 
-And for the point charge, our field $E$ changes, so technically this value
-for $\Delta V$ is not correct. But if we take vary small paths, $\Delta 
-\overrightarrow{\mathbf{s}},$ then the field will be nearly constant over
-the small distances. It will change from one $\Delta \overrightarrow{\mathbf{%
-s}}$ to another $\Delta \overrightarrow{\mathbf{s}}$ But for each $\Delta 
-\overrightarrow{\mathbf{s}}$ the field is essentially constant. Then we can
-add up the contribution of each small distance, $\Delta \overrightarrow{%
-\mathbf{s}}_{i}$ to deal with the entire path from $A$ to $B$ for our point
-charge geometry. \FRAME{dtbpF}{2.1664in}{2.3186in}{0pt}{}{}{Figure}{\special%
-{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
-TRUE;display "USEDEF";valid_file "T";width 2.1664in;height 2.3186in;depth
+But really, for the point charge, our field $E$ changes, so technically this
+value for $\Delta V$ is not correct. But if we take vary small paths, $%
+\Delta \overrightarrow{\mathbf{s}},$ then the field will be nearly constant
+over the small distances. It will change from one $\Delta \overrightarrow{%
+\mathbf{s}}$ to another $\Delta \overrightarrow{\mathbf{s}}$ But for each $%
+\Delta \overrightarrow{\mathbf{s}}$ the field is essentially constant if $%
+\Delta \overrightarrow{\mathbf{s}}$ is small enough. Then we can add up the
+contribution of each small distance, $\Delta \overrightarrow{\mathbf{s}}_{i}$
+to deal with the entire path from $A$ to $B$ for our point charge geometry. 
+\FRAME{dtbpF}{2.1664in}{2.3186in}{0pt}{}{}{Figure}{\special{language
+"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
+"USEDEF";valid_file "T";width 2.1664in;height 2.3186in;depth
 0pt;original-width 2.7415in;original-height 2.9369in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
 'T1OKTGCO.wmf';tempfile-properties "XPR";}}That is, we take a small amount
@@ -6803,8 +6822,8 @@ integral
 \Delta V=-\int_{A}^{B}\overrightarrow{\mathbf{E}}\cdot d\overrightarrow{%
 \mathbf{s}}
 \end{equation}%
-and this is what we can use to find the electric potential from a point
-charge!
+and the sum is exact. And this is what we can use to find the electric
+potential from a point charge!
 
 Let's find the electric potential between two points $A$ and $B$ where $A$
 and $B$ could be any two points. \FRAME{dtbpF}{1.9086in}{1.9847in}{0pt}{}{}{%
@@ -6825,7 +6844,7 @@ directions%
 d\overrightarrow{\mathbf{s}}=\left( dr\mathbf{\hat{r}}+rd\theta \mathbf{\hat{%
 \theta}}\right)
 \end{equation*}%
-from trigonometry we can see that 
+From trigonometry we can see that 
 \begin{equation*}
 \cos \phi =\frac{dr}{ds}
 \end{equation*}%
@@ -6867,7 +6886,7 @@ we get only a radial contribution since $\mathbf{\hat{r}}\cdot \mathbf{\hat{%
 \end{eqnarray*}%
 where $\phi $ is the angle between $d\overrightarrow{\mathbf{s}}$ and $%
 \mathbf{\hat{r}}$ and where we recall that $\mathbf{\hat{r}}\cdot \mathbf{%
-\hat{r}}=1\mathbf{.}$ Recalling that 
+\hat{r}}=1\mathbf{.}$ And we found before that 
 \begin{equation*}
 dr=ds\cos \phi
 \end{equation*}%
@@ -7263,9 +7282,9 @@ we have found the electric potential from our equation of the field? We will
 take up this question in the next two lectures.
 
 %TCIMACRO{%
-%\TeXButton{Basic Equations}{\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}}}%
+%\TeXButton{Basic Equations}{\vspace{0.5in}\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}}}%
 %BeginExpansion
-\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}%
+\vspace{0.5in}\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}%
 %EndExpansion
 
 The electric potential of a point charge is given by%
@@ -7361,7 +7380,7 @@ They are really different ways to look at the same thing--and that thing is
 the environment set up by the environmental charge. It is tradition to say
 the electric field is the principal quantity. This is because we have good
 evidence that the electric field \emph{is} something. That evidence we will
-study at the end of these lectures, but in a nutshell it is that we can make
+study later in these lectures, but in a nutshell it is that we can make
 waves in the electric field. If we can make waves in it, it must be
 something!\footnote{%
 By the end of these lectures, we will try to make this a more convincing
@@ -7422,7 +7441,10 @@ Putting in our field gives%
 }+dz\mathbf{\hat{z}}\right) \\
 &=&-\frac{2\lambda }{4\pi \epsilon _{o}}\int_{A}^{B}\frac{dr}{r}
 \end{eqnarray*}%
-which we can integrate%
+It turns out that only the radial component matters. Given our symmetry that
+seems reasonable. Once again, we see that $\Delta V$ is path independent.
+
+We can integrate our equation for $\Delta V$ to get%
 \begin{eqnarray*}
 \Delta V &=&\left( -\frac{1}{2\pi }\frac{\lambda }{\epsilon _{o}}\ln
 r_{B}-\left( -\frac{1}{2\pi }\frac{\lambda }{\epsilon _{o}}\ln r_{A}\right)
@@ -7455,11 +7477,10 @@ Roman,12,0000000000,useDefault,normal";numpoints 100;plotstyle
 \TEXUX{$r$};function \TEXUX{$-\ln r$};linecolor "blue";linestyle
 1;pointstyle "point";linethickness 3;lineAttributes "Solid";var1range
 "-5,5";num-x-gridlines 100;curveColor "[flat::RGB:0x000000ff]";curveStyle
-"Line";VCamFile 'T1OKTI0J.xvz';valid_file "T";tempfilename
-'T1OKTGD0.wmf';tempfile-properties "XPR";}}The curve is definitely not
-approaching zero as $r$ gets large. No matter how far we get from an
-infinite line of charge, we really never get very far compared with it's
-infinite length. So the potential is not going to zero!
+"Line";valid_file "T";tempfilename 'T1OKTGD0.wmf';tempfile-properties "XPR";}%
+}The curve is definitely not approaching zero as $r$ gets large. No matter
+how far we get from an infinite line of charge, we really never get very far
+compared with it's infinite length. So the potential is not going to zero!
 
 Our solution is good only when $r_{A}$ and $r_{B}$ are much smaller than the
 length of the line. that is, when our simple geometry is a good
@@ -7639,11 +7660,11 @@ TRUE;display "USEDEF";valid_file "T";width 2.5157in;height 2.5296in;depth
 
 The coated plate's lead dioxide also reacts with the SO$_{4}^{-2}$ ions and
 uses the hydrogen ions and the oxygen from the PbO$_{2}$ coating. \FRAME{%
-dtbpF}{3.0173in}{2.7328in}{0pt}{}{}{Figure}{\special{language "Scientific
+dtbpF}{2.7851in}{2.5164in}{0pt}{}{}{Figure}{\special{language "Scientific
 Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
-"T";width 3.0173in;height 2.7328in;depth 0pt;original-width
-2.9741in;original-height 2.6904in;cropleft "0";croptop "1";cropright
-"1";cropbottom "0";tempfilename 'T1OKTGD7.wmf';tempfile-properties "XPR";}}%
+"T";width 2.7851in;height 2.5164in;depth 0pt;original-width
+3.1931in;original-height 2.8818in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'T3KS8I00.wmf';tempfile-properties "XPR";}}%
 But importantly, It also uses some some electrons from the lead plate. The
 coated lead plate is neutral, so this reaction is using some of the free
 electrons from the lead. The reaction goes like this, the PbO$_{2}$ splits
@@ -7792,9 +7813,9 @@ the potential if we know the field. Next lecture we will find out how to
 calculate the field if we know the potential.
 
 %TCIMACRO{%
-%\TeXButton{Basic Equations}{\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}}}%
+%\TeXButton{Basic Equations}{\vspace{0.5in}\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}}}%
 %BeginExpansion
-\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}%
+\vspace{0.5in}\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}%
 %EndExpansion
 
 \begin{equation*}
@@ -8204,16 +8225,16 @@ start again with%
 \begin{equation}
 \Delta V=-\int_{A}^{B}\mathbf{E}\cdot d\mathbf{s}
 \end{equation}%
-and since the field $E=0$ inside the conductor, then inside 
+and since the field $E_{net}=0$ inside the conductor, then inside 
 \begin{equation}
 \Delta V_{inside}=0
 \end{equation}%
-On the surface we see that there is a potential, since there is a field. If
-we take our spherical case, \FRAME{dhF}{1.2436in}{1.1441in}{0pt}{}{}{Figure}{%
-\special{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
-TRUE;display "USEDEF";valid_file "T";width 1.2436in;height 1.1441in;depth
-0pt;original-width 1.209in;original-height 1.1104in;cropleft "0";croptop
-"1";cropright "1";cropbottom "0";tempfilename
+On the surface we see that there is a potential, since there is a net field.
+If we take our spherical case, \FRAME{dhF}{1.2436in}{1.1441in}{0pt}{}{}{%
+Figure}{\special{language "Scientific Word";type
+"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
+1.2436in;height 1.1441in;depth 0pt;original-width 1.209in;original-height
+1.1104in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
 'T1OKTGDN.wmf';tempfile-properties "XPR";}}and observe the potential as we
 go away from the center, we expect the potential to be constant up to the
 surface. Then as we reach the surface, we know from Gauss' law that the
@@ -8305,9 +8326,9 @@ electric fields. They often use differential equations in the potential to
 find the field rather than integral equations to find the field directly.
 
 %TCIMACRO{%
-%\TeXButton{Basic Equations}{\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}}}%
+%\TeXButton{Basic Equations}{\vspace{0.5in}\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}}}%
 %BeginExpansion
-\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}%
+\vspace{0.5in}\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}%
 %EndExpansion
 
 \begin{equation*}
@@ -8486,7 +8507,7 @@ have a capacitance, so it might be a problem if you forget this in a design
 problem for an unusual device.
 
 As an example, let's take a sphere. We will assume there is a spherical
-conduction shell that is infinitely far away. This configuration gives
+conducting shell that is infinitely far away. This configuration gives
 exactly the same field lines that the charged sphere gives on it's own, but
 the mental picture is helpful. The imaginary shell will give $V=0$ (we set
 our zero potential at $r=\infty $). The potential of the little sphere we
@@ -8655,13 +8676,15 @@ the cable must be taken into account.
 
 \section{Combinations of Capacitors}
 
-We don't want to have to do long calculations to combine capacitors that we
-buy from an electronics store. It would be convenient to come up with a way
-to combine capacitors using a simple rule.
+Many practical electronic designs use combinations of commercial capacitors.
+So we need a strategy for combining capacitors. But, we don't want to have
+to do long calculations to combine capacitors.. It would be convenient to
+come up with a way to combine capacitors using a simple rule.
 
-\FRAME{ftbpF}{1.5584in}{1.8174in}{0pt}{}{}{Figure}{\special{language
-"Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
-"USEDEF";valid_file "T";width 1.5584in;height 1.8174in;depth
+\FRAME{dtbpFU}{1.5584in}{1.8174in}{0pt}{\Qcb{{\protect\small Standard
+electronic symbols for batteries and capacitors.}}}{}{Figure}{\special%
+{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
+TRUE;display "USEDEF";valid_file "T";width 1.5584in;height 1.8174in;depth
 0pt;original-width 3.0661in;original-height 3.5808in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
 'T1OKTGDY.wmf';tempfile-properties "XPR";}}We need a simple way to write
@@ -8689,10 +8712,10 @@ C_{eq}=C_{1}+C_{2}
 We call this set up a \emph{parallel} circuit. This means that each of the
 capacitors are hooked directly to the terminals of the battery.
 
-But suppose we hook up the capacitors as in the next drawing\FRAME{ftbpF}{%
-2.1414in}{1.7735in}{0pt}{}{}{Figure}{\special{language "Scientific
+But suppose we hook up the capacitors as in the next drawing. \FRAME{dtbpF}{%
+2.1412in}{1.7731in}{0pt}{}{}{Figure}{\special{language "Scientific
 Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
-"T";width 2.1414in;height 1.7735in;depth 0pt;original-width
+"T";width 2.1412in;height 1.7731in;depth 0pt;original-width
 4.6531in;original-height 3.8482in;cropleft "0";croptop "1";cropright
 "1";cropbottom "0";tempfilename 'T1OKTGE0.wmf';tempfile-properties "XPR";}}%
 Now we expect the left hand side of $C_{1}$ to be at the positive potential
@@ -8701,11 +8724,25 @@ to be at the same potential as the negative side of the battery. What
 happens in the middle?
 
 We can see that we will have negative charge on the right hand plate of $%
-C_{2}$ and positive charge on the left plate of $C_{1}.$ This must cause
-there to be a positive charge on the right plate of $C_{1}$ and a negative
-charge on the left plate of $C_{2.}$ Moreover, all the charges will have the
-same magnitude. That means each of the plates will have a potential
-difference%
+C_{2}$ and positive charge on the left plate of $C_{1}.$ These must be the
+same amount of charge because they are due to the battery pumping charge.
+The charge that we see on the positive plate had to be pumped up from the
+negative plate. It's the same amount of charge (think of our lead acid
+battery). This must cause there to be a positive charge on the right plate
+of $C_{1}$ and a negative charge on the left plate of $C_{2}.$ The right
+hand side of $C_{1}$ is charged by attracting the free electrons in the wire
+and even the left side of $C_{2}$ to the extra positive charge on the left
+hand side of $C_{1}.$ The extra positive charge will attract the same amount
+of negative charge to the right hand plate of $C_{1}.$ This charge had to
+come from somewhere. And we can see that it will come from the left hand
+side of $C_{2}.$ Thus the charge on the left plate of $C_{1}$ is the same
+amount of charge as we get on the right plate of $C_{1}$ (but opposite sign)
+and the charge on the left plate of $C_{2}$ is the same amount of charge as
+on the right plate of $C_{1}$ (but opposite sign) and we already know the
+charge on the right plate of $C_{2}$ must match the amount of charge on the
+left plate of $C_{1}$ because that is how much charge the battery pumped
+(but again the opposite sign). They are all the same amount of charge. That
+means each of the capacitors will have a potential difference%
 \begin{equation*}
 \Delta V_{1}=\frac{Q}{C_{1}}
 \end{equation*}%
@@ -8729,7 +8766,7 @@ or
 We can again define an equivalent capacitance for the combination of
 capacitors.%
 \begin{equation*}
-\Delta V=\frac{Q}{C_{equ}}
+\Delta V_{bat}=\frac{Q}{C_{equ}}
 \end{equation*}%
 then%
 \begin{eqnarray*}
