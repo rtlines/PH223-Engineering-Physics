@@ -11,7 +11,7 @@
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=Manual}
 %TCIDATA{Created=Thursday, March 21, 2024 14:45:27}
-%TCIDATA{LastRevised=Tuesday, October 07, 2025 12:14:52}
+%TCIDATA{LastRevised=Thursday, October 23, 2025 10:58:55}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 %TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Standard LaTeX Book">}
 %TCIDATA{Language=American English}
@@ -2249,7 +2249,12 @@ Finally, we have drawn a sphere of charge already\FRAME{dhF}{1.8031in}{%
 We can define an amount of charge per unit volume to help describe this
 distribution%
 \begin{equation*}
-\rho =\frac{Q}{\mathbb{V}}
+\rho =\frac{Q}{%
+%TCIMACRO{\TeXButton{V}{\ooalign{\hfil$V$\hfil\cr\kern0.1em--\hfil\cr}}}%
+%BeginExpansion
+\ooalign{\hfil$V$\hfil\cr\kern0.1em--\hfil\cr}%
+%EndExpansion
+}
 \end{equation*}%
 The spherical shell of charge is related to a sheet of charge, so we will
 include it here\FRAME{dhF}{1.6215in}{1.4927in}{0pt}{}{}{Figure}{\special%
@@ -8936,19 +8941,25 @@ w=\frac{1}{2}C\Delta V^{2}
 
 There is a limit to how much energy we can store. That is because even air
 can conduct charge if the potential difference is high enough. We called
-this air conduction a spark or coronal discharge. At some point charge jumps
-from one plate to another through the air in between. If the potential
+this air conduction a spark (or coronal discharge). At some point charge
+jumps from one plate to another through the air in between. If the potential
 difference is very high, the Coulomb force between the charges on opposite
 plates will force charge to leave one plate and jump to the other even if
 there is no air!
 
 \subsection{Field storage}
 
-We consider the energy stored in the capacitor to be stored in the electric
-field. The field is proportional to the amount of charge and related to the
-potential energy, so this seems reasonable. Let's find the potential energy
-stored in the field in the capacitor. Recall for an ideal parallel plate
-capacitor 
+So we have energy stored in our capacitor. That can be useful! But we should
+think, where, exactly, is the energy in the capacitor? This might seem
+strange, but we consider the energy stored in the capacitor to be stored in
+the electric field. The field is proportional to the amount of charge and
+related to the potential energy, so this seems reasonable. And finding that
+we can store energy in an electric field is key to understanding our model
+of light later in this course. Let's find out how much energy is stored in
+the electric field of our capacitor.
+
+We can start this problem by finding the electric potential across the
+capacitor. Recall for an ideal parallel plate capacitor 
 \begin{equation*}
 \Delta V=Ed
 \end{equation*}%
@@ -8956,8 +8967,11 @@ and%
 \begin{equation*}
 C=\epsilon _{o}\frac{A}{d}
 \end{equation*}%
-We assume that energy provided by the work to move the charges on the
-capacitor is all stored as potential energy. We just found that work to be 
+We assume that energy provided by the work to move the charges onto the
+capacitor is all stored as potential energy\footnote{%
+We are once again thinking of moving the charge without acceleration, so the
+minimum work is done to just barely move the charge onto the capacitor.}. We
+just found that work to be 
 \begin{equation}
 w=\frac{1}{2}C\Delta V^{2}
 \end{equation}%
@@ -8969,8 +8983,8 @@ tells us how much energy we can store. In the previous example we had to
 provide a battery or something to force the charge onto the capacitor. This
 outside force did the work to move the charge, $\omega .$ This means that
 work done \emph{by the electric field }would be the negative of the work we
-calculated $\left( -\omega \right) $, so the potential energy stored would
-be positive. 
+calculated $\left( -w\right) $, so the potential energy stored would be
+positive. 
 \begin{equation}
 \Delta U_{stored}=\frac{1}{2}C\Delta V^{2}
 \end{equation}%
@@ -8978,14 +8992,28 @@ and since we started with $U_{i}=0$ then
 \begin{eqnarray*}
 U_{stored} &=&\frac{1}{2}\left( \epsilon _{o}\frac{A}{d}\right) \left(
 Ed\right) ^{2} \\
-&=&\frac{1}{2}\epsilon _{o}AdE^{2}
+&=&\frac{1}{2}\epsilon _{o}A\left( d\right) E^{2}
 \end{eqnarray*}%
-It might seem strange but is can be useful to think of how much energy we
-have in the volume of space inside the capacitor. 
+This is the energy inside the capacitor. And look! It depends on the
+electric field! This helps us see why we say the energy is stored in the
+electric field.
+
+It might seem strange, but it can be useful to think of how dense the energy
+is inside the capacitor.. 
 \begin{equation*}
-u=\frac{U_{stored}}{\mathbb{V}}
+u=\frac{U_{stored}}{%
+%TCIMACRO{\TeXButton{V}{\ooalign{\hfil$V$\hfil\cr\kern0.1em--\hfil\cr}}}%
+%BeginExpansion
+\ooalign{\hfil$V$\hfil\cr\kern0.1em--\hfil\cr}%
+%EndExpansion
+}
 \end{equation*}%
-In this case the volume $\mathbb{V}$ is just $Ad$ so 
+In this case the volume $%
+%TCIMACRO{\TeXButton{V}{\ooalign{\hfil$V$\hfil\cr\kern0.1em--\hfil\cr}}}%
+%BeginExpansion
+\ooalign{\hfil$V$\hfil\cr\kern0.1em--\hfil\cr}%
+%EndExpansion
+$ is just $Ad$ so 
 \begin{equation}
 u=\frac{1}{2}\epsilon _{o}E^{2}
 \end{equation}%
@@ -9021,7 +9049,8 @@ dielectric\footnote{%
 This symbol $\kappa ,$ is the greek letter \textquotedblleft
 kappa.\textquotedblright} and $\Delta V_{wo}$ is the potential difference
 without the dielectric (the subscripts $wo$ will stand for \textquotedblleft
-(w)ith(o)ut the dielectric.\textquotedblright\ But what is happening?
+(w)ith(o)ut the dielectric.\textquotedblright\ But what is happening that
+makes the potential difference decrease?
 
 The plates of the capacitor are becoming charged. These charges will
 polarize the material in the middle.
@@ -9045,7 +9074,7 @@ but $Q$ did not, we can reason that since
 \begin{equation*}
 Q=C\Delta V
 \end{equation*}%
-the material properties part--the capacitance--must have changed.%
+the material properties part -- the capacitance -- must have changed.%
 \begin{equation*}
 C=\frac{Q_{wo}}{\Delta V}=\frac{Q_{wo}}{\frac{\Delta V_{wo}}{\kappa }}=\frac{%
 \kappa Q_{wo}}{\Delta V_{wo}}
@@ -9064,8 +9093,9 @@ and let $\kappa =1$ if there is no dielectric.
 
 But if we do have a dielectric we need its $\kappa $ value. So where do you
 find values for $\kappa ?$ For this class, we will look them up in the
-tables in books or on the internet. Here are a few values for our
-use.\smallskip 
+tables in books or on the internet. But if you are making capacitors you
+would get the dielectric constant for your material from the material
+manufacturer. Here are a few values for our use.\smallskip 
 \begin{equation*}
 \begin{tabular}{|c|c|c|c|c|}
 \hline
@@ -9129,7 +9159,7 @@ E=\frac{E_{wo}}{\kappa }
 and, recalling for a parallel plate capacitor (near the center) the field is
 approximately 
 \begin{equation*}
-E=\frac{\eta }{\varepsilon _{o}}
+E=\frac{\eta }{\epsilon _{o}}
 \end{equation*}%
 then%
 \begin{equation*}
@@ -9175,14 +9205,30 @@ Figure}{\special{language "Scientific Word";type
 conductor, the valance electrons are free to move. In fact, they do move all
 the time. The electrons will have some thermal energy just because the
 conductor is not at absolute zero temperature. This thermal energy causes
-them to move in random directions. (think of air molecules in a room).
+them to move in random directions. (think of air molecules in a room).%
+\footnote{%
+Here I am taking a classical view of electrons. But in P-Chem you will find
+the electrons are waves and the electron wave functions for the valence
+electrons span the entire conductor. And that is why they can move.}
 
 Let's take a piece of a wire $\Delta x$ long. The speed of the electrons
 along the wire (in the $x$-direction in this case) is called the \emph{drift
 speed}, $v_{d},$ because the electrons just drift from place to place with a
 fairly small speed. This drift speed could be due mostly to thermal energy,
 so it can be very small or even zero (if no electric potential is applied).
-Of course, $v_{d},$ must be an average, each electron will be moving random
+If we think about it, we will realize that the electrons don't really flow
+in a straight line. They continually bump into atoms\footnote{%
+We will refine this picture in the next lecture.}. So the actual path the
+electrons take looks more like this.\FRAME{dtbpF}{2.6636in}{1.6821in}{0pt}{}{%
+}{Figure}{\special{language "Scientific Word";type
+"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
+2.6636in;height 1.6821in;depth 0pt;original-width 3.2534in;original-height
+2.0453in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'T3VJJT00.wmf';tempfile-properties "XPR";}}We only care about the forward
+part of this motion. It is that forward component that we call the drift
+speed of the electrons. It is much slower than the actual speed the
+electrons travel, and it depends on the type of conductor we are using. Of
+course, $v_{d},$ must be an average, each electron will be moving random
 directions with slightly different speeds, so the $x$-component of the
 velocity will be different for each electron, but on average they will move
 at a speed $v_{d}.$
@@ -9192,7 +9238,7 @@ at a speed $v_{d}.$
 "USEDEF";valid_file "T";width 3.1142in;height 1.222in;depth
 0pt;original-width 3.0701in;original-height 1.1882in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
-'T1OKTGE7.wmf';tempfile-properties "XPR";}}So we will suppose that there are
+'T1OKTGE7.wmf';tempfile-properties "XPR";}}We will suppose that there are
 charge carriers of charge $q_{c}$ that are moving through the wire with
 velocity $v_{d}.$ Then we can write some length of wire, $\Delta x,$ as 
 \begin{equation*}
@@ -9204,7 +9250,12 @@ The volume of the shaded piece of wire is
 \end{equation*}%
 if there are 
 \begin{equation*}
-n=\frac{\#}{\mathbb{V}}
+n=\frac{\#}{%
+%TCIMACRO{\TeXButton{V}{\ooalign{\hfil$V$\hfil\cr\kern0.1em--\hfil\cr}}}%
+%BeginExpansion
+\ooalign{\hfil$V$\hfil\cr\kern0.1em--\hfil\cr}%
+%EndExpansion
+}
 \end{equation*}%
 charge carriers per unit volume, a \emph{volume charge carrier number density%
 }, then the total charge in our volume is 
@@ -9226,21 +9277,6 @@ $\Delta t$
 \end{equation}%
 to get a charge flow rate. This is very like a volume or mass flow rate in
 fluid flow. We have an amount of charge going by in a time $\Delta t.$
-
-I gave the flow velocity a special name, $v_{d}.$ But I did not give all the
-reasons for using an average $x$-component of the velocity. If we think
-about it, we will realize that the electrons don't really flow in a straight
-line. They continually bump into atoms\footnote{%
-We will refine this picture in the next lecture.}. So the actual path the
-electrons take looks more like this.\FRAME{dtbpF}{2.6636in}{1.6821in}{0pt}{}{%
-}{Figure}{\special{language "Scientific Word";type
-"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-2.6636in;height 1.6821in;depth 0pt;original-width 3.2534in;original-height
-2.0453in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
-'T1OKTGE8.wmf';tempfile-properties "XPR";}}We only care about the forward
-part of this motion. It is that forward component that we call the \emph{%
-drift speed} of the electrons. It is much slower than the actual speed the
-electrons travel, and it depends on the type of conductor we are using.
 
 We already know the name for the flow rate of charge, it is the electric
 current. 
@@ -9370,13 +9406,14 @@ carriers would go
 \section{Current and resistance}
 
 We now have flowing charges, but our PH121 or Dynamics experience tells us
-that there is more. If we push or pull an object, we expect that most of the
-time there will be dissipative forces. There will be friction. \FRAME{dhF}{%
-3.0467in}{3.1401in}{0pt}{}{}{Figure}{\special{language "Scientific
-Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
-"T";width 3.0467in;height 3.1401in;depth 0pt;original-width
-3.0035in;original-height 3.0943in;cropleft "0";croptop "1";cropright
-"1";cropbottom "0";tempfilename 'T1OKTGEC.wmf';tempfile-properties "XPR";}}
+that there is more. \FRAME{dhF}{1.9088in}{1.9673in}{0pt}{}{}{Figure}{\special%
+{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
+TRUE;display "USEDEF";valid_file "T";width 1.9088in;height 1.9673in;depth
+0pt;original-width 3.0035in;original-height 3.0943in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
+'T1OKTGEC.wmf';tempfile-properties "XPR";}}If we push or pull an object, we
+expect that most of the time there will be dissipative forces. There will be
+friction.
 
 We should ask, is there a friction involved in charge movement? We already
 know how to push a charge, we use an electric field\FRAME{dhF}{2.0081in}{%
@@ -9398,10 +9435,8 @@ Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
 "1";cropbottom "0";tempfilename 'T1OKTGEE.wmf';tempfile-properties "XPR";}}%
 Of course, in conductors we now know the charge carrier is an electron and
 it is negative, so let's try to redraw this picture to show the actual
-charge motion.
-
-Now the charge is free to move inside of the conductor, but it is not
-totally unencumbered. The free charges will run into the nuclei of the
+charge motion. The charge is free to move inside of the conductor, but it is
+not totally unencumbered. The free charges will run into the nuclei of the
 atoms. The charges will bounce off. So as they travel through the material
 we will expect to see some randomness to their motion. This is compounded by
 the fact that the electrons already have random thermal motion. So the path
@@ -9569,8 +9604,8 @@ force
 F=qE_{net}
 \end{equation*}%
 on the free charges \emph{inside} the wire. These free charges are not the
-extra charge from the capacitor. They are the free electrons that are
-loosely attached to the metal atoms that make up the wire. So these free
+extra charge from the capacitor. They are the free valance electrons that
+are loosely attached to the metal atoms that make up the wire. So these free
 charges are distributed throughout the volume of the wire. These free
 charges will accelerate, forming a current inside the wire.
 
@@ -9708,9 +9743,9 @@ the pipe below the turbine would run dry. This does not happen. The flow
 rate through a pipe does not change under normal conditions, and under
 abnormal conditions, we would destroy the pump or the turbine! If we throw
 rocks off a hill, they actually gain speed when the water loses potential
-energy. Now the flow rate is slower with a turbine in the pipe than it would
-be with no turbine in the pipe! But with the turbine in the pipe, the flow
-rate is the same throughout the whole pipe system.
+energy. \emph{Now the flow rate is slower with a turbine in the pipe than it
+would be with no turbine in the pipe!} But with the turbine in the pipe, the
+flow rate is the same throughout the whole pipe system.
 
 Like the water case, the flow rate of charge does not change from point to
 point in the wire. The same amount of charge per unit time leaves the wire
@@ -9756,6 +9791,11 @@ next figure.
 
 The current that flows through wires $B$ and $C$ combined must be equal to
 the current that came through wire $A.$
+
+We introduced the idea of a kind of friction for electrical currents and
+even now know where that friction-like force comes from. But we didn't give
+it a name yet. Let's call it \emph{resistance.} and let's talk about it in
+our next lecture.
 
 \smallskip \pagebreak
 
@@ -9897,7 +9937,7 @@ inverse of our conductivity%
 \rho =\frac{1}{\sigma }=\frac{m_{e}}{nq_{e}^{2}\tau }
 \end{equation*}%
 Special conductors are often made that use \textquotedblleft
-impurities,\textquotedblright\ that is, trace amounts of other atoms, to
+impurities,\textquotedblright\ that is, small amounts of other atoms, to
 increase or decrease the resistivity of those conducive materials by making
 the electrons collide more often. The thermal dependence can be modeled
 using the equation
@@ -9912,9 +9952,8 @@ where $\rho _{o}$ is the resistivity at some reference temperature (usually $%
 {}^{\circ}{\rm C}%
 %EndExpansion
 }$) and $\alpha $ is a constant that tells us how our particular material
-changes resistance with temperature. It is kind of like the specific heat in
-thermodynamics $Q=C\Delta T$. This is an approximation. It is a curve fit
-that works over normal temperatures. But we would not expect the same
+changes resistance with temperature. This is an approximation. It is a curve
+fit that works over normal temperatures. But we would not expect the same
 resistive properties, say, if we melt the material. The position of the
 atoms would change if the material goes from solid to liquid. So we will
 need to be careful in how we use this formula.
@@ -10940,18 +10979,28 @@ is
 \overrightarrow{\mathbf{s}}\times \mathbf{\hat{r}}}{r^{2}} \\
 &=&\frac{\mu _{o}I}{4\pi }\int \frac{-dx\sin \theta \mathbf{\hat{k}}}{r^{2}}
 \end{eqnarray*}%
-Next we need to find $r.$ We would like to not have more than one variable.
-So it would be good to try to pick $x$ or $\theta $ and to put everything in
-terms of that one variable. Let's try $\theta .$ From trigonometry we
-realize 
+Next we need to find $r.$ The $r$ is the distance from our bit of current to
+the point where we want to know the field. We would like to not have more
+than one variable. So it would be good to try to find a way to express $r$
+in terms of $x$ or $\theta $ and to put everything in terms of that one
+variable. Let's try $\theta .$ From looking at the figure and using
+trigonometry we realize 
 \begin{equation*}
 \sin \theta =\frac{a}{r}
 \end{equation*}%
-on the right side of the wire, and 
+but we should be careful. This works for a bit of current on on the right
+side of the wire. Look at a bit of current on the left hand side. \FRAME{%
+dtbpF}{1.7573in}{1.8957in}{0pt}{}{}{Figure}{\special{language "Scientific
+Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
+"T";width 1.7573in;height 1.8957in;depth 0pt;original-width
+1.7201in;original-height 1.8585in;cropleft "0";croptop "1";cropright
+"1";cropbottom "0";tempfilename 'T48IBV00.wmf';tempfile-properties "XPR";}}%
+Now our angle between $dx$ and $r$ would be $\pi -\theta .$ But remembering
+our trig identities, 
 \begin{equation*}
 \sin \left( \pi -\theta \right) =\sin \theta =\frac{a}{r}
 \end{equation*}%
-on the left side, So all along the bottom wire $r$ is given by 
+which is just the same! So all along the bottom wire $r$ is given by 
 \begin{equation*}
 r=\frac{a}{\sin \theta }
 \end{equation*}%
@@ -10961,7 +11010,7 @@ Then our field equation for the bottom wire becomes%
 dx\right) \sin \theta \mathbf{\hat{k}}}{\left( \frac{a}{\sin \theta }\right)
 ^{2}}
 \end{equation*}%
-but now we have an integration over $dx$ and our function is in terms of $%
+But now we have an integration over $dx$ and our function is in terms of $%
 \theta $ which depends on $x.$ We should try to fix this. Let's find $dx$ in
 terms of $d\theta .$ We can pick $x=0$ to be the middle of the wire. Then 
 \begin{equation*}
@@ -11044,9 +11093,9 @@ is downward so%
 d\overrightarrow{\mathbf{s}}\times \mathbf{\hat{r}}=-dx\sin \theta \mathbf{%
 \hat{k}}
 \end{equation*}%
-But this is just as before. So even this is the same! The integral across
-the top wire will have exactly the same result as the integral across the
-bottom wire. We can just multiply our previous result by two.
+But this is just as before. So even direction is the same! The integral
+across the top wire will have exactly the same result as the integral across
+the bottom wire. We can just multiply our previous result by two.
 
 How about the sides? Again we get the same $d\overrightarrow{\mathbf{s}}%
 \times \mathbf{\hat{r}}$ direction and all the rest is the same, so our
@@ -11485,14 +11534,15 @@ there to be. The paths we will use are imaginary.
 
 Usually we will want our path to be around a closed loop. Let's take the
 case of a long straight current-carrying wire. We know the field shape for
-this. We can see that if we take a crazy path around the wire, that $%
-\overrightarrow{B}\cdot \Delta \overrightarrow{s_{i}}$ will give us the
-projection of $\overrightarrow{B}$ onto the $\Delta \overrightarrow{s_{i}}$
-direction for each part of the path. \FRAME{dhF}{2.7259in}{2.5953in}{0pt}{}{%
-}{Figure}{\special{language "Scientific Word";type
-"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-2.7259in;height 2.5953in;depth 0pt;original-width 2.6835in;original-height
-2.5538in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+this. So we can test our method and know if we get the right answer. We can
+see that if we take a crazy path around the wire, that $\overrightarrow{B}%
+\cdot \Delta \overrightarrow{s_{i}}$ will give us the projection of $%
+\overrightarrow{B}$ onto the $\Delta \overrightarrow{s_{i}}$ direction for
+each part of the path. \FRAME{dhF}{2.7259in}{2.5953in}{0pt}{}{}{Figure}{%
+\special{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
+TRUE;display "USEDEF";valid_file "T";width 2.7259in;height 2.5953in;depth
+0pt;original-width 2.6835in;original-height 2.5538in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
 'T1OKTHFQ.wmf';tempfile-properties "XPR";}}We get%
 \begin{equation*}
 \sum_{i}B_{\Vert }\Delta s
@@ -11523,9 +11573,9 @@ write our line integral as%
 \end{eqnarray*}%
 This is an amazingly simple result. We integrated the magnetic field around
 an imaginary loop path, and got that the result is proportional to the
-current in the wire. This reminds us of Gauss' law where we integrated the
-electric field around a surface and got that the result is proportional to
-the amount of charge inside the surface.
+current that goes through our loop. This reminds us of Gauss' law where we
+integrated the electric field around a surface and got that the result is
+proportional to the amount of charge inside the surface.
 
 \begin{equation*}
 \int \overrightarrow{E}\cdot d\overrightarrow{A}=\frac{Q_{in}}{\epsilon _{o}}
@@ -11794,7 +11844,7 @@ charge. If the charge is negative, then the $\ q$ in
 \end{equation*}%
 will be negative, and so the force will go in the other way. To keep this
 straight in my own mind, I still use our right hand rule, and just remember
-that if $F$ is negative, it goes the opposite way of my thumb.
+that if $q$ is negative, the force goes the opposite way of my thumb.
 
 \begin{quotation}
 Right hand rule \#2: We start with our hand pointing in the direction of $%
@@ -11954,12 +12004,11 @@ the confinement of charged particles in a magnetic field for fusion reaction.
 "1";cropright "1";cropbottom "0";tempfilename
 'T1OKTHG3.wmf';tempfile-properties "XPR";}}
 
-This device shows up on tests, especially finals, because it has both an
-electric field and a magnetic field--you test two sets of knowledge at once!
-But it is also the first stage of a mass spectrometer, which is a device
-used by chemists. So let's see how it works. Our question should be, what is
-the velocity of a charged particle that travels through the field without
-being deflected?
+This device shows up on tests because it has both an electric field and a
+magnetic field--you test two sets of knowledge at once! But it is also the
+first stage of a mass spectrometer, which is a device used by chemists. So
+let's see how it works. Our question should be, what is the velocity of a
+charged particle that travels through the field without being deflected?
 
 $E$\textbf{-field}
 
@@ -12575,7 +12624,7 @@ F_{12}=L\frac{\mu _{o}I_{2}I_{1}}{2\pi d}
 U=-\overrightarrow{\mathbf{\mu }}\cdot \overrightarrow{\mathbf{B}}
 \end{equation}
 
-\chapter{Permanent Magnets, Induction}
+\chapter{Permanent Magnets}
 
 %TCIMACRO{%
 %\TeXButton{Fundamental Concepts}{{\vspace{0.25in}\LARGE Fundamental Concepts\vspace{0.25in}}}}%
@@ -12594,8 +12643,6 @@ spinning electrons.
 \item Temporary alignment results in paramagnetism and diamagnetism.
 
 \item More permanent alignment yields ferromagnetism.
-
-\item A changing magnetic field can create an emf.
 \end{itemize}
 
 \section{Finally, why bar magnets work}
@@ -12620,8 +12667,9 @@ current would be%
 \begin{equation*}
 I=\frac{q_{e}}{T}
 \end{equation*}%
-where $T$ is the period of rotation. And we recall from PH121 or Statics and
-Dynamics that the period of rotation can be found from 
+where $T$ is the period of rotation. And we recall from Principles of
+Physics I (PH121) that the period of rotation can be found from the angular
+speed, $\omega $ 
 \begin{equation*}
 \omega =\frac{2\pi }{T}
 \end{equation*}%
@@ -12688,7 +12736,8 @@ compound the overall magnetic moment of the compound tends to cancel out.
 Worse yet, the electrons don't really move like little planets around the
 nucleus. So it is not clear that orbital \textquotedblleft
 motion\textquotedblright\ makes much sense. The electrons form standing
-waves around the nucleus that oscillate in time. You have probably seen
+waves around the nucleus that oscillate in time. Standing waves are
+something we will study later in our course. For now, you have probably seen
 these standing waves drawn in chemistry books. \FRAME{dtbpFU}{3.9167in}{%
 2.2243in}{0pt}{\Qcb{{\protect\small Collection of 16 atomic single-electron
 orbitals for the lowest four n quantum numbers. Image courtesy Geek3
@@ -12707,11 +12756,11 @@ current model of electron orbitals takes some quantum mechanics (and a few
 more years of physics or one wonderful semester of physical chemistry). But
 we can understand a little, because quantum mechanics does tell us that the
 electrons have angular momentum. The big difference is that the angular
-momentum is \emph{quantized} meaning it can have only certain values (think
-of the quantized standing wave modes for waves on strings). This means that
-the magnetic moment has a smallest value and that the other values will be
-(complicated) multiples of this value. The smallest magnetic moment for an
-electron turns out to be 
+momentum is \emph{quantized} meaning it can have only certain values. Why
+this would be is mysterious until we get to the latter part of this course.
+But for now this means that the magnetic moment has a smallest value and
+that the other values will be (complicated) multiples of this value. The
+smallest magnetic moment for an electron turns out to be 
 \begin{equation}
 \mu =\sqrt{2}\frac{q_{e}}{2m_{e}}\hslash
 \end{equation}%
@@ -12749,11 +12798,12 @@ is
 
 This means that electrons, themselves are little magnets. Where does this
 magnetic moment come from? Well it is \emph{as though} the electron is
-constantly spinning. It is not really so far as we can tell, but this is a
-semi-classical mental model that we can use to envision the source of the
-electron's magnetic field. The \textquotedblleft spinning\textquotedblright\
-electron is charged, so the electron acts like a miniscule current loop. The
-electron, itself is a source of the magnetic field for permanent magnets.
+constantly spinning. It is not really spinning so far as we can tell, but
+this is a semi-classical mental model that we can use to envision the source
+of the electron's magnetic field. The \textquotedblleft
+spinning\textquotedblright\ electron is charged, so the electron acts like a
+miniscule current loop. The electron, itself is a source of the magnetic
+field for permanent magnets.
 
 The spin magnetic moment was given the strange name \emph{Bohr magneton} in
 honor of Niels Bohr. If there are many electrons in the atom, there will be
@@ -12877,11 +12927,21 @@ B_{m}=\mu _{o}\frac{\mu }{\ell A}
 But note that $\ell A$ is just the volume of the piece of magnetic material,
 so 
 \begin{equation*}
-B_{m}=\mu _{o}\frac{\mu }{\mathbb{V}}
+B_{m}=\mu _{o}\frac{\mu }{%
+%TCIMACRO{\TeXButton{V}{\ooalign{\hfil$V$\hfil\cr\kern0.1em--\hfil\cr}}}%
+%BeginExpansion
+\ooalign{\hfil$V$\hfil\cr\kern0.1em--\hfil\cr}%
+%EndExpansion
+}
 \end{equation*}%
 which is gives us our new quantity, the magnetization vector%
 \begin{equation}
-M=\frac{\mu }{\mathbb{V}}
+M=\frac{\mu }{%
+%TCIMACRO{\TeXButton{V}{\ooalign{\hfil$V$\hfil\cr\kern0.1em--\hfil\cr}}}%
+%BeginExpansion
+\ooalign{\hfil$V$\hfil\cr\kern0.1em--\hfil\cr}%
+%EndExpansion
+}
 \end{equation}%
 Well, this is the magnitude, anyway, so 
 \begin{equation}
@@ -12937,7 +12997,8 @@ to classify materials, and choose the proper material for whatever
 experiment or device we are designing.
 
 For many substances we find that the magnetization vector is proportional to
-the field strength (which is why field strength hangs around in usage)%
+the field strength (which is why \textquotedblleft field
+strength\textquotedblright\ hangs around in usage)%
 \begin{equation}
 \overrightarrow{\mathbf{M}}=\chi \overrightarrow{\mathbf{H}}
 \end{equation}
@@ -13149,9 +13210,80 @@ The location of the magnetic pole explains the declination adjustment you
 have to use when using a compass. What you are really doing is accounting
 for the difference in pole location.
 
+%TCIMACRO{%
+%\TeXButton{Basic Equations}{\vspace{0.24in}\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}}}%
+%BeginExpansion
+\vspace{0.24in}\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}%
+%EndExpansion
+
+\begin{equation*}
+\mu =\frac{q_{e}v_{t}r}{2}
+\end{equation*}%
+\begin{equation}
+\mu =\frac{q_{e}L}{2m}
+\end{equation}%
+\begin{equation}
+M=\frac{\mu }{\mathbb{V}}
+\end{equation}%
+\begin{equation*}
+\overrightarrow{\mathbf{H}}=\frac{\overrightarrow{\mathbf{B}}_{o}}{\mu _{o}}
+\end{equation*}%
+\begin{equation}
+\overrightarrow{\mathbf{B}}=\overrightarrow{\mathbf{B}}_{o}+\mu _{o}%
+\overrightarrow{\mathbf{M}}
+\end{equation}%
+\begin{equation}
+\overrightarrow{\mathbf{B}}=\mu _{o}\left( \overrightarrow{\mathbf{H}}+%
+\overrightarrow{\mathbf{M}}\right) 
+\end{equation}%
+\begin{equation}
+\overrightarrow{\mathbf{B}}=\mu _{o}\left( 1+\chi \right) \overrightarrow{%
+\mathbf{H}}
+\end{equation}%
+\begin{equation}
+\mu _{m}=\mu _{o}\left( 1+\chi \right) 
+\end{equation}%
+\begin{equation*}
+\begin{tabular}{ll}
+Paramagnetic & $\mu _{m}>\mu _{o}$ \\ 
+Diamagnetic & $\mu _{m}<\mu _{o}$ \\ 
+Free Space & $\mu _{m}=\mu _{o}$%
+\end{tabular}%
+\end{equation*}%
+\begin{equation*}
+\overrightarrow{\mathbf{M}}=\chi \overrightarrow{\mathbf{H}}
+\end{equation*}%
+\begin{equation}
+M=C\frac{B_{o}}{T}
+\end{equation}
+
+\chapter{Induction}
+
+%TCIMACRO{%
+%\TeXButton{Fundamental Concepts}{{\vspace{0.25in}\LARGE Fundamental Concepts\vspace{0.25in}}}}%
+%BeginExpansion
+{\vspace{0.25in}\LARGE Fundamental Concepts\vspace{0.25in}}%
+%EndExpansion
+
+\begin{itemize}
+\item A changing magnetic field can create an emf.
+
+\item Conductors moving in magnetic fields separate charge. creating a
+potential difference that we call \textquotedblleft motional
+emf.\textquotedblright 
+
+\item Motional emfs generate currents, even in solid pieces of conductor.
+These currents in conductors are called \textquotedblleft eddy
+currents.\textquotedblright 
+
+\item Magnetic flux is found by integrating the dot product of the magnetic
+field and a differential element of area over the area. $\Phi _{B}=\int_{A}%
+\overrightarrow{B}\cdot d\overrightarrow{A}$
+\end{itemize}
+
 \section{Induced currents}
 
-We spend most of the last two lectures building a relationship between
+We spend most of the last few lectures building a relationship between
 moving charge (current) and magnetic fields. But suppose we have moving
 magnetic fields. Could a moving magnetic field make a current?
 
@@ -13200,80 +13332,11 @@ To be able to calculate how much current flows, we will need to investigate
 changing magnetic fields. We will do this next lecture with our concept of
 flux.
 
-%TCIMACRO{%
-%\TeXButton{Basic Equations}{\vspace{0.24in}\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}}}%
-%BeginExpansion
-\vspace{0.24in}\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}%
-%EndExpansion
-
-\begin{equation*}
-\mu =\frac{q_{e}v_{t}r}{2}
-\end{equation*}%
-\begin{equation}
-\mu =\frac{q_{e}L}{2m}
-\end{equation}%
-\begin{equation}
-M=\frac{\mu }{\mathbb{V}}
-\end{equation}%
-\begin{equation*}
-\overrightarrow{\mathbf{H}}=\frac{\overrightarrow{\mathbf{B}}_{o}}{\mu _{o}}
-\end{equation*}%
-\begin{equation}
-\overrightarrow{\mathbf{B}}=\overrightarrow{\mathbf{B}}_{o}+\mu _{o}%
-\overrightarrow{\mathbf{M}}
-\end{equation}%
-\begin{equation}
-\overrightarrow{\mathbf{B}}=\mu _{o}\left( \overrightarrow{\mathbf{H}}+%
-\overrightarrow{\mathbf{M}}\right)
-\end{equation}%
-\begin{equation}
-\overrightarrow{\mathbf{B}}=\mu _{o}\left( 1+\chi \right) \overrightarrow{%
-\mathbf{H}}
-\end{equation}%
-\begin{equation}
-\mu _{m}=\mu _{o}\left( 1+\chi \right)
-\end{equation}%
-\begin{equation*}
-\begin{tabular}{ll}
-Paramagnetic & $\mu _{m}>\mu _{o}$ \\ 
-Diamagnetic & $\mu _{m}<\mu _{o}$ \\ 
-Free Space & $\mu _{m}=\mu _{o}$%
-\end{tabular}%
-\end{equation*}%
-\begin{equation*}
-\overrightarrow{\mathbf{M}}=\chi \overrightarrow{\mathbf{H}}
-\end{equation*}%
-\begin{equation}
-M=C\frac{B_{o}}{T}
-\end{equation}
-
-\chapter{Induction}
-
-%TCIMACRO{%
-%\TeXButton{Fundamental Concepts}{{\vspace{0.25in}\LARGE Fundamental Concepts\vspace{0.25in}}}}%
-%BeginExpansion
-{\vspace{0.25in}\LARGE Fundamental Concepts\vspace{0.25in}}%
-%EndExpansion
-
-\begin{itemize}
-\item Conductors moving in magnetic fields separate charge. creating a
-potential difference that we call \textquotedblleft motional
-emf.\textquotedblright
-
-\item Motional emfs generate currents, even in solid pieces of conductor.
-These currents in conductors are called \textquotedblleft eddy
-currents.\textquotedblright
-
-\item Magnetic flux is found by integrating the dot product of the magnetic
-field and a differential element of area over the area. $\Phi _{B}=\int_{A}%
-\overrightarrow{B}\cdot d\overrightarrow{A}$
-\end{itemize}
-
 \section{Motional emf}
 
-Last lecture, we studied Faraday's experiment. He created a magnetic field,
-and then used that magnetic field to make a current. But currents are caused
-by electric fields! Did Faraday's magnetic field create an electric field?
+Faraday's experiment tells us that we can create a magnetic field, and then
+used that magnetic field to make a current. But currents are caused by
+electric fields! Did Faraday's magnetic field create an electric field?
 
 To investigate Faraday's result, let's see if we can find a way to use
 charge motion and a magnetic field to make an electric field. Let's take a
@@ -13314,11 +13377,16 @@ F_{E}=qE
 By separating the charges along the wire so that there is excess positive
 charge on one end and excess negative charge on the other end, we now have
 and $E$-field in the wire. We can solve for $E$ when we have reached
-equilibrium.%
+equilibrium. We can use Newton's second law:%
 \begin{equation*}
-\Sigma F=0=-F_{B}+F_{E}
+\Sigma \overrightarrow{F}=0=\overrightarrow{F}_{B}+\overrightarrow{F}_{E}
 \end{equation*}%
-or%
+or, finding the $x$ and $y$-components%
+\begin{eqnarray*}
+F_{net_{x}} &=&0 \\
+F_{net_{y}} &=&-F_{B}+F_{E}
+\end{eqnarray*}%
+The $x$-equation isn't very helpful, but from the $y$-equation we have%
 \begin{equation*}
 qE=qvB
 \end{equation*}%
@@ -13326,9 +13394,10 @@ which tells us%
 \begin{equation}
 E=vB
 \end{equation}%
-Now, we know that electric fields cause potential differences. The $E$-field
-in the wire will be nearly uniform. Then it looks much like a capacitor with
-separated charges. The potential difference will be 
+Now, we know from our earlier studies that electric fields cause potential
+differences. The $E$-field in the wire will be nearly uniform. Then it looks
+much like a capacitor with separated charges. The potential difference will
+be about 
 \begin{eqnarray*}
 \Delta V &=&\int \overrightarrow{E}\cdot d\overrightarrow{s} \\
 &\approx &EL
@@ -13339,8 +13408,9 @@ where $L$ is the length of our wire. So
 \end{equation}
 
 This is like a battery. The magnetic field is \textquotedblleft
-pumping\textquotedblright\ charge. If we connected the two ends somehow with
-a wire that is not moving, a current will flow.
+pumping\textquotedblright\ charge to a higher electrical potential energy.
+If we connected the two ends somehow with a wire that is not moving, a
+current will flow. 
 
 \FRAME{dhF}{3.7775in}{1.708in}{0pt}{}{}{Figure}{\special{language
 "Scientific Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display
@@ -13355,7 +13425,7 @@ two long parts of a U-shaped long wire as shown. We will call the two long
 parts of the wire \textquotedblleft rails\textquotedblright\ since they look
 a little like railroad rails. Then we have a connection between our moving
 piece of metal, and the rest of the circuit. What we have is very like the
-circuit on the right hand side of the last figure.
+circuit on the right hand side of the previous figure.
 
 We will have to apply a force $F_{pull}$ to move the bar. This is because
 there is another force, marked as $F_{resistive}$ in the figure. This force
@@ -13379,7 +13449,7 @@ so the force is
 F_{resistive} &=&\left( \frac{vBL}{R}\right) LB \\
 &=&\frac{vB^{2}L^{2}}{R}
 \end{eqnarray*}%
-Thus we have to push with an equal force 
+And we have to push with an equal force 
 \begin{equation*}
 F_{push}=F_{resistive}
 \end{equation*}%
@@ -13390,19 +13460,20 @@ the velocity, so the bar will slow down.
 \section{Eddy Currents}
 
 If we have a conductive loop and part of that loop moves in a magnetic
-field, we get a current. I chose to make our apparatus a pendulum. \FRAME{%
-dtbpF}{1.1185in}{1.3979in}{0pt}{}{}{Figure}{\special{language "Scientific
-Word";type "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file
-"T";width 1.1185in;height 1.3979in;depth 0pt;original-width
-2.1554in;original-height 2.7026in;cropleft "0";croptop "1";cropright
-"1";cropbottom "0";tempfilename 'T1OKTHGW.wmf';tempfile-properties "XPR";}}%
-So as the pendulum swings, through the magnetic field, we get a current.
-What if we have a solid sheet of conductor and we move that sheet through
-the magnetic field, will there be a current? \FRAME{dtbpF}{1.5336in}{2.0347in%
-}{0pt}{}{}{Figure}{\special{language "Scientific Word";type
-"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
-1.5336in;height 2.0347in;depth 0pt;original-width 1.5345in;original-height
-2.0445in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+field, we get a current. And suppose I chose to make our apparatus a
+pendulum. \FRAME{dtbpF}{1.1185in}{1.3979in}{0pt}{}{}{Figure}{\special%
+{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
+TRUE;display "USEDEF";valid_file "T";width 1.1185in;height 1.3979in;depth
+0pt;original-width 2.1554in;original-height 2.7026in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
+'T1OKTHGW.wmf';tempfile-properties "XPR";}}So as the pendulum swings,
+through the magnetic field, we get a current. What if we have a solid sheet
+of conductor and we move that sheet through the magnetic field, will there
+be a current? \FRAME{dtbpF}{1.5336in}{2.0347in}{0pt}{}{}{Figure}{\special%
+{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
+TRUE;display "USEDEF";valid_file "T";width 1.5336in;height 2.0347in;depth
+0pt;original-width 1.5345in;original-height 2.0445in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";tempfilename
 'T1OKTHGX.wmf';tempfile-properties "XPR";}}The answer is yes. After all,
 there are free valence electrons in the metal sheet, and they can flow in
 the sheet just like they can flow in a wire. We call this current in the
@@ -13514,24 +13585,24 @@ TRUE;display "PICT";valid_file "T";width 2.8141in;height 2.0755in;depth
 "1";cropright "1";cropbottom "0";tempfilename
 'T1OKTHH5.wmf';tempfile-properties "XPR";}}The flux through the green
 rectangular area is almost constant. We could take an even smaller piece of
-our loop area \FRAME{dtbpF}{1.6449in}{1.3275in}{0in}{}{}{Figure}{\special%
+our loop area \FRAME{dtbpF}{1.6449in}{1.3275in}{0pt}{}{}{Figure}{\special%
 {language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
 TRUE;display "USEDEF";valid_file "T";width 1.6449in;height 1.3275in;depth
-0in;original-width 1.6086in;original-height 1.2929in;cropleft "0";croptop
+0pt;original-width 1.6086in;original-height 1.2929in;cropleft "0";croptop
 "1";cropright "1";cropbottom "0";tempfilename
 'T1OKTHH6.wmf';tempfile-properties "XPR";}}%
 \begin{equation*}
 dA=dydr
 \end{equation*}%
-This area is perpendicular to the field, so the angle between $B$ and $A$ is 
-$90\unit{%
+This area's area vector is in the same direction as the field, so the angle
+between $B$ and $A$ is $0\unit{%
 %TCIMACRO{\U{b0}}%
 %BeginExpansion
 {{}^\circ}%
 %EndExpansion
 }.$ Then we would have a small amount of flux through $dA$ 
 \begin{equation*}
-d\Phi _{B}=\frac{\mu _{o}I}{2\pi r}dydr\left( 1\right)
+d\Phi _{B}=\frac{\mu _{o}I}{2\pi r}dydr\left( 1\right) 
 \end{equation*}%
 and we can integrate this to find the total flux through the whole loop%
 \begin{eqnarray*}
@@ -13539,8 +13610,8 @@ and we can integrate this to find the total flux through the whole loop%
 &=&\frac{\mu _{o}I}{2\pi }\int_{r_{o}}^{r=a}\frac{1}{r}dr\int_{o}^{b}dy \\
 &=&\frac{\mu _{o}Ib}{2\pi }\int_{r_{o}}^{r_{o}+a}\frac{1}{r}dr \\
 &=&\frac{\mu _{o}Ib}{2\pi }\left( \ln \left( r_{o}+a\right) -\ln \left(
-r_{o}\right) \right) \\
-&=&\frac{\mu _{o}Ib}{2\pi }\ln \left( \frac{r_{o}+a}{r_{o}}\right)
+r_{o}\right) \right)  \\
+&=&\frac{\mu _{o}Ib}{2\pi }\ln \left( \frac{r_{o}+a}{r_{o}}\right) 
 \end{eqnarray*}
 
 We can even put in some numbers for this case. Suppose our loop has a height
@@ -13550,10 +13621,10 @@ is $I=0.5\unit{A}$. Then
 \begin{eqnarray*}
 \Phi _{B} &=&\frac{\left( 4\pi \times 10^{-7}\frac{\unit{T}\unit{m}}{\unit{A}%
 }\right) \left( 0.5\unit{A}\right) \left( 0.05\unit{m}\right) }{2\pi }\ln
-\left( \frac{0.01\unit{m}+0.01\unit{m}}{0.01\unit{m}}\right) \\
+\left( \frac{0.01\unit{m}+0.01\unit{m}}{0.01\unit{m}}\right)  \\
 &=&3.\,\allowbreak 465\,7\times 10^{-9}\unit{Wb}
 \end{eqnarray*}%
-the unit of magnetic flux is called the weber and it is given by : 
+the unit of magnetic flux is called the Weber and it is given by : 
 \begin{equation*}
 \unit{Wb}=\unit{T}\unit{m}^{2}=\frac{\unit{m}^{2}}{\unit{A}}\frac{\unit{kg}}{%
 \unit{s}^{2}}
@@ -13568,9 +13639,9 @@ between induced emf and magnetic flux is called \emph{Faraday's law} after
 the scientist that discovered it. We will study this law in our next lecture.
 
 %TCIMACRO{%
-%\TeXButton{Basic Equations}{\vspace{0.02in}\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}}}%
+%\TeXButton{Basic Equations}{\vspace{0.05in}\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}}}%
 %BeginExpansion
-\vspace{0.02in}\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}%
+\vspace{0.05in}\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}%
 %EndExpansion
 \begin{equation}
 \Delta V\approx vBL
@@ -14862,8 +14933,12 @@ L &=&N\frac{\Phi _{B}}{I} \\
 &=&\frac{\mu _{o}N^{2}\mathbb{V}}{\ell ^{2}} \\
 &=&\mu _{o}n^{2}\mathbb{V}
 \end{eqnarray*}%
-where we used the fact that the volume of the solenoid is $\mathbb{V}=A\ell
-. $
+where we used the fact that the volume of the solenoid is $%
+%TCIMACRO{\TeXButton{V}{\ooalign{\hfil$V$\hfil\cr\kern0.1em--\hfil\cr}}}%
+%BeginExpansion
+\ooalign{\hfil$V$\hfil\cr\kern0.1em--\hfil\cr}%
+%EndExpansion
+=A\ell .$
 
 Many inductors built for use in electronics are just this, air filled
 solenoids. So this really is a somewhat practical solution.
