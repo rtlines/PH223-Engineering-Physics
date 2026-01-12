@@ -11,7 +11,7 @@
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=Manual}
 %TCIDATA{Created=Thursday, March 21, 2024 14:45:27}
-%TCIDATA{LastRevised=Thursday, December 11, 2025 11:04:01}
+%TCIDATA{LastRevised=Monday, January 12, 2026 16:33:53}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 %TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Standard LaTeX Book">}
 %TCIDATA{Language=American English}
@@ -9797,13 +9797,311 @@ even now know where that friction-like force comes from. But we didn't give
 it a name yet. Let's call it \emph{resistance.} and let's talk about it in
 our next lecture.
 
-\smallskip \pagebreak
+We should ask the question of how current works with capacitors. Let's take
+a look.
+
+\section{Resisters and Capacitors Together}
+
+We know for capacitors that 
+\begin{equation*}
+Q=C\Delta V
+\end{equation*}%
+or now, with an ideal battery,when the capacitor is fully charged (so $I=0$
+and $r$ does not matter).
+
+Now consider what happens in the circuit shown below\FRAME{dtbpF}{3.205in}{%
+1.8645in}{0in}{}{}{Figure}{\special{language "Scientific Word";type
+"GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
+3.205in;height 1.8645in;depth 0in;original-width 3.16in;original-height
+1.8265in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+'T8RYJQ04.wmf';tempfile-properties "XPR";}}
+
+With the switch open, the capacitor is uncharged . So $Q=0$ before the
+switch is closed. It takes some time for current to start to flow after.We
+can see that if we let $t=0$ be the time the switch is closed, at $t=0$ we
+still have $Q=0.$ We will have a current of 
+\begin{equation*}
+I_{o}=\frac{\Delta V_{b}}{R}
+\end{equation*}%
+at this initial time, where $\Delta V_{b}$ is the battery voltage.
+
+We expect that at some later time, $t_{long}$ we will have 
+\begin{equation*}
+Q=C\Delta V
+\end{equation*}%
+When this happens, $\Delta V$ of the capacitor will be equal to $\Delta
+V_{b}.$ Since the potential is equal to the potential of the battery, the
+current must stop by $t_{long}$. It would be good to be able to calculate
+what happens between $t=0$ and $t=t_{long}.$
+
+\subsection{RC charge as function of time}
+
+We can do this using Kirchhoff's loop rule.%
+\begin{equation*}
+\Delta V_{b}-\Delta V_{C}-\Delta V_{R}=0
+\end{equation*}%
+or%
+\begin{equation*}
+\Delta V_{b}-\frac{q}{C}-IR=0
+\end{equation*}%
+and we know that the current $I=dq/dt$ so%
+\begin{equation*}
+\Delta V_{b}-\frac{q}{C}-\frac{dq}{dt}R=0
+\end{equation*}%
+rearranging gives%
+\begin{equation*}
+\frac{\Delta V_{b}}{R}-\frac{q}{RC}=\frac{dq}{dt}
+\end{equation*}%
+which is a wonderful differential equation--one we can solve. We separate
+the variables $dq$ and $dt$%
+\begin{equation*}
+\frac{C\Delta V_{b}-q}{RC}=\frac{dq}{dt}
+\end{equation*}%
+then%
+\begin{equation*}
+dt=\frac{dq}{\frac{C\Delta V_{b}-q}{RC}}
+\end{equation*}%
+\begin{equation*}
+\frac{dt}{RC}=\frac{dq}{C\Delta V_{b}-q}
+\end{equation*}%
+and we integrate both sides%
+\begin{equation*}
+\frac{1}{RC}\int_{0}^{t}dt^{\prime }=\int_{o}^{q}\frac{1}{C\Delta
+V_{b}-q^{\prime }}dq^{\prime }
+\end{equation*}%
+or%
+\begin{equation*}
+\frac{t}{RC}=\int_{o}^{q}\frac{1}{C\Delta V_{b}-q^{\prime }}dq^{\prime }
+\end{equation*}%
+now we let $u=C\Delta V_{b}-q$ so $du=-dq$ and our limits of $q^{\prime }=0$
+gives $u=C\Delta V_{b}$ and the limit of $q^{\prime }=q$ gives $u=C\Delta
+V_{b}-q$ 
+\begin{eqnarray*}
+\frac{t}{RC} &=&-\int_{C\Delta V_{b}}^{C\Delta V_{b}-q}\frac{1}{u}du \\
+&=&\left. -\ln u\mathstrut \right\vert _{C\Delta V_{b}}^{C\Delta V_{b}-q} \\
+&=&-\left( \ln \left( C\Delta V_{b}-q\right) -\ln \left( C\Delta
+V_{b}\right) \right)  \\
+&=&-\ln \left( \frac{C\Delta V_{b}-q}{C\Delta V_{b}}\right) 
+\end{eqnarray*}%
+then%
+\begin{equation*}
+\frac{t}{RC}=-\ln \left( \frac{C\Delta V_{b}-q}{C\Delta V_{b}}\right) 
+\end{equation*}%
+Exponentiating both sides gives%
+\begin{eqnarray*}
+e^{-\frac{t}{RC}} &=&\left( \frac{C\Delta V_{b}-q}{C\Delta V_{b}}\right)  \\
+e^{-\frac{t}{RC}} &=&1-\frac{q}{C\Delta V_{b}} \\
+e^{-\frac{t}{RC}} &=&1-\frac{q}{C\Delta V_{b}} \\
+e^{-\frac{t}{RC}}-1 &=&-\frac{q}{C\Delta V_{b}} \\
+C\Delta V_{b}\left( 1-e^{-\frac{t}{RC}}\right)  &=&q
+\end{eqnarray*}%
+and now we recognize that 
+\begin{equation*}
+Q=C\Delta V=C\Delta V_{b}
+\end{equation*}%
+as the total charge that the capacitor can hold, then%
+\begin{equation}
+q\left( t\right) =Q\left( 1-e^{-\frac{t}{RC}}\right) 
+\end{equation}
+
+\subsection{RC example}
+
+The small $q$ is the charge is has at the current time. This will get bigger
+until at $t_{long}$ it will reach $Q.$ The letter $e$ here is the base of
+the natural logarithm. Suppose we had the following values%
+\begin{equation}
+\begin{tabular}{l}
+$R=2\unit{%
+%TCIMACRO{\U{3a9}}%
+%BeginExpansion
+\Omega%
+%EndExpansion
+}$ \\ 
+$C=10\unit{F}$ \\ 
+$\mathcal{E}=1.5\unit{V}$%
+\end{tabular}%
+\end{equation}%
+then our charge as a function of time would be%
+\begin{equation}
+q(t)=\left( 10\unit{F}\right) \left( 1.5\unit{V}\right) \left( 1-e^{-\frac{t%
+}{\left( 2\unit{%
+%TCIMACRO{\U{3a9}}%
+%BeginExpansion
+\Omega%
+%EndExpansion
+}\right) \left( 10\unit{F}\right) }}\right) 
+\end{equation}%
+We can plot this\FRAME{dtbpFX}{2.3682in}{1.5797in}{0pt}{}{}{Plot}{\special%
+{language "Scientific Word";type "MAPLEPLOT";width 2.3682in;height
+1.5797in;depth 0pt;display "USEDEF";plot_snapshots TRUE;mustRecompute
+FALSE;lastEngine "MuPAD";xmin "0.001";xmax "75";xviewmin "0.001";xviewmax
+"75";yviewmin "0";yviewmax "20";viewset"XY";rangeset"X";plottype
+4;labeloverrides 3;x-label "t";y-label "Q";axesFont "Times New
+Roman,12,0000000000,useDefault,normal";numpoints 100;plotstyle
+"patch";axesstyle "normal";axestips FALSE;xis \TEXUX{t};var1name
+\TEXUX{$t$};function \TEXUX{$\left( 10\right) \left( 1.5\right) \left(
+1-e^{-\frac{t}{\left( 2\right) \left( 10\right) }}\right) $};linecolor
+"blue";linestyle 1;pointstyle "point";linethickness 3;lineAttributes
+"Solid";var1range "0.001,75";num-x-gridlines 100;curveColor
+"[flat::RGB:0x000000ff]";curveStyle "Line";function \TEXUX{$\left( 10\right)
+\left( 1.5\right) $};linecolor "green";linestyle 2;pointstyle
+"point";linethickness 1;lineAttributes "Dash";var1range
+"0.001,75";num-x-gridlines 100;curveColor
+"[flat::RGB:0x00008000]";curveStyle "Line";VCamFile
+'T8RYLP0D.xvz';valid_file "T";tempfilename
+'T8RYSH07.wmf';tempfile-properties "XPR";}}notice, that by about $t=70\unit{s%
+}$ we essentially have $q=Q.$ But up to that point, the charge changes in a
+very non-linear way. The part of the equation that looks like%
+\begin{equation*}
+\left( 1-e^{-\frac{t}{RC}}\right) 
+\end{equation*}%
+is interesting, what is $e^{0}$?%
+\begin{equation*}
+e^{0}=1
+\end{equation*}%
+so at $t=0$ we do have $q=0$ because 
+\begin{equation*}
+\left( 1-e^{-\frac{t}{RC}}\right) =\left( 1-1\right) 
+\end{equation*}%
+For any positive time, $e^{-\frac{t}{RC}}$ will be less than $1.$ For large
+times $\frac{t}{RC}$ gets to be a big number. So $e^{-\frac{t}{RC}}$ gets
+very small, So $\left( 1-e^{-\frac{t}{RC}}\right) $ gets very close to $1.$
+That means that 
+\begin{equation*}
+q=Q\left( 1-e^{-\frac{t}{RC}}\right) \rightarrow Q\left( 1\right) =Q
+\end{equation*}%
+just as we saw in the graph and as we know it must.
+
+We sometimes give a name to $R\times C$
+
+\begin{equation}
+\tau =RC
+\end{equation}%
+this is called the \emph{time constant} because it tells us something about
+how long it takes for $q$ to go from $0$ to get to $Q.$ The
+\textquotedblleft t-looking-thing\textquotedblright\ is a Greek letter
+\textquotedblleft t\textquotedblright\ It is pronounced \textquotedblleft
+tau.\textquotedblright\ Note that we also use $\tau $ for torque, but this
+is really not torque. It is an amount of time.
+
+\subsection{RC Current}
+
+We can also find the current. We know that 
+\begin{equation*}
+I=\frac{dq}{dt}=\frac{d}{dt}Q\left( 1-e^{-\frac{t}{RC}}\right) =-Q\frac{d}{dt%
+}e^{-\frac{t}{RC}}=\frac{Q}{RC}e^{-\frac{t}{RC}}
+\end{equation*}%
+but from $Q=C\mathcal{E}$ we have%
+\begin{eqnarray*}
+I\left( t\right) &=&\frac{\mathcal{E}}{R}e^{-\frac{t}{RC}} \\
+&=&I_{o}e^{-\frac{t}{RC}}
+\end{eqnarray*}%
+where $I_{o}$ is the maximum current $I_{\max }=\mathcal{E}/R$. For our case
+this looks like%
+\begin{equation*}
+I\left( t\right) =0.75\unit{A}e^{-\frac{t}{20\unit{s}}}
+\end{equation*}
+
+\subsection{RC Discharging}
+
+To understand better what the time constant means, lets now remove the
+battery from the circuit, but let the circuit stay connected (say, replace
+the battery with a piece of wire). Now we find that the charge seems to fade
+away! 
+
+We can calculate what the charge would be as a function of time. We probably
+won't have time to do this in class, but really it is just the same the
+answer is%
+\begin{equation}
+q=Qe^{-\frac{t}{RC}}=Qe^{-\frac{t}{\tau }}
+\end{equation}%
+We find by again taking Kirchhoffs rule%
+\begin{equation*}
+\Delta V_{bat}-\Delta V_{C}-\Delta V_{R}=0
+\end{equation*}%
+or%
+\begin{equation*}
+0-\frac{q}{C}-IR=0
+\end{equation*}%
+Again writing out the current gives%
+\begin{eqnarray*}
+\frac{q}{RC} &=&-\frac{dq}{dt} \\
+\frac{dt}{RC} &=&-\frac{dq}{q}
+\end{eqnarray*}%
+and integrating gives%
+\begin{equation*}
+-\frac{1}{RC}\int_{0}^{t}dt^{\prime }=\int_{Q}^{q}\frac{dq^{\prime }}{%
+q^{\prime }}
+\end{equation*}%
+so%
+\begin{equation*}
+-\frac{t}{RC}=\ln \left( \frac{q}{Q}\right)
+\end{equation*}%
+and exponentiating both sides gives%
+\begin{equation}
+q=Qe^{-\frac{t}{RC}}=Qe^{-\frac{t}{\tau }}
+\end{equation}%
+Now we can see that if $t=\tau ,$ then%
+\begin{equation*}
+q=Qe^{-\frac{t}{RC}}=Qe^{-\frac{1}{1}}=Qe^{-1}
+\end{equation*}%
+since $e=2.\,\allowbreak 718\,3,$ 
+\begin{equation*}
+e^{-1}=\frac{1}{e}=\allowbreak 0.367\,88
+\end{equation*}%
+so we have 
+\begin{equation*}
+q=\allowbreak 0.367\,88Q
+\end{equation*}%
+That is, after a time $\tau ,$ we are at about $37\%$ of the original
+charge, or we have \emph{lost} about $63\%$ of the original charge.
+Likewise, if we decide to recharge our capacitor, $\tau $ will tell us how
+long it takes to gain $63\%$ of the full charge.
+
+We can say a capacitor \emph{discharges} when it looses its charge. Let's
+plot the discharge.\FRAME{dtbpFX}{2.3682in}{1.5797in}{0pt}{}{}{Plot}{\special%
+{language "Scientific Word";type "MAPLEPLOT";width 2.3682in;height
+1.5797in;depth 0pt;display "USEDEF";plot_snapshots TRUE;mustRecompute
+FALSE;lastEngine "MuPAD";xmin "0.001";xmax "70";xviewmin "0.001";xviewmax
+"70";yviewmin "0";yviewmax "20";viewset"XY";rangeset"X";plottype
+4;labeloverrides 3;x-label "t";y-label "Q";axesFont "Times New
+Roman,12,0000000000,useDefault,normal";numpoints 100;plotstyle
+"patch";axesstyle "normal";axestips FALSE;xis \TEXUX{t};var1name
+\TEXUX{$t$};function \TEXUX{$\left( 10\right) \left( 1.5\right) \left(
+e^{-\frac{t}{20}}\right) $};linecolor "blue";linestyle 1;pointstyle
+"point";linethickness 3;lineAttributes "Solid";var1range
+"0.001,70";num-x-gridlines 100;curveColor
+"[flat::RGB:0x000000ff]";curveStyle "Line";function \TEXUX{$\left( 10\right)
+\left( 1.5\right) $};linecolor "green";linestyle 2;pointstyle
+"point";linethickness 1;lineAttributes "Dash";var1range
+"0.001,70";num-x-gridlines 100;curveColor
+"[flat::RGB:0x00008000]";curveStyle "Line";function \TEXUX{$\left(
+.37\right) \left( 10\right) \left( 1.5\right) $};linecolor
+"yellow";linestyle 2;pointstyle "point";linethickness 1;lineAttributes
+"Dash";var1range "0.001,70";num-x-gridlines 100;curveColor
+"[flat::RGB:0x00ffcd99]";curveStyle "Line";VCamFile
+'T8RYIL09.xvz';valid_file "T";tempfilename
+'T8RYJQ06.wmf';tempfile-properties "XPR";}}As we would expect, by about $t=50%
+\unit{s},$ we have discharged. At $\tau =10\unit{s}$ we have about $37\%$ of
+the full charge ($3\unit{C}$ in this case).\footnote{%
+The observant student might worry that our equation gives values for very
+large values of $t$. Does the capacitor ever fully discharge? Well, yes it
+does. Remember that we have a minimum charge of $1.6\times 10^{-19}\unit{C}$
+because that is the charge of our charge carrier. We can't have less charge
+than that. So when our equation gives less than $1.6\times 10^{-19}\unit{C}$
+we will remember that it must really be $q=0.$}
 
 %TCIMACRO{%
 %\TeXButton{Basic Equations}{\vspace{0.24in}\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}}}%
 %BeginExpansion
 \vspace{0.24in}\hspace{-1.3in}{\LARGE Basic Equations\vspace{0.25in}}%
 %EndExpansion
+\begin{equation*}
+v_{d}=\left( \frac{q\tau }{m}\right) E
+\end{equation*}%
+\begin{equation*}
+I=nAv_{d}q_{c}
+\end{equation*}
 
 \begin{equation*}
 J=nq_{e}v_{d}
@@ -9811,6 +10109,18 @@ J=nq_{e}v_{d}
 \begin{equation*}
 I=JA
 \end{equation*}
+
+Charging%
+\begin{equation*}
+q=Q\left( 1-e^{-\frac{t}{RC}}\right) 
+\end{equation*}
+
+Discharging%
+\begin{equation*}
+q=Qe^{-\frac{t}{RC}}=Qe^{-\frac{t}{\tau }}
+\end{equation*}
+
+\pagebreak 
 
 \chapter{Ohm's law}
 
@@ -28883,7 +29193,7 @@ true. The quality of our image depends on how poorly a point object is
 imaged. We need to deal with this in this last lecture. It is also true that
 light has a direction for the $\overrightarrow{E}$ wave and the $%
 \overrightarrow{B}$ wave. That has some effects that we can use in
-industrial designs. These are our topics for this lecture. 
+industrial designs. These are our topics for this lecture.
 
 %TCIMACRO{%
 %\TeXButton{Fundamental Concepts}{{\vspace{0.25in}\LARGE Fundamental Concepts\vspace{0.25in}}}}%
@@ -29091,7 +29401,7 @@ of energy flow. We have drawn light waves before.\FRAME{dhF}{3.681in}{3.673in%
 "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
 3.681in;height 3.673in;depth 0pt;original-width 3.7218in;original-height
 3.7156in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
-'T583EG3R.wmf';tempfile-properties "XPR";}}Let's  ignore the magnetic field
+'T583EG3R.wmf';tempfile-properties "XPR";}}Let's ignore the magnetic field
 (marked in the figure as $B$) for this analysis. We will look at the $E$
 field an notice that it goes up and down in the figure. But we could have
 light in any orientation. If we look directly at an approaching beam of
@@ -29305,7 +29615,7 @@ n=\tan \theta _{b}
 \end{equation}%
 which we can solve for $\theta _{b}.$%
 \begin{equation*}
-\theta _{b}=\tan ^{-1}\left( n\right) 
+\theta _{b}=\tan ^{-1}\left( n\right)
 \end{equation*}
 
 This phenomena is why we wear polarizing sunglasses to reduce glare.
