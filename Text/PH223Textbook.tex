@@ -11,7 +11,7 @@
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=Manual}
 %TCIDATA{Created=Thursday, March 21, 2024 14:45:27}
-%TCIDATA{LastRevised=Monday, January 12, 2026 16:33:53}
+%TCIDATA{LastRevised=Friday, February 27, 2026 12:14:57}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 %TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Standard LaTeX Book">}
 %TCIDATA{Language=American English}
@@ -9880,20 +9880,20 @@ V_{b}-q$
 \frac{t}{RC} &=&-\int_{C\Delta V_{b}}^{C\Delta V_{b}-q}\frac{1}{u}du \\
 &=&\left. -\ln u\mathstrut \right\vert _{C\Delta V_{b}}^{C\Delta V_{b}-q} \\
 &=&-\left( \ln \left( C\Delta V_{b}-q\right) -\ln \left( C\Delta
-V_{b}\right) \right)  \\
-&=&-\ln \left( \frac{C\Delta V_{b}-q}{C\Delta V_{b}}\right) 
+V_{b}\right) \right) \\
+&=&-\ln \left( \frac{C\Delta V_{b}-q}{C\Delta V_{b}}\right)
 \end{eqnarray*}%
 then%
 \begin{equation*}
-\frac{t}{RC}=-\ln \left( \frac{C\Delta V_{b}-q}{C\Delta V_{b}}\right) 
+\frac{t}{RC}=-\ln \left( \frac{C\Delta V_{b}-q}{C\Delta V_{b}}\right)
 \end{equation*}%
 Exponentiating both sides gives%
 \begin{eqnarray*}
-e^{-\frac{t}{RC}} &=&\left( \frac{C\Delta V_{b}-q}{C\Delta V_{b}}\right)  \\
+e^{-\frac{t}{RC}} &=&\left( \frac{C\Delta V_{b}-q}{C\Delta V_{b}}\right) \\
 e^{-\frac{t}{RC}} &=&1-\frac{q}{C\Delta V_{b}} \\
 e^{-\frac{t}{RC}} &=&1-\frac{q}{C\Delta V_{b}} \\
 e^{-\frac{t}{RC}}-1 &=&-\frac{q}{C\Delta V_{b}} \\
-C\Delta V_{b}\left( 1-e^{-\frac{t}{RC}}\right)  &=&q
+C\Delta V_{b}\left( 1-e^{-\frac{t}{RC}}\right) &=&q
 \end{eqnarray*}%
 and now we recognize that 
 \begin{equation*}
@@ -9901,7 +9901,7 @@ Q=C\Delta V=C\Delta V_{b}
 \end{equation*}%
 as the total charge that the capacitor can hold, then%
 \begin{equation}
-q\left( t\right) =Q\left( 1-e^{-\frac{t}{RC}}\right) 
+q\left( t\right) =Q\left( 1-e^{-\frac{t}{RC}}\right)
 \end{equation}
 
 \subsection{RC example}
@@ -9929,7 +9929,7 @@ q(t)=\left( 10\unit{F}\right) \left( 1.5\unit{V}\right) \left( 1-e^{-\frac{t%
 %BeginExpansion
 \Omega%
 %EndExpansion
-}\right) \left( 10\unit{F}\right) }}\right) 
+}\right) \left( 10\unit{F}\right) }}\right)
 \end{equation}%
 We can plot this\FRAME{dtbpFX}{2.3682in}{1.5797in}{0pt}{}{}{Plot}{\special%
 {language "Scientific Word";type "MAPLEPLOT";width 2.3682in;height
@@ -9953,7 +9953,7 @@ Roman,12,0000000000,useDefault,normal";numpoints 100;plotstyle
 }$ we essentially have $q=Q.$ But up to that point, the charge changes in a
 very non-linear way. The part of the equation that looks like%
 \begin{equation*}
-\left( 1-e^{-\frac{t}{RC}}\right) 
+\left( 1-e^{-\frac{t}{RC}}\right)
 \end{equation*}%
 is interesting, what is $e^{0}$?%
 \begin{equation*}
@@ -9961,7 +9961,7 @@ e^{0}=1
 \end{equation*}%
 so at $t=0$ we do have $q=0$ because 
 \begin{equation*}
-\left( 1-e^{-\frac{t}{RC}}\right) =\left( 1-1\right) 
+\left( 1-e^{-\frac{t}{RC}}\right) =\left( 1-1\right)
 \end{equation*}%
 For any positive time, $e^{-\frac{t}{RC}}$ will be less than $1.$ For large
 times $\frac{t}{RC}$ gets to be a big number. So $e^{-\frac{t}{RC}}$ gets
@@ -10007,7 +10007,7 @@ I\left( t\right) =0.75\unit{A}e^{-\frac{t}{20\unit{s}}}
 To understand better what the time constant means, lets now remove the
 battery from the circuit, but let the circuit stay connected (say, replace
 the battery with a piece of wire). Now we find that the charge seems to fade
-away! 
+away!
 
 We can calculate what the charge would be as a function of time. We probably
 won't have time to do this in class, but really it is just the same the
@@ -10112,7 +10112,7 @@ I=JA
 
 Charging%
 \begin{equation*}
-q=Q\left( 1-e^{-\frac{t}{RC}}\right) 
+q=Q\left( 1-e^{-\frac{t}{RC}}\right)
 \end{equation*}
 
 Discharging%
@@ -10120,7 +10120,7 @@ Discharging%
 q=Qe^{-\frac{t}{RC}}=Qe^{-\frac{t}{\tau }}
 \end{equation*}
 
-\pagebreak 
+\pagebreak
 
 \chapter{Ohm's law}
 
@@ -24021,31 +24021,31 @@ detector time. Usually the integration time is much longer than a period, so
 what is really detected is like a time-average of our intensity. So if our
 wave is 
 \begin{equation*}
-E=E_{\max }\sin \left( kx-\omega t-\phi _{o}\right)
+E=E_{\max }\sin \left( kx-\omega t-\phi _{o}\right) 
 \end{equation*}%
 then%
 \begin{equation*}
 S=\frac{E_{\max }^{2}\sin ^{2}\left( kx-\omega t-\phi _{o}\right) }{c\mu _{o}%
 }
 \end{equation*}%
-and 
+and if we take the average over $N$ periods where $N$ is a large number 
 \begin{eqnarray*}
-I &=&\int_{\text{many T}}Sdt=\int_{\text{many T}}\frac{E_{\max }^{2}\sin
+\bar{I} &=&\frac{1}{NT}\int_{0}^{NT}Sdt=\int_{0}^{NT}\frac{E_{\max }^{2}\sin
 ^{2}\left( kx-\omega t-\phi _{o}\right) }{c\mu _{o}}dt \\
-&=&\frac{E_{\max }^{2}}{c\mu _{o}}\int_{\text{many T}}\sin ^{2}\left(
+&=&\frac{E_{\max }^{2}}{c\mu _{o}}\frac{1}{NT}\int_{0}^{NT}\sin ^{2}\left(
 kx-\omega t-\phi _{o}\right) dt
 \end{eqnarray*}%
 but we have seen an integral over $\sin ^{2}\left( \theta \right) $ before!
 Back when we studied alternating current we found that (see equation (\cite%
 {integral_of_sine_squared}))%
 \begin{equation}
-\int_{\text{many T}}\sin ^{2}\left( \omega t\right) dt=\frac{1}{2}
+\frac{1}{NT}\int_{0}^{NT}\sin ^{2}\left( \omega t\right) dt=\frac{1}{2}
 \end{equation}
 
 So we have 
 \begin{eqnarray}
-\bar{I} &=&\frac{E_{\max }^{2}}{c\mu _{o}}\int_{\text{many T}}\sin
-^{2}\left( kx-\omega t-\phi _{o}\right) dt \\
+\bar{I} &=&\frac{E_{\max }^{2}}{c\mu _{o}}\int_{0}^{NT}\sin ^{2}\left(
+kx-\omega t-\phi _{o}\right) dt \\
 &=&\frac{E_{\max }^{2}}{2c\mu _{o}}
 \end{eqnarray}%
 where $\bar{I}$ is the time average intensity. The important part is that
